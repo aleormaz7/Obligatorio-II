@@ -1,0 +1,19 @@
+# depslib dependency file v1.0
+1542972676 source:c:\users\ale\desktop\ude\programacion 2\codeblocks\obligatorio2\boolean.cpp
+	"Boolean.h"
+
+1542972855 c:\users\ale\desktop\ude\programacion 2\codeblocks\obligatorio2\boolean.h
+	<stdio.h>
+
+1542972762 source:c:\users\ale\desktop\ude\programacion 2\codeblocks\obligatorio2\fecha.cpp
+	"Fecha.h"
+
+1542972827 c:\users\ale\desktop\ude\programacion 2\codeblocks\obligatorio2\fecha.h
+	"Boolean.h"
+
+1542972573 source:c:\users\ale\desktop\ude\programacion 2\codeblocks\obligatorio2\string.cpp
+	"String.h"
+
+1542972889 c:\users\ale\desktop\ude\programacion 2\codeblocks\obligatorio2\string.h
+	"Boolean.h"
+
