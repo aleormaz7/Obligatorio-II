@@ -1,6 +1,7 @@
+/*
 #include "ListaRevision.h"
 
-void MostrarLista(Lista L)
+void MostrarLista(listaRevision L)
 {
     while(L != NULL)
     {
@@ -9,12 +10,12 @@ void MostrarLista(Lista L)
     }
 }
 
-void Crear(Lista &L)
+void Crear(listaRevision &L)
 {
     L = NULL;
 }
 
-boolean EsVacia(Lista L)
+boolean EsVacia(listaRevision L)
 {
     boolean es = FALSE;
 
@@ -26,29 +27,29 @@ boolean EsVacia(Lista L)
     return es;
 }
 
-void InsFront(Lista &L, int e)
+void InsFront(listaRevision &L, int e)
 {
-    Lista aux = new nodo;
+    listaRevision aux = new nodo;
     aux-> info = e;
     aux->sig = L;
     L = aux;
 }
 
 
-int Primero(Lista L)
+int Primero(listaRevision L)
 {
     return (L->info);
 }
 
 
-void Resto(Lista &L)
+void Resto(listaRevision &L)
 {
-    Lista aux = L;
+    listaRevision aux = L;
     L = L->sig;
     delete(aux);
 }
 
-int LargoRecu(Lista L)
+int LargoRecu(listaRevision L)
 {
     if(L == NULL)
     {
@@ -61,7 +62,7 @@ int LargoRecu(Lista L)
 }
 
 
-int UltimoRecu(Lista L)
+int UltimoRecu(listaRevision L)
 {
     if(L->sig == NULL)
         return L->info;
@@ -70,7 +71,7 @@ int UltimoRecu(Lista L)
 }
 
 
-int ContarRecu(Lista L, int valor)
+int ContarRecu(listaRevision L, int valor)
 {
     if(L == NULL)
     {
@@ -90,7 +91,7 @@ int ContarRecu(Lista L, int valor)
 }
 
 
-boolean PerteneceRecu(Lista L, int valor)
+boolean PerteneceRecu(listaRevision L, int valor)
 {
     if(L == NULL)
     {
@@ -110,7 +111,7 @@ boolean PerteneceRecu(Lista L, int valor)
 }
 
 
-void SustituirRecu(Lista &L, int num1,int num2)
+void SustituirRecu(listaRevision &L, int num1,int num2)
 {
     if(L != NULL)
     {
@@ -125,7 +126,7 @@ void SustituirRecu(Lista &L, int num1,int num2)
 
 
 
-int MaximoRecu(Lista L)
+int MaximoRecu(listaRevision L)
 {
     if(L->sig == NULL)
     {
@@ -146,7 +147,7 @@ int MaximoRecu(Lista L)
 }
 
 
-void ParesImparesRecu(Lista L, Lista &LPares, Lista &LImpares)
+void ParesImparesRecu(listaRevision L, listaRevision &LPares, listaRevision &LImpares)
 {
     if(L != NULL)
     {
@@ -163,7 +164,7 @@ void ParesImparesRecu(Lista L, Lista &LPares, Lista &LImpares)
     }
 }
 
-void InsBackRecu(Lista &L, int valor)
+void InsBackRecu(listaRevision &L, int valor)
 {
     if(L == NULL)
     {
@@ -176,3 +177,4 @@ void InsBackRecu(Lista &L, int valor)
         InsBackRecu(L->sig,valor);
     }
 }
+*/
