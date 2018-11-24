@@ -1,6 +1,6 @@
 #include "Fecha.h"
 
-void cargarFecha(fecha &f)
+void cargarFecha(Fecha &f)
 {
     printf("\nIngrese un dia: ");
     scanf("%d",&f.dia);
@@ -12,14 +12,14 @@ void cargarFecha(fecha &f)
     scanf("%d",&f.anio);
 }
 
-void mostrarFecha(fecha f)
+void mostrarFecha(Fecha f)
 {
     printf(" %d",f.dia);
     printf("/%d",f.mes);
     printf("/%d",f.anio);
 }
 
-boolean fechaValida(fecha f)
+boolean fechaValida(Fecha f)
 {
     boolean valida;
 
@@ -66,17 +66,17 @@ boolean fechaValida(fecha f)
     return valida;
 }
 
-int darDia(fecha f)
+int darDia(Fecha f)
 {
     return f.dia;
 }
 
-int darMes(fecha f)
+int darMes(Fecha f)
 {
     return f.mes;
 }
 
-int darAnio(fecha f)
+int darAnio(Fecha f)
 {
     return f.anio;
 }
