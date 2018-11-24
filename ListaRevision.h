@@ -13,27 +13,27 @@ typedef nodoL * listaRevision;
 
 ///RECURSIVO:
 ///a) LargoRecu: Dada una lista, devuelve su largo (la cantidad de elementos de la lista).
-int LargoRecu(Lista L);
+int LargoRecu(listaRevision L);
 
 ///b) UltimoRecu: Dada una lista, devuelve su último elemento
 ///PRECONDICION: L no es vacia
-int UltimoRecu(Lista L);
+int UltimoRecu(listaRevision L);
 
 ///c) ContarRecu: Dada una lista y un número entero, devuelve la cantidad de veces que dicho entero aparece en la lista.
-int ContarRecu(Lista L, int valor);
+int ContarRecu(listaRevision L, int valor);
 
 ///d) PerteneceRecu: Dada una lista y un número entero, devuelve TRUE si dicho entero pertenece a la lista y FALSE en caso contrario.
-boolean PerteneceRecu(Lista L, int valor);
+boolean PerteneceRecu(listaRevision L, int valor);
 
 ///e) SustituirRecu: Dada una lista y dos números enteros, sustituye cada ocurrencia del
 ///   primer entero en la lista por el segundo entero.
-void SustituirRecu(Lista &L, int num1, int num2);
+void SustituirRecu(listaRevision &L, int num1, int num2);
 
 ///f) MaximoRecu: Dada una lista, devuelve el mayor entero almacenado en ella.
-int MaximoRecu(Lista L);
+int MaximoRecu(listaRevision L);
 
 ///h) InsBackRecu: Dada una lista y un número entero, agrega dicho entero al final de la lista.
-void InsBackRecu(Lista &L, int valor);
+void InsBackRecu(listaRevision &L, int valor);
 
 
 #endif // LISTAREVISION_H_INCLUDED
