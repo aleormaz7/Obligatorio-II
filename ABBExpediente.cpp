@@ -1,34 +1,43 @@
 #include "ABBExpediente.h"
 
-
-
-///Operaciones Basicas:
-///Crear
 void CrearABB(ABBExpediente &a)
+///Crear
 {
     a = NULL;
 }
-///Pertenece
-///Saber si un elemento pertenece al ABB, versión iterativa
-boolean Pertenece(ABBExpediente a, long int e)
+
+boolean PerteneceExp(ABBExpediente a, Expediente e)
+///Saber si Expediente pertenece al ABB
 {
-    boolean encontre = FALSE;
-    while (a != NULL && !encontre)
-    {
-        if (e == darCodigoExpediente(a->info))
-            encontre = TRUE;
+    if (a == NULL)
+        return FALSE;
+    else
+        if (darCodigoExpediente(a -> info) == darCodigoExpediente(e))
+            return TRUE;
         else
-            if (e < darCodigoExpediente(a -> info))
-                a = a -> hizq;
-            else
-                a = a -> hder;
-    }
-    return encontre;
+            if (darCodigoExpediente(e) < (darCodigoExpediente(a -> info)) )
+                return PerteneceExp(a -> hizq,e);
+           else
+                return PerteneceExp(a -> hder,e);
 }
 
-///Insert
-///PRECONDICION: el valor no existía previamente en el ABB
-void Insert(ABBExpediente &a, Expediente e)
+boolean PerteneceExpPorCod(ABBExpediente a, long int cod)
+///Saber si Expediente pertenece al ABB, por su codigo de expediente
+{
+    if (a == NULL)
+        return FALSE;
+    else
+        if (darCodigoExpediente(a -> info) == cod)
+            return TRUE;
+        else
+            if (cod < (darCodigoExpediente(a -> info)) )
+                return PerteneceExpPorCod(a -> hizq,cod);
+           else
+                return PerteneceExpPorCod(a -> hder,cod);
+}
+
+void InsertABBExp(ABBExpediente &a, Expediente e)
+///PRECONDICION: el expediente no existe previamente en el ABB
 {
     if (a == NULL)
     {
@@ -40,8 +49,116 @@ void Insert(ABBExpediente &a, Expediente e)
     else
     {
         if (e.codigoExpediente < (darCodigoExpediente(a->info)))
-            Insert (a -> hizq, e);
+            InsertABBExp (a -> hizq, e);
         else
-            Insert (a -> hder, e);
+            InsertABBExp (a -> hder, e);
     }
 }
+
+Expediente minimoExpediente (ABBExpediente a)
+/// Precondición : el árbol a  NO está vacío
+{
+    if (a -> hizq == NULL)
+        return (a->info);
+    else
+        return minimoExpediente (a -> hizq);
+}
+
+
+void borrarMinimoExpedienete (ABBExpediente &a)
+/// Precondición : el árbol a  NO está vacío
+{
+    ABBExpediente aux;
+    if (a -> hizq == NULL)
+    {
+        aux = a -> hder;
+        delete a;
+        a = aux;
+    }
+    else
+        borrarMinimoExpedienete (a -> hizq);
+ }
+
+void borrarABBExpediente (Expediente e , ABBExpediente &a)
+/// Precondición : el Expediente está en el árbol
+{
+    ABBExpediente aux;
+    if (darCodigoExpediente(e) == darCodigoExpediente(a -> info))
+    {
+        if (a -> hder == NULL)
+        {
+            aux = a -> hizq;
+            delete a;
+            a = aux;
+        }
+        else
+        {
+            if (a -> hizq == NULL)
+            {
+                aux = a -> hder;
+                delete a;
+                a = aux;
+            }
+            else
+            {
+                a -> info = minimoExpediente(a -> hder);
+                borrarMinimoExpedienete (a ->hder);
+            }
+        }
+     }
+        else
+        {
+            if (darCodigoExpediente(e) < darCodigoExpediente(a -> info))
+                borrarABBExpediente (e, a -> hizq);
+            else
+                borrarABBExpediente (e, a -> hder);
+        }
+}
+
+void borrarABBExpedientePorCodigo (long int cod , ABBExpediente &a)
+/// Precondición : el Expediente está en el árbol
+{
+    ABBExpediente aux;
+    if (cod == darCodigoExpediente(a -> info))
+    {
+        if (a -> hder == NULL)
+        {
+            aux = a -> hizq;
+            delete a;
+            a = aux;
+        }
+        else
+        {
+            if (a -> hizq == NULL)
+            {
+                aux = a -> hder;
+                delete a;
+                a = aux;
+            }
+            else
+            {
+                a -> info = minimoExpediente(a -> hder);
+                borrarMinimoExpedienete (a ->hder);
+            }
+        }
+     }
+        else
+        {
+            if (cod < darCodigoExpediente(a -> info))
+                borrarABBExpedientePorCodigo(cod, a -> hizq);
+            else
+                borrarABBExpedientePorCodigo(cod, a -> hder);
+        }
+}
+
+ void ListarExpientesOrdenados (ABBExpediente a)
+{
+    if (a != NULL)
+    {
+        ListarExpientesOrdenados (a -> hizq);
+        printf (" %d ", darCodigoExpediente(a -> info));
+        ListarExpientesOrdenados (a -> hder);
+     }
+}
+
+
