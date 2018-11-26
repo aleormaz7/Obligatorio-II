@@ -27,7 +27,7 @@ void borrarABBExpediente (Expediente e , ABBExpediente &a); /// Precondición : e
 
 void borrarABBExpedientePorCodigo (long int cod , ABBExpediente &a); /// Precondición : el Expediente está en el árbol
 
-void ListarExpientesOrdenados (ABBExpediente a);
+void ListarExpedientesOrdenados(ABBExpediente a);
 
 
 

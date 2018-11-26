@@ -17,3 +17,62 @@
 1542972889 c:\users\ale\desktop\ude\programacion 2\codeblocks\obligatorio2\string.h
 	"Boolean.h"
 
+1543071841 source:c:\users\ale\desktop\obli2\boolean.cpp
+	"Boolean.h"
+
+1543071841 c:\users\ale\desktop\obli2\boolean.h
+	<stdio.h>
+
+1543234205 source:c:\users\ale\desktop\obli2\fecha.cpp
+	"Fecha.h"
+
+1543232121 c:\users\ale\desktop\obli2\fecha.h
+	"Boolean.h"
+
+1543071841 source:c:\users\ale\desktop\obli2\resultante.cpp
+	"Resultante.h"
+
+1543071841 c:\users\ale\desktop\obli2\resultante.h
+	<stdio.h>
+
+1543235152 source:c:\users\ale\desktop\obli2\revision.cpp
+	"Revision.h"
+
+1543232948 c:\users\ale\desktop\obli2\revision.h
+	"Fecha.h"
+	"String.h"
+	"Resultante.h"
+
+1543071841 c:\users\ale\desktop\obli2\string.h
+	"Boolean.h"
+
+1543071841 source:c:\users\ale\desktop\obli2\string.cpp
+	"String.h"
+
+1543230374 source:c:\users\ale\desktop\obli2\abbexpediente.cpp
+	"ABBExpediente.h"
+
+1543230374 c:\users\ale\desktop\obli2\abbexpediente.h
+	"Expediente.h"
+
+1543071841 c:\users\ale\desktop\obli2\expediente.h
+	"String.h"
+
+1543071841 source:c:\users\ale\desktop\obli2\archivo.cpp
+	"Archivo.h"
+
+1543071841 c:\users\ale\desktop\obli2\archivo.h
+
+1543230480 source:c:\users\ale\desktop\obli2\expediente.cpp
+	"Expediente.h"
+
+1543235344 source:c:\users\ale\desktop\obli2\listarevision.cpp
+	"ListaRevision.h"
+
+1543235338 c:\users\ale\desktop\obli2\listarevision.h
+	"Revision.h"
+
+1543235384 source:c:\users\ale\desktop\obli2\main.cpp
+	"ABBExpediente.h"
+	"ListaRevision.h"
+

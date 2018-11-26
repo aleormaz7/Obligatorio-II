@@ -22,7 +22,6 @@ void mostrarFecha(Fecha f)
 boolean fechaValida(Fecha f)
 {
     boolean valida;
-
     switch (f.mes)
     {
         case 1:
@@ -64,6 +63,23 @@ boolean fechaValida(Fecha f)
     }
 
     return valida;
+}
+
+
+boolean fechaMayor(Fecha f1, Fecha f2)
+{
+    boolean resu = FALSE;
+    if(f1.anio >=  f2.anio)
+    {
+        if(f1.mes >= f2.mes)
+        {
+            if(f1.dia >= f2.dia)
+            {
+                resu = TRUE;
+            }
+        }
+    }
+    return resu;
 }
 
 int darDia(Fecha f)

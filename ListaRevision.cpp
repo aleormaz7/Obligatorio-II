@@ -1,11 +1,12 @@
-/*
 #include "ListaRevision.h"
+
+
 
 void MostrarLista(listaRevision L)
 {
     while(L != NULL)
     {
-        printf(" %d",L->info);
+        //printf(" %d",L->info);
         L = L->sig;
     }
 }
@@ -27,16 +28,16 @@ boolean EsVacia(listaRevision L)
     return es;
 }
 
-void InsFront(listaRevision &L, int e)
+void InsFront(listaRevision &L, Revision r)
 {
-    listaRevision aux = new nodo;
-    aux-> info = e;
+    listaRevision aux = new nodoL;
+    aux-> info = r;
     aux->sig = L;
     L = aux;
 }
 
 
-int Primero(listaRevision L)
+Revision Primero(listaRevision L)
 {
     return (L->info);
 }
@@ -49,7 +50,7 @@ void Resto(listaRevision &L)
     delete(aux);
 }
 
-int LargoRecu(listaRevision L)
+/*int LargoRecu(listaRevision L)
 {
     if(L == NULL)
     {
@@ -59,10 +60,10 @@ int LargoRecu(listaRevision L)
     {
         return 1 + LargoRecu(L->sig);
     }
-}
+}*/
 
 
-int UltimoRecu(listaRevision L)
+Revision UltimoRecu(listaRevision L)
 {
     if(L->sig == NULL)
         return L->info;
@@ -71,7 +72,7 @@ int UltimoRecu(listaRevision L)
 }
 
 
-int ContarRecu(listaRevision L, int valor)
+/*int ContarRecu(listaRevision L, int valor)
 {
     if(L == NULL)
     {
@@ -88,10 +89,10 @@ int ContarRecu(listaRevision L, int valor)
             return ContarRecu(L->sig,valor);
         }
     }
-}
+}*/
 
 
-boolean PerteneceRecu(listaRevision L, int valor)
+boolean PerteneceRecu(listaRevision L, Revision r)
 {
     if(L == NULL)
     {
@@ -99,19 +100,19 @@ boolean PerteneceRecu(listaRevision L, int valor)
     }
     else
     {
-        if(L->info == valor)
+        if(darCodigoExpedienteDeRevision(L->info) == darCodigoExpedienteDeRevision(r))
         {
             return TRUE;
         }
         else
         {
-            PerteneceRecu(L->sig,valor);
+            PerteneceRecu(L->sig,r);
         }
     }
 }
 
 
-void SustituirRecu(listaRevision &L, int num1,int num2)
+/*void SustituirRecu(listaRevision &L, int num1,int num2)
 {
     if(L != NULL)
     {
@@ -122,11 +123,11 @@ void SustituirRecu(listaRevision &L, int num1,int num2)
 
         SustituirRecu(L->sig,num1,num2);
     }
-}
+}*/
 
 
 
-int MaximoRecu(listaRevision L)
+/*int MaximoRecu(listaRevision L)
 {
     if(L->sig == NULL)
     {
@@ -144,37 +145,43 @@ int MaximoRecu(listaRevision L)
             return aux;
         }
     }
-}
+}*/
 
 
-void ParesImparesRecu(listaRevision L, listaRevision &LPares, listaRevision &LImpares)
-{
-    if(L != NULL)
-    {
-        if((L->info % 2) == 0)
-        {
-            InsFront(LPares,L->info);
-        }
-        else
-        {
-            InsFront(LImpares,L->info);
-        }
 
-        ParesImparesRecu(L->sig, LPares, LImpares);
-    }
-}
-
-void InsBackRecu(listaRevision &L, int valor)
+void InsBackRecu(listaRevision &L, Revision r)
 {
     if(L == NULL)
     {
-        L = new nodo;
-        L->info = valor;
+        L = new nodoL;
+        L->info = r;
         L->sig = NULL;
     }
     else
     {
-        InsBackRecu(L->sig,valor);
+        InsBackRecu(L->sig,r);
     }
 }
-*/
+
+
+void ListarRevisiones(listaRevision L)
+{
+    while(L != NULL)
+    {
+        mostrarRevision(L->info);
+        L = L->sig;
+    }
+}
+
+void ListarRevisionesPorCodigoExpediente(listaRevision L, long int cod)
+{
+    while(L != NULL)
+    {
+        if(darCodigoExpedienteDeRevision(L->info) == cod)
+        {
+            mostrarRevision(L->info);
+        }
+        L = L->sig;
+    }
+}
+

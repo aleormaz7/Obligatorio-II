@@ -15,6 +15,8 @@ void mostrarFecha(Fecha f);///muestro una fecha
 
 boolean fechaValida(Fecha f);///determino si una fecha es valida
 
+boolean fechaMayor(Fecha f1, Fecha f2);
+
 int darDia(Fecha f);///devuelve dia
 
 int darMes(Fecha f);///devuelve mes

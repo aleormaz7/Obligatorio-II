@@ -151,13 +151,13 @@ void borrarABBExpedientePorCodigo (long int cod , ABBExpediente &a)
         }
 }
 
- void ListarExpientesOrdenados (ABBExpediente a)
+ void ListarExpedientesOrdenados (ABBExpediente a)
 {
     if (a != NULL)
     {
-        ListarExpientesOrdenados (a -> hizq);
+        ListarExpedientesOrdenados (a -> hizq);
         printf (" %d ", darCodigoExpediente(a -> info));
-        ListarExpientesOrdenados (a -> hder);
+        ListarExpedientesOrdenados (a -> hder);
      }
 }
 

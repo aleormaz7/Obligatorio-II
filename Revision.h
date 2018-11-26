@@ -12,7 +12,7 @@ typedef struct { Fecha fechaRealizado;
                } Revision;
 
 
-void cargarRevision(Revision &r);
+void cargarRevision(Revision &r, long int codigo, Fecha f);
 
 void mostrarRevision(Revision r);
 
@@ -24,5 +24,6 @@ void darDescripcion(Revision r, String &s);
 
 Resultante darResultanteRevision(Revision r);
 
+long int darCodigoExpedienteDeRevision(Revision r);
 
 #endif // REVISION_H_INCLUDED

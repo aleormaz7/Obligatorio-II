@@ -1,13 +1,7 @@
 #include "Expediente.h"
 
 
-/* //long int codigoExpediente;
-                 String caratula;
-                 String nombreEscribano;
-                 String apellidoEscribano;
-                 int cantPaginas;
 
-                 */
 void cargarExpediente(Expediente &e)
 {
     printf("\nCodigo del expediente: ");
