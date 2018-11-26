@@ -19,6 +19,8 @@ void InsertABBExp(ABBExpediente &a, Expediente e); ///PRECONDICION: el Expedient
 
 Expediente minimoExpediente (ABBExpediente a) ; /// Precondición : el árbol a  NO está vacío
 
+Expediente maximoExpediente (ABBExpediente a) ; /// Precondición : el árbol a  NO está vacío
+
 void borrarMinimoExpedienete (ABBExpediente &a); /// Precondición : el árbol a  NO está vacío
 
 void borrarABBExpedientePorCodigo (long int cod , ABBExpediente &a); /// Precondición : el Expediente está en el árbol
