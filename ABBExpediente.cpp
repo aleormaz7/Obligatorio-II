@@ -6,21 +6,6 @@ void CrearABB(ABBExpediente &a)
     a = NULL;
 }
 
-boolean PerteneceExp(ABBExpediente a, Expediente e)
-///Saber si Expediente pertenece al ABB
-{
-    if (a == NULL)
-        return FALSE;
-    else
-        if (darCodigoExpediente(a -> info) == darCodigoExpediente(e))
-            return TRUE;
-        else
-            if (darCodigoExpediente(e) < (darCodigoExpediente(a -> info)) )
-                return PerteneceExp(a -> hizq,e);
-           else
-                return PerteneceExp(a -> hder,e);
-}
-
 boolean PerteneceExpPorCod(ABBExpediente a, long int cod)
 ///Saber si Expediente pertenece al ABB, por su codigo de expediente
 {
@@ -56,7 +41,7 @@ void InsertABBExp(ABBExpediente &a, Expediente e)
 }
 
 Expediente minimoExpediente (ABBExpediente a)
-/// Precondición : el árbol a  NO está vacío
+/// PrecondiciÃ³n : el Ã¡rbol a  NO estÃ¡ vacÃ­o
 {
     if (a -> hizq == NULL)
         return (a->info);
@@ -66,7 +51,7 @@ Expediente minimoExpediente (ABBExpediente a)
 
 
 void borrarMinimoExpedienete (ABBExpediente &a)
-/// Precondición : el árbol a  NO está vacío
+/// PrecondiciÃ³n : el Ã¡rbol a  NO estÃ¡ vacÃ­o
 {
     ABBExpediente aux;
     if (a -> hizq == NULL)
@@ -79,44 +64,8 @@ void borrarMinimoExpedienete (ABBExpediente &a)
         borrarMinimoExpedienete (a -> hizq);
  }
 
-void borrarABBExpediente (Expediente e , ABBExpediente &a)
-/// Precondición : el Expediente está en el árbol
-{
-    ABBExpediente aux;
-    if (darCodigoExpediente(e) == darCodigoExpediente(a -> info))
-    {
-        if (a -> hder == NULL)
-        {
-            aux = a -> hizq;
-            delete a;
-            a = aux;
-        }
-        else
-        {
-            if (a -> hizq == NULL)
-            {
-                aux = a -> hder;
-                delete a;
-                a = aux;
-            }
-            else
-            {
-                a -> info = minimoExpediente(a -> hder);
-                borrarMinimoExpedienete (a ->hder);
-            }
-        }
-     }
-        else
-        {
-            if (darCodigoExpediente(e) < darCodigoExpediente(a -> info))
-                borrarABBExpediente (e, a -> hizq);
-            else
-                borrarABBExpediente (e, a -> hder);
-        }
-}
-
 void borrarABBExpedientePorCodigo (long int cod , ABBExpediente &a)
-/// Precondición : el Expediente está en el árbol
+/// PrecondiciÃ³n : el Expediente estÃ¡ en el Ã¡rbol
 {
     ABBExpediente aux;
     if (cod == darCodigoExpediente(a -> info))
