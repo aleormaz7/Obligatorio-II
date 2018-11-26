@@ -49,6 +49,14 @@ Expediente minimoExpediente (ABBExpediente a)
         return minimoExpediente (a -> hizq);
 }
 
+Expediente maximoExpediente (ABBExpediente a)
+/// Precondición : el árbol a  NO está vacío
+{
+    if (a -> hder == NULL)
+        return (a->info);
+    else
+        return minimoExpediente (a -> hder);
+}
 
 void borrarMinimoExpedienete (ABBExpediente &a)
 /// Precondición : el árbol a  NO está vacío
