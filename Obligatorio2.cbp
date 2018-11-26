@@ -44,6 +44,8 @@
 		<Unit filename="Fecha.h" />
 		<Unit filename="ListaRevision.cpp" />
 		<Unit filename="ListaRevision.h" />
+		<Unit filename="Menu.cpp" />
+		<Unit filename="Menu.h" />
 		<Unit filename="Resultante.cpp" />
 		<Unit filename="Resultante.h" />
 		<Unit filename="Revision.cpp" />

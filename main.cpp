@@ -1,12 +1,12 @@
+#include "Menu.h"
 #include "ABBExpediente.h"
-
 #include "ListaRevision.h"
 
 int main()
 {
 
     /// Pruebas para Expediente /////
-    int continuar;
+    //int continuar;
     long int codEpxAux, codigoExpediente;
     Expediente exp;
     String s;
@@ -20,6 +20,135 @@ int main()
     ABBExpediente abbe;
     CrearABB(abbe);
 
+    ///Menu
+    int opc;
+    do
+    {
+        mostrarMenu(opc);
+        if(opc == 1)
+        {
+            do
+            {
+                mostrarSubMenuAltasyBajas(opc);
+                switch(opc)
+                {
+                    case 1:
+                        printf("\n1-: Cargar Expediente \n");
+                        cargarExpediente(exp);
+                        if(PerteneceExp(abbe,exp))
+                            printf("\nYa esta cardado");
+                        else
+                            InsertABBExp(abbe,exp);
+                        break;
+                    case 2:
+                        printf("\n2-: Cargar Revision \n");
+                        printf("\nIngrese Codigo Expediente:");
+                        scanf("%ld",&codigoExpediente);
+                        if(PerteneceExpPorCod(abbe,codigoExpediente))
+                        {
+                            printf("\nIngrese Fecha expediente");
+                            cargarFecha(f);
+                            if(EsVacia(lr))
+                            {
+                                if(fechaValida(f))
+                                {
+                                    cargarRevision(r,codigoExpediente,f);
+                                    InsFront(lr,r);
+                                }
+                                else
+                                  printf("\nFehca invalida");
+                            }
+                            else
+                            {
+                                ///buscar fecha mas reciente en lista revision
+                                Revision auxRev = Primero(lr);
+                                if(fechaValida(f) && fechaMayor(f,darFechaRev(auxRev)))
+                                {
+                                    cargarRevision(r,codigoExpediente,f);
+                                    InsFront(lr,r);
+                                }
+                                else
+                                    printf("\nFehca invalida");
+                            }
+                        }
+                        else
+                            printf("\nNo existe revision con dicho codigo de expediente");
+                        break;
+                    case 3:
+                        printf("\n3-: Eliminar Expediente \n");
+                        printf("\nCodigo del expediente a eliminar: ");
+                        scanf("%ld",&codEpxAux);
+                        if(PerteneceExpPorCod(abbe,codEpxAux))
+                            borrarABBExpedientePorCodigo(codEpxAux,abbe);
+                        else
+                            printf("\nNo existe un expediente con ese codigo");
+                        break;
+                    default: printf("\nOpcion invalida.\n");
+                        break;
+
+                }
+            }while(opc != 4);
+        }
+        else if(opc == 2)
+        {
+            do
+            {
+                mostrarSubMenuListados(opc);
+                switch(opc)
+                {
+                    case 1:
+                         printf("\n1-: Listar Exoediente Ordenados  \n");
+                         ListarExpedientesOrdenados(abbe);
+                        break;
+                    case 2:
+                        printf("\n2-: Listar Todas las Revisiones \n");
+                        ListarRevisiones(lr);
+                        break;
+                    case 3:
+                        printf("\n3-: Listar Revisiones Con el Menor y el Mayor Codigo Expediente \n");
+                        break;
+                    case 4:
+                         printf("\n4-: Listar Revisiones Por Codigo Expediente \n");
+                         printf("\nIngrese Codigo Expediente:");
+                         scanf("%ld",&codigoExpediente);
+                         ListarRevisionesPorCodigoExpediente(lr,codigoExpediente);
+                        break;
+                    default: printf("\nOpcion invalida.\n");
+                        break;
+                }
+            }while(opc != 5);
+
+        }
+        else if(opc == 3)
+        {
+            do
+            {
+                mostrarSubMenuConsultas(opc);
+                switch(opc)
+                {
+                    case 1:
+                        break;
+                    case 2:
+                        break;
+                    case 3:
+                        break;
+                    case 4:
+                        break;
+                    default: printf("\nOpcion invalida.\n");
+                        break;
+                }
+            }while(opc != 5);
+        }
+    }while(opc != 4);
+
+
+
+
+
+
+/////////////////////////////////////////////////
+///lo que estaba antes x las dudas no lo borre
+/*
     printf("\nCargar Expediente             - 1 -");
     printf("\nEliminar Expediente           - 2 -");
     printf("\nListar Expedientes ordenados  - 3 -");
@@ -65,7 +194,7 @@ do
                 cargarFecha(f);
                 if(EsVacia(lr))
                 {
-                    printf("\nlista es vacia");
+
                     if(fechaValida(f))
                     {
                         cargarRevision(r,codigoExpediente,f);
@@ -108,8 +237,6 @@ do
 } while(continuar != codEpxAux);
 
     printf("\n\n");
-
-
-
+*/
 
 }

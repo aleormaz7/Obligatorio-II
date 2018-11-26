@@ -49,10 +49,10 @@
 1543071841 source:c:\users\ale\desktop\obli2\string.cpp
 	"String.h"
 
-1543230374 source:c:\users\ale\desktop\obli2\abbexpediente.cpp
+1543235872 source:c:\users\ale\desktop\obli2\abbexpediente.cpp
 	"ABBExpediente.h"
 
-1543230374 c:\users\ale\desktop\obli2\abbexpediente.h
+1543235885 c:\users\ale\desktop\obli2\abbexpediente.h
 	"Expediente.h"
 
 1543071841 c:\users\ale\desktop\obli2\expediente.h
@@ -66,13 +66,20 @@
 1543230480 source:c:\users\ale\desktop\obli2\expediente.cpp
 	"Expediente.h"
 
-1543235344 source:c:\users\ale\desktop\obli2\listarevision.cpp
+1543236295 source:c:\users\ale\desktop\obli2\listarevision.cpp
 	"ListaRevision.h"
 
-1543235338 c:\users\ale\desktop\obli2\listarevision.h
+1543236169 c:\users\ale\desktop\obli2\listarevision.h
 	"Revision.h"
 
-1543235384 source:c:\users\ale\desktop\obli2\main.cpp
+1543247014 source:c:\users\ale\desktop\obli2\main.cpp
+	"Menu.h"
 	"ABBExpediente.h"
 	"ListaRevision.h"
+
+1543244277 c:\users\ale\desktop\obli2\menu.h
+	<stdio.h>
+
+1543236658 source:c:\users\ale\desktop\obli2\menu.cpp
+	"Menu.h"
 
