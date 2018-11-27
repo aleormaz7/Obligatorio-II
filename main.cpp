@@ -137,7 +137,11 @@ int main()
                 mostrarSubMenuConsultas(opc);
                 switch(opc)
                 {
-                    case 1:
+                    case 1: printf("\nInrese el apellido del escribano: ");
+                        scan(s);
+                        printf("\nEl escribano: ");
+                        print(s);
+                        printf("tiene un total de %d expedientes coordinados.",cntExpedientesEscribano(abbe,s));
                         break;
                     case 2:
                         break;
