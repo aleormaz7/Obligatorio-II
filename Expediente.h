@@ -14,6 +14,8 @@ void cargarExpediente(Expediente &e,long int CodExpediente);
 
 void mostrarExpediente(Expediente e);
 
+void mostrarExpedienteConsultaOrdenados(Expediente e);
+
 long int darCodigoExpediente(Expediente e);
 
 void darCaratula(Expediente e, String &s);
