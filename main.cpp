@@ -1,9 +1,12 @@
 #include "Menu.h"
 #include "ABBExpediente.h"
 #include "ListaRevision.h"
+#include "Archivo.h"
 
 int main()
 {
+    inicializarDat("Expedientes.dat");
+    inicializarDat("Revisiones.dat");
 
     /// Pruebas para Expediente /////
     //int continuar;
@@ -148,6 +151,8 @@ int main()
                     case 3:
                         break;
                     case 4:
+                        break;
+                    case 5:
                         break;
                     default: printf("\nOpcion invalida.\n");
                         break;

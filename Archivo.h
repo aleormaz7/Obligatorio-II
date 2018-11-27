@@ -1,6 +1,10 @@
-#ifndef ARCHIVO_H_INCLUDED
-#define ARCHIVO_H_INCLUDED
+#ifndef _ARCHIVO_H
+#define _ARCHIVO_H
+#include "String.h"
+
+void inicializarDat(String s);
 
 
 
-#endif // ARCHIVO_H_INCLUDED
+
+#endif // _ARCHIVO_H
