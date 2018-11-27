@@ -165,6 +165,12 @@ void Levantar_String (String &s, FILE * f)
 		i++;
 		fread(&c,sizeof(char),1,f);
 	}
+	/*
+	printf("\nPrimer: ");
+	print(s);
+    printf("\nSegundo: ");
+	print(aux);
+	*/
 	strcop(s,aux);
 	strdestruir(aux);
 }

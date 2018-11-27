@@ -6,8 +6,11 @@
 int main()
 {
     /* Se crean los .Dat en caso que no existan */
-    //inicializarDat("Expedientes.dat");
-    //inicializarDat("Revisiones.dat");
+    if(!existeArchivo("Expedientes.dat"))
+        inicializarDat("Expedientes.dat");
+
+    if(!existeArchivo("Revisiones.dat"))
+        inicializarDat("Revisiones.dat");
 
     ABBExpediente abbe;
     CrearABB(abbe);
@@ -193,8 +196,4 @@ int main()
     }while(opc != 4);
 
     bajarExpedientes(abbe,"Expedientes.dat");
-
-
-
-
 }
