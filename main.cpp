@@ -34,10 +34,12 @@ int main()
                 {
                     case 1:
                         printf("\n1-: Cargar Expediente \n");
-                        cargarExpediente(exp);
-                        if(PerteneceExp(abbe,exp))
-                            printf("\nYa esta cardado");
+                        printf("\nCodigo del expediente: ");
+                        scanf("%ld",&codigoExpediente);
+                        if(PerteneceExpPorCod(abbe,codigoExpediente))
+                            printf("\nYa existe un expediente con ese codigo");
                         else
+                            cargarExpediente(exp,codigoExpediente);
                             InsertABBExp(abbe,exp);
                         break;
                     case 2:
