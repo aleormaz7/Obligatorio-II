@@ -27,6 +27,8 @@ void borrarABBExpedientePorCodigo (long int cod , ABBExpediente &a); /// Precond
 
 void ListarExpedientesOrdenados(ABBExpediente a);
 
+int cntExpedientesEscribano(ABBExpediente a, String apellido);
+
 
 
 #endif // ABBEXPEDIENTE_H_INCLUDED
