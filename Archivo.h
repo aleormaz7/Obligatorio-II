@@ -4,7 +4,7 @@
 
 void inicializarDat(String s);
 
-
+boolean existeArchivo(String nomArch);
 
 
 #endif // _ARCHIVO_H

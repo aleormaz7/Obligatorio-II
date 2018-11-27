@@ -55,7 +55,7 @@ Expediente maximoExpediente (ABBExpediente a)
     if (a -> hder == NULL)
         return (a->info);
     else
-        return minimoExpediente (a -> hder);
+        return maximoExpediente (a -> hder);
 }
 
 void borrarMinimoExpedienete (ABBExpediente &a)
@@ -125,6 +125,7 @@ int cntExpedientesEscribano(ABBExpediente a, String apellido)
     else
     {
         String ApeAux;
+        strcrear(ApeAux);
         darApellidoEscribano((a->info),ApeAux);
         if(streq(ApeAux,apellido))
             return 1 + cntExpedientesEscribano(a -> hizq,apellido) + cntExpedientesEscribano (a -> hder,apellido);
@@ -133,13 +134,34 @@ int cntExpedientesEscribano(ABBExpediente a, String apellido)
     }
 }
 
-void bajarExpedientes(ABBExpediente a)
+void bajarExpedientes(ABBExpediente a, String nomArch)
+{
+    FILE * f = fopen(nomArch,"wb");
+    bajarExpedientesRec(a,f);
+    fclose(f);
+}
+
+void bajarExpedientesRec(ABBExpediente a,FILE * f)
 {
     if (a != NULL)
     {
-        bajarExpedientes(a -> hizq);
-        bajarExpedienteArchivo(a -> info);
-        bajarExpedientes(a -> hder);
+        bajarExpedientesRec(a->hizq,f);
+        bajarExpedienteArchivo(a->info,f);
+        bajarExpedientesRec(a ->hder,f);
     }
+}
+
+
+void levantarExpedientes(ABBExpediente &a,String nomArch)
+{
+    FILE * f = fopen(nomArch,"rb");
+    Expediente auxExp;
+    levantarExpedienteArchivo(auxExp,f);
+    while(!feof(f))
+    {
+        InsertABBExp(a,auxExp);
+        levantarExpedienteArchivo(auxExp,f);
+    }
+    fclose(f);
 }
 

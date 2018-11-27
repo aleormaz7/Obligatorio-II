@@ -38,48 +38,50 @@
 1543235152 source:c:\users\ale\desktop\obli2\revision.cpp
 	"Revision.h"
 
-1543232948 c:\users\ale\desktop\obli2\revision.h
+1543320421 c:\users\ale\desktop\obli2\revision.h
 	"Fecha.h"
 	"String.h"
 	"Resultante.h"
 
-1543071841 c:\users\ale\desktop\obli2\string.h
+1543310509 c:\users\ale\desktop\obli2\string.h
 	"Boolean.h"
 
-1543071841 source:c:\users\ale\desktop\obli2\string.cpp
+1543310509 source:c:\users\ale\desktop\obli2\string.cpp
 	"String.h"
 
-1543235872 source:c:\users\ale\desktop\obli2\abbexpediente.cpp
+1543321197 source:c:\users\ale\desktop\obli2\abbexpediente.cpp
 	"ABBExpediente.h"
 
-1543235885 c:\users\ale\desktop\obli2\abbexpediente.h
+1543321206 c:\users\ale\desktop\obli2\abbexpediente.h
 	"Expediente.h"
 
-1543071841 c:\users\ale\desktop\obli2\expediente.h
+1543320911 c:\users\ale\desktop\obli2\expediente.h
 	"String.h"
 
-1543071841 source:c:\users\ale\desktop\obli2\archivo.cpp
+1543310509 source:c:\users\ale\desktop\obli2\archivo.cpp
 	"Archivo.h"
 
-1543071841 c:\users\ale\desktop\obli2\archivo.h
+1543319544 c:\users\ale\desktop\obli2\archivo.h
+	"String.h"
 
-1543230480 source:c:\users\ale\desktop\obli2\expediente.cpp
+1543320944 source:c:\users\ale\desktop\obli2\expediente.cpp
 	"Expediente.h"
 
-1543236295 source:c:\users\ale\desktop\obli2\listarevision.cpp
+1543320706 source:c:\users\ale\desktop\obli2\listarevision.cpp
 	"ListaRevision.h"
 
-1543236169 c:\users\ale\desktop\obli2\listarevision.h
+1543320599 c:\users\ale\desktop\obli2\listarevision.h
 	"Revision.h"
 
-1543247014 source:c:\users\ale\desktop\obli2\main.cpp
+1543320368 source:c:\users\ale\desktop\obli2\main.cpp
 	"Menu.h"
 	"ABBExpediente.h"
 	"ListaRevision.h"
+	"Archivo.h"
 
 1543244277 c:\users\ale\desktop\obli2\menu.h
 	<stdio.h>
 
-1543236658 source:c:\users\ale\desktop\obli2\menu.cpp
+1543310509 source:c:\users\ale\desktop\obli2\menu.cpp
 	"Menu.h"
 

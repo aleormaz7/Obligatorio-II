@@ -1,11 +1,11 @@
 #include "ListaRevision.h"
 
 
-
 void MostrarLista(listaRevision L)
 {
     while(L != NULL)
     {
+
         //printf(" %d",L->info);
         L = L->sig;
     }
@@ -36,12 +36,10 @@ void InsFront(listaRevision &L, Revision r)
     L = aux;
 }
 
-
 Revision Primero(listaRevision L)
 {
     return (L->info);
 }
-
 
 void Resto(listaRevision &L)
 {
@@ -50,19 +48,6 @@ void Resto(listaRevision &L)
     delete(aux);
 }
 
-/*int LargoRecu(listaRevision L)
-{
-    if(L == NULL)
-    {
-        return 0;
-    }
-    else
-    {
-        return 1 + LargoRecu(L->sig);
-    }
-}*/
-
-
 Revision UltimoRecu(listaRevision L)
 {
     if(L->sig == NULL)
@@ -70,27 +55,6 @@ Revision UltimoRecu(listaRevision L)
     else
         UltimoRecu(L->sig);
 }
-
-
-/*int ContarRecu(listaRevision L, int valor)
-{
-    if(L == NULL)
-    {
-        return 0;
-    }
-    else
-    {
-        if(L->info == valor)
-        {
-            return 1 + ContarRecu(L->sig,valor);
-        }
-        else
-        {
-            return ContarRecu(L->sig,valor);
-        }
-    }
-}*/
-
 
 boolean PerteneceRecu(listaRevision L, Revision r)
 {
@@ -110,44 +74,6 @@ boolean PerteneceRecu(listaRevision L, Revision r)
         }
     }
 }
-
-
-/*void SustituirRecu(listaRevision &L, int num1,int num2)
-{
-    if(L != NULL)
-    {
-        if(L->info == num1)
-        {
-            L->info = num2;
-        }
-
-        SustituirRecu(L->sig,num1,num2);
-    }
-}*/
-
-
-
-/*int MaximoRecu(listaRevision L)
-{
-    if(L->sig == NULL)
-    {
-        return L->info;
-    }
-    else
-    {
-        int aux = MaximoRecu(L->sig);
-        if(L->info > aux)
-        {
-            return L->info;
-        }
-        else
-        {
-            return aux;
-        }
-    }
-}*/
-
-
 
 void InsBackRecu(listaRevision &L, Revision r)
 {
@@ -184,4 +110,90 @@ void ListarRevisionesPorCodigoExpediente(listaRevision L, long int cod)
         L = L->sig;
     }
 }
+
+
+void EliminarRevisionesPorExpediente(listaRevision &L, long int codigoExp)
+{
+    listaRevision aux;
+    Crear(aux);
+    if(L != NULL)
+    {
+        if(darCodigoExpedienteDeRevision( L->info) == codigoExp)
+        {
+            aux = L->sig;
+            delete(L);
+            L = aux;
+            EliminarRevisionesPorExpediente(L,codigoExp);
+        }
+        else
+        {
+            EliminarRevisionesPorExpediente(L->sig,codigoExp);
+        }
+    }
+}
+
+long int codigoExpedienteMayorCantRevisiones(listaRevision L)
+{
+    /*long int auxMayor;
+    long int auxCodigoExp;
+    int cantRevisiones = 0;
+
+    while(L != NULL)
+    {
+        auxMayor = darCodigoExpedienteDeRevision(L->info);
+        L = L->sig;
+        if(darCodigoExpedienteDeRevision(L->info) > auxMayor)
+        {
+            cantRevisiones++;
+
+        }
+
+    }*/
+
+}
+
+int cantRevisonesEntreFechas(listaRevision L, Fecha f1, Fecha f2)
+{
+    int cant = 0;
+    while (L != NULL)
+    {
+
+        ///comparar por anio mes dia
+        //if((darFechaRev(L->info) >= f1) && (darFechaRev(L->info) <= f2))
+        //{
+        //    cant++;
+        //}
+
+        L = L->sig;
+    }
+    return cant;
+}
+
+void cantRevisionesCadaTipo(listaRevision L, int &cantTipo1, int &cantTipo2, int &cantTipo3)
+{
+    cantTipo1 = 0;
+    cantTipo2 = 0;
+    cantTipo3 = 0;
+
+    while(L != NULL)
+    {
+        Resultante r = darResultanteRevision(L->info);
+        switch(r)
+        {
+            case SATISFACTORIO:
+                cantTipo1++;
+                break;
+            case INCOMPLETA:
+                cantTipo2++;
+                break;
+            case PENDIENTE:
+                cantTipo3++;
+                break;
+            default:
+                break;
+        }
+        L = L->sig;
+    }
+}
+
 

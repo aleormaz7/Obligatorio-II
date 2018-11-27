@@ -26,4 +26,6 @@ Resultante darResultanteRevision(Revision r);
 
 long int darCodigoExpedienteDeRevision(Revision r);
 
+
+
 #endif // REVISION_H_INCLUDED

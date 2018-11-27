@@ -29,7 +29,11 @@ void ListarExpedientesOrdenados(ABBExpediente a);
 
 int cntExpedientesEscribano(ABBExpediente a, String apellido);
 
-void bajarExpedientes(ABBExpediente a);
+void bajarExpedientes(ABBExpediente a,String nomArch);
+
+void bajarExpedientesRec(ABBExpediente a,FILE * f);
+
+void levantarExpedientes(ABBExpediente &a,String nomArch);
 
 
 

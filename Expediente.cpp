@@ -94,3 +94,13 @@ void bajarExpedienteArchivo(Expediente e, FILE * f)
     Bajar_String(e.apellidoEscribano,f);
     fwrite(&e.cantPaginas,sizeof(int),1,f);
 }
+
+void levantarExpedienteArchivo(Expediente &e,FILE * f)
+{
+    fread(&e.codigoExpediente,sizeof(long int),1,f);
+    Levantar_String(e.caratula,f);
+    Levantar_String(e.nombreEscribano,f);
+    Levantar_String(e.apellidoEscribano,f);
+    fread(&e.cantPaginas,sizeof(int),1,f);
+    fread(&e.codigoExpediente,sizeof(long int),1,f);
+}

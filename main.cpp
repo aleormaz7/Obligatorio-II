@@ -6,8 +6,14 @@
 int main()
 {
     /* Se crean los .Dat en caso que no existan */
-    inicializarDat("Expedientes.dat");
-    inicializarDat("Revisiones.dat");
+    //inicializarDat("Expedientes.dat");
+    //inicializarDat("Revisiones.dat");
+
+    ABBExpediente abbe;
+    CrearABB(abbe);
+
+
+    levantarExpedientes(abbe,"Expedientes.dat");
 
 
     /// Pruebas para Expediente /////
@@ -17,13 +23,17 @@ int main()
     String s;
     strcrear(s);
     Revision r;
-    Fecha f;
+    Fecha f,fini,ffin;
     listaRevision lr;
+
+    int cant1,cant2,cant3;
+
 
     Crear(lr);
 
-    ABBExpediente abbe;
-    CrearABB(abbe);
+
+
+
 
     ///Menu
     int opc,opcAltasBajas;
@@ -88,8 +98,12 @@ int main()
                         printf("\nCodigo del expediente a eliminar: ");
                         scanf("%ld",&codEpxAux);
                         if(PerteneceExpPorCod(abbe,codEpxAux))
+                        {
                             borrarABBExpedientePorCodigo(codEpxAux,abbe);
-                            /// Falta borrar las revisiones del expediente
+                            ///borrar las revisiones del expediente
+                            EliminarRevisionesPorExpediente(lr,codEpxAux);
+
+                        }
                         else
                             printf("\nError! No existe un expediente con el codigo ingresado");
                         break;
@@ -150,10 +164,21 @@ int main()
                         printf(" tiene un total de %d expedientes coordinados.",cntExpedientesEscribano(abbe,s));
                         break;
                     case 2:
+                         //printf("\nObtener codigo expediente con mayor cantidad revisiones: ");
+                         //printf("%ld",);
                         break;
                     case 3:
+                         printf("\nCantidad revisiones entre fechas: ");
+                         cargarFecha(fini);
+                         cargarFecha(ffin);
+                         if(fechaValida(fini) && fechaValida(ffin))
+                            printf("%d",cantRevisonesEntreFechas(fini,ffin);
+                         else
+                            printf("\nCargar fechas validas");
                         break;
                     case 4:
+                        printf("\nCantidad revisiones cada tipo: ");
+                        cantRevisionesCadaTipo(lr,cant1,cant2,cant3);
                         break;
                     case 5:
                         break;
@@ -164,102 +189,9 @@ int main()
         }
     }while(opc != 4);
 
-    bajarExpedientes(abbe);
+    bajarExpedientes(abbe,"Expedientes.dat");
 
 
 
-
-/////////////////////////////////////////////////
-///lo que estaba antes x las dudas no lo borre
-/*
-    printf("\nCargar Expediente             - 1 -");
-    printf("\nEliminar Expediente           - 2 -");
-    printf("\nListar Expedientes ordenados  - 3 -");
-    printf("\nCargar Revision               - 4 -");
-    printf("\nListar todas las Revisiones   - 5 -");
-    printf("\nSalir                         - 0 -");
-    printf("\n");
-    scanf("%d",&continuar);
-
-do
-{
-    switch(continuar)
-    {
-        case 1:
-             cargarExpediente(exp);
-             if(PerteneceExp(abbe,exp))
-                printf("\nYa esta cardado");
-            else
-                 InsertABBExp(abbe,exp);
-            break;
-        case 2:
-            printf("\nCodigo del expediente a eliminar: ");
-            scanf("%ld",&codEpxAux);
-
-            if(PerteneceExpPorCod(abbe,codEpxAux))
-                borrarABBExpedientePorCodigo(codEpxAux,abbe);
-            else
-                printf("\nNo existe un expediente con ese codigo");
-            break;
-
-        case 3:
-            printf("\n\n **************");
-            ListarExpedientesOrdenados(abbe);
-            printf("\n**************\n");
-            break;
-        case 4:
-            printf("\n\n **************");
-            printf("\nIngrese Codigo Expediente:");
-            scanf("%ld",&codigoExpediente);
-            if(PerteneceExpPorCod(abbe,codigoExpediente))
-            {
-                printf("\nIngrese Fecha expediente");
-                cargarFecha(f);
-                if(EsVacia(lr))
-                {
-
-                    if(fechaValida(f))
-                    {
-                        cargarRevision(r,codigoExpediente,f);
-                        InsFront(lr,r);
-                    }
-                    else
-                      printf("\nFehca invalida");
-                }
-                else
-                {
-                    ///buscar fecha mas reciente en lista revision
-                    Revision auxRev = Primero(lr);
-                    if(fechaValida(f) && fechaMayor(f,darFechaRev(auxRev)))
-                    {
-                        cargarRevision(r,codigoExpediente,f);
-                        InsFront(lr,r);
-                    }
-                    else
-                        printf("\nFehca invalida");
-                }
-            }
-            else
-                printf("\nNo existe expediente con dicho codigo");
-
-            printf("\n**************\n");
-            break;
-        case 5:
-            printf("\n\n **************");
-            printf("\nLista Revisiones: ");
-            ListarRevisiones(lr);
-            printf("\n**************\n");
-            break;
-
-
-    }
-
-    printf("\nContinuar?");
-    scanf("%d",&continuar);
-
-} while(continuar != codEpxAux);
-
-    printf("\n\n");
-*/
 
 }
