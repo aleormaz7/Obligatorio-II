@@ -118,4 +118,18 @@ void borrarABBExpedientePorCodigo (long int cod , ABBExpediente &a)
      }
 }
 
+int cntExpedientesEscribano(ABBExpediente a, String apellido)
+{
+    if (a == NULL)
+        return 0;
+    else
+    {
+        String ApeAux;
+        darApellidoEscribano((a->info),ApeAux);
+        if(streq(ApeAux,apellido))
+            return 1 + cntExpedientesEscribano(a -> hizq,apellido) + cntExpedientesEscribano (a -> hder,apellido);
+        else
+            return cntExpedientesEscribano(a -> hizq,apellido) + cntExpedientesEscribano(a -> hder,apellido);
+    }
+}
 
