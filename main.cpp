@@ -123,6 +123,8 @@ int main()
                          scanf("%ld",&codigoExpediente);
                          ListarRevisionesPorCodigoExpediente(lr,codigoExpediente);
                         break;
+                    case 5:
+                        break;
                     default: printf("\nOpcion invalida.\n");
                         break;
                 }
