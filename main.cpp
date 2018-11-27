@@ -42,6 +42,7 @@ int main()
                             cargarExpediente(exp,codigoExpediente);
                             InsertABBExp(abbe,exp);
                         break;
+
                     case 2:
                         printf("\n2-: Cargar Revision \n");
                         printf("\nIngrese Codigo Expediente:");
@@ -76,6 +77,7 @@ int main()
                         else
                             printf("\nNo existe revision con dicho codigo de expediente");
                         break;
+
                     case 3:
                         printf("\n3-: Eliminar Expediente \n");
                         printf("\nCodigo del expediente a eliminar: ");
@@ -99,7 +101,7 @@ int main()
                 switch(opc)
                 {
                     case 1:
-                         printf("\n1-: Listar Exoediente Ordenados  \n");
+                         printf("\n1-: Listado de expedientes almacenados en el sistemas, ordenados por su codigo \n");
                          ListarExpedientesOrdenados(abbe);
                         break;
                     case 2:
@@ -107,7 +109,12 @@ int main()
                         ListarRevisiones(lr);
                         break;
                     case 3:
-                        printf("\n3-: Listar Revisiones Con el Menor y el Mayor Codigo Expediente \n");
+                        printf("\nExpediente con el menor codigo: ");
+                        exp = minimoExpediente(abbe);
+                        mostrarExpediente(exp);
+                        printf("\nExpediente con el mayor Codigo: ");
+                        exp = maximoExpediente(abbe);
+                        mostrarExpediente(exp);
                         break;
                     case 4:
                          printf("\n4-: Listar Revisiones Por Codigo Expediente \n");
@@ -119,7 +126,6 @@ int main()
                         break;
                 }
             }while(opc != 5);
-
         }
         else if(opc == 3)
         {
