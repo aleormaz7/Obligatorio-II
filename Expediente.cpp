@@ -39,6 +39,25 @@ void mostrarExpediente(Expediente e)
 
 }
 
+void mostrarExpedienteConsultaOrdenados(Expediente e)
+{
+
+    printf("\nCodigo: %ld",e.codigoExpediente);
+
+    printf(" || Caratula: ");
+    print(e.caratula);
+
+    printf(" || Escribano: ");
+    print(e.nombreEscribano);
+
+    printf(" ");
+    print(e.apellidoEscribano);
+
+    printf(" || Cantidad de paginas: %d",e.cantPaginas);
+
+}
+
+
 long int darCodigoExpediente(Expediente e)
 {
     return e.codigoExpediente;
