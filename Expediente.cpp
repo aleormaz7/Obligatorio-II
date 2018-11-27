@@ -73,12 +73,12 @@ void darCaratula(Expediente e, String &s)
 
 void darNombreEscribano(Expediente e, String &s)
 {
-        strcop(s,e.nombreEscribano);
+    strcop(s,e.nombreEscribano);
 }
 
 void darApellidoEscribano(Expediente e, String &s)
 {
-        strcop(s,e.apellidoEscribano);
+    strcop(s,e.apellidoEscribano);
 }
 
 int darCntPaginas(Expediente e)
