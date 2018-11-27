@@ -172,13 +172,16 @@ int main()
                          cargarFecha(fini);
                          cargarFecha(ffin);
                          if(fechaValida(fini) && fechaValida(ffin))
-                            printf("%d",cantRevisonesEntreFechas(fini,ffin);
+                            printf("\nCantidad = %d",cantRevisonesEntreFechas(lr,fini,ffin));
                          else
                             printf("\nCargar fechas validas");
                         break;
                     case 4:
                         printf("\nCantidad revisiones cada tipo: ");
                         cantRevisionesCadaTipo(lr,cant1,cant2,cant3);
+                        printf("\nSATISFACTORIO = %d",cant1);
+                        printf("\nINCOMPLETA = %d",cant2);
+                        printf("\nPENDIENTE = %d",cant3);
                         break;
                     case 5:
                         break;

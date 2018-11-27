@@ -157,13 +157,17 @@ int cantRevisonesEntreFechas(listaRevision L, Fecha f1, Fecha f2)
     int cant = 0;
     while (L != NULL)
     {
-
-        ///comparar por anio mes dia
-        //if((darFechaRev(L->info) >= f1) && (darFechaRev(L->info) <= f2))
-        //{
-        //    cant++;
-        //}
-
+        Fecha f = darFechaRev(L->info);
+        if(f.anio >= f1.anio && f.anio <= f2.anio)
+        {
+             if(f.mes >= f1.mes && f.mes <= f2.mes)
+             {
+                 if(f.dia >= f1.dia && f.dia <= f2.dia)
+                 {
+                     cant++;
+                 }
+             }
+        }
         L = L->sig;
     }
     return cant;

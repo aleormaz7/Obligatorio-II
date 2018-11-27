@@ -42,7 +42,7 @@ void EliminarRevisionesPorExpediente(listaRevision &L, long int codigoExp);
 
 int cantRevisonesEntreFechas(listaRevision L, Fecha f1, Fecha f2);
 
-int cantRevisionesCadaTipo(listaRevision L);
+void cantRevisionesCadaTipo(listaRevision L, int &cantTipo1, int &cantTipo2, int &cantTipo3);
 
 
 #endif // LISTAREVISION_H_INCLUDED
