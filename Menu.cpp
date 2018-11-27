@@ -8,6 +8,7 @@ void mostrarMenu(int &opcion)
     printf("2. Listados \n");
     printf("3. Consultas \n");
     printf("4. Salir del programa \n");
+    printf("Opcion: ");
     scanf("%d",&opcion);
 }
 
@@ -27,7 +28,7 @@ void mostrarSubMenuListados(int &opcion)
     printf("\n\n Menu Listados \n");
     printf("1. Listar Expedientes Ordenados \n");
     printf("2. Listar Revisiones Cronologicamnete \n");
-    printf("3. Lista Datos Expediente Mayor y Mennor Codigo \n");
+    printf("3. Lista Datos Expediente Mayor y Menor Codigo \n");
     printf("4. Lista Revisiones De Un Expediente \n");
     printf("5. Volver al menu principal \n");
     scanf("%d",&opcion);
