@@ -5,8 +5,10 @@
 
 int main()
 {
+    /* Se crean los .Dat en caso que no existan */
     inicializarDat("Expedientes.dat");
     inicializarDat("Revisiones.dat");
+
 
     /// Pruebas para Expediente /////
     //int continuar;
@@ -87,8 +89,9 @@ int main()
                         scanf("%ld",&codEpxAux);
                         if(PerteneceExpPorCod(abbe,codEpxAux))
                             borrarABBExpedientePorCodigo(codEpxAux,abbe);
+                            /// Falta borrar las revisiones del expediente
                         else
-                            printf("\nNo existe un expediente con ese codigo");
+                            printf("\nError! No existe un expediente con el codigo ingresado");
                         break;
                     case 4: break;
                     default: printf("\nOpcion invalida.\n");
@@ -161,7 +164,7 @@ int main()
         }
     }while(opc != 4);
 
-
+    bajarExpedientes(abbe);
 
 
 

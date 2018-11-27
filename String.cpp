@@ -141,3 +141,30 @@ boolean streq(String s1, String s2)
 
     return iguales;
 }
+
+void Bajar_String (String s, FILE * f)
+{
+	int i = 0;
+	while(s[i]!= '\0')
+	{
+		fwrite(&s[i],sizeof(char),1,f);
+		i++;
+	}
+	fwrite(&s[i],sizeof(char),1,f);
+}
+
+void Levantar_String (String &s, FILE * f)
+{
+	String aux = new char[MAX];
+	int i=0;
+	char c;
+	fread(&c,sizeof(char),1,f);
+	while(!feof(f))
+	{
+		aux[i] = c;
+		i++;
+		fread(&c,sizeof(char),1,f);
+	}
+	strcop(s,aux);
+	strdestruir(aux);
+}

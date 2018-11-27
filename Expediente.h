@@ -26,5 +26,6 @@ void darApellidoEscribano(Expediente e, String &s);
 
 int darCntPaginas(Expediente e);
 
+void bajarExpedienteArchivo(Expediente e);
 
 #endif // EXPEDIENTE_H_INCLUDED

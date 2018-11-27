@@ -41,6 +41,13 @@ boolean strmen(String s1, String s2);
 ///streq reciba dos strings y devuelve TRUE si ambos strings son iguales o FALSE en caso contrario.
 boolean streq(String s1, String s2);
 
+void Bajar_String (String s, FILE * f);
+// Escribe en el archivo los caracteres del string s (incluido '\0')
+// Precondición: El archivo viene abierto para escritura.
+
+void Levantar_String (String &s, FILE * f);
+// Lee desde el archivo los caracteres del string s.
+// Precondición: El archivo viene abierto para lectura.
 
 
 #endif // STRING_H_INCLUDED

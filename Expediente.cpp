@@ -85,3 +85,12 @@ int darCntPaginas(Expediente e)
 {
     return e.cantPaginas;
 }
+
+void bajarExpedienteArchivo(Expediente e, FILE * f)
+{
+    fwrite(&e.codigoExpediente,sizeof(long int),1,f);
+    Bajar_String(e.caratula,f);
+    Bajar_String(e.nombreEscribano,f);
+    Bajar_String(e.apellidoEscribano,f);
+    fwrite(&e.cantPaginas,sizeof(int),1,f);
+}

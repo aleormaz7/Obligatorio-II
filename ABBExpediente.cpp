@@ -133,3 +133,13 @@ int cntExpedientesEscribano(ABBExpediente a, String apellido)
     }
 }
 
+void bajarExpedientes(ABBExpediente a)
+{
+    if (a != NULL)
+    {
+        bajarExpedientes(a -> hizq);
+        bajarExpedienteArchivo(a -> info);
+        bajarExpedientes(a -> hder);
+    }
+}
+

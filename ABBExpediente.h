@@ -29,6 +29,8 @@ void ListarExpedientesOrdenados(ABBExpediente a);
 
 int cntExpedientesEscribano(ABBExpediente a, String apellido);
 
+void bajarExpedientes(ABBExpediente a);
+
 
 
 #endif // ABBEXPEDIENTE_H_INCLUDED
