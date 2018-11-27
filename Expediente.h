@@ -10,7 +10,7 @@ typedef struct { long int codigoExpediente;
                  int cantPaginas;
                } Expediente;
 
-void cargarExpediente(Expediente &e);
+void cargarExpediente(Expediente &e,long int CodExpediente);
 
 void mostrarExpediente(Expediente e);
 
