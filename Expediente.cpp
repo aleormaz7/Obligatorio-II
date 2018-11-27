@@ -8,12 +8,15 @@ void cargarExpediente(Expediente &e, long int CodExpediente)
     e.codigoExpediente = CodExpediente;
 
     printf("\nCaratula: ");
+    strcrear(e.caratula);
     scan(e.caratula);
 
     printf("\nNombre del escribano: ");
+    strcrear(e.nombreEscribano);
     scan(e.nombreEscribano);
 
     printf("\nApellido del escribano: ");
+    strcrear(e.apellidoEscribano);
     scan(e.apellidoEscribano);
 
     printf("\nCantidad de paginas: ");
