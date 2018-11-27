@@ -21,7 +21,7 @@ int main()
     CrearABB(abbe);
 
     ///Menu
-    int opc;
+    int opc,opcAltasBajas;
     do
     {
         mostrarMenu(opc);
@@ -29,15 +29,15 @@ int main()
         {
             do
             {
-                mostrarSubMenuAltasyBajas(opc);
-                switch(opc)
+                mostrarSubMenuAltasyBajas(opcAltasBajas);
+                switch(opcAltasBajas)
                 {
                     case 1:
                         printf("\n1-: Cargar Expediente \n");
                         printf("\nCodigo del expediente: ");
                         scanf("%ld",&codigoExpediente);
                         if(PerteneceExpPorCod(abbe,codigoExpediente))
-                            printf("\nYa existe un expediente con ese codigo");
+                            printf("\nError! Ya existe un expediente con ese codigo");
                         else
                             cargarExpediente(exp,codigoExpediente);
                             InsertABBExp(abbe,exp);
@@ -87,11 +87,12 @@ int main()
                         else
                             printf("\nNo existe un expediente con ese codigo");
                         break;
+                    case 4: break;
                     default: printf("\nOpcion invalida.\n");
                         break;
 
                 }
-            }while(opc != 4);
+            }while(opcAltasBajas != 4);
         }
         else if(opc == 2)
         {
