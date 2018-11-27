@@ -2,10 +2,10 @@
 
 
 
-void cargarExpediente(Expediente &e)
+void cargarExpediente(Expediente &e, long int CodExpediente)
 {
-    printf("\nCodigo del expediente: ");
-    scanf("%ld",&e.codigoExpediente);
+
+    e.codigoExpediente = CodExpediente;
 
     printf("\nCaratula: ");
     scan(e.caratula);
