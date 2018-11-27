@@ -113,7 +113,7 @@ void borrarABBExpedientePorCodigo (long int cod , ABBExpediente &a)
     if (a != NULL)
     {
         ListarExpedientesOrdenados (a -> hizq);
-        printf (" %d ", darCodigoExpediente(a -> info));
+        mostrarExpedienteConsultaOrdenados(a -> info);
         ListarExpedientesOrdenados (a -> hder);
      }
 }
