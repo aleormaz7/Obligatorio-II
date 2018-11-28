@@ -23,7 +23,6 @@ void mostrarSubMenuAltasyBajas(int &opcion)
     printf("2. Alta Revision \n");
     printf("3. Baja Expediente por codigo \n");
     printf("4. Volver al menu principal \n");
-    printf("Opcion: ");
     scanf("%d",&opcion);
 }
 
@@ -38,7 +37,6 @@ void mostrarSubMenuListados(int &opcion)
     printf("3. Lista Datos Expediente Mayor y Menor Codigo \n");
     printf("4. Lista Revisiones De Un Expediente \n");
     printf("5. Volver al menu principal \n");
-    printf("Opcion: ");
     scanf("%d",&opcion);
 }
 

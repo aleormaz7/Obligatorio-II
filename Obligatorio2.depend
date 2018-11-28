@@ -85,7 +85,7 @@
 1543310509 source:c:\users\ale\desktop\obli2\menu.cpp
 	"Menu.h"
 
-1543361706 source:c:\users\german ana\dropbox\ude\programacion ii\obligatorio\obligatorio-ii\abbexpediente.cpp
+1543364665 source:c:\users\german ana\dropbox\ude\programacion ii\obligatorio\obligatorio-ii\abbexpediente.cpp
 	"ABBExpediente.h"
 
 1543352990 c:\users\german ana\dropbox\ude\programacion ii\obligatorio\obligatorio-ii\abbexpediente.h
@@ -109,7 +109,7 @@
 1543352990 source:c:\users\german ana\dropbox\ude\programacion ii\obligatorio\obligatorio-ii\boolean.cpp
 	"Boolean.h"
 
-1543361349 source:c:\users\german ana\dropbox\ude\programacion ii\obligatorio\obligatorio-ii\expediente.cpp
+1543364753 source:c:\users\german ana\dropbox\ude\programacion ii\obligatorio\obligatorio-ii\expediente.cpp
 	"Expediente.h"
 
 1543352990 source:c:\users\german ana\dropbox\ude\programacion ii\obligatorio\obligatorio-ii\fecha.cpp
@@ -121,7 +121,7 @@
 1543352990 source:c:\users\german ana\dropbox\ude\programacion ii\obligatorio\obligatorio-ii\listarevision.cpp
 	"ListaRevision.h"
 
-1543352990 c:\users\german ana\dropbox\ude\programacion ii\obligatorio\obligatorio-ii\listarevision.h
+1543364794 c:\users\german ana\dropbox\ude\programacion ii\obligatorio\obligatorio-ii\listarevision.h
 	"Revision.h"
 
 1543352990 c:\users\german ana\dropbox\ude\programacion ii\obligatorio\obligatorio-ii\revision.h
@@ -132,7 +132,7 @@
 1543352990 c:\users\german ana\dropbox\ude\programacion ii\obligatorio\obligatorio-ii\resultante.h
 	<stdio.h>
 
-1543352990 source:c:\users\german ana\dropbox\ude\programacion ii\obligatorio\obligatorio-ii\menu.cpp
+1543365091 source:c:\users\german ana\dropbox\ude\programacion ii\obligatorio\obligatorio-ii\menu.cpp
 	"Menu.h"
 
 1543352990 c:\users\german ana\dropbox\ude\programacion ii\obligatorio\obligatorio-ii\menu.h
@@ -144,10 +144,10 @@
 1543352990 source:c:\users\german ana\dropbox\ude\programacion ii\obligatorio\obligatorio-ii\revision.cpp
 	"Revision.h"
 
-1543355857 source:c:\users\german ana\dropbox\ude\programacion ii\obligatorio\obligatorio-ii\string.cpp
+1543364691 source:c:\users\german ana\dropbox\ude\programacion ii\obligatorio\obligatorio-ii\string.cpp
 	"String.h"
 
-1543354847 source:c:\users\german ana\dropbox\ude\programacion ii\obligatorio\obligatorio-ii\main.cpp
+1543365423 source:c:\users\german ana\dropbox\ude\programacion ii\obligatorio\obligatorio-ii\main.cpp
 	"Menu.h"
 	"ABBExpediente.h"
 	"ListaRevision.h"

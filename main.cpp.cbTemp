@@ -34,6 +34,10 @@ int main()
 
     Crear(lr);
 
+
+
+
+
     ///Menu
     int opc,opcAltasBajas;
     do
