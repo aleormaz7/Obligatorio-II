@@ -98,11 +98,11 @@ void bajarExpedienteArchivo(Expediente e, FILE * f)
 void levantarExpedienteArchivo(Expediente &e,FILE * f)
 {
     fread(&e.codigoExpediente,sizeof(long int),1,f);
-    strcrear(e.caratula);
+   // strcrear(e.caratula);
     Levantar_String(e.caratula,f);
-    strcrear(e.nombreEscribano);
+ //   strcrear(e.nombreEscribano);
     Levantar_String(e.nombreEscribano,f);
-    strcrear(e.apellidoEscribano);
+ //   strcrear(e.apellidoEscribano);
     Levantar_String(e.apellidoEscribano,f);
     fread(&e.cantPaginas,sizeof(int),1,f);
 }

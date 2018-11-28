@@ -10,8 +10,6 @@ typedef struct nodoR { Revision info;
 
 typedef nodoL * listaRevision;
 
-
-
 void Crear(listaRevision &L);
 
 Revision Primero(listaRevision L);
@@ -37,8 +35,6 @@ void ListarRevisiones(listaRevision L);
 void ListarRevisionesPorCodigoExpediente(listaRevision L, long int cod);
 
 void EliminarRevisionesPorExpediente(listaRevision &L, long int codigoExp);
-
-//long int codigoExpedienteMayorCantRevisiones(listaRevision L);
 
 int cantRevisonesEntreFechas(listaRevision L, Fecha f1, Fecha f2);
 
