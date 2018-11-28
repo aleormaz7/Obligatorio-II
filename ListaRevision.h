@@ -11,12 +11,16 @@ typedef struct nodoR { Revision info;
 typedef nodoL * listaRevision;
 
 void Crear(listaRevision &L);
+///Crea la lista
 
 Revision Primero(listaRevision L);
+///Retorna la primer revision de la lista
 
 void InsFront(listaRevision &L, Revision r);
+///inserta una revision al inicio de la lista
 
 boolean EsVacia(listaRevision L);
+///Retorna si la lista es vacia o no
 
 ///Elimina las revisiones de un expediente
 void EliminarRevisionesPorExpediente(listaRevision &L, long int codigoExp);
