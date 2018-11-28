@@ -104,6 +104,7 @@ int main()
                             borrarABBExpedientePorCodigo(codEpxAux,abbe);
                             ///borrar las revisiones del expediente
                             EliminarRevisionesPorExpediente(lr,codEpxAux);
+                            printf("\nSe ha eliminado la informacion del sistema.");
                         }
                         else
                             printf("\nError! No existe un expediente con el codigo ingresado");
@@ -111,7 +112,6 @@ int main()
                     case 4: break;
                     default: printf("\nOpcion invalida.\n");
                         break;
-
                 }
             }while(opcAltasBajas != 4);
         }
