@@ -7,9 +7,9 @@
 typedef enum {SATISFACTORIO, INCOMPLETA, PENDIENTE} Resultante;
 
 
-void CargarResultante(Resultante &r);
+void CargarResultante(Resultante &r);///Carga el resultante
 
-void MostrarResultante(Resultante r);
+void MostrarResultante(Resultante r);///Muestra el resultante
 
 
 #endif // RESULTANTE_H_INCLUDED

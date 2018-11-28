@@ -26,9 +26,7 @@ void mostrarRevision(Revision r)
 
     printf(" -Resultado Revision: ");
     MostrarResultante(r.resultadoRev);
-
 }
-
 
 Fecha darFechaRev(Revision r)
 {
@@ -47,6 +45,5 @@ Resultante darResultanteRevision(Revision r)
 
 long int darCodigoExpedienteDeRevision(Revision r)
 {
-
     return r.codigoExpediente;
 }

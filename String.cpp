@@ -65,8 +65,7 @@ void scan(String &s)
 
 void strcon(String &s1, String s2)
 {
-    String aux;
-    aux = new char[MAX];
+    String aux = new char[MAX];
 
     int largoS1 = strlar(s1);
     int largoS2 = strlar(s2);
@@ -87,6 +86,7 @@ void strcon(String &s1, String s2)
 
     strdestruir(s1);
     strcop(s1,aux);
+
 }
 
 void strswp(String &s1, String &s2)
