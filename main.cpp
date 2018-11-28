@@ -109,7 +109,8 @@ int main()
                         else
                             printf("\nError! No existe un expediente con el codigo ingresado");
                         break;
-                    case 4: break;
+                    case 4:
+                        break;
                     default: printf("\nOpcion invalida.\n");
                         break;
                 }

@@ -41,55 +41,6 @@ Revision Primero(listaRevision L)
     return (L->info);
 }
 
-void Resto(listaRevision &L)
-{
-    listaRevision aux = L;
-    L = L->sig;
-    delete(aux);
-}
-
-Revision UltimoRecu(listaRevision L)
-{
-    if(L->sig == NULL)
-        return L->info;
-    else
-        UltimoRecu(L->sig);
-}
-
-boolean PerteneceRecu(listaRevision L, Revision r)
-{
-    if(L == NULL)
-    {
-        return FALSE;
-    }
-    else
-    {
-        if(darCodigoExpedienteDeRevision(L->info) == darCodigoExpedienteDeRevision(r))
-        {
-            return TRUE;
-        }
-        else
-        {
-            PerteneceRecu(L->sig,r);
-        }
-    }
-}
-
-void InsBackRecu(listaRevision &L, Revision r)
-{
-    if(L == NULL)
-    {
-        L = new nodoL;
-        L->info = r;
-        L->sig = NULL;
-    }
-    else
-    {
-        InsBackRecu(L->sig,r);
-    }
-}
-
-
 void ListarRevisiones(listaRevision L)
 {
     while(L != NULL)
@@ -110,7 +61,6 @@ void ListarRevisionesPorCodigoExpediente(listaRevision L, long int cod)
         L = L->sig;
     }
 }
-
 
 void EliminarRevisionesPorExpediente(listaRevision &L, long int codigoExp)
 {

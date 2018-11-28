@@ -18,27 +18,20 @@ void InsFront(listaRevision &L, Revision r);
 
 boolean EsVacia(listaRevision L);
 
-/// UltimoRecu: Dada una lista, devuelve su último elemento
-///PRECONDICION: L no es vacia
-Revision UltimoRecu(listaRevision L);
-
-///PerteneceRecu: Dada una lista y un número entero, devuelve TRUE si dicho entero pertenece a la lista y FALSE en caso contrario.
-boolean PerteneceRecu(listaRevision L, Revision r);
-
-/// InsBackRecu: Dada una lista y un número entero, agrega dicho entero al final de la lista.
-void InsBackRecu(listaRevision &L, int valor);
-
-///Mustra todas las revisiones de la lista de revisiones en una linea
-void ListarRevisiones(listaRevision L);
-
-///Dado el código de un expediente, listar todas las revisiones correspondientes a dicho
-void ListarRevisionesPorCodigoExpediente(listaRevision L, long int cod);
-
+///Elimina las revisiones de un expediente
 void EliminarRevisionesPorExpediente(listaRevision &L, long int codigoExp);
 
-int cantRevisonesEntreFechas(listaRevision L, Fecha f1, Fecha f2);
+///Muestra todas las revisiones de la lista en una linea
+void ListarRevisiones(listaRevision L);
+
+///Dado el código de un expediente, listar todas las revisiones correspondientes al mismo
+void ListarRevisionesPorCodigoExpediente(listaRevision L, long int cod);
+
+
+int cantRevisonesEntreFechas(listaRevision L, Fecha f1, Fecha f2);///Lista las revisiones entre el rago de fechas(incluidas)
+///Precondicion: f1 y f2 validas u f1 < f2
 
 void cantRevisionesCadaTipo(listaRevision L, int &cantTipo1, int &cantTipo2, int &cantTipo3);
-
+///Retorna la cantidad de revisiones de cada tipo.
 
 #endif // LISTAREVISION_H_INCLUDED
