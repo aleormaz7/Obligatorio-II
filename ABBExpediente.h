@@ -10,31 +10,33 @@ typedef struct nodoE{ Expediente info;
 
 typedef nodoA * ABBExpediente;
 
+void CrearABB(ABBExpediente &a); ///Crea el ABB de expedientes
 
-void CrearABB(ABBExpediente &a); ///Crear
+boolean PerteneceExpPorCod(ABBExpediente a, long int cod); ///Retirna si Expediente pertenece al ABB, por su codigo de expediente
 
-boolean PerteneceExpPorCod(ABBExpediente a, long int cod); ///Saber si Expediente pertenece al ABB, por su codigo de expediente
+void InsertABBExp(ABBExpediente &a, Expediente e);///Inserta un expedientes en el ABB
+///PRECONDICION: el Expediente no existe previamente en el ABB
 
-void InsertABBExp(ABBExpediente &a, Expediente e); ///PRECONDICION: el Expediente no existe previamente en el ABB
+Expediente minimoExpediente (ABBExpediente a); ///Retorna el expediente con el minimo codigo de codigo
+/// Precondición : el árbol a  NO está vacío
 
-Expediente minimoExpediente (ABBExpediente a) ; /// Precondición : el árbol a  NO está vacío
+Expediente maximoExpediente (ABBExpediente a) ; ///Retirna el expediente con el maximo codigo de expediente
+/// Precondición : el árbol a  NO está vacío
 
-Expediente maximoExpediente (ABBExpediente a) ; /// Precondición : el árbol a  NO está vacío
+void borrarMinimoExpedienete (ABBExpediente &a); ///Borra del ABB el expediente con el minimo codigo.
+/// Precondición : el árbol a  NO está vacío
 
-void borrarMinimoExpedienete (ABBExpediente &a); /// Precondición : el árbol a  NO está vacío
+void borrarABBExpedientePorCodigo (long int cod , ABBExpediente &a); ///Borra el expediente con el codigo ingresado del ABB
+/// Precondición : el Expediente está en el árbol
 
-void borrarABBExpedientePorCodigo (long int cod , ABBExpediente &a); /// Precondición : el Expediente está en el árbol
+void ListarExpedientesOrdenados(ABBExpediente a);///Lista los expedientes del ABB ordenados por si codigo de expediente.
 
-void ListarExpedientesOrdenados(ABBExpediente a);
+int cntExpedientesEscribano(ABBExpediente a, String apellido);///Retorna la cantidad de expedientes, coincidentes con el apellido ingresado
 
-int cntExpedientesEscribano(ABBExpediente a, String apellido);
+void bajarExpedientes(ABBExpediente a,String nomArch); ///Baja los expedientes del ABB al archivo .dat indicado
 
-void bajarExpedientes(ABBExpediente a,String nomArch);
+void bajarExpedientesRec(ABBExpediente a,FILE * f); /// Baja el expediente al archivo
 
-void bajarExpedientesRec(ABBExpediente a,FILE * f);
-
-void levantarExpedientes(ABBExpediente &a,String nomArch);
-
-
+void levantarExpedientes(ABBExpediente &a,String nomArch); ///Levanta los expedientes desde el archivo .dat indicado
 
 #endif // ABBEXPEDIENTE_H_INCLUDED

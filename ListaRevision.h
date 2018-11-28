@@ -31,7 +31,6 @@ void ListarRevisiones(listaRevision L);
 ///Dado el código de un expediente, listar todas las revisiones correspondientes al mismo
 void ListarRevisionesPorCodigoExpediente(listaRevision L, long int cod);
 
-
 int cantRevisonesEntreFechas(listaRevision L, Fecha f1, Fecha f2);///Lista las revisiones entre el rago de fechas(incluidas)
 ///Precondicion: f1 y f2 validas u f1 < f2
 
