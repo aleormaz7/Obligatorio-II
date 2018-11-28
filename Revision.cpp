@@ -5,12 +5,12 @@ void cargarRevision(Revision &r, long int codigo, Fecha f)
     r.fechaRealizado = f;
 
     strcrear(r.descripcion);
-    printf("\nIngrese descripion: ");
+    printf("\nDescripion de la revision: ");
     scan(r.descripcion);
 
     r.codigoExpediente = codigo;
 
-    printf("\nIngrese resultado revision: ");
+    printf("\nResultado de la revision: ");
     CargarResultante(r.resultadoRev);
 }
 

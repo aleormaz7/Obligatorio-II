@@ -3,7 +3,7 @@
 void CargarResultante(Resultante &r)
 {
     int x;
-    printf("\n 1-SATISFACTORIO, 2-INCOMPLETA, 3-PENDIENTE : " );
+    printf("\ 1-SATISFACTORIO, 2-INCOMPLETA, 3-PENDIENTE : " );
     scanf("%d",&x);
     do{
             switch(x)

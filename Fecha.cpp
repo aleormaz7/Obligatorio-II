@@ -2,13 +2,13 @@
 
 void cargarFecha(Fecha &f)
 {
-    printf("\nIngrese un dia: ");
+    printf("\nDia: ");
     scanf("%d",&f.dia);
 
-    printf("\nIngrese un mes: ");
+    printf("\nMes: ");
     scanf("%d",&f.mes);
 
-    printf("\nIngrese un anio: ");
+    printf("\nAnio: ");
     scanf("%d",&f.anio);
 }
 
