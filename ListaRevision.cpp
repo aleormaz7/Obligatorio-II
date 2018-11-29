@@ -16,7 +16,7 @@ void Crear(listaRevision &L)
     L = NULL;
 }
 
-boolean EsVacia(listaRevision L)
+boolean listaRevisionesEsVacia(listaRevision L)
 {
     boolean es = FALSE;
 
@@ -24,7 +24,6 @@ boolean EsVacia(listaRevision L)
     {
         es = TRUE;
     }
-
     return es;
 }
 

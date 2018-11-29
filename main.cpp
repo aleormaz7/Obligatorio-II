@@ -66,7 +66,7 @@ int main()
                         {
                             printf("\nIngrese Fecha de la revision");
                             cargarFecha(f);
-                            if(EsVacia(lr))
+                            if(listaRevisionesEsVacia(lr))
                             {
                                 if(fechaValida(f))
                                 {
@@ -135,15 +135,18 @@ int main()
                         printf("\nExpediente con el menor codigo: ");
                         exp = minimoExpediente(abbe);
                         mostrarExpediente(exp);
-                        printf("\nExpediente con el mayor Codigo: ");
+                        printf("\n\nExpediente con el mayor Codigo: ");
                         exp = maximoExpediente(abbe);
                         mostrarExpediente(exp);
                         break;
                     case 4:
-                         printf("\n4-: Listar Revisiones Por Codigo Expediente \n");
+                         printf("\n4-: Listado de Revisiones de un expediente \n");
                          printf("\nIngrese Codigo Expediente:");
                          scanf("%ld",&codigoExpediente);
-                         ListarRevisionesPorCodigoExpediente(lr,codigoExpediente);
+                         if(PerteneceExpPorCod(abbe,codigoExpediente))
+                            ListarRevisionesPorCodigoExpediente(lr,codigoExpediente);
+                        else
+                            printf("\nEn el sistema no existe un expediente con el codigo ingresado");
                         break;
                     case 5:
                         break;
@@ -166,8 +169,15 @@ int main()
                         printf(" tiene un total de %d expedientes coordinados.",cntExpedientesEscribano(abbe,s));
                         break;
                     case 2:
-                         //printf("\nObtener codigo expediente con mayor cantidad revisiones: ");
-                         //printf("%ld",);
+                        if(!AbbExpientesEsVacio(abbe))
+                        {
+                            if(!listaRevisionesEsVacia(lr))
+                                printf("\nEl expediente con mas revisiones es el expediente con codigo: %ld: ",codExpMasRevisiones(abbe));
+                            else
+                                printf("\nNo se puede procesar la consulta ya que no existen revisiones en el sistema.");
+                        }
+                        else
+                           printf("\nNo se puede procesar la consulta ya que no existen expedientes en el sistema.");
                         break;
                     case 3:
                          printf("\nCantidad revisiones entre fechas: ");

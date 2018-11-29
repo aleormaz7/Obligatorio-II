@@ -12,6 +12,9 @@ typedef nodoA * ABBExpediente;
 
 void CrearABB(ABBExpediente &a); ///Crea el ABB de expedientes
 
+boolean AbbExpientesEsVacio(ABBExpediente a);
+///retirna si el ABB de expedientes es vacio o no
+
 boolean PerteneceExpPorCod(ABBExpediente a, long int cod); ///Retirna si Expediente pertenece al ABB, por su codigo de expediente
 
 void InsertABBExp(ABBExpediente &a, Expediente e);///Inserta un expedientes en el ABB
@@ -38,5 +41,9 @@ void bajarExpedientes(ABBExpediente a,String nomArch); ///Baja los expedientes d
 void bajarExpedientesRec(ABBExpediente a,FILE * f); /// Baja el expediente al archivo
 
 void levantarExpedientes(ABBExpediente &a,String nomArch); ///Levanta los expedientes desde el archivo .dat indicado
+
+long int codExpMasRevisiones(ABBExpediente a);///Retorna el codigo del expediente con mas cantidad de revisiones.
+///funcion que interactua con la lista de revisiones.
+///Precondicion: ABB de expedientes y lista de reviciones No vacios
 
 #endif // ABBEXPEDIENTE_H_INCLUDED

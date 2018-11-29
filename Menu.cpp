@@ -5,7 +5,7 @@ void mostrarMenu(int &opcion)
 {
     printf("\n\n********************");
     printf("\n** Menu principal **\n");
-    printf("\********************\n\n");
+    printf("********************\n\n");
     printf("1. Altas y Bajas \n");
     printf("2. Listados \n");
     printf("3. Consultas \n");
@@ -18,10 +18,10 @@ void mostrarSubMenuAltasyBajas(int &opcion)
 {
     printf("\n\n***************************");
     printf("\n** Menu de Altas y Bajas **\n");
-    printf("\***************************\n\n");
+    printf("***************************\n\n");
     printf("1. Alta Expediente \n");
     printf("2. Alta Revision \n");
-    printf("3. Baja Expediente por codigo \n");
+    printf("3. Baja de expediente por codigo \n");
     printf("4. Volver al menu principal \n");
     printf("Opcion: ");
     scanf("%d",&opcion);
@@ -32,11 +32,11 @@ void mostrarSubMenuListados(int &opcion)
 {
     printf("\n\n*******************");
     printf("\n** Menu Listados **\n");
-    printf("\*******************\n\n");
-    printf("1. Listar Expedientes Ordenados \n");
-    printf("2. Listar Revisiones Cronologicamnete \n");
-    printf("3. Lista Datos Expediente Mayor y Menor Codigo \n");
-    printf("4. Lista Revisiones De Un Expediente \n");
+    printf("*******************\n\n");
+    printf("1. Listar expedientes ordenados por su codigo\n");
+    printf("2. Listar revisiones cronologicamnete \n");
+    printf("3. Lista datos de los expedientes con mayor y menor codigo \n");
+    printf("4. Lista revisiones de un expediente \n");
     printf("5. Volver al menu principal \n");
     printf("Opcion: ");
     scanf("%d",&opcion);
@@ -44,14 +44,15 @@ void mostrarSubMenuListados(int &opcion)
 
 void mostrarSubMenuConsultas(int &opcion)
 {
-    printf("\n\n*******************");
+    printf("\n\n********************");
     printf("\n** Menu Consultas **\n");
-    printf("\n\n*******************");
-    printf("1. Cantidad Expediente por Apellido Escribano \n");
-    printf("2. Codigo Expediente Con Mayor Cantidad Revisiones \n");
-    printf("3. Cantidad De Revisiones Entre Fechas \n");
-    printf("4. Cantidad De Revisiones De Cada Tipo \n");
+    printf("\********************\n");
+    printf("1. Cantidad expediente por apellido de escribano \n");
+    printf("2. Codigo del expediente con mayor cantidad revisiones \n");
+    printf("3. Cantidad de revisiones entre fechas \n");
+    printf("4. Cantidad de revisiones de cada tipo \n");
     printf("5. Volver al menu principal \n");
+    printf("Opcion: ");
     scanf("%d",&opcion);
 }
 

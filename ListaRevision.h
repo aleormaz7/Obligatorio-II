@@ -13,14 +13,14 @@ typedef nodoL * listaRevision;
 void Crear(listaRevision &L);
 ///Crea la lista
 
+boolean listaRevisionesEsVacia(listaRevision l);
+///Retorna si la lista de revisiones esta vacia o no.
+
 Revision Primero(listaRevision L);
 ///Retorna la primer revision de la lista
 
 void InsFront(listaRevision &L, Revision r);
 ///inserta una revision al inicio de la lista
-
-boolean EsVacia(listaRevision L);
-///Retorna si la lista es vacia o no
 
 ///Elimina las revisiones de un expediente
 void EliminarRevisionesPorExpediente(listaRevision &L, long int codigoExp);
@@ -30,6 +30,7 @@ void ListarRevisiones(listaRevision L);
 
 ///Dado el código de un expediente, listar todas las revisiones correspondientes al mismo
 void ListarRevisionesPorCodigoExpediente(listaRevision L, long int cod);
+///Precondicion: Cod sea de un expediente que exista en el ABB de expedietes
 
 int cantRevisonesEntreFechas(listaRevision L, Fecha f1, Fecha f2);///Lista las revisiones entre el rago de fechas(incluidas)
 ///Precondicion: f1 y f2 validas u f1 < f2

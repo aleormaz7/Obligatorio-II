@@ -6,6 +6,14 @@ void CrearABB(ABBExpediente &a)
     a = NULL;
 }
 
+boolean AbbExpientesEsVacio(ABBExpediente a)
+{
+    boolean es = FALSE;
+    if(a == NULL)
+        es = TRUE;
+    return es;
+}
+
 boolean PerteneceExpPorCod(ABBExpediente a, long int cod)
 ///Saber si Expediente pertenece al ABB, por su codigo de expediente
 {
@@ -151,7 +159,6 @@ void bajarExpedientesRec(ABBExpediente a,FILE * f)
     }
 }
 
-
 void levantarExpedientes(ABBExpediente &a,String nomArch)
 {
     FILE * f = fopen(nomArch,"rb");
@@ -165,3 +172,7 @@ void levantarExpedientes(ABBExpediente &a,String nomArch)
     fclose(f);
 }
 
+long int codExpMasRevisiones(ABBExpediente a)
+{
+
+}
