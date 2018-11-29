@@ -25,7 +25,7 @@ int strlar(String s)
     return i;
 }
 
-void strcop(String &s1, String &s2)
+void strcop(String &s1, String s2)
 {
     int largo = strlar(s2);
     strdestruir(s1);
@@ -159,12 +159,13 @@ void Levantar_String (String &s, FILE * f)
 	int i=0;
 	char c;
 	fread(&c,sizeof(char),1,f);
-	while(!feof(f))
+	while(!feof(f) &&  c!= '\0')
 	{
 		aux[i] = c;
 		i++;
 		fread(&c,sizeof(char),1,f);
 	}
+	aux[i] = c;
 	strcop(s,aux);
 	strdestruir(aux);
 }

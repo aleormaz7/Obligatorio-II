@@ -153,8 +153,8 @@ void bajarExpedientesRec(ABBExpediente a,FILE * f)
 {
     if (a != NULL)
     {
-        bajarExpedientesRec(a->hizq,f);
         bajarExpedienteArchivo(a->info,f);
+        bajarExpedientesRec(a->hizq,f);
         bajarExpedientesRec(a ->hder,f);
     }
 }

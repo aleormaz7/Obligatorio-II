@@ -16,7 +16,7 @@ void strdestruir(String &s);
 int strlar(String s);
 
 /// strcop recibe dos strings y copia el segundo en el primero.
-void strcop(String &s1, String &s2);
+void strcop(String &s1, String s2);
 
 /// scan lee un string desde el teclado. Se tomarán en cuenta los primeros 79 caracteres
 ///   significativos en caso de que el largo del string sea mayor o igual a 80. Un string
