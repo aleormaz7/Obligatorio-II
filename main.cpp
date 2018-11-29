@@ -20,7 +20,6 @@ int main()
 
 
     /// Pruebas para Expediente /////
-    //int continuar;
     long int codEpxAux, codigoExpediente;
     Expediente exp;
     String s;
@@ -29,7 +28,7 @@ int main()
     Fecha f,fini,ffin;
     listaRevision lr;
 
-    int cant1,cant2,cant3;
+    int cant1,cant2,cant3, cntAux = 0;
 
 
     Crear(lr);
@@ -172,7 +171,11 @@ int main()
                         if(!AbbExpientesEsVacio(abbe))
                         {
                             if(!listaRevisionesEsVacia(lr))
-                                printf("\nEl expediente con mas revisiones es el expediente con codigo: %ld: ",codExpMasRevisiones(abbe));
+                            {
+                                cntAux = 0;
+                                codExpMasRevisiones(abbe,lr,codEpxAux,cntAux);
+                                printf("\nEl expediente con mas revisiones es el expediente con codigo: %ld, con %d revisiones.",codEpxAux,cntAux);
+                            }
                             else
                                 printf("\nNo se puede procesar la consulta ya que no existen revisiones en el sistema.");
                         }

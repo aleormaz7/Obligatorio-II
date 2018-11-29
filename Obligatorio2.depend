@@ -153,3 +153,72 @@
 	"ListaRevision.h"
 	"Archivo.h"
 
+1543492669 source:c:\users\ale\desktop\obligatorio-ii\abbexpediente.cpp
+	"ABBExpediente.h"
+
+1543491644 c:\users\ale\desktop\obligatorio-ii\abbexpediente.h
+	"Expediente.h"
+	"ListaRevision.h"
+
+1543490323 c:\users\ale\desktop\obligatorio-ii\expediente.h
+	"String.h"
+
+1543489400 c:\users\ale\desktop\obligatorio-ii\string.h
+	"Boolean.h"
+
+1543490323 c:\users\ale\desktop\obligatorio-ii\boolean.h
+	<stdio.h>
+
+1543490585 c:\users\ale\desktop\obligatorio-ii\listarevision.h
+	"Revision.h"
+
+1543490323 c:\users\ale\desktop\obligatorio-ii\revision.h
+	"Fecha.h"
+	"String.h"
+	"Resultante.h"
+
+1543490323 c:\users\ale\desktop\obligatorio-ii\fecha.h
+	"Boolean.h"
+
+1543490323 c:\users\ale\desktop\obligatorio-ii\resultante.h
+	<stdio.h>
+
+1543490323 source:c:\users\ale\desktop\obligatorio-ii\archivo.cpp
+	"Archivo.h"
+
+1543490323 c:\users\ale\desktop\obligatorio-ii\archivo.h
+	"String.h"
+
+1543490323 source:c:\users\ale\desktop\obligatorio-ii\boolean.cpp
+	"Boolean.h"
+
+1543489676 source:c:\users\ale\desktop\obligatorio-ii\expediente.cpp
+	"Expediente.h"
+
+1543490323 source:c:\users\ale\desktop\obligatorio-ii\fecha.cpp
+	"Fecha.h"
+
+1543493073 source:c:\users\ale\desktop\obligatorio-ii\listarevision.cpp
+	"ListaRevision.h"
+
+1543492410 source:c:\users\ale\desktop\obligatorio-ii\main.cpp
+	"Menu.h"
+	"ABBExpediente.h"
+	"ListaRevision.h"
+	"Archivo.h"
+
+1543490323 c:\users\ale\desktop\obligatorio-ii\menu.h
+	<stdio.h>
+
+1543490323 source:c:\users\ale\desktop\obligatorio-ii\menu.cpp
+	"Menu.h"
+
+1543490323 source:c:\users\ale\desktop\obligatorio-ii\resultante.cpp
+	"Resultante.h"
+
+1543490323 source:c:\users\ale\desktop\obligatorio-ii\revision.cpp
+	"Revision.h"
+
+1543490067 source:c:\users\ale\desktop\obligatorio-ii\string.cpp
+	"String.h"
+

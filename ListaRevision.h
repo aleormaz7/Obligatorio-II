@@ -38,4 +38,7 @@ int cantRevisonesEntreFechas(listaRevision L, Fecha f1, Fecha f2);///Lista las r
 void cantRevisionesCadaTipo(listaRevision L, int &cantTipo1, int &cantTipo2, int &cantTipo3);
 ///Retorna la cantidad de revisiones de cada tipo.
 
+int cntRevisionesCodigoExp(listaRevision l, long int codRev);
+///Retorna la cantidad de revisiones de un codigo de expediente
+
 #endif // LISTAREVISION_H_INCLUDED

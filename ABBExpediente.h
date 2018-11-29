@@ -2,6 +2,7 @@
 #define ABBEXPEDIENTE_H_INCLUDED
 
 #include "Expediente.h"
+#include "ListaRevision.h"
 
 typedef struct nodoE{ Expediente info;
                       nodoE * hizq;
@@ -42,7 +43,7 @@ void bajarExpedientesRec(ABBExpediente a,FILE * f); /// Baja el expediente al ar
 
 void levantarExpedientes(ABBExpediente &a,String nomArch); ///Levanta los expedientes desde el archivo .dat indicado
 
-long int codExpMasRevisiones(ABBExpediente a);///Retorna el codigo del expediente con mas cantidad de revisiones.
+void codExpMasRevisiones(ABBExpediente a, listaRevision lr,long int &codExp, int &cntRev);///Retorna el codigo del expediente con mas cantidad de revisiones.
 ///funcion que interactua con la lista de revisiones.
 ///Precondicion: ABB de expedientes y lista de reviciones No vacios
 

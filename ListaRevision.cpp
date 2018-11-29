@@ -81,26 +81,6 @@ void EliminarRevisionesPorExpediente(listaRevision &L, long int codigoExp)
     }
 }
 
-long int codigoExpedienteMayorCantRevisiones(listaRevision L)
-{
-    /*long int auxMayor;
-    long int auxCodigoExp;
-    int cantRevisiones = 0;
-
-    while(L != NULL)
-    {
-        auxMayor = darCodigoExpedienteDeRevision(L->info);
-        L = L->sig;
-        if(darCodigoExpedienteDeRevision(L->info) > auxMayor)
-        {
-            cantRevisiones++;
-
-        }
-
-    }*/
-
-}
-
 int cantRevisonesEntreFechas(listaRevision L, Fecha f1, Fecha f2)
 {
     int cant = 0;
@@ -149,4 +129,15 @@ void cantRevisionesCadaTipo(listaRevision L, int &cantTipo1, int &cantTipo2, int
     }
 }
 
+int cntRevisionesCodigoExp(listaRevision L, long int codExp)
+{
+    int cnt = 0;
 
+    while(L != NULL)
+    {
+        if(darCodigoExpedienteDeRevision(L->info) == codExp);
+            cnt ++;
+        L = L->sig;
+    }
+    return cnt;
+}

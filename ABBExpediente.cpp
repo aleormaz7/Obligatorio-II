@@ -172,7 +172,16 @@ void levantarExpedientes(ABBExpediente &a,String nomArch)
     fclose(f);
 }
 
-long int codExpMasRevisiones(ABBExpediente a)
+void codExpMasRevisiones(ABBExpediente a, listaRevision lr,long int &codExp, int &cntRev)
 {
-
-}
+    if(a != NULL)
+    {
+        if(cntRev < (cntRevisionesCodigoExp(lr,darCodigoExpediente(a->info))))
+        {
+            cntRev = cntRevisionesCodigoExp(lr,darCodigoExpediente(a->info));
+            codExp = darCodigoExpediente(a->info);
+        }
+        codExpMasRevisiones(a->hizq,lr,codExp,cntRev);
+        codExpMasRevisiones(a->hder,lr,codExp,cntRev);
+    }
+ }
