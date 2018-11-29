@@ -30,4 +30,9 @@ Resultante darResultanteRevision(Revision r);
 long int darCodigoExpedienteDeRevision(Revision r);
 ///Retorna el codigo del expediente de la revision
 
+
+void bajarRevisionArchivo(Revision r, FILE * f);
+
+void levantarRevisionArchivo(Revision &r,FILE * f);
+
 #endif // REVISION_H_INCLUDED

@@ -141,3 +141,27 @@ int cntRevisionesCodigoExp(listaRevision L, long int codExp)
     }
     return cnt;
 }
+
+void bajarRevisiones(listaRevision lr, String nomArch)
+{
+    FILE * f = fopen(nomArch,"wb");
+    if (lr != NULL)
+    {
+        bajarRevisionArchivo(lr->info,f);
+        lr = lr->sig;
+    }
+}
+
+void levantarRevisiones(listaRevision &lr, String nomArch)
+{
+    FILE * f = fopen(nomArch,"rb");
+    Revision auxRev;
+    levantarRevisionArchivo(auxRev,f);
+    while(!feof(f))
+    {
+        InsFront(lr,auxRev);
+        levantarRevisionArchivo(auxRev,f);
+    }
+    fclose(f);
+}
+

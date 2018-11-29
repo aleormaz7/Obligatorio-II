@@ -15,9 +15,11 @@ int main()
     ABBExpediente abbe;
     CrearABB(abbe);
 
+    listaRevision lr;
+    Crear(lr);
 
     levantarExpedientes(abbe,"Expedientes.dat");
-
+    levantarRevisiones(lr,"Revisiones.dat");
 
     /// Pruebas para Expediente /////
     long int codEpxAux, codigoExpediente;
@@ -26,12 +28,10 @@ int main()
     strcrear(s);
     Revision r;
     Fecha f,fini,ffin;
-    listaRevision lr;
+
 
     int cant1,cant2,cant3, cntAux = 0;
 
-
-    Crear(lr);
 
     ///Menu
     int opc,opcAltasBajas;
@@ -208,4 +208,5 @@ int main()
     }while(opc != 4);
 
     bajarExpedientes(abbe,"Expedientes.dat");
+    bajarRevisiones(lr,"Revisiones.dat");
 }

@@ -41,4 +41,10 @@ void cantRevisionesCadaTipo(listaRevision L, int &cantTipo1, int &cantTipo2, int
 int cntRevisionesCodigoExp(listaRevision l, long int codRev);
 ///Retorna la cantidad de revisiones de un codigo de expediente
 
+
+void bajarRevisiones(listaRevision lr, String nomArch);
+
+void levantarRevisiones(listaRevision &lr, String nomArch);
+
+
 #endif // LISTAREVISION_H_INCLUDED

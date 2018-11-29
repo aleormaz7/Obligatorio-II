@@ -47,3 +47,36 @@ long int darCodigoExpedienteDeRevision(Revision r)
 {
     return r.codigoExpediente;
 }
+
+
+void bajarRevisionArchivo(Revision r, FILE * f)
+{
+    ///Fecha fechaRealizado
+    fwrite(&r.fechaRealizado,sizeof(Fecha),1,f);
+
+    ///String descripcion
+    Bajar_String(r.descripcion,f);
+
+    ///long int codigoExpediente
+    fwrite(&r.codigoExpediente,sizeof(long int),1,f);
+
+    ///Resultante resultadoRev
+    fwrite(&r.resultadoRev,sizeof(Resultante),1,f);
+}
+
+void levantarRevisionArchivo(Revision &r, FILE * f)
+{
+    ///Fecha fechaRealizado
+    fread(&r.fechaRealizado,sizeof(Fecha),1,f);
+
+    ///String descripcion
+    strcrear(r.descripcion);
+    Levantar_String(r.descripcion,f);
+
+    ///long int codigoExpediente
+    fread(&r.codigoExpediente,sizeof(long int),1,f);
+
+    ///Resultante resultadoRev
+    fread(&r.resultadoRev,sizeof(Resultante),1,f);
+
+}

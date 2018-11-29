@@ -169,10 +169,10 @@
 1543490323 c:\users\ale\desktop\obligatorio-ii\boolean.h
 	<stdio.h>
 
-1543490585 c:\users\ale\desktop\obligatorio-ii\listarevision.h
+1543494912 c:\users\ale\desktop\obligatorio-ii\listarevision.h
 	"Revision.h"
 
-1543490323 c:\users\ale\desktop\obligatorio-ii\revision.h
+1543494454 c:\users\ale\desktop\obligatorio-ii\revision.h
 	"Fecha.h"
 	"String.h"
 	"Resultante.h"
@@ -198,10 +198,10 @@
 1543490323 source:c:\users\ale\desktop\obligatorio-ii\fecha.cpp
 	"Fecha.h"
 
-1543493073 source:c:\users\ale\desktop\obligatorio-ii\listarevision.cpp
+1543495031 source:c:\users\ale\desktop\obligatorio-ii\listarevision.cpp
 	"ListaRevision.h"
 
-1543492410 source:c:\users\ale\desktop\obligatorio-ii\main.cpp
+1543494934 source:c:\users\ale\desktop\obligatorio-ii\main.cpp
 	"Menu.h"
 	"ABBExpediente.h"
 	"ListaRevision.h"
@@ -216,7 +216,7 @@
 1543490323 source:c:\users\ale\desktop\obligatorio-ii\resultante.cpp
 	"Resultante.h"
 
-1543490323 source:c:\users\ale\desktop\obligatorio-ii\revision.cpp
+1543494494 source:c:\users\ale\desktop\obligatorio-ii\revision.cpp
 	"Revision.h"
 
 1543490067 source:c:\users\ale\desktop\obligatorio-ii\string.cpp
