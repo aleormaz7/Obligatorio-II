@@ -46,7 +46,7 @@ void mostrarSubMenuConsultas(int &opcion)
 {
     printf("\n\n********************");
     printf("\n** Menu Consultas **\n");
-    printf("\********************\n");
+    printf("********************\n");
     printf("1. Cantidad expediente por apellido de escribano \n");
     printf("2. Codigo del expediente con mayor cantidad revisiones \n");
     printf("3. Cantidad de revisiones entre fechas \n");

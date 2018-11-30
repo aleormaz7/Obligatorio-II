@@ -69,7 +69,6 @@ void strcon(String &s1, String s2)
 
     int largoS1 = strlar(s1);
     int largoS2 = strlar(s2);
-    int largoTotal = largoS1 + largoS2 + 1;
 
     int i = 0, j = 0;
     while(i < largoS1)

@@ -1,6 +1,5 @@
 #include "Menu.h"
 #include "ABBExpediente.h"
-#include "ListaRevision.h"
 #include "Archivo.h"
 
 int main()
@@ -124,28 +123,49 @@ int main()
                 {
                     case 1:
                          printf("\n1-: Listado de expedientes almacenados en el sistemas, ordenados por su codigo \n");
-                         ListarExpedientesOrdenados(abbe);
+                         if(!AbbExpientesEsVacio(abbe))
+                            ListarExpedientesOrdenados(abbe);
+                         else
+                            printf("\nNo existen expedientes ingresados en el sistema");
+
                         break;
                     case 2:
+
                         printf("\n2-: Listar Todas las Revisiones \n");
-                        ListarRevisiones(lr);
+                        if(!listaRevisionesEsVacia(lr))
+                            ListarRevisiones(lr);
+                        else
+                            printf("\nNo existen revisiones en el sistema");
                         break;
                     case 3:
-                        printf("\nExpediente con el menor codigo: ");
-                        exp = minimoExpediente(abbe);
-                        mostrarExpediente(exp);
-                        printf("\n\nExpediente con el mayor Codigo: ");
-                        exp = maximoExpediente(abbe);
-                        mostrarExpediente(exp);
+                        if(!AbbExpientesEsVacio(abbe))
+                        {
+                            printf("\nExpediente con el menor codigo: ");
+                            exp = minimoExpediente(abbe);
+                            mostrarExpediente(exp);
+                            printf("\n\nExpediente con el mayor Codigo: ");
+                            exp = maximoExpediente(abbe);
+                            mostrarExpediente(exp);
+                        }
+                        else
+                            printf("\nNo se puedo procesar la consulta, no hay expedientes en el sistema");
+
                         break;
                     case 4:
-                         printf("\n4-: Listado de Revisiones de un expediente \n");
-                         printf("\nIngrese Codigo Expediente:");
-                         scanf("%ld",&codigoExpediente);
-                         if(PerteneceExpPorCod(abbe,codigoExpediente))
-                            ListarRevisionesPorCodigoExpediente(lr,codigoExpediente);
-                        else
-                            printf("\nEn el sistema no existe un expediente con el codigo ingresado");
+                         if(!listaRevisionesEsVacia(lr))
+                         {
+                             printf("\n4-: Listado de Revisiones de un expediente \n");
+                             printf("\nIngrese Codigo Expediente:");
+                             scanf("%ld",&codigoExpediente);
+                             if(PerteneceExpPorCod(abbe,codigoExpediente))
+                                ListarRevisionesPorCodigoExpediente(lr,codigoExpediente);
+                            else
+                                printf("\nEn el sistema no existe un expediente con el codigo ingresado");
+
+                         }
+                         else
+                             printf("\nNo se puedo procesar la consulta, no hay revisiones en el sistema");
+
                         break;
                     case 5:
                         break;
