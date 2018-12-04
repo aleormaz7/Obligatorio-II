@@ -15,9 +15,11 @@ void mostrarFecha(Fecha f);///muestro una fecha
 
 boolean fechaValida(Fecha f);///determino si una fecha es valida
 
-boolean fechaMayor(Fecha f1, Fecha f2);
+boolean fechaMayor(Fecha f1, Fecha f2);///Retorna si la fecha 1 es mayor a la fecha 2
+///Precondicion: f1 y f2 son fechas validas.
 
-boolean fechaIgual(Fecha f1, Fecha f2);
+boolean fechaIgual(Fecha f1, Fecha f2);///Retorna si las son iguales
+///Precondicion: f1 y f2 son fechas validas.
 
 int darDia(Fecha f);///devuelve dia
 
