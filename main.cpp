@@ -51,9 +51,11 @@ int main()
                         if(PerteneceExpPorCod(abbe,codigoExpediente))
                             printf("\nError! Ya existe un expediente con ese codigo");
                         else
+                        {
                             cargarExpediente(exp,codigoExpediente);
                             InsertABBExp(abbe,exp);
                             printf("\nSe ha ingresado el expediente en el sistema. ");
+                        }
                         break;
 
                     case 2:
@@ -214,6 +216,7 @@ int main()
                          printf("\nSegunda Fecha: ");
                          cargarFecha(ffin);
                          if(fechaValida(fini) && fechaValida(ffin))
+
                             printf("\nCantidad = %d",cantRevisonesEntreFechas(lr,fini,ffin));
                          else
                             printf("\nCargar fechas validas");
