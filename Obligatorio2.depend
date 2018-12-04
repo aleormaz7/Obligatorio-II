@@ -222,3 +222,71 @@
 1543490067 source:c:\users\ale\desktop\obligatorio-ii\string.cpp
 	"String.h"
 
+1543872188 source:c:\users\ale\desktop\obligatorio-ii-master\abbexpediente.cpp
+	"ABBExpediente.h"
+
+1543872188 c:\users\ale\desktop\obligatorio-ii-master\abbexpediente.h
+	"Expediente.h"
+	"ListaRevision.h"
+
+1543872188 c:\users\ale\desktop\obligatorio-ii-master\expediente.h
+	"String.h"
+
+1543872188 c:\users\ale\desktop\obligatorio-ii-master\string.h
+	"Boolean.h"
+
+1543872188 c:\users\ale\desktop\obligatorio-ii-master\boolean.h
+	<stdio.h>
+
+1543890660 c:\users\ale\desktop\obligatorio-ii-master\listarevision.h
+	"Revision.h"
+
+1543872188 c:\users\ale\desktop\obligatorio-ii-master\revision.h
+	"Fecha.h"
+	"String.h"
+	"Resultante.h"
+
+1543872188 c:\users\ale\desktop\obligatorio-ii-master\fecha.h
+	"Boolean.h"
+
+1543872188 c:\users\ale\desktop\obligatorio-ii-master\resultante.h
+	<stdio.h>
+
+1543872188 source:c:\users\ale\desktop\obligatorio-ii-master\archivo.cpp
+	"Archivo.h"
+
+1543872188 c:\users\ale\desktop\obligatorio-ii-master\archivo.h
+	"String.h"
+
+1543872188 source:c:\users\ale\desktop\obligatorio-ii-master\boolean.cpp
+	"Boolean.h"
+
+1543872188 source:c:\users\ale\desktop\obligatorio-ii-master\expediente.cpp
+	"Expediente.h"
+
+1543872188 source:c:\users\ale\desktop\obligatorio-ii-master\fecha.cpp
+	"Fecha.h"
+
+1543890670 source:c:\users\ale\desktop\obligatorio-ii-master\listarevision.cpp
+	"ListaRevision.h"
+
+1543872188 source:c:\users\ale\desktop\obligatorio-ii-master\main.cpp
+	"Menu.h"
+	"ABBExpediente.h"
+	"Archivo.h"
+
+1543872188 c:\users\ale\desktop\obligatorio-ii-master\menu.h
+	<stdio.h>
+
+1543872188 source:c:\users\ale\desktop\obligatorio-ii-master\menu.cpp
+	"Menu.h"
+
+1543872188 source:c:\users\ale\desktop\obligatorio-ii-master\resultante.cpp
+	"Resultante.h"
+
+1543872188 source:c:\users\ale\desktop\obligatorio-ii-master\revision.cpp
+	"Revision.h"
+
+1543872188 source:c:\users\ale\desktop\obligatorio-ii-master\string.cpp
+	"String.h"
+
