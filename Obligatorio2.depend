@@ -119,10 +119,10 @@
 1543886749 c:\users\german ana\dropbox\ude\programacion ii\obligatorio\obligatorio-ii\fecha.h
 	"Boolean.h"
 
-1543891070 source:c:\users\german ana\dropbox\ude\programacion ii\obligatorio\obligatorio-ii\listarevision.cpp
+1543919987 source:c:\users\german ana\dropbox\ude\programacion ii\obligatorio\obligatorio-ii\listarevision.cpp
 	"ListaRevision.h"
 
-1543891070 c:\users\german ana\dropbox\ude\programacion ii\obligatorio\obligatorio-ii\listarevision.h
+1543918754 c:\users\german ana\dropbox\ude\programacion ii\obligatorio\obligatorio-ii\listarevision.h
 	"Revision.h"
 
 1543882441 c:\users\german ana\dropbox\ude\programacion ii\obligatorio\obligatorio-ii\revision.h
@@ -148,7 +148,7 @@
 1543882441 source:c:\users\german ana\dropbox\ude\programacion ii\obligatorio\obligatorio-ii\string.cpp
 	"String.h"
 
-1543887399 source:c:\users\german ana\dropbox\ude\programacion ii\obligatorio\obligatorio-ii\main.cpp
+1543919807 source:c:\users\german ana\dropbox\ude\programacion ii\obligatorio\obligatorio-ii\main.cpp
 	"Menu.h"
 	"ABBExpediente.h"
 	"Archivo.h"

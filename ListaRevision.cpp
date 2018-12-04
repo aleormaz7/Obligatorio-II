@@ -97,7 +97,8 @@ void EliminarRevisionesPorExpediente(listaRevision &L, long int codigoExp)
 
 int cantRevisonesEntreFechas(listaRevision L, Fecha f1, Fecha f2)
 {
-    int cant = 0;
+    int cant = 0;/*
+
     while (L != NULL)
     {
         Fecha f = darFechaRev(L->info);
@@ -110,6 +111,18 @@ int cantRevisonesEntreFechas(listaRevision L, Fecha f1, Fecha f2)
                      cant++;
                  }
              }
+        }
+        L = L->sig;
+    }
+    */
+    while (L != NULL)
+    {
+        if(fechaIgual((darFechaRev(L->info)),f1) || fechaIgual((darFechaRev(L->info)),f2))
+            cant++;
+        else
+        {
+            if(fechaMayor(darFechaRev(L->info),f1) && fechaMayor(f2,darFechaRev(L->info)))
+                cant++;
         }
         L = L->sig;
     }
