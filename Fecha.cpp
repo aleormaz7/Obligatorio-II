@@ -68,25 +68,33 @@ boolean fechaValida(Fecha f)
 
 boolean fechaMayor(Fecha f1, Fecha f2)
 {
-    boolean resu = FALSE;
-    if(f1.anio >=  f2.anio)
-    {
-        if(f1.mes >= f2.mes)
+    boolean mayor = FALSE;
+    if (f1.anio > f2.anio)
+        mayor = TRUE;
+    else
         {
-            if(f1.dia > f2.dia)
+            if (f1.anio == f2.anio)
             {
-                resu = TRUE;
+                if (f1.mes > f2.mes)
+                    mayor = TRUE;
+                else
+                {
+                   if (f1.mes == f2.mes)
+                    {
+                        if (f1.dia > f2.dia)
+                            mayor = TRUE;
+                    }
+                }
             }
         }
-    }
-    return resu;
+    return mayor;
 }
 
 boolean fechaIgual(Fecha f1, Fecha f2)
 {
-    boolean iguales = TRUE;
-    if((f1.anio != f2.anio) || (f1.mes != f2.mes) || (f1.dia != f2.dia))
-       iguales = FALSE;
+    boolean iguales = FALSE;
+    if (f1.dia == f2.dia && f1.mes == f2.mes && f1.anio == f2.anio)
+            iguales = TRUE;
     return iguales;
 }
 
