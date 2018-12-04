@@ -79,12 +79,17 @@ int main()
                             {
                                 ///buscar fecha mas reciente en lista revision
                                 Revision auxRev = Primero(lr);
-                                if(fechaValida(f) && fechaMayor(f,darFechaRev(auxRev)))
-                                {
-                                    cargarRevision(r,codigoExpediente,f);
-                                    InsFront(lr,r);
-                                    printf("\nSe ha registrado la revision del expediente.");
-                                }
+                                if(fechaValida(f))
+                                   {
+                                       if(fechaIgual(f,darFechaRev(auxRev)) || (fechaMayor(f,darFechaRev(auxRev))))
+                                          {
+                                                cargarRevision(r,codigoExpediente,f);
+                                                InsFront(lr,r);
+                                                printf("\nSe ha registrado la revision del expediente.");
+                                          }
+                                          else
+                                            printf("\nLa fecha de revision debe ser mayor o igual a la ultima registrada en el sistema");
+                                   }
                                 else
                                     printf("\nFecha invalida");
                             }
@@ -204,7 +209,9 @@ int main()
                         break;
                     case 3:
                          printf("\nCantidad revisiones entre fechas: ");
+                         printf("\nPrimer Fecha: ");
                          cargarFecha(fini);
+                         printf("\nSegunda Fecha: ");
                          cargarFecha(ffin);
                          if(fechaValida(fini) && fechaValida(ffin))
                             printf("\nCantidad = %d",cantRevisonesEntreFechas(lr,fini,ffin));

@@ -73,13 +73,21 @@ boolean fechaMayor(Fecha f1, Fecha f2)
     {
         if(f1.mes >= f2.mes)
         {
-            if(f1.dia >= f2.dia)
+            if(f1.dia > f2.dia)
             {
                 resu = TRUE;
             }
         }
     }
     return resu;
+}
+
+boolean fechaIgual(Fecha f1, Fecha f2)
+{
+    boolean iguales = TRUE;
+    if((f1.anio != f2.anio) || (f1.mes != f2.mes) || (f1.dia != f2.dia))
+       iguales = FALSE;
+    return iguales;
 }
 
 int darDia(Fecha f)
