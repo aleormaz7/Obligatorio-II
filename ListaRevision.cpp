@@ -145,7 +145,7 @@ int cntRevisionesCodigoExp(listaRevision L, long int codExp)
 void bajarRevisiones(listaRevision lr, String nomArch)
 {
     FILE * f = fopen(nomArch,"wb");
-    if (lr != NULL)
+    while(lr != NULL)
     {
         bajarRevisionArchivo(lr->info,f);
         lr = lr->sig;

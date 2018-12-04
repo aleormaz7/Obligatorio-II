@@ -211,15 +211,19 @@ int main()
                         break;
                     case 3:
                          printf("\nCantidad revisiones entre fechas: ");
-                         printf("\nPrimer Fecha: ");
+                         printf("\nFecha desde: ");
                          cargarFecha(fini);
-                         printf("\nSegunda Fecha: ");
+                         printf("\nFecha hasta: ");
                          cargarFecha(ffin);
                          if(fechaValida(fini) && fechaValida(ffin))
-
-                            printf("\nCantidad = %d",cantRevisonesEntreFechas(lr,fini,ffin));
+                            {
+                                if(!fechaMayor(fini,ffin) || (fechaIgual(fini,ffin)))
+                                    printf("\nCantidad = %d",cantRevisonesEntreFechas(lr,fini,ffin));
+                                else
+                                    printf("\nError! La fecha desde no puede ser mayor que la fecha hasta");
+                            }
                          else
-                            printf("\nCargar fechas validas");
+                            printf("\nError! Cargar fechas validas");
                         break;
                     case 4:
                         printf("\nCantidad revisiones cada tipo: ");
