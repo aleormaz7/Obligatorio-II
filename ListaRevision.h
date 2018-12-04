@@ -22,6 +22,9 @@ Revision Primero(listaRevision L);
 void InsFront(listaRevision &L, Revision r);
 ///inserta una revision al inicio de la lista
 
+void InsBackRecu(listaRevision &L, Revision r);
+///inserta una revision al final de la lista
+
 ///Elimina las revisiones de un expediente
 void EliminarRevisionesPorExpediente(listaRevision &L, long int codigoExp);
 

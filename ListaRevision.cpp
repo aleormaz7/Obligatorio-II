@@ -35,6 +35,20 @@ void InsFront(listaRevision &L, Revision r)
     L = aux;
 }
 
+void InsBackRecu(listaRevision &L, Revision r)
+{
+    if(L == NULL)
+    {
+        L = new nodoL;
+        L->info = r;
+        L->sig = NULL;
+    }
+    else
+    {
+        InsBackRecu(L->sig,r);
+    }
+}
+
 Revision Primero(listaRevision L)
 {
     return (L->info);
@@ -159,7 +173,7 @@ void levantarRevisiones(listaRevision &lr, String nomArch)
     levantarRevisionArchivo(auxRev,f);
     while(!feof(f))
     {
-        InsFront(lr,auxRev);
+        InsBackRecu(lr,auxRev);
         levantarRevisionArchivo(auxRev,f);
     }
     fclose(f);
