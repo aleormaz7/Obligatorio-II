@@ -59,8 +59,7 @@ long int evaluarPolinomio(ListaTerminos listaT, int valor)
 
 void sumarPolinomios(ListaTerminos listaA, ListaTerminos listaB, ListaTerminos &listaResultado)
 {
-    int indA = mayorGradoListaTerminos(listaA),indB = mayorGradoListaTerminos(listaB);
-    while(indA >= 0 || indB >= 0)
+    while(listaA != NULL || listaB != NULL)
     {
         Termino terminoAux;
         if(DarGradoTermino(listaA->info)== DarGradoTermino(listaB->info))
@@ -78,8 +77,6 @@ void sumarPolinomios(ListaTerminos listaA, ListaTerminos listaB, ListaTerminos &
                             listaTerminosInsertarOrdenado(listaResultado,terminoAux);
                           }
                    }
-                   indA--;
-                   indB--;
                    listaA = listaA->Sig;
                    listaB = listaB->Sig;
            }
@@ -89,14 +86,12 @@ void sumarPolinomios(ListaTerminos listaA, ListaTerminos listaB, ListaTerminos &
                {
                     CrearTermino(terminoAux,((DarCoefTermino(listaA->info))),DarCoefTermino(listaA->info));
                     listaTerminosInsertarOrdenado(listaResultado,terminoAux);
-                    indA--;
                     listaA = listaA->Sig;
                }
                else
                {
                     CrearTermino(terminoAux,((DarCoefTermino(listaB->info))),DarCoefTermino(listaB->info));
                     listaTerminosInsertarOrdenado(listaResultado,terminoAux);
-                    indB--;
                     listaB = listaB->Sig;
                }
            }
