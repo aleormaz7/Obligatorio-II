@@ -41,6 +41,6 @@ ListaTerminos reduceListaTerminos(ListaTerminos listaT, ListaTerminos &listaResu
 int mayorGradoListaTerminos(ListaTerminos listaT);
 /*Precondicion: listaT no es vacia */
 
-ListaTerminos listaTerminosCopiar(ListaTerminos listaA,ListaTerminos &listaB);
+ListaTerminos listaTerminosCopiar(ListaTerminos listaT);
 
 #endif // LISTATERMINOS_H_INCLUDED
