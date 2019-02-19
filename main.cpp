@@ -13,10 +13,10 @@ int main()
 
 
 
-    ///pruebasSumarPolinomios();
+    pruebasSumarPolinomios();
 
 
-    pruebasModuloPolinomio();
+   /// pruebasModuloPolinomio();
 
 
 }

@@ -20,7 +20,7 @@ void listaTerminosCrear(ListaTerminos &listaT);
 void listaTerminosInsertarOrdenado(ListaTerminos &listaT, Termino t);
 /*inserta recursivamente ordenado por grado*/
 
-void listaTerminosMostrar(ListaTerminos t);
+void listaTerminosMostrar(ListaTerminos listaT);
 
 long int evaluarPolinomio(ListaTerminos listaT, int valor);
 

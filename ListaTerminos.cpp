@@ -13,7 +13,6 @@ void listaTerminosResto(ListaTerminos &listaT)
 
 }
 
-
 void listaTerminosCrear(ListaTerminos &listaT)
 {
     listaT = NULL;
@@ -42,12 +41,12 @@ void listaTerminosInsertarOrdenado(ListaTerminos &listaT, Termino t)
 }
 
 
-void listaTerminosMostrar(ListaTerminos t)
+void listaTerminosMostrar(ListaTerminos listaT)
 {
-    while (t->Sig != NULL)
+    while (listaT != NULL)
     {
-        MostrarTermino(t->info);
-        t = t->Sig;
+        MostrarTermino(listaT->info);
+        listaT = listaT->Sig;
     }
 }
 
@@ -93,7 +92,7 @@ void sumarPolinomios(ListaTerminos listaA, ListaTerminos listaB, ListaTerminos &
                    {
                        if((DarCoefTermino(listaA->info) + DarCoefTermino(listaB->info))!= 0)
                           {
-                            CrearTermino(terminoAux,((DarCoefTermino(listaA->info) + DarCoefTermino(listaB->info))),DarCoefTermino(listaA->info));
+                            CrearTermino(terminoAux,((DarCoefTermino(listaA->info) + DarCoefTermino(listaB->info))),DarGradoTermino(listaA->info));
                             listaTerminosInsertarOrdenado(listaResultado,terminoAux);
                           }
                    }
@@ -104,13 +103,13 @@ void sumarPolinomios(ListaTerminos listaA, ListaTerminos listaB, ListaTerminos &
            {
                if(DarGradoTermino(listaA->info) > DarGradoTermino(listaB->info))
                {
-                    CrearTermino(terminoAux,((DarCoefTermino(listaA->info))),DarCoefTermino(listaA->info));
+                    CrearTermino(terminoAux,((DarCoefTermino(listaA->info))),DarGradoTermino(listaA->info));
                     listaTerminosInsertarOrdenado(listaResultado,terminoAux);
                     listaA = listaA->Sig;
                }
                else
                {
-                    CrearTermino(terminoAux,((DarCoefTermino(listaB->info))),DarCoefTermino(listaB->info));
+                    CrearTermino(terminoAux,((DarCoefTermino(listaB->info))),DarGradoTermino(listaB->info));
                     listaTerminosInsertarOrdenado(listaResultado,terminoAux);
                     listaB = listaB->Sig;
                }
@@ -132,15 +131,15 @@ void bajarTerminos(file * f, ListaTerminos listaTerminos);
 */
 
 boolean representaPolinomioNulo(ListaTerminos listaT)
-{/*
+{
     boolean esNulo = FALSE;
-	if (DarGradoTermino(listaT->info) == 0 && DarCoefTermino(listaA->info) == 0)
+	if (DarGradoTermino(listaT->info) == 0 && DarCoefTermino(listaT->info) == 0)
 		boolean esNulo = TRUE;
-    return esNulo;*/
+    return esNulo;
 }
 
 ListaTerminos reduceListaTerminos(ListaTerminos listaT, ListaTerminos &listaResultante)
-{/*
+{
 	long int coefAux = DarCoefTermino(listaT->info);
 	int gradoAux = DarGradoTermino(listaT->info);
 	Termino tAux;
@@ -150,24 +149,24 @@ ListaTerminos reduceListaTerminos(ListaTerminos listaT, ListaTerminos &listaResu
 		{
 			coefAux  = DarCoefTermino(listaT->info);
 			gradoAux = DarGradoTermino(listaT->info);
-			marcoTerminoProcesado(listaT->info);
-			ListaT = ListaT->Sig;
+			//marcoTerminoProcesado(listaT->info);
+			listaT = listaT->Sig;
 			while(DarGradoTermino(listaT->info) == gradoAux)
 			{
-				marcoTerminoProcesado(listaT->info);
+			//	marcoTerminoProcesado(listaT->info);
 				coefAux = coefAux + DarCoefTermino(listaT->info);
 				listaT = listaT->Sig;
 			}
 			if(gradoAux == 0)
 			{
-				creoTermino(tAux,coefAux,gradoAux);
+				CrearTermino(tAux,coefAux,gradoAux);
 				listaTerminosInsertarOrdenado(listaResultante,tAux);
 			}
 			else
 			{
 				if(coefAux == 0)
 				{
-					creoTermino(tAux,coefAux,gradoAux);
+					CrearTermino(tAux,coefAux,gradoAux);
 					listaTerminosInsertarOrdenado(listaResultante,tAux);
 				}
 			}
@@ -175,7 +174,7 @@ ListaTerminos reduceListaTerminos(ListaTerminos listaT, ListaTerminos &listaResu
 	}
 
     ListaTerminos aux;
-    return aux;*/
+    return aux;
 }
 
 int mayorGradoListaTerminos(ListaTerminos listaT)

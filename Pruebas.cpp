@@ -86,9 +86,10 @@ void pruebaListaStrings()
 
 void pruebasSumarPolinomios()
 {
-    ListaTerminos LtA,LtB;
+    ListaTerminos LtA,LtB,ListaResultado;
     listaTerminosCrear(LtA);
     listaTerminosCrear(LtB);
+    listaTerminosCrear(ListaResultado);
 
     Termino tA1,tA2,tA3,tB1,tB2,tB3;
     tA1.coef  = 5;
@@ -115,6 +116,9 @@ void pruebasSumarPolinomios()
     tB3.grado = 0;
     listaTerminosInsertarOrdenado(LtB,tB3);
 
+
+    sumarPolinomios(LtA,LtB,ListaResultado);
+    listaTerminosMostrar(ListaResultado);
 }
 
 void pruebasModuloTermino()

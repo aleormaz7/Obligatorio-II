@@ -8,38 +8,55 @@ void CrearTermino(Termino &t, long int coef, int grado)
 
 void MostrarTermino(Termino t)
 {
-    if(t.grado > 0)
+    ///No guardamos 0, salvo en el termino independiente
+
+    if(t.grado > 1)
     {
-        if(t.coef > 0)
-        {
+     if(t.coef > 1)
+     {
             printf(" +%ld",t.coef);
             printf("x%d",t.grado);
-        }
-        else
-        {
-            if(t.coef == 0)
-            {
-                ///No mostrar nada ej 0x2
-            }
-            else
-            {
-                printf(" %ld",t.coef);
+     }
+     else
+     {
+         if(t.coef == 1 || t.coef == -1)
+         {
+             if(t.coef == 1)
                 printf("x%d",t.grado);
-            }
-        }
+             else
+                printf("-x%d",t.grado);
+         }
+         else
+         {
+            printf(" %ld",t.coef);
+            printf("x%d",t.grado);
+         }
+     }
     }
     else
     {
-        if(t.grado == 0)
+        if(t.grado == 1)
         {
-            if(t.coef == 0)
+            if(t.coef == 1 || t.coef == -1)
             {
-                ///No muestro nada ej 0x0
+                if(t.coef == 1)
+                    printf(" x ");
+                else
+                    printf(" -x ");
             }
-            else ///Termino independiente
-            {
+            else
+                if(t.coef > 0)
+                    printf(" +%ldx ",t.coef);
+
+                else
+                    printf(" %ldx ",t.coef);
+        }
+        else
+        {
+            if(t.coef >= 0)
+                printf(" +%ld",t.coef);
+            else
                 printf(" %ld",t.coef);
-            }
         }
     }
 }
