@@ -38,6 +38,8 @@
 		<Unit filename="Boolean.h" />
 		<Unit filename="ListaString.cpp" />
 		<Unit filename="ListaString.h" />
+		<Unit filename="ListaTerminos.cpp" />
+		<Unit filename="ListaTerminos.h" />
 		<Unit filename="Polinomio.cpp" />
 		<Unit filename="Polinomio.h" />
 		<Unit filename="Pruebas.cpp" />
