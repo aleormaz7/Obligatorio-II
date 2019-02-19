@@ -1,8 +1,8 @@
 #include "ListaTerminos.h"
 
-Boolean listaTerminosEsVacia(ListaTerminos listaT)
+boolean listaTerminosEsVacia(ListaTerminos listaT)
 {
-    Boolean EsVacia = FALSE;
+    boolean EsVacia = FALSE;
     if (listaT == NULL)
         EsVacia = TRUE;
     return EsVacia;
@@ -23,32 +23,47 @@ void listaTerminosInsertarOrdenado(ListaTerminos &listaT, Termino t);
 //Precondición: lista no vacia
 void listaTerminosMostrar(ListaTerminos t)
 {
-    if (!vacia(t))
+    while (t->Sig != NULL)
     {
-        while (t->Sig != NULL)
-        {
-            MostrarTermino(t->info);
-            t = t->sig;
-        }
+        MostrarTermino(t->info);
+        t = t->Sig;
     }
 }
 
-long int evaluarPolinomio(ListaTerminos listaT, int valor);
+long int evaluarPolinomio(ListaTerminos listaT, int valor)
+{
+    long int resultado  = 0;
+    return resultado;
+}
 
-void sumarPolinomios(ListaTerminos listaA, ListaTerminos listaB, ListaTerminos &listaResultado);
+void sumarPolinomios(ListaTerminos listaA, ListaTerminos listaB, ListaTerminos &listaResultado)
+{
 
-void multiplicarPolinomios(ListaTerminos listaA, ListaTerminos listaB, ListaTerminos &listaResultado);
+}
 
-void levantarTerminos(file * f, ListaTerminos &listaTerminos);
+void multiplicarPolinomios(ListaTerminos listaA, ListaTerminos listaB, ListaTerminos &listaResultado)
+{
+
+}
+/*
+void levantarTerminos(file * f, ListaTerminos &listaT)
+{
+
+}
 
 void bajarTerminos(file * f, ListaTerminos listaTerminos);
+*/
 
-Boolean representaPolinomioNulo(ListaTerminos listaTerminos)
+boolean representaPolinomioNulo(ListaTerminos listaTerminos)
 {
-    Boolean resu = FALSE;
+    boolean resu = FALSE;
     if (listaTerminos == NULL)
         resu = TRUE;
     return resu;
 }
 
-ListaTerminos reducePolinomio(ListaTerminos listaTerminos);
+ListaTerminos reducePolinomio(ListaTerminos listaTerminos)
+{
+    ListaTerminos aux;
+    return aux;
+}
