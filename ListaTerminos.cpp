@@ -16,11 +16,29 @@ void listaTerminosCrear(ListaTerminos &listaT)
     listaT = NULL;
 }
 
-void listaTerminosInsertarOrdenado(ListaTerminos &listaT, Termino t);
-/*inserta recursivamente ordenado por grado*/
+void listaTerminosInsertarOrdenado(ListaTerminos &listaT, Termino t)
+{
+    if(listaT == NULL)
+    {
+        listaT = new nodoT;
+        listaT->info = t;
+        listaT->Sig = NULL;
+    }
+    else
+    {
+        if(DarGradoTermino(t) >= DarGradoTermino(listaT ->info))
+        {
+            ListaTerminos aux = new nodoT;
+            aux->info = t;
+            aux->Sig = listaT;
+            listaT = aux;
+        }
+        else
+            listaTerminosInsertarOrdenado(listaT->Sig,t);
+    }
+}
 
 
-//Precondición: lista no vacia
 void listaTerminosMostrar(ListaTerminos t)
 {
     while (t->Sig != NULL)
