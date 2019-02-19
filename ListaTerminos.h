@@ -5,35 +5,35 @@
 #include "Boolean.h"
 
 typedef struct nodoT { Termino info;
-nodoT * Sig;
- } nodoTermino;
+                        nodoT * Sig;
+                      } nodoTermino;
 
 typedef nodoTermino * ListaTerminos;
 
-Boolean Vacia(ListaTerminos listaT);
+Boolean listaTerminosEsVacia(ListaTerminos listaT);
 
-void resto(ListaTerminos &listaT); /*borrar 1er valor*/
-
+void listaTerminosResto(ListaTerminos &listaT); /*borrar 1er valor*/
 /*Precondición: lista no vacía*/
-void Crear(ListaTerminos &listaT);
 
-void insertar(ListaTerminos &listaT, Termino t);
+void listaTerminosCrear(ListaTerminos &listaT);
 
+void listaTerminosInsertarOrdenado(ListaTerminos &listaT, Termino t);
 /*inserta recursivamente ordenado por grado*/
-void mostrarListaTerminos(ListaTerminos t);
 
-int Evaluar(ListaTerminos listaT, int valor);
+void listaTerminosMostrar(ListaTerminos t);
 
-void SumaPolinomios(ListaTerminos listaA, ListaTerminos listaB, ListaTerminos &listaResultado);
+int evaluarPolinomio(ListaTerminos listaT, int valor);
 
-void MultiplicarPolinomios(ListaTerminos listaA, ListaTerminos listaB, ListaTerminos &listaResultado);
+void sumarPolinomios(ListaTerminos listaA, ListaTerminos listaB, ListaTerminos &listaResultado);
 
-void LevantarTerminos(file * f, ListaTerminos &listaTerminos);
+void multiplicarPolinomios(ListaTerminos listaA, ListaTerminos listaB, ListaTerminos &listaResultado);
 
-void BajarTerminos(file * f, ListaTerminos ListaTerminos);
+void levantarTerminos(file * f, ListaTerminos &listaTerminos);
+
+void bajarTerminos(file * f, ListaTerminos ListaTerminos);
 
 Boolean representaPolinomioNulo(ListaTerminos ListaTerminos);
 
-ListaTerminos Reduce(ListaTerminos listaTerminos);
+ListaTerminos reducePolinomio(ListaTerminos listaTerminos);
 
 #endif // LISTATERMINOS_H_INCLUDED
