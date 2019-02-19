@@ -68,9 +68,9 @@ long int evaluarPolinomio(ListaTerminos listaT, int valor)
         else
         {
             if((DarGradoTermino(listaT->info)) == 1)
-                resultado = resultado * DarCoefTermino(listaT->info);
+                resultado = resultado * DarCoefTermino(listaA->info);
             else
-                resultado = resultado + DarCoefTermino(listaT->info);
+                resultado = resultado + DarCoefTermino(listaA->info);
 		}
 		listaT = listaT->Sig;
     }
