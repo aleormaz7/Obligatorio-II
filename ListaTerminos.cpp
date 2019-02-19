@@ -1,27 +1,27 @@
 #include "ListaTerminos.h"
 
-Boolean Vacia(ListaTerminos listaT)
+Boolean listaTerminosEsVacia(ListaTerminos listaT)
 {
-    Boolean Resu = FALSE;
+    Boolean EsVacia = FALSE;
     if (listaT == NULL)
-        Resu = TRUE;
-    return Resu;
+        EsVacia = TRUE;
+    return EsVacia;
 }
 
-void resto(ListaTerminos &listaT); /*borrar 1er valor*/
+void listaTerminosResto(ListaTerminos &listaT); /*borrar 1er valor*/
 
-/*Precondición: lista no vacía*/
-void Crear(ListaTerminos &listaT)
+
+void listaTerminosCrear(ListaTerminos &listaT)
 {
     listaT = NULL;
 }
 
-void insertar(ListaTerminos &listaT, Termino t);
+void listaTerminosInsertarOrdenado(ListaTerminos &listaT, Termino t);
 /*inserta recursivamente ordenado por grado*/
 
 
 //Precondición: lista no vacia
-void mostrarListaTerminos(ListaTerminos t)
+void listaTerminosMostrar(ListaTerminos t)
 {
     if (!vacia(t))
     {
@@ -33,15 +33,15 @@ void mostrarListaTerminos(ListaTerminos t)
     }
 }
 
-int Evaluar(ListaTerminos listaT, int valor);
+long int evaluarPolinomio(ListaTerminos listaT, int valor);
 
-void SumaPolinomios(ListaTerminos listaA, ListaTerminos listaB, ListaTerminos &listaResultado);
+void sumarPolinomios(ListaTerminos listaA, ListaTerminos listaB, ListaTerminos &listaResultado);
 
-void MultiplicarPolinomios(ListaTerminos listaA, ListaTerminos listaB, ListaTerminos &listaResultado);
+void multiplicarPolinomios(ListaTerminos listaA, ListaTerminos listaB, ListaTerminos &listaResultado);
 
-void LevantarTerminos(file * f, ListaTerminos &listaTerminos);
+void levantarTerminos(file * f, ListaTerminos &listaTerminos);
 
-void BajarTerminos(file * f, ListaTerminos listaTerminos);
+void bajarTerminos(file * f, ListaTerminos listaTerminos);
 
 Boolean representaPolinomioNulo(ListaTerminos listaTerminos)
 {
@@ -51,4 +51,4 @@ Boolean representaPolinomioNulo(ListaTerminos listaTerminos)
     return resu;
 }
 
-ListaTerminos Reduce(ListaTerminos listaTerminos);
+ListaTerminos reducePolinomio(ListaTerminos listaTerminos);

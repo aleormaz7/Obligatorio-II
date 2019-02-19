@@ -10,7 +10,7 @@ typedef struct nodoT { Termino info;
 
 typedef nodoTermino * ListaTerminos;
 
-Boolean listaTerminosEsVacia(ListaTerminos listaT);
+boolean listaTerminosEsVacia(ListaTerminos listaT);
 
 void listaTerminosResto(ListaTerminos &listaT); /*borrar 1er valor*/
 /*Precondición: lista no vacía*/
@@ -22,18 +22,18 @@ void listaTerminosInsertarOrdenado(ListaTerminos &listaT, Termino t);
 
 void listaTerminosMostrar(ListaTerminos t);
 
-int evaluarPolinomio(ListaTerminos listaT, int valor);
+long int evaluarPolinomio(ListaTerminos listaT, int valor);
 
 void sumarPolinomios(ListaTerminos listaA, ListaTerminos listaB, ListaTerminos &listaResultado);
 
 void multiplicarPolinomios(ListaTerminos listaA, ListaTerminos listaB, ListaTerminos &listaResultado);
 
-void levantarTerminos(file * f, ListaTerminos &listaTerminos);
+void levantarTerminos(file * f, ListaTerminos &listaT);
 
-void bajarTerminos(file * f, ListaTerminos ListaTerminos);
+void bajarTerminos(file * f, ListaTerminos listaT);
 
-Boolean representaPolinomioNulo(ListaTerminos ListaTerminos);
+Boolean representaPolinomioNulo(ListaTerminos listaT);
 
-ListaTerminos reducePolinomio(ListaTerminos listaTerminos);
+ListaTerminos reducePolinomio(ListaTerminos listaT);
 
 #endif // LISTATERMINOS_H_INCLUDED
