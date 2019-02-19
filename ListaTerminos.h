@@ -36,4 +36,7 @@ boolean representaPolinomioNulo(ListaTerminos listaT);
 
 ListaTerminos reducePolinomio(ListaTerminos listaT);
 
+int mayorGradoListaTerminos(ListaTerminos listaT);
+/*Precondicion: listaT no es vacia */
+
 #endif // LISTATERMINOS_H_INCLUDED
