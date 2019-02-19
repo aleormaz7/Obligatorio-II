@@ -58,3 +58,62 @@
 1550342852 c:\users\ale\desktop\pruebas\archivo.h
 	"String.h"
 
+1550536295 source:c:\users\german ana\dropbox\ude\taller i\proyecto\taller-i\archivo.cpp
+	"archivo.h"
+
+1550536295 c:\users\german ana\dropbox\ude\taller i\proyecto\taller-i\archivo.h
+	"String.h"
+
+1550536295 c:\users\german ana\dropbox\ude\taller i\proyecto\taller-i\string.h
+	"Boolean.h"
+
+1550536295 c:\users\german ana\dropbox\ude\taller i\proyecto\taller-i\boolean.h
+	<stdio.h>
+
+1550536295 source:c:\users\german ana\dropbox\ude\taller i\proyecto\taller-i\boolean.cpp
+	"Boolean.h"
+
+1550536295 source:c:\users\german ana\dropbox\ude\taller i\proyecto\taller-i\listastring.cpp
+	"ListaString.h"
+
+1550536295 c:\users\german ana\dropbox\ude\taller i\proyecto\taller-i\listastring.h
+	"String.h"
+
+1550574799 source:c:\users\german ana\dropbox\ude\taller i\proyecto\taller-i\listaterminos.cpp
+	"ListaTerminos.h"
+
+1550540574 c:\users\german ana\dropbox\ude\taller i\proyecto\taller-i\listaterminos.h
+	"Termino.h"
+	"Boolean.h"
+
+1550536295 c:\users\german ana\dropbox\ude\taller i\proyecto\taller-i\termino.h
+	<stdio.h>
+	"String.h"
+
+1550575349 source:c:\users\german ana\dropbox\ude\taller i\proyecto\taller-i\main.cpp
+	"ListaString.h"
+	"Termino.h"
+	"Archivo.h"
+	"Pruebas.h"
+	<Stdio.h>
+
+1550575204 c:\users\german ana\dropbox\ude\taller i\proyecto\taller-i\pruebas.h
+	"ListaString.h"
+	"ListaTerminos.h"
+
+1550537856 source:c:\users\german ana\dropbox\ude\taller i\proyecto\taller-i\polinomio.cpp
+	"Polinomio.h"
+
+1550537750 c:\users\german ana\dropbox\ude\taller i\proyecto\taller-i\polinomio.h
+	"String.h"
+	"ListaTerminos.h"
+
+1550575251 source:c:\users\german ana\dropbox\ude\taller i\proyecto\taller-i\pruebas.cpp
+	"Pruebas.h"
+
+1550536295 source:c:\users\german ana\dropbox\ude\taller i\proyecto\taller-i\string.cpp
+	"String.h"
+
+1550536295 source:c:\users\german ana\dropbox\ude\taller i\proyecto\taller-i\termino.cpp
+	"Termino.h"
+

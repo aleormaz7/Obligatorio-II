@@ -41,32 +41,33 @@ void pruebaListaStrings ()
 
 void pruebasSumarPolinomios()
 {
-    ListaTerminos Lt;
-    listaTerminosCrear(Lt);
+    ListaTerminos LtA,LtB;
+    listaTerminosCrear(LtA);
+    listaTerminosCrear(LtB);
 
     Termino tA1,tA2,tA3,tB1,tB2,tB3;
-    tA1.coef = 5;
+    tA1.coef  = 5;
     tA1.grado = 3;
-    listaTerminosInsertarOrdenado(Lt,tA1);
+    listaTerminosInsertarOrdenado(LtA,tA1);
 
-    tA2.coef = 5;
-    tA2.grado = 3;
-    listaTerminosInsertarOrdenado(Lt,tA2);
+    tA2.coef  = -2;
+    tA2.grado = 1;
+    listaTerminosInsertarOrdenado(LtA,tA2);
 
-    tA3.coef = 5;
-    tA3.grado = 3;
-    listaTerminosInsertarOrdenado(Lt,tA3);
+    tA3.coef  = 10;
+    tA3.grado = 0;
+    listaTerminosInsertarOrdenado(LtA,tA3);
 
-    tB1.coef = 5;
+    tB1.coef  = 15;
     tB1.grado = 3;
-    listaTerminosInsertarOrdenado(Lt,tB1);
+    listaTerminosInsertarOrdenado(LtB,tB1);
 
-    tB2.coef = 5;
-    tB2.grado = 3;
-    listaTerminosInsertarOrdenado(Lt,tB2);
+    tB2.coef  = 4;
+    tB2.grado = 1;
+    listaTerminosInsertarOrdenado(LtB,tB2);
 
-    tB3.coef = 5;
-    tB3.grado = 3;
-    listaTerminosInsertarOrdenado(Lt,tB3);
+    tB3.coef  = -2;
+    tB3.grado = 0;
+    listaTerminosInsertarOrdenado(LtB,tB3);
 
 }

@@ -1,7 +1,6 @@
 #include "ListaString.h"
 #include "Termino.h"
 #include "Archivo.h"
-#include "Pruebas.h"
 
 #include <Stdio.h>
 
