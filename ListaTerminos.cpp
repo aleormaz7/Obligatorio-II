@@ -70,6 +70,15 @@ void sumarPolinomios(ListaTerminos listaA, ListaTerminos listaB, ListaTerminos &
                         CrearTermino(terminoAux,((DarCoefTermino(listaA->info) + DarCoefTermino(listaB->info))),0);
                         listaTerminosInsertarOrdenado(listaResultado,terminoAux);
                    }
+                   else
+                   {
+                       if((DarCoefTermino(listaA->info) + DarCoefTermino(listaB->info))!= 0)
+                          {
+                            Termino terminoAux;
+                            CrearTermino(terminoAux,((DarCoefTermino(listaA->info) + DarCoefTermino(listaB->info))),DarCoefTermino(listaA->info));
+                            listaTerminosInsertarOrdenado(listaResultado,terminoAux);
+                          }
+                   }
            }
     }
 }
