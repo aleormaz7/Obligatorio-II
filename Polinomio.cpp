@@ -1,31 +1,39 @@
 #include "Polinomio.h"
 
-void polinomioCrear(Polinomio &p, String nombre, ListaTerminos listaT)
+void crearPolinomio(Polinomio &p, String nombre, ListaTerminos listaT)
 {
-    p.nombre = nombre;
-    p.Terminos = listaT;
+    strcop(p.nombre,nombre);
+
+
+    ///p.listaTerminos = listaT;(estaria devolviendo un solo termino)
 }
 
-void darListaTerminos(Polinomio p, ListaTerminos &listaT)
+///ListaTerminos darListaTerminosPolinomio(Polinomio p)//////////////
+///{
+///return p.listaTerminos;// (estaria devolviendo un solo termino)
+///}
+
+void darListaTerminosPolinomio(Polinomio p, ListaTerminos &listaT)
 {
+
+    //DarCoefTermino(listaT.info) = DarCoefTermino(p.listaTerminos.info);
+    //DarGradoTermino(listaT.info) = DarGradoTermino(p.listaTerminos.info);
 
 }
 
 void mostrarPolinomio(Polinomio p)
 {
     print(p.nombre);
-    printf("/n");
-    listaTerminosMostrar(p.Terminos);
+    listaTerminosMostrar(p.listaTerminos);
 }
 
-/*
-void darNombre(Polinomio p, String &s)
+
+void darNombrePolinomio(Polinomio p, String &s)
 {
-    strcop(&s,p.nombre);
+    strcop(s,p.nombre);
 }
-*/
 
-void borrar()
+void borrarPolinomio()
 {
 
 }
