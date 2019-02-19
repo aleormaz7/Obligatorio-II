@@ -22,9 +22,9 @@ void MostrarTermino(Termino t)
          if(t.coef == 1 || t.coef == -1)
          {
              if(t.coef == 1)
-                printf("x%d",t.grado);
+                printf(" +x%d",t.grado);
              else
-                printf("-x%d",t.grado);
+                printf(" -x%d",t.grado);
          }
          else
          {
@@ -40,23 +40,29 @@ void MostrarTermino(Termino t)
             if(t.coef == 1 || t.coef == -1)
             {
                 if(t.coef == 1)
-                    printf(" x ");
+                    printf(" +x");
                 else
-                    printf(" -x ");
+                    printf(" -x");
             }
             else
                 if(t.coef > 0)
-                    printf(" +%ldx ",t.coef);
+                    printf(" +%ldx",t.coef);
 
                 else
-                    printf(" %ldx ",t.coef);
+                    printf(" %ldx",t.coef);
         }
         else
         {
-            if(t.coef >= 0)
+            if(t.coef > 0)
                 printf(" +%ld",t.coef);
             else
-                printf(" %ld",t.coef);
+            {
+                if(t.coef = 0)
+                    printf(" 0");
+                else
+                    printf(" %ld",t.coef);
+            }
+
         }
     }
 }

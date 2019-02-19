@@ -92,27 +92,27 @@ void pruebasSumarPolinomios()
     listaTerminosCrear(ListaResultado);
 
     Termino tA1,tA2,tA3,tB1,tB2,tB3;
-    tA1.coef  = 5;
-    tA1.grado = 3;
+    tA1.coef  = 2;
+    tA1.grado = 4;
     listaTerminosInsertarOrdenado(LtA,tA1);
 
-    tA2.coef  = -2;
+    tA2.coef  = -1;
     tA2.grado = 1;
     listaTerminosInsertarOrdenado(LtA,tA2);
 
-    tA3.coef  = 10;
+    tA3.coef  = -8;
     tA3.grado = 0;
     listaTerminosInsertarOrdenado(LtA,tA3);
 
-    tB1.coef  = 15;
-    tB1.grado = 3;
+    tB1.coef  = -2;
+    tB1.grado = 4;
     listaTerminosInsertarOrdenado(LtB,tB1);
 
-    tB2.coef  = 4;
+    tB2.coef  = 1;
     tB2.grado = 1;
     listaTerminosInsertarOrdenado(LtB,tB2);
 
-    tB3.coef  = -2;
+    tB3.coef  = 8;
     tB3.grado = 0;
     listaTerminosInsertarOrdenado(LtB,tB3);
 
