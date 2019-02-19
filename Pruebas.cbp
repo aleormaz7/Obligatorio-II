@@ -2,12 +2,12 @@
 <CodeBlocks_project_file>
 	<FileVersion major="1" minor="6" />
 	<Project>
-		<Option title="Obligatorio2" />
+		<Option title="Pruebas" />
 		<Option pch_mode="2" />
 		<Option compiler="gcc" />
 		<Build>
 			<Target title="Debug">
-				<Option output="bin/Debug/Obligatorio2" prefix_auto="1" extension_auto="1" />
+				<Option output="bin/Debug/Pruebas" prefix_auto="1" extension_auto="1" />
 				<Option object_output="obj/Debug/" />
 				<Option type="1" />
 				<Option compiler="gcc" />
@@ -16,7 +16,7 @@
 				</Compiler>
 			</Target>
 			<Target title="Release">
-				<Option output="bin/Release/Obligatorio2" prefix_auto="1" extension_auto="1" />
+				<Option output="bin/Release/Pruebas" prefix_auto="1" extension_auto="1" />
 				<Option object_output="obj/Release/" />
 				<Option type="1" />
 				<Option compiler="gcc" />
@@ -32,26 +32,22 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
-		<Unit filename="ABBExpediente.cpp" />
-		<Unit filename="ABBExpediente.h" />
 		<Unit filename="Archivo.cpp" />
 		<Unit filename="Archivo.h" />
 		<Unit filename="Boolean.cpp" />
 		<Unit filename="Boolean.h" />
-		<Unit filename="Expediente.cpp" />
-		<Unit filename="Expediente.h" />
-		<Unit filename="Fecha.cpp" />
-		<Unit filename="Fecha.h" />
-		<Unit filename="ListaRevision.cpp" />
-		<Unit filename="ListaRevision.h" />
-		<Unit filename="Menu.cpp" />
-		<Unit filename="Menu.h" />
-		<Unit filename="Resultante.cpp" />
-		<Unit filename="Resultante.h" />
-		<Unit filename="Revision.cpp" />
-		<Unit filename="Revision.h" />
+		<Unit filename="ListaString.cpp" />
+		<Unit filename="ListaString.h" />
+		<Unit filename="Polinomio.cpp" />
+		<Unit filename="Polinomio.h" />
+		<Unit filename="Pruebas.cpp" />
+		<Unit filename="Pruebas.h">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
 		<Unit filename="String.cpp" />
 		<Unit filename="String.h" />
+		<Unit filename="Termino.cpp" />
+		<Unit filename="Termino.h" />
 		<Unit filename="main.cpp" />
 		<Extensions>
 			<code_completion />

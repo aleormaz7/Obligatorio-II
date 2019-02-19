@@ -1,0 +1,60 @@
+# depslib dependency file v1.0
+1543882441 source:c:\users\german ana\dropbox\ude\taller i\pruebas\pruebas\boolean.cpp
+	"Boolean.h"
+
+1543882441 c:\users\german ana\dropbox\ude\taller i\pruebas\pruebas\boolean.h
+	<stdio.h>
+
+1543882441 source:c:\users\german ana\dropbox\ude\taller i\pruebas\pruebas\string.cpp
+	"String.h"
+
+1543882441 c:\users\german ana\dropbox\ude\taller i\pruebas\pruebas\string.h
+	"Boolean.h"
+
+1550199134 source:c:\users\german ana\dropbox\ude\taller i\pruebas\pruebas\listastring.cpp
+	"ListaString.h"
+
+1550191455 source:c:\users\german ana\dropbox\ude\taller i\pruebas\pruebas\main.cpp
+	"ListaString.h"
+	<Stdio.h>
+
+1550188633 c:\users\german ana\dropbox\ude\taller i\pruebas\pruebas\listastring.h
+	"String.h"
+
+1550341344 source:c:\users\ale\desktop\pruebas\main.cpp
+	"ListaString.h"
+	"Termino.h"
+	"Archivo.h"
+	<Stdio.h>
+
+1550199406 c:\users\ale\desktop\pruebas\listastring.h
+	"String.h"
+
+1543882441 c:\users\ale\desktop\pruebas\string.h
+	"Boolean.h"
+
+1543882441 c:\users\ale\desktop\pruebas\boolean.h
+	<stdio.h>
+
+1543882441 source:c:\users\ale\desktop\pruebas\boolean.cpp
+	"Boolean.h"
+
+1550199448 source:c:\users\ale\desktop\pruebas\listastring.cpp
+	"ListaString.h"
+
+1543882441 source:c:\users\ale\desktop\pruebas\string.cpp
+	"String.h"
+
+1550264757 c:\users\ale\desktop\pruebas\termino.h
+	<stdio.h>
+	"String.h"
+
+1550279142 source:c:\users\ale\desktop\pruebas\termino.cpp
+	"Termino.h"
+
+1550342865 source:c:\users\ale\desktop\pruebas\archivo.cpp
+	"archivo.h"
+
+1550342852 c:\users\ale\desktop\pruebas\archivo.h
+	"String.h"
+

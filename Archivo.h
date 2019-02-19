@@ -1,10 +1,16 @@
-#ifndef _ARCHIVO_H
-#define _ARCHIVO_H
+#ifndef ARCHIVO_H_INCLUDED
+#define ARCHIVO_H_INCLUDED
+
 #include "String.h"
 
-void inicializarDat(String s); ///Inicializa el archivo .dat
+///Determina si existe o no un archivo con el nombre recibido por parámetro
+boolean ExisteArchivo(String nomArch);
 
-boolean existeArchivo(String nomArch); ///Retorna si el archivo indicado existe o no
+///Determina si el archivo está vacío o no. Precondición: El archivo existe
+boolean ArchivoEsVacio(String nomArch);
+
+///Determina si el entero recibido está en el archivo. Precondición: El archivo existe
+boolean EnteroPertenecArchivo(String nomArch, int valor);
 
 
-#endif // _ARCHIVO_H
+#endif // ARCHIVO_H_INCLUDED

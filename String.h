@@ -50,4 +50,17 @@ void Levantar_String (String &s, FILE * f);
 // Precondición: El archivo viene abierto para lectura.
 
 
+boolean esEntero(String s);
+
+boolean esAlfanumerico(String s);
+/*Precondicion: largo Sting > 0*/
+
+long int convertirStringAEntero(String s);
+/* Precondición largo String > 0 */
+
+
+void retornaExtension(String s, String &sExtension);
+
+int cntPuntos(String s);
+
 #endif // STRING_H_INCLUDED
