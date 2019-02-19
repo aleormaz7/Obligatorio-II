@@ -129,3 +129,17 @@ int mayorGradoListaTerminos(ListaTerminos listaT)
 {
     return DarGradoTermino(listaT->info);
 }
+
+ListaTerminos listaTerminosCopiar(ListaTerminos listaT)
+{
+    ListaTerminos listaRetorno;
+    listaTerminosCrear(listaRetorno);
+
+    while(listaT != NULL)
+    {
+        Termino tAux;
+        CrearTermino(tAux,DarCoefTermino(listaT->info),DarGradoTermino(listaT->info));
+        listaTerminosInsertarOrdenado(listaRetorno,tAux);
+    }
+    return listaRetorno;
+}

@@ -39,4 +39,5 @@ ListaTerminos reducePolinomio(ListaTerminos listaT);
 int mayorGradoListaTerminos(ListaTerminos listaT);
 /*Precondicion: listaT no es vacia */
 
+void listaTerminosCopiar(ListaTerminos listaA,ListaTerminos &listaB);
 #endif // LISTATERMINOS_H_INCLUDED
