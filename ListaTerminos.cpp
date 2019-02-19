@@ -52,9 +52,25 @@ void listaTerminosMostrar(ListaTerminos t)
 }
 
 long int evaluarPolinomio(ListaTerminos listaT, int valor)
-{
+{/*
     long int resultado  = 0;
     return resultado;
+
+	while(listaT != NULL)
+		switch(DarGradoTermino(listaT->info))
+		{
+			case DarGradoTermino(listaT->info) > 1:
+							for(i = 1; i = DarGradoTermino(listaT->info);i++)
+								resultado = valor * valor;
+							resultado = resultado * DarCoefTermino(listaA->info);
+							break;
+			case DarGradoTermino(listaT->info) == 1:
+							resultado = resultado * DarCoefTermino(listaA->info);
+							break;
+			case DarGradoTermino(listaT->info) == 0:
+							resultado = resultado + DarCoefTermino(listaA->info);
+							break;
+		}*/
 }
 
 void sumarPolinomios(ListaTerminos listaA, ListaTerminos listaB, ListaTerminos &listaResultado)
@@ -111,18 +127,51 @@ void levantarTerminos(file * f, ListaTerminos &listaT)
 void bajarTerminos(file * f, ListaTerminos listaTerminos);
 */
 
-boolean representaPolinomioNulo(ListaTerminos listaTerminos)
-{
-    boolean resu = FALSE;
-    if (listaTerminos == NULL)
-        resu = TRUE;
-    return resu;
+boolean representaPolinomioNulo(ListaTerminos listaT)
+{/*
+    boolean esNulo = FALSE;
+	if (DarGradoTermino(listaT->info) == 0 && DarCoefTermino(listaA->info) == 0)
+		boolean esNulo = TRUE;
+    return esNulo;*/
 }
 
-ListaTerminos reducePolinomio(ListaTerminos listaTerminos)
-{
+ListaTerminos reduceListaTerminos(ListaTerminos listaT, ListaTerminos &listaResultante)
+{/*
+	long int coefAux = DarCoefTermino(listaT->info);
+	int gradoAux = DarGradoTermino(listaT->info);
+	Termino tAux;
+	while (listaT != NULL)
+	{
+		if(DarGradoTermino(listaT->info) != -1)
+		{
+			coefAux  = DarCoefTermino(listaT->info);
+			gradoAux = DarGradoTermino(listaT->info);
+			marcoTerminoProcesado(listaT->info);
+			ListaT = ListaT->Sig;
+			while(DarGradoTermino(listaT->info) == gradoAux)
+			{
+				marcoTerminoProcesado(listaT->info);
+				coefAux = coefAux + DarCoefTermino(listaT->info);
+				listaT = listaT->Sig;
+			}
+			if(gradoAux == 0)
+			{
+				creoTermino(tAux,coefAux,gradoAux);
+				listaTerminosInsertarOrdenado(listaResultante,tAux);
+			}
+			else
+			{
+				if(coefAux == 0)
+				{
+					creoTermino(tAux,coefAux,gradoAux);
+					listaTerminosInsertarOrdenado(listaResultante,tAux);
+				}
+			}
+		}
+	}
+
     ListaTerminos aux;
-    return aux;
+    return aux;*/
 }
 
 int mayorGradoListaTerminos(ListaTerminos listaT)
