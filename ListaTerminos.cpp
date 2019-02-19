@@ -60,13 +60,13 @@ long int evaluarPolinomio(ListaTerminos listaT, int valor)
 void sumarPolinomios(ListaTerminos listaA, ListaTerminos listaB, ListaTerminos &listaResultado)
 {
     int indA = mayorGradoListaTerminos(listaA),indB = mayorGradoListaTerminos(listaB);
-    while(indA >= 0)
+    while(indA >= 0 || indB >= 0)
     {
+        Termino terminoAux;
         if(DarGradoTermino(listaA->info)== DarGradoTermino(listaB->info))
            {
                 if(DarGradoTermino(listaA->info) == 0)
                    {
-                        Termino terminoAux;
                         CrearTermino(terminoAux,((DarCoefTermino(listaA->info) + DarCoefTermino(listaB->info))),0);
                         listaTerminosInsertarOrdenado(listaResultado,terminoAux);
                    }
@@ -74,11 +74,31 @@ void sumarPolinomios(ListaTerminos listaA, ListaTerminos listaB, ListaTerminos &
                    {
                        if((DarCoefTermino(listaA->info) + DarCoefTermino(listaB->info))!= 0)
                           {
-                            Termino terminoAux;
                             CrearTermino(terminoAux,((DarCoefTermino(listaA->info) + DarCoefTermino(listaB->info))),DarCoefTermino(listaA->info));
                             listaTerminosInsertarOrdenado(listaResultado,terminoAux);
                           }
                    }
+                   indA--;
+                   indB--;
+                   listaA = listaA->Sig;
+                   listaB = listaB->Sig;
+           }
+           else
+           {
+               if(DarGradoTermino(listaA->info) > DarGradoTermino(listaB->info))
+               {
+                    CrearTermino(terminoAux,((DarCoefTermino(listaA->info))),DarCoefTermino(listaA->info));
+                    listaTerminosInsertarOrdenado(listaResultado,terminoAux);
+                    indA--;
+                    listaA = listaA->Sig;
+               }
+               else
+               {
+                    CrearTermino(terminoAux,((DarCoefTermino(listaB->info))),DarCoefTermino(listaB->info));
+                    listaTerminosInsertarOrdenado(listaResultado,terminoAux);
+                    indB--;
+                    listaB = listaB->Sig;
+               }
            }
     }
 }
