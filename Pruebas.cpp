@@ -121,6 +121,41 @@ void pruebasSumarPolinomios()
     listaTerminosMostrar(ListaResultado);
 }
 
+void pruebasReducirPolinomio()
+{
+    ListaTerminos LtA,ListaResultado;
+    listaTerminosCrear(LtA);
+    listaTerminosCrear(ListaResultado);
+
+    Termino tA1,tA2,tA3,tA4,tA5,tA6;
+    tA1.coef  = 32;
+    tA1.grado = 4;
+    listaTerminosInsertarOrdenado(LtA,tA1);
+
+    tA2.coef  = 11;
+    tA2.grado = 1;
+    listaTerminosInsertarOrdenado(LtA,tA2);
+
+    tA3.coef  = 8;
+    tA3.grado = 0;
+    listaTerminosInsertarOrdenado(LtA,tA3);
+
+    tA4.coef  = -12;
+    tA4.grado = 4;
+    listaTerminosInsertarOrdenado(LtA,tA4);
+
+    tA5.coef  = 1;
+    tA5.grado = 1;
+    listaTerminosInsertarOrdenado(LtA,tA5);
+
+    tA6.coef  = 8;
+    tA6.grado = 0;
+    listaTerminosInsertarOrdenado(LtA,tA6);
+
+    reduceListaTerminos(LtA,ListaResultado);
+    listaTerminosMostrar(ListaResultado);
+}
+
 void pruebasModuloTermino()
 {
     ///MODULO TERMINO:

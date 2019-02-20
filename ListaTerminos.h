@@ -35,7 +35,7 @@ void multiplicarPolinomios(ListaTerminos listaA, ListaTerminos listaB, ListaTerm
 boolean representaPolinomioNulo(ListaTerminos listaT);
 /*Precondicion: listaT no es vacia */
 
-ListaTerminos reduceListaTerminos(ListaTerminos listaT, ListaTerminos &listaResultante);
+void reduceListaTerminos(ListaTerminos listaT, ListaTerminos &listaResultante);
 /*Precondicion: listaT no es vacia && listaT no representa un ponilomio nulo*/
 
 int mayorGradoListaTerminos(ListaTerminos listaT);

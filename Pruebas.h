@@ -16,6 +16,7 @@ void pruebaListaStrings();
 
 void pruebasSumarPolinomios();
 
+void pruebasReducirPolinomio();
 
 void pruebasModuloTermino();
 /* programa de pruebas modulo Termino */

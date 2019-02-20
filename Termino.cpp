@@ -9,7 +9,6 @@ void CrearTermino(Termino &t, long int coef, int grado)
 void MostrarTermino(Termino t)
 {
     ///No guardamos 0, salvo en el termino independiente
-
     if(t.grado > 1)
     {
         if(t.coef > 1)
@@ -62,7 +61,6 @@ void MostrarTermino(Termino t)
                 else
                     printf(" %ld",t.coef);
             }
-
         }
     }
 }

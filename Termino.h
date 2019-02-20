@@ -22,5 +22,4 @@ void BajarTermino(Termino t, FILE * f);
 
 void LevantarTermino(Termino &t, FILE * f);
 
-
 #endif // TERMINO_H_INCLUDED

@@ -138,43 +138,59 @@ boolean representaPolinomioNulo(ListaTerminos listaT)
     return esNulo;
 }
 
-ListaTerminos reduceListaTerminos(ListaTerminos listaT, ListaTerminos &listaResultante)
-{
+void reduceListaTerminos(ListaTerminos listaT, ListaTerminos &listaResultante)
+{/*
 	long int coefAux = DarCoefTermino(listaT->info);
 	int gradoAux = DarGradoTermino(listaT->info);
 	Termino tAux;
-	while (listaT != NULL)
+	while (listaT->Sig != NULL)
 	{
-		if(DarGradoTermino(listaT->info) != -1)
+		if(DarGradoTermino(listaT->info) == DarGradoTermino(listaT->Sig->info))
 		{
 			coefAux  = DarCoefTermino(listaT->info);
 			gradoAux = DarGradoTermino(listaT->info);
-			//marcoTerminoProcesado(listaT->info);
-			listaT = listaT->Sig;
-			while(DarGradoTermino(listaT->info) == gradoAux)
-			{
-			//	marcoTerminoProcesado(listaT->info);
-				coefAux = coefAux + DarCoefTermino(listaT->info);
-				listaT = listaT->Sig;
-			}
-			if(gradoAux == 0)
-			{
-				CrearTermino(tAux,coefAux,gradoAux);
-				listaTerminosInsertarOrdenado(listaResultante,tAux);
-			}
-			else
-			{
-				if(coefAux == 0)
-				{
-					CrearTermino(tAux,coefAux,gradoAux);
-					listaTerminosInsertarOrdenado(listaResultante,tAux);
-				}
-			}
-		}
-	}
-
-    ListaTerminos aux;
-    return aux;
+			marcoTerminoProcesado(listaT->info);
+			if(listaT->Sig == NULL)
+            {
+                if(gradoAux == 0)
+                {
+                    CrearTermino(tAux,coefAux,gradoAux);
+                    listaTerminosInsertarOrdenado(listaResultante,tAux);
+                }
+                else
+                {
+                    if(coefAux == 0)
+                    {
+                        CrearTermino(tAux,coefAux,gradoAux);
+                        listaTerminosInsertarOrdenado(listaResultante,tAux);
+                    }
+                }
+            }
+            else
+            {
+                listaT = listaT->Sig;
+                while(DarGradoTermino(listaT->info) == gradoAux)
+                {
+                    marcoTerminoProcesado(listaT->info);
+                    coefAux = coefAux + DarCoefTermino(listaT->info);
+                    listaT = listaT->Sig;
+                }
+                if(gradoAux == 0)
+                {
+                    CrearTermino(tAux,coefAux,gradoAux);
+                    listaTerminosInsertarOrdenado(listaResultante,tAux);
+                }
+                else
+                {
+                    if(coefAux == 0)
+                    {
+                        CrearTermino(tAux,coefAux,gradoAux);
+                        listaTerminosInsertarOrdenado(listaResultante,tAux);
+                    }
+                }
+            }
+        }
+    }*/
 }
 
 int mayorGradoListaTerminos(ListaTerminos listaT)
