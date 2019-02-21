@@ -117,19 +117,6 @@ void sumarPolinomios(ListaTerminos listaA, ListaTerminos listaB, ListaTerminos &
     }
 }
 
-void multiplicarPolinomios(ListaTerminos listaA, ListaTerminos listaB, ListaTerminos &listaResultado)
-{
-
-}
-/*
-void levantarTerminos(file * f, ListaTerminos &listaT)
-{
-
-}
-
-void bajarTerminos(file * f, ListaTerminos listaTerminos);
-*/
-
 boolean representaPolinomioNulo(ListaTerminos listaT)
 {
     boolean esNulo = FALSE;
@@ -138,59 +125,65 @@ boolean representaPolinomioNulo(ListaTerminos listaT)
     return esNulo;
 }
 
+void multiplicarPolinomios(ListaTerminos listaA, ListaTerminos listaB, ListaTerminos &listaResuladoFinal)
+{
+	Termino tAux;
+	ListaTerminos listaResultadoAux;
+	listaTerminosCrear(listaResultadoAux);
+
+	if(representaPolinomioNulo(listaA) || representaPolinomioNulo(listaB))
+	{
+		CrearTermino(tAux,0,0);
+		listaTerminosInsertarOrdenado(listaResultadoAux,tAux);
+	}
+	else
+	{
+		while(listaA != NULL)
+		{
+			while(listaB != NULL)
+			{
+				CrearTermino(tAux,(DarCoefTermino(listaA->info) * DarCoefTermino(listaB->info)),(DarGradoTermino(listaA->info) + DarGradoTermino(listaB->info)));
+				listaTerminosInsertarOrdenado(listaResultadoAux,tAux);
+				listaB = listaB->Sig;
+			}
+			listaA = listaB->Sig;
+		}
+	}
+	reduceListaTerminos(listaResultadoAux,listaResuladoFinal);
+//	destuirLista(listaResultadoAux);
+}
+
+
 void reduceListaTerminos(ListaTerminos listaT, ListaTerminos &listaResultante)
-{/*
-	long int coefAux = DarCoefTermino(listaT->info);
-	int gradoAux = DarGradoTermino(listaT->info);
+{
+	long int coefAux = 0;
+	int gradoAux 	 = 0;
 	Termino tAux;
 	while (listaT->Sig != NULL)
 	{
-		if(DarGradoTermino(listaT->info) == DarGradoTermino(listaT->Sig->info))
+		coefAux  = coefAux  + DarCoefTermino(listaT->info);
+		gradoAux = DarGradoTermino(listaT->info);
+		if(DarGradoTermino(listaT->info) != DarGradoTermino(listaT->Sig->info))
 		{
-			coefAux  = DarCoefTermino(listaT->info);
-			gradoAux = DarGradoTermino(listaT->info);
-			marcoTerminoProcesado(listaT->info);
-			if(listaT->Sig == NULL)
-            {
-                if(gradoAux == 0)
-                {
-                    CrearTermino(tAux,coefAux,gradoAux);
-                    listaTerminosInsertarOrdenado(listaResultante,tAux);
-                }
-                else
-                {
-                    if(coefAux == 0)
-                    {
-                        CrearTermino(tAux,coefAux,gradoAux);
-                        listaTerminosInsertarOrdenado(listaResultante,tAux);
-                    }
-                }
-            }
-            else
-            {
-                listaT = listaT->Sig;
-                while(DarGradoTermino(listaT->info) == gradoAux)
-                {
-                    marcoTerminoProcesado(listaT->info);
-                    coefAux = coefAux + DarCoefTermino(listaT->info);
-                    listaT = listaT->Sig;
-                }
-                if(gradoAux == 0)
-                {
-                    CrearTermino(tAux,coefAux,gradoAux);
-                    listaTerminosInsertarOrdenado(listaResultante,tAux);
-                }
-                else
-                {
-                    if(coefAux == 0)
-                    {
-                        CrearTermino(tAux,coefAux,gradoAux);
-                        listaTerminosInsertarOrdenado(listaResultante,tAux);
-                    }
-                }
-            }
-        }
-    }*/
+			if(gradoAux == 0)
+			{
+				CrearTermino(tAux,coefAux,0);
+				listaTerminosInsertarOrdenado(listaResultante,tAux);
+			}
+			else
+			{
+				if(coefAux != 0)
+				{
+					CrearTermino(tAux,coefAux,gradoAux);
+					listaTerminosInsertarOrdenado(listaResultante,tAux);
+				}
+			}
+			coefAux  = 0;
+		}
+		listaT = listaT->Sig;
+    }
+	CrearTermino(tAux,(coefAux + DarCoefTermino(listaT->info)),0);
+	listaTerminosInsertarOrdenado(listaResultante,tAux);
 }
 
 int mayorGradoListaTerminos(ListaTerminos listaT)
@@ -211,3 +204,12 @@ ListaTerminos listaTerminosCopiar(ListaTerminos listaT)
     }
     return listaRetorno;
 }
+
+/*
+void levantarTerminos(file * f, ListaTerminos &listaT)
+{
+
+}
+
+void bajarTerminos(file * f, ListaTerminos listaTerminos);
+*/

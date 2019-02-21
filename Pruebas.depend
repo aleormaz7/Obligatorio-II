@@ -79,14 +79,14 @@
 1550536295 c:\users\german ana\dropbox\ude\taller i\proyecto\taller-i\listastring.h
 	"String.h"
 
-1550618470 source:c:\users\german ana\dropbox\ude\taller i\proyecto\taller-i\listaterminos.cpp
+1550710911 source:c:\users\german ana\dropbox\ude\taller i\proyecto\taller-i\listaterminos.cpp
 	"ListaTerminos.h"
 
 1550619175 c:\users\german ana\dropbox\ude\taller i\proyecto\taller-i\listaterminos.h
 	"Termino.h"
 	"Boolean.h"
 
-1550618459 c:\users\german ana\dropbox\ude\taller i\proyecto\taller-i\termino.h
+1550619319 c:\users\german ana\dropbox\ude\taller i\proyecto\taller-i\termino.h
 	<stdio.h>
 	"String.h"
 
@@ -107,13 +107,13 @@
 	"String.h"
 	"ListaTerminos.h"
 
-1550618220 source:c:\users\german ana\dropbox\ude\taller i\proyecto\taller-i\pruebas.cpp
+1550619265 source:c:\users\german ana\dropbox\ude\taller i\proyecto\taller-i\pruebas.cpp
 	"Pruebas.h"
 
 1550536295 source:c:\users\german ana\dropbox\ude\taller i\proyecto\taller-i\string.cpp
 	"String.h"
 
-1550618453 source:c:\users\german ana\dropbox\ude\taller i\proyecto\taller-i\termino.cpp
+1550619331 source:c:\users\german ana\dropbox\ude\taller i\proyecto\taller-i\termino.cpp
 	"Termino.h"
 
 1550597819 source:c:\users\ale\desktop\taller-i\archivo.cpp
