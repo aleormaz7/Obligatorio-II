@@ -9,6 +9,8 @@ void CrearTermino(Termino &t, long int coef, int grado)
 void MostrarTermino(Termino t)
 {
     ///No guardamos 0, salvo en el termino independiente
+
+   /// como mostrar el polinomio cuando el termino independiente es 0 Ej: 2x2 + 3x + 0 ?
     if(t.grado > 1)
     {
         if(t.coef > 1)
