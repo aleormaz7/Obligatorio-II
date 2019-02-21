@@ -60,8 +60,8 @@ long int evaluarPolinomio(ListaTerminos listaT, int valor)
     {
         if((DarGradoTermino(listaT->info)) > 1)
         {
-            for(i = 1; i = DarGradoTermino(listaT->info);i++)
-                resultado = valor * valor;
+            for(i = 1; i = DarGradoTermino(listaT->info);i++)  /// ojo, deberia ser menor o menor/igual en vez de igual
+                resultado = valor * valor;                  /// ojo, deberia ser resultado = valor * resultado;
             resultado = resultado * (DarCoefTermino(listaT->info));
         }
         else
@@ -78,7 +78,7 @@ long int evaluarPolinomio(ListaTerminos listaT, int valor)
 
 void sumarPolinomios(ListaTerminos listaA, ListaTerminos listaB, ListaTerminos &listaResultado)
 {
-    while(listaA != NULL || listaB != NULL)
+    while(listaA != NULL || listaB != NULL)     /// meditar... es || o es &&?
     {
         Termino terminoAux;
         if(DarGradoTermino(listaA->info)== DarGradoTermino(listaB->info))
@@ -115,6 +115,9 @@ void sumarPolinomios(ListaTerminos listaA, ListaTerminos listaB, ListaTerminos &
                }
            }
     }
+    /// una vez hecha la suma, verificar si tiene grado mayor a 0 y termino independiente igual a 0
+    /// en caso de tenerlo, ir hasta el final y elimnarlo
+    /// la idea es que no queden terminos independientes nulos cuando no es el polinomio nulo
 }
 
 boolean representaPolinomioNulo(ListaTerminos listaT)
@@ -140,6 +143,7 @@ void multiplicarPolinomios(ListaTerminos listaA, ListaTerminos listaB, ListaTerm
 	{
 		while(listaA != NULL)
 		{
+		    /// hacer listaBAux = listaB y moverse con listaBAux
 			while(listaB != NULL)
 			{
 				CrearTermino(tAux,(DarCoefTermino(listaA->info) * DarCoefTermino(listaB->info)),(DarGradoTermino(listaA->info) + DarGradoTermino(listaB->info)));
@@ -151,6 +155,10 @@ void multiplicarPolinomios(ListaTerminos listaA, ListaTerminos listaB, ListaTerm
 	}
 	reduceListaTerminos(listaResultadoAux,listaResuladoFinal);
 	destuirListaTerminos(listaResultadoAux);
+
+    /// una vez hecha la multiplicacion, verificar si tiene grado mayor a 0 y termino independiente igual a 0
+    /// en caso de tenerlo, ir hasta el final y elimnarlo
+    /// la idea es que no queden terminos independientes nulos cuando no es el polinomio nulo
 }
 
 
@@ -159,7 +167,7 @@ void reduceListaTerminos(ListaTerminos listaT, ListaTerminos &listaResultante)
 	long int coefAux = 0;
 	int gradoAux 	 = 0;
 	Termino tAux;
-	while (listaT->Sig != NULL)
+	while (listaT->Sig != NULL) /// seguro que listaT no viene vacia??? reflexionar
 	{
 		coefAux  = coefAux  + DarCoefTermino(listaT->info);
 		gradoAux = DarGradoTermino(listaT->info);
@@ -205,9 +213,9 @@ ListaTerminos listaTerminosCopiar(ListaTerminos listaT)
     return listaRetorno;
 }
 
-void destuirListaTerminos(ListaTerminos L)
+void destuirListaTerminos(ListaTerminos L) /// no deberia ir L por referencia???
 {
-        if(L -> Sig == NULL)
+    if(L -> Sig == NULL)
     {
         delete L;
     }

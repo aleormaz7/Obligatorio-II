@@ -58,7 +58,7 @@ void MostrarTermino(Termino t)
                 printf(" +%ld",t.coef);
             else
             {
-                if(t.coef = 0)
+                if(t.coef == 0)
                     printf(" 0");
                 else
                     printf(" %ld",t.coef);

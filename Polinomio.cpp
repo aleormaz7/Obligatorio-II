@@ -166,6 +166,7 @@ void darListaTerminosPolinomio(Polinomio p, ListaTerminos &listaT)
 
         p.listaTerminos = p.listaTerminos->Sig;
     }
+    ///simplemente asignar el puntero o como mucho llamar al procedimiento que hace una copia de la lista
 }
 
 void mostrarPolinomio(Polinomio p)
@@ -183,6 +184,6 @@ void darNombrePolinomio(Polinomio p, String &s)
 void borrarPolinomio(Polinomio &p)
 {
     strdestruir(p.nombre);//Eliminar nombre
-    //listaTerminosBorrar(p.listaTerminos);//Eliminar lista de Terminos
+    destuirListaTerminos(p.listaTerminos);//Eliminar lista de Terminos
 }
 

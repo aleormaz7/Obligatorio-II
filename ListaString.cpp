@@ -103,7 +103,7 @@ void destruirListaString(ListaString &L)
         strdestruir(L->info);
         delete L;
     }
-    else
+    else    /// no deberian haber llaves en el else y delete en cada nodo?
         destruirListaString(L->Sig);
         strdestruir(L->info);
 }

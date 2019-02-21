@@ -137,7 +137,7 @@
 1550747109 c:\users\ale\desktop\taller-i\listastring.h
 	"String.h"
 
-1550747109 source:c:\users\ale\desktop\taller-i\listaterminos.cpp
+1550748784 source:c:\users\ale\desktop\taller-i\listaterminos.cpp
 	"ListaTerminos.h"
 
 1550747109 c:\users\ale\desktop\taller-i\listaterminos.h
@@ -148,7 +148,7 @@
 	<stdio.h>
 	"String.h"
 
-1550747110 source:c:\users\ale\desktop\taller-i\main.cpp
+1550748924 source:c:\users\ale\desktop\taller-i\main.cpp
 	"Pruebas.h"
 
 1550747109 c:\users\ale\desktop\taller-i\pruebas.h
@@ -158,15 +158,15 @@
 	"Termino.h"
 	"Polinomio.h"
 
-1550747995 c:\users\ale\desktop\taller-i\polinomio.h
+1550748559 c:\users\ale\desktop\taller-i\polinomio.h
 	"String.h"
 	"ListaTerminos.h"
 	"ListaString.h"
 
-1550748465 source:c:\users\ale\desktop\taller-i\polinomio.cpp
+1550748760 source:c:\users\ale\desktop\taller-i\polinomio.cpp
 	"Polinomio.h"
 
-1550747958 source:c:\users\ale\desktop\taller-i\pruebas.cpp
+1550748592 source:c:\users\ale\desktop\taller-i\pruebas.cpp
 	"Pruebas.h"
 
 1550708994 source:c:\users\ale\desktop\taller-i\string.cpp
