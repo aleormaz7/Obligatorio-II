@@ -3,12 +3,13 @@
 
 #include "String.h"
 #include "ListaTerminos.h"
+#include "ListaString.h"
 
 typedef struct { String nombre;
                  ListaTerminos listaTerminos;
                } Polinomio;
 
-void crearPolinomio(Polinomio &p, String nombre, ListaTerminos listaT);
+void crearPolinomio(Polinomio &p, String lineaComando);
 /* crea polinomio: */
 
 void darListaTerminosPolinomio(Polinomio p, ListaTerminos &listaT);

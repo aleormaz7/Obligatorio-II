@@ -264,25 +264,49 @@ void pruebasModuloArchivo()
 
 void pruebasModuloPolinomio()
 {
-    String nombrePol;
+    ///**pruebas (version sin chequeo)
+    /*String nombrePol,nombrePol2;
     strcrear(nombrePol);
+    strcrear(nombrePol2);
     printf("\nIngrese nombre polinomio:");
-
     scan(nombrePol);
-
-    Polinomio p;
-
-    ListaTerminos lt;
+    Polinomio p,p2;
+    ListaTerminos lt,lt2;
     listaTerminosCrear(lt);
+    listaTerminosCrear(lt2);
     Termino tA1,tA2;
     CrearTermino(tA1,5,3);
     listaTerminosInsertarOrdenado(lt,tA1);
-
     CrearTermino(tA2,-2,1);
     listaTerminosInsertarOrdenado(lt,tA2);
-
     crearPolinomio(p,nombrePol,lt);
-
     mostrarPolinomio(p);
+    /////////////////////////////////////////
+    printf("\nPruebaDarLista2");
+    darListaTerminosPolinomio(p,lt2);
+    listaTerminosMostrar(lt2);*/
+    ///**
+
+    Polinomio p;
+    ListaString ls;
+    String s,nomComandoAux;
+
+    CrearListaString(ls);
+    strcrear(nomComandoAux);
+
+    strcrear(s);
+    printf("\ningrese toda la linea del comando con sus parametros: ");
+    scan(s);
+    //print(s);
+
+
+    printf("\nIngrese comando crear(magia): ");
+    scan(nomComandoAux);
+    //print(nomComandoAux);
+
+    crearPolinomio(p,s);
+    printf("\n Polinomio: ");
+    mostrarPolinomio(p);
+
 
 }
