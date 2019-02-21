@@ -105,6 +105,7 @@ void destruirListaString(ListaString &L)
     }
     else
         destruirListaString(L->Sig);
+        strdestruir(L->info);
 }
 
 boolean CoeficientesEnteros(ListaString L)

@@ -13,10 +13,11 @@ void pruebaModuloString();
 void pruebaListaStrings();
 // programa de prueba de la lista de strings
 
-
 void pruebasSumarPolinomios();
 
 void pruebasReducirPolinomio();
+
+void pruebasMultiplicarPolinomio();
 
 void pruebasModuloTermino();
 /* programa de pruebas modulo Termino */

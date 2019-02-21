@@ -146,11 +146,11 @@ void multiplicarPolinomios(ListaTerminos listaA, ListaTerminos listaB, ListaTerm
 				listaTerminosInsertarOrdenado(listaResultadoAux,tAux);
 				listaB = listaB->Sig;
 			}
-			listaA = listaB->Sig;
+			listaA = listaA->Sig;
 		}
 	}
 	reduceListaTerminos(listaResultadoAux,listaResuladoFinal);
-//	destuirLista(listaResultadoAux);
+	destuirListaTerminos(listaResultadoAux);
 }
 
 
@@ -203,6 +203,20 @@ ListaTerminos listaTerminosCopiar(ListaTerminos listaT)
         listaTerminosInsertarOrdenado(listaRetorno,tAux);
     }
     return listaRetorno;
+}
+
+void destuirListaTerminos(ListaTerminos L)
+{
+        if(L -> Sig == NULL)
+    {
+        delete L;
+    }
+    else
+    {
+        destuirListaTerminos(L->Sig);
+        delete L;
+    }
+
 }
 
 /*

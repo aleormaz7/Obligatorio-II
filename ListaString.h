@@ -26,6 +26,7 @@ int LargoListaString (ListaString L);
 
 void destruirListaString(ListaString &ls);
 ///Libera la menoria dinamica referente a la misma
+/*Preconducion Ls no es vacia*/
 
 boolean CoeficientesEnteros(ListaString ls);
 ///Controla que todos los String que se coindicen con coefientes, representen un entero

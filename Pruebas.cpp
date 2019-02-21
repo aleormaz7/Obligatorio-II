@@ -121,6 +121,44 @@ void pruebasSumarPolinomios()
     listaTerminosMostrar(ListaResultado);
 }
 
+
+void pruebasMultiplicarPolinomio()
+{
+    ListaTerminos LtA,LtB,ListaResultado;
+    listaTerminosCrear(LtA);
+    listaTerminosCrear(LtB);
+    listaTerminosCrear(ListaResultado);
+
+    Termino tA1,tA2,tA3,tB1,tB2,tB3;
+    tA1.coef  = 1;
+    tA1.grado = 2;
+    listaTerminosInsertarOrdenado(LtA,tA1);
+
+    tA2.coef  = 1;
+    tA2.grado = 0;
+    listaTerminosInsertarOrdenado(LtA,tA2);
+/*
+    tA3.coef  = 16;
+    tA3.grado = 0;
+    listaTerminosInsertarOrdenado(LtA,tA3);
+*/
+    tB1.coef  = 1;
+    tB1.grado = 2;
+    listaTerminosInsertarOrdenado(LtB,tB1);
+
+    tB2.coef  = 1;
+    tB2.grado = 0;
+    listaTerminosInsertarOrdenado(LtB,tB2);
+/*
+    tB3.coef  = 2;
+    tB3.grado = 0;
+    listaTerminosInsertarOrdenado(LtB,tB3);
+*/
+
+    multiplicarPolinomios(LtA,LtB,ListaResultado);
+    listaTerminosMostrar(ListaResultado);
+}
+
 void pruebasReducirPolinomio()
 {
     ListaTerminos LtA,ListaResultado;
