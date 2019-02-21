@@ -60,8 +60,8 @@ long int evaluarPolinomio(ListaTerminos listaT, int valor)
     {
         if((DarGradoTermino(listaT->info)) > 1)
         {
-            for(i = 1; i = DarGradoTermino(listaT->info);i++)  /// ojo, deberia ser menor o menor/igual en vez de igual
-                resultado = valor * valor;                  /// ojo, deberia ser resultado = valor * resultado;
+            for(i = 1; i <= DarGradoTermino(listaT->info);i++)  /// ojo, deberia ser menor o menor/igual en vez de igual
+                resultado = resultado * valor;                  /// ojo, deberia ser resultado = valor * resultado;
             resultado = resultado * (DarCoefTermino(listaT->info));
         }
         else
@@ -78,9 +78,9 @@ long int evaluarPolinomio(ListaTerminos listaT, int valor)
 
 void sumarPolinomios(ListaTerminos listaA, ListaTerminos listaB, ListaTerminos &listaResultado)
 {
-    while(listaA != NULL || listaB != NULL)     /// meditar... es || o es &&?
-    {
-        Termino terminoAux;
+    while(listaA != NULL && listaB != NULL)     /// meditar... es || o es &&?
+    {                                           /// es corecto el comentario, no se banca cuando no tiene uno de ambos queda sin termino independiente
+        Termino terminoAux;                     /// ademas implico una correccion al recorrer la lista
         if(DarGradoTermino(listaA->info)== DarGradoTermino(listaB->info))
            {
                 if(DarGradoTermino(listaA->info) == 0)
@@ -131,8 +131,9 @@ boolean representaPolinomioNulo(ListaTerminos listaT)
 void multiplicarPolinomios(ListaTerminos listaA, ListaTerminos listaB, ListaTerminos &listaResuladoFinal)
 {
 	Termino tAux;
-	ListaTerminos listaResultadoAux;
+	ListaTerminos listaResultadoAux,ListaBAux;
 	listaTerminosCrear(listaResultadoAux);
+
 
 	if(representaPolinomioNulo(listaA) || representaPolinomioNulo(listaB))
 	{
@@ -143,18 +144,18 @@ void multiplicarPolinomios(ListaTerminos listaA, ListaTerminos listaB, ListaTerm
 	{
 		while(listaA != NULL)
 		{
-		    /// hacer listaBAux = listaB y moverse con listaBAux
-			while(listaB != NULL)
+		    ListaBAux = listaB;
+			while(ListaBAux != NULL)
 			{
-				CrearTermino(tAux,(DarCoefTermino(listaA->info) * DarCoefTermino(listaB->info)),(DarGradoTermino(listaA->info) + DarGradoTermino(listaB->info)));
+				CrearTermino(tAux,(DarCoefTermino(listaA->info) * DarCoefTermino(ListaBAux->info)),(DarGradoTermino(listaA->info) + DarGradoTermino(ListaBAux->info)));
 				listaTerminosInsertarOrdenado(listaResultadoAux,tAux);
-				listaB = listaB->Sig;
+				ListaBAux = ListaBAux->Sig;
 			}
 			listaA = listaA->Sig;
 		}
+        reduceListaTerminos(listaResultadoAux,listaResuladoFinal);
+        destuirListaTerminos(listaResultadoAux);
 	}
-	reduceListaTerminos(listaResultadoAux,listaResuladoFinal);
-	destuirListaTerminos(listaResultadoAux);
 
     /// una vez hecha la multiplicacion, verificar si tiene grado mayor a 0 y termino independiente igual a 0
     /// en caso de tenerlo, ir hasta el final y elimnarlo

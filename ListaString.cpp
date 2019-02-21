@@ -99,13 +99,16 @@ void destruirListaString(ListaString &L)
 {
     if(L -> Sig == NULL)
     {
-        /// ojo que solo estan borrando la memoria del ultimo nodo, tambien hay que borrar los anteriores
         strdestruir(L->info);
         delete L;
     }
-    else    /// no deberian haber llaves en el else y delete en cada nodo?
+    else
+    {
         destruirListaString(L->Sig);
         strdestruir(L->info);
+        delete L;
+    }
+
 }
 
 boolean CoeficientesEnteros(ListaString L)

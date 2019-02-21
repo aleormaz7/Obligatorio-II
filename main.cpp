@@ -13,9 +13,9 @@ int main()
 
 
 
-   /// pruebasSumarPolinomios();
+    pruebasSumarPolinomios();
 ///    pruebasReducirPolinomio();
-        pruebasMultiplicarPolinomio();
+        ////pruebasMultiplicarPolinomio();
 
 ///pruebasModuloPolinomio();
 

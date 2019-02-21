@@ -73,13 +73,13 @@
 1550536295 source:c:\users\german ana\dropbox\ude\taller i\proyecto\taller-i\boolean.cpp
 	"Boolean.h"
 
-1550711333 source:c:\users\german ana\dropbox\ude\taller i\proyecto\taller-i\listastring.cpp
+1550791681 source:c:\users\german ana\dropbox\ude\taller i\proyecto\taller-i\listastring.cpp
 	"ListaString.h"
 
 1550711338 c:\users\german ana\dropbox\ude\taller i\proyecto\taller-i\listastring.h
 	"String.h"
 
-1550712611 source:c:\users\german ana\dropbox\ude\taller i\proyecto\taller-i\listaterminos.cpp
+1550792773 source:c:\users\german ana\dropbox\ude\taller i\proyecto\taller-i\listaterminos.cpp
 	"ListaTerminos.h"
 
 1550711291 c:\users\german ana\dropbox\ude\taller i\proyecto\taller-i\listaterminos.h
@@ -90,7 +90,7 @@
 	<stdio.h>
 	"String.h"
 
-1550711746 source:c:\users\german ana\dropbox\ude\taller i\proyecto\taller-i\main.cpp
+1550792417 source:c:\users\german ana\dropbox\ude\taller i\proyecto\taller-i\main.cpp
 	"Pruebas.h"
 
 1550711673 c:\users\german ana\dropbox\ude\taller i\proyecto\taller-i\pruebas.h
@@ -100,20 +100,21 @@
 	"Termino.h"
 	"Polinomio.h"
 
-1550610327 source:c:\users\german ana\dropbox\ude\taller i\proyecto\taller-i\polinomio.cpp
+1550791458 source:c:\users\german ana\dropbox\ude\taller i\proyecto\taller-i\polinomio.cpp
 	"Polinomio.h"
 
-1550610327 c:\users\german ana\dropbox\ude\taller i\proyecto\taller-i\polinomio.h
+1550791458 c:\users\german ana\dropbox\ude\taller i\proyecto\taller-i\polinomio.h
 	"String.h"
 	"ListaTerminos.h"
+	"ListaString.h"
 
-1550712442 source:c:\users\german ana\dropbox\ude\taller i\proyecto\taller-i\pruebas.cpp
+1550792698 source:c:\users\german ana\dropbox\ude\taller i\proyecto\taller-i\pruebas.cpp
 	"Pruebas.h"
 
 1550536295 source:c:\users\german ana\dropbox\ude\taller i\proyecto\taller-i\string.cpp
 	"String.h"
 
-1550619331 source:c:\users\german ana\dropbox\ude\taller i\proyecto\taller-i\termino.cpp
+1550791458 source:c:\users\german ana\dropbox\ude\taller i\proyecto\taller-i\termino.cpp
 	"Termino.h"
 
 1550708994 source:c:\users\ale\desktop\taller-i\archivo.cpp
