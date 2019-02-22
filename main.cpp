@@ -17,7 +17,8 @@ int main()
 ///    pruebasReducirPolinomio();
         ///pruebasMultiplicarPolinomio();
 ///        pruebasControlTerminoIndependienteNoNulo();
-    pruebasEvaluarPolinomio();
+ ///   pruebasEvaluarPolinomio();
+        pruebasEsRaiz();
 
 ///pruebasModuloPolinomio();
 

@@ -33,4 +33,6 @@ void pruebasControlTerminoIndependienteNoNulo();
 
 void pruebasEvaluarPolinomio();
 
+void pruebasEsRaiz();
+
 #endif // PRUEBAS_H_INCLUDED
