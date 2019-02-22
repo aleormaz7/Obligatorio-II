@@ -176,3 +176,62 @@
 1550747110 source:c:\users\ale\desktop\taller-i\termino.cpp
 	"Termino.h"
 
+1550793476 source:c:\users\german ana\dropbox\ude\taller i\proyecto\taller-ii\taller-i\archivo.cpp
+	"archivo.h"
+
+1550793476 c:\users\german ana\dropbox\ude\taller i\proyecto\taller-ii\taller-i\archivo.h
+	"String.h"
+
+1550793476 c:\users\german ana\dropbox\ude\taller i\proyecto\taller-ii\taller-i\string.h
+	"Boolean.h"
+
+1550793476 c:\users\german ana\dropbox\ude\taller i\proyecto\taller-ii\taller-i\boolean.h
+	<stdio.h>
+
+1550793476 source:c:\users\german ana\dropbox\ude\taller i\proyecto\taller-ii\taller-i\boolean.cpp
+	"Boolean.h"
+
+1550793476 source:c:\users\german ana\dropbox\ude\taller i\proyecto\taller-ii\taller-i\listastring.cpp
+	"ListaString.h"
+
+1550793476 c:\users\german ana\dropbox\ude\taller i\proyecto\taller-ii\taller-i\listastring.h
+	"String.h"
+
+1550795925 source:c:\users\german ana\dropbox\ude\taller i\proyecto\taller-ii\taller-i\listaterminos.cpp
+	"ListaTerminos.h"
+
+1550793476 c:\users\german ana\dropbox\ude\taller i\proyecto\taller-ii\taller-i\listaterminos.h
+	"Termino.h"
+	"Boolean.h"
+
+1550793476 c:\users\german ana\dropbox\ude\taller i\proyecto\taller-ii\taller-i\termino.h
+	<stdio.h>
+	"String.h"
+
+1550793476 source:c:\users\german ana\dropbox\ude\taller i\proyecto\taller-ii\taller-i\polinomio.cpp
+	"Polinomio.h"
+
+1550793476 c:\users\german ana\dropbox\ude\taller i\proyecto\taller-ii\taller-i\polinomio.h
+	"String.h"
+	"ListaTerminos.h"
+	"ListaString.h"
+
+1550794897 source:c:\users\german ana\dropbox\ude\taller i\proyecto\taller-ii\taller-i\pruebas.cpp
+	"Pruebas.h"
+
+1550793476 c:\users\german ana\dropbox\ude\taller i\proyecto\taller-ii\taller-i\pruebas.h
+	"String.h"
+	"ListaString.h"
+	"Archivo.h"
+	"Termino.h"
+	"Polinomio.h"
+
+1550793476 source:c:\users\german ana\dropbox\ude\taller i\proyecto\taller-ii\taller-i\string.cpp
+	"String.h"
+
+1550793476 source:c:\users\german ana\dropbox\ude\taller i\proyecto\taller-ii\taller-i\termino.cpp
+	"Termino.h"
+
+1550793611 source:c:\users\german ana\dropbox\ude\taller i\proyecto\taller-ii\taller-i\main.cpp
+	"Pruebas.h"
+

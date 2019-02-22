@@ -78,29 +78,67 @@ long int evaluarPolinomio(ListaTerminos listaT, int valor)
 
 void sumarPolinomios(ListaTerminos listaA, ListaTerminos listaB, ListaTerminos &listaResultado)
 {
-    while(listaA != NULL && listaB != NULL)     /// meditar... es || o es &&?
-    {                                           /// es corecto el comentario, no se banca cuando no tiene uno de ambos queda sin termino independiente
+    while(listaA != NULL || listaB != NULL)     /// meditar... es || o es &&?
+    {                                           /// SI, pero NO con el comentario, teniamos problemas no tiene uno de ambos queda sin termino independiente
         Termino terminoAux;                     /// ademas implico una correccion al recorrer la lista
-        if(DarGradoTermino(listaA->info)== DarGradoTermino(listaB->info))
-           {
-                if(DarGradoTermino(listaA->info) == 0)
-                   {
-                        CrearTermino(terminoAux,((DarCoefTermino(listaA->info) + DarCoefTermino(listaB->info))),0);
+        if(listaA == NULL)
+        {
+            if(DarGradoTermino(listaB->info) == 0)
+               {
+                    CrearTermino(terminoAux,((DarCoefTermino(listaB->info))),0);
+                    listaTerminosInsertarOrdenado(listaResultado,terminoAux);
+               }
+               else
+               {
+                   if((DarCoefTermino(listaB->info))!= 0)
+                      {
+                        CrearTermino(terminoAux,((DarCoefTermino(listaB->info) )),DarGradoTermino(listaB->info));
                         listaTerminosInsertarOrdenado(listaResultado,terminoAux);
-                   }
-                   else
-                   {
-                       if((DarCoefTermino(listaA->info) + DarCoefTermino(listaB->info))!= 0)
-                          {
-                            CrearTermino(terminoAux,((DarCoefTermino(listaA->info) + DarCoefTermino(listaB->info))),DarGradoTermino(listaA->info));
-                            listaTerminosInsertarOrdenado(listaResultado,terminoAux);
-                          }
-                   }
-                   listaA = listaA->Sig;
-                   listaB = listaB->Sig;
-           }
-           else
-           {
+                      }
+               }
+            listaB = listaB->Sig;
+        }
+        else
+        {
+            if(listaB == NULL)
+            {
+                if(DarGradoTermino(listaA->info) == 0)
+                {
+                    CrearTermino(terminoAux,((DarCoefTermino(listaA->info))),0);
+                    listaTerminosInsertarOrdenado(listaResultado,terminoAux);
+                }
+                else
+                {
+                   if((DarCoefTermino(listaA->info))!= 0)
+                    {
+                        CrearTermino(terminoAux,((DarCoefTermino(listaA->info) )),DarGradoTermino(listaA->info));
+                        listaTerminosInsertarOrdenado(listaResultado,terminoAux);
+                    }
+                }
+                listaA = listaA->Sig;
+            }
+            else
+            {
+            if(DarGradoTermino(listaA->info)== DarGradoTermino(listaB->info))
+            {
+                if(DarGradoTermino(listaA->info) == 0)
+                {
+                    CrearTermino(terminoAux,((DarCoefTermino(listaA->info) + DarCoefTermino(listaB->info))),0);
+                    listaTerminosInsertarOrdenado(listaResultado,terminoAux);
+                }
+                else
+                {
+                    if((DarCoefTermino(listaA->info) + DarCoefTermino(listaB->info))!= 0)
+                    {
+                        CrearTermino(terminoAux,((DarCoefTermino(listaA->info) + DarCoefTermino(listaB->info))),DarGradoTermino(listaA->info));
+                        listaTerminosInsertarOrdenado(listaResultado,terminoAux);
+                    }
+                }
+                listaA = listaA->Sig;
+                listaB = listaB->Sig;
+            }
+            else
+            {
                if(DarGradoTermino(listaA->info) > DarGradoTermino(listaB->info))
                {
                     CrearTermino(terminoAux,((DarCoefTermino(listaA->info))),DarGradoTermino(listaA->info));
@@ -113,7 +151,10 @@ void sumarPolinomios(ListaTerminos listaA, ListaTerminos listaB, ListaTerminos &
                     listaTerminosInsertarOrdenado(listaResultado,terminoAux);
                     listaB = listaB->Sig;
                }
-           }
+            }
+            }
+        }
+
     }
     /// una vez hecha la suma, verificar si tiene grado mayor a 0 y termino independiente igual a 0
     /// en caso de tenerlo, ir hasta el final y elimnarlo

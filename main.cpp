@@ -13,7 +13,7 @@ int main()
 
 
 
-  ///  pruebasSumarPolinomios();
+        pruebasSumarPolinomios();
 ///    pruebasReducirPolinomio();
         ////pruebasMultiplicarPolinomio();
 

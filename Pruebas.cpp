@@ -111,7 +111,7 @@ void pruebasSumarPolinomios()
     tB1.coef  = 3;
     tB1.grado = 2;
     listaTerminosInsertarOrdenado(LtB,tB1);
-/*
+
     tB2.coef  = 1;
     tB2.grado = 1;
     listaTerminosInsertarOrdenado(LtB,tB2);
@@ -120,7 +120,7 @@ void pruebasSumarPolinomios()
     tB3.grado = 0;
     listaTerminosInsertarOrdenado(LtB,tB3);
 
-/*
+
     sumarPolinomios(LtA,LtB,ListaResultado);
     listaTerminosMostrar(ListaResultado);
 }
