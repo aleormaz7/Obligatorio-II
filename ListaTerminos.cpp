@@ -156,6 +156,7 @@ void sumarPolinomios(ListaTerminos listaA, ListaTerminos listaB, ListaTerminos &
         }
 
     }
+    controlTerminoIndependienteNoNulo(listaResultado);
     /// una vez hecha la suma, verificar si tiene grado mayor a 0 y termino independiente igual a 0
     /// en caso de tenerlo, ir hasta el final y elimnarlo
     /// la idea es que no queden terminos independientes nulos cuando no es el polinomio nulo
@@ -196,11 +197,8 @@ void multiplicarPolinomios(ListaTerminos listaA, ListaTerminos listaB, ListaTerm
 		}
         reduceListaTerminos(listaResultadoAux,listaResuladoFinal);
         destuirListaTerminos(listaResultadoAux);
+        controlTerminoIndependienteNoNulo(listaResuladoFinal);
 	}
-
-    /// una vez hecha la multiplicacion, verificar si tiene grado mayor a 0 y termino independiente igual a 0
-    /// en caso de tenerlo, ir hasta el final y elimnarlo
-    /// la idea es que no queden terminos independientes nulos cuando no es el polinomio nulo
 }
 
 
@@ -274,15 +272,21 @@ void controlTerminoIndependienteNoNulo(ListaTerminos &L)
     /// Verificar si tiene grado mayor a 0 y termino independiente igual a 0
     /// en caso de tenerlo, ir hasta el final y elimnarlo
     /// la idea es que no queden terminos independientes nulos cuando no es el polinomio nulo
-    if(DarCoefTermino(L->info) > 0)
+    if(DarGradoTermino(L->info) > 0)
     {
-         ListaTerminos LAux = L;
-         while(LAux->Sig != NULL)
-         {
-             LAux = LAux->Sig;
-         }
-         if(DarCoefTermino(LAux->info) == 0 && DarGradoTermino(LAux->info) == 0)
-            delete LAux;
+        if(DarCoefTermino(L->info) != 0)
+        {
+             ListaTerminos LAux = L;
+             while(LAux->Sig->Sig != NULL)
+             {
+                 LAux = LAux->Sig;
+             }
+             if(DarCoefTermino(LAux->Sig->info) == 0 && DarGradoTermino(LAux->Sig->info) == 0)
+             {
+                 delete LAux->Sig;
+                 LAux->Sig = NULL;
+             }
+        }
     }
 }
 /*
