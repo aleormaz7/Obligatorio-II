@@ -13,10 +13,11 @@ int main()
 
 
 
-        pruebasSumarPolinomios();
+      ///  pruebasSumarPolinomios();
 ///    pruebasReducirPolinomio();
         ///pruebasMultiplicarPolinomio();
 ///        pruebasControlTerminoIndependienteNoNulo();
+    pruebasEvaluarPolinomio();
 
 ///pruebasModuloPolinomio();
 

@@ -12,9 +12,6 @@ typedef nodoTermino * ListaTerminos;
 
 boolean listaTerminosEsVacia(ListaTerminos listaT);
 
-void listaTerminosResto(ListaTerminos &listaT); /*borrar 1er valor*/
-/*Precondición: lista no vacía*/
-
 void listaTerminosCrear(ListaTerminos &listaT);
 
 void listaTerminosInsertarOrdenado(ListaTerminos &listaT, Termino t);
@@ -23,6 +20,7 @@ void listaTerminosInsertarOrdenado(ListaTerminos &listaT, Termino t);
 void listaTerminosMostrar(ListaTerminos listaT);
 
 long int evaluarPolinomio(ListaTerminos listaT, int valor);
+/*Precondicion: ListaTerminos no es vacia y grado mayor o*/
 
 void sumarPolinomios(ListaTerminos listaA, ListaTerminos listaB, ListaTerminos &listaResultado);
 
@@ -48,5 +46,8 @@ void destuirListaTerminos(ListaTerminos listaT);
 
 void controlTerminoIndependienteNoNulo(ListaTerminos &listaT);
 /*Precondicion: listaT no es vacia*/
+
+boolean esRaiz(ListaTerminos listaT, int valor);
+/*Precondicion: ListaTerminos no es vacia y grado mayor o*/
 
 #endif // LISTATERMINOS_H_INCLUDED

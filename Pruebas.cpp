@@ -125,6 +125,35 @@ void pruebasSumarPolinomios()
     listaTerminosMostrar(ListaResultado);
 }
 
+void pruebasEvaluarPolinomio()
+{
+    ListaTerminos lista;
+    listaTerminosCrear(lista);
+    int valor;
+
+    Termino tA1,tA2,tA3,tB1,tB2,tB3;
+
+    tA1.coef  = 3;
+    tA1.grado = 6;
+    listaTerminosInsertarOrdenado(lista,tA1);
+
+    tA2.coef  = 2;
+    tA2.grado = 2;
+    listaTerminosInsertarOrdenado(lista,tA2);
+
+    tA2.coef  = -4;
+    tA2.grado = 1;
+    listaTerminosInsertarOrdenado(lista,tA2);
+
+    tA3.coef  = 3;
+    tA3.grado = 0;
+    listaTerminosInsertarOrdenado(lista,tA3);
+
+    printf("Valor a evaluar: ");
+    scanf("%d",&valor);
+    printf("\nResultado de la evaluacion:  %li",evaluarPolinomio(lista,valor));
+
+}
 
 void pruebasMultiplicarPolinomio()
 {

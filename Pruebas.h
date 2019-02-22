@@ -31,4 +31,6 @@ void pruebasModuloPolinomio();
 
 void pruebasControlTerminoIndependienteNoNulo();
 
+void pruebasEvaluarPolinomio();
+
 #endif // PRUEBAS_H_INCLUDED
