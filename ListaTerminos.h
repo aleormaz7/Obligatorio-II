@@ -46,5 +46,7 @@ ListaTerminos listaTerminosCopiar(ListaTerminos listaT);
 void destuirListaTerminos(ListaTerminos listaT);
 /*Precondicion: listaT no es vacia*/
 
+void controlTerminoIndependienteNoNulo(ListaTerminos &listaT);
+/*Precondicion: listaT no es vacia*/
 
 #endif // LISTATERMINOS_H_INCLUDED

@@ -198,6 +198,27 @@ void pruebasReducirPolinomio()
     listaTerminosMostrar(ListaResultado);
 }
 
+void pruebasControlTerminoIndependienteNoNulo()
+{
+    ListaTerminos LtA;
+    listaTerminosCrear(LtA);
+
+    Termino tA1,tA2,tA3,tA4,tA5,tA6;
+    tA1.coef  = 32;
+    tA1.grado = 4;
+    listaTerminosInsertarOrdenado(LtA,tA1);
+
+    tA2.coef  = 11;
+    tA2.grado = 1;
+    listaTerminosInsertarOrdenado(LtA,tA2);
+
+    tA3.coef  = 0;
+    tA3.grado = 0;
+    listaTerminosInsertarOrdenado(LtA,tA3);
+
+    controlTerminoIndependienteNoNulo(LtA);
+    listaTerminosMostrar(LtA);
+}
 void pruebasModuloTermino()
 {
     ///MODULO TERMINO:

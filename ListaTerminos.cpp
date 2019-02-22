@@ -79,8 +79,8 @@ long int evaluarPolinomio(ListaTerminos listaT, int valor)
 void sumarPolinomios(ListaTerminos listaA, ListaTerminos listaB, ListaTerminos &listaResultado)
 {
     while(listaA != NULL || listaB != NULL)     /// meditar... es || o es &&?
-    {                                           /// SI, pero NO con el comentario, teniamos problemas no tiene uno de ambos queda sin termino independiente
-        Termino terminoAux;                     /// ademas implico una correccion al recorrer la lista
+    {                                           /// SI, pero NO con el comentario, Si quedaba como estaba daba problemas cuando uno de los polinomios no tenia termi independiente.
+        Termino terminoAux;                     /// para eso se agrego una correccion al recorrer la lista
         if(listaA == NULL)
         {
             if(DarGradoTermino(listaB->info) == 0)
@@ -269,6 +269,22 @@ void destuirListaTerminos(ListaTerminos L) /// no deberia ir L por referencia???
 
 }
 
+void controlTerminoIndependienteNoNulo(ListaTerminos &L)
+{
+    /// Verificar si tiene grado mayor a 0 y termino independiente igual a 0
+    /// en caso de tenerlo, ir hasta el final y elimnarlo
+    /// la idea es que no queden terminos independientes nulos cuando no es el polinomio nulo
+    if(DarCoefTermino(L->info) > 0)
+    {
+         ListaTerminos LAux = L;
+         while(LAux->Sig != NULL)
+         {
+             LAux = LAux->Sig;
+         }
+         if(DarCoefTermino(LAux->info) == 0 && DarGradoTermino(LAux->info) == 0)
+            delete LAux;
+    }
+}
 /*
 void levantarTerminos(file * f, ListaTerminos &listaT)
 {

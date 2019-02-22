@@ -29,6 +29,6 @@ void pruebasModuloPolinomio();
 /* programa de pruebas modulo Polinomio */
 
 
-
+void pruebasControlTerminoIndependienteNoNulo();
 
 #endif // PRUEBAS_H_INCLUDED
