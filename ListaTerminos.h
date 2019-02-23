@@ -50,4 +50,10 @@ void controlTerminoIndependienteNoNulo(ListaTerminos &listaT);
 boolean esRaiz(ListaTerminos listaT, int valor);
 /*Precondicion: ListaTerminos no es vacia y grado mayor o*/
 
+void levantarListaTerminos(ListaTerminos &lT,String nomArch);
+
+void bajarListaTerminos(ListaTerminos lt, String nomArch);
+
+void InsBackListaTermino(ListaTerminos &L, Termino t);
+
 #endif // LISTATERMINOS_H_INCLUDED

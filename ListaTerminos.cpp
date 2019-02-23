@@ -292,11 +292,41 @@ boolean esRaiz(ListaTerminos listaT,int valor)
         es = TRUE;
     return es;
 }
-/*
-void levantarTerminos(file * f, ListaTerminos &listaT)
-{
 
+
+void levantarListaTerminos(ListaTerminos &lt,String nomArch)
+{
+    FILE * f = fopen(nomArch,"rb");
+    Termino TermAux;
+    LevantarTermino(TermAux,f);
+    while(!feof(f))
+    {
+        InsBackListaTermino(lt,TermAux);
+        LevantarTermino(TermAux,f);
+    }
+    fclose(f);
 }
 
-void bajarTerminos(file * f, ListaTerminos listaTerminos);
-*/
+void bajarListaTerminos(ListaTerminos lt, String nomArch)
+{
+    FILE * f = fopen(nomArch,"wb");
+    while(lt != NULL)
+    {
+        BajarTermino(lt->info,f);
+        lt = lt->Sig;
+    }
+}
+
+void InsBackListaTermino(ListaTerminos &L, Termino t)
+{
+    if(L == NULL)
+    {
+        L = new nodoT;
+        L->info = t;
+        L->Sig = NULL;
+    }
+    else
+    {
+        InsBackListaTermino(L->Sig,t);
+    }
+}
