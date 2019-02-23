@@ -21,7 +21,7 @@ void mostrarPolinomio(Polinomio p);
 void darNombrePolinomio(Polinomio p, String &s);
 /* devuelve nombre del polinomio */
 
-void borrarPolinomio();
+void borrarPolinomio(Polinomio &p);
 /* borra nombre y lista de terminos del polinomio*/
 
 

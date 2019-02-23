@@ -7,6 +7,7 @@
 #include "Termino.h"
 #include "ListaTerminos.h"
 #include "Polinomio.h"
+#include "ABBPolinomio.h"
 
 void pruebaModuloString();
 /* programa de pruebas modulo String */
@@ -43,5 +44,8 @@ void pruebaDarExtencion();
 void pruebaControlPunto();
 
 void pruebasSumarPolinomiosMain();
+
+void PruebasABBPolinomio();
+
 
 #endif // PRUEBAS_H_INCLUDED

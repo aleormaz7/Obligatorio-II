@@ -97,20 +97,20 @@ void sumarPolinomios(ListaTerminos listaA, ListaTerminos listaB, ListaTerminos &
         {
 			if(listaB == NULL)
 			{
-			if(DarGradoTermino(listaA->info) == 0)
-			{
-				CrearTermino(terminoAux,((DarCoefTermino(listaA->info))),0);
-				listaTerminosInsertarOrdenado(listaResultado,terminoAux);
-			}
-			else
-			{
-			   if((DarCoefTermino(listaA->info))!= 0)
-				{
-					CrearTermino(terminoAux,((DarCoefTermino(listaA->info) )),DarGradoTermino(listaA->info));
-					listaTerminosInsertarOrdenado(listaResultado,terminoAux);
-				}
-			}
-			listaA = listaA->Sig;
+                if(DarGradoTermino(listaA->info) == 0)
+                {
+                    CrearTermino(terminoAux,((DarCoefTermino(listaA->info))),0);
+                    listaTerminosInsertarOrdenado(listaResultado,terminoAux);
+                }
+                else
+                {
+                   if((DarCoefTermino(listaA->info))!= 0)
+                    {
+                        CrearTermino(terminoAux,((DarCoefTermino(listaA->info) )),DarGradoTermino(listaA->info));
+                        listaTerminosInsertarOrdenado(listaResultado,terminoAux);
+                    }
+                }
+                listaA = listaA->Sig;
 			}
 			else
 			{

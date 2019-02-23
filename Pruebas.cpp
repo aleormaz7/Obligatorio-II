@@ -390,3 +390,58 @@ void pruebasModuloPolinomio()
     listaTerminosMostrar(lt);
 
 }
+
+void PruebasABBPolinomio()
+{
+    ABBPolinomio a;
+    ABBPolinomioCrear(a);
+
+    Polinomio p;
+
+    String lineaComando;
+    ListaString listaS;
+
+    CrearListaString(listaS);
+
+    strcrear(lineaComando);
+
+    strcrear(lineaComando);
+    printf("\ningrese toda la linea del comando con sus parametros: ");
+    scan(lineaComando);
+
+
+    ///Partir el String en una lista de strings
+    partirString(lineaComando,listaS);
+    listaTerminosCrear(p.listaTerminos);
+
+
+    crearPolinomio(p,listaS);
+
+    ABBPolinomioInsertar(a,p);
+
+    if(ABBPolinomioExiste(a,"pepe"))
+        printf("existe");
+    else
+        printf("no existe");
+
+
+
+    if(ABBPolinomioEsVacio(a))
+        printf("es vacio");
+    else
+        printf("No es vacio");
+
+    printf("\nMostrar Polinomio");
+    mostrarPolinomio(darPolinomio(a,"pepe"));
+
+    ABBPolinomioEliminar(a);
+
+    if(ABBPolinomioExiste(a,"pepe"))
+        printf("existe");
+    else
+        printf("no existe");
+
+
+
+}
+

@@ -114,17 +114,16 @@ void destruirListaString(ListaString &L)
 boolean CoeficientesEnteros(ListaString L)
 {
     boolean todosEnteros = TRUE;
-    int i = 2;
+    int i = 1;
     int largoLista = LargoListaString(L);
-    L = L->Sig->Sig;
 
-    while (todosEnteros && i < largoLista)
+    while ((todosEnteros && i <= largoLista) && L != NULL)
     {
         if (!esEntero(L -> info))
             todosEnteros = FALSE;
 		else
             L = L->Sig;
-            i++; /// ojo que esto sin querer esta fuera del else. Es lo que quieren?
+        i++;
     }
     return todosEnteros;
 }

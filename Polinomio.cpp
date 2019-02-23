@@ -40,12 +40,12 @@ void crearPolinomio(Polinomio &p, ListaString listaS)
                 int largo = LargoListaString(listaS) + 2;///mas 2 de los dos que me movi
 
                 ///TODO: revisar aca xq esta funcion empieza en 2 y yo ya estoy parado en 2, entonces aca empezaria en 4 ??
-                /*if(!CoeficientesEnteros(listaS))
+                if(!CoeficientesEnteros(listaS))
                 {
                     printf("\nError: los coeficientes deben ser numéricos.");
                 }
                 else
-                {*/
+                {
                     printf("\nSon coef numericos");
 
                     Termino auxT;
@@ -97,7 +97,7 @@ void crearPolinomio(Polinomio &p, ListaString listaS)
                             ///TODO: InsertarPolinomio en ABB de Polinomios.
                         }
                     }
-                /*}*/
+                }
             }
         }
     }

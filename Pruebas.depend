@@ -132,16 +132,16 @@
 1550846980 source:c:\users\ale\desktop\taller-i\boolean.cpp
 	"Boolean.h"
 
-1550846980 source:c:\users\ale\desktop\taller-i\listastring.cpp
+1550944692 source:c:\users\ale\desktop\taller-i\listastring.cpp
 	"ListaString.h"
 
 1550846980 c:\users\ale\desktop\taller-i\listastring.h
 	"String.h"
 
-1550877177 source:c:\users\ale\desktop\taller-i\listaterminos.cpp
+1550945059 source:c:\users\ale\desktop\taller-i\listaterminos.cpp
 	"ListaTerminos.h"
 
-1550877177 c:\users\ale\desktop\taller-i\listaterminos.h
+1550944118 c:\users\ale\desktop\taller-i\listaterminos.h
 	"Termino.h"
 	"Boolean.h"
 
@@ -149,32 +149,33 @@
 	<stdio.h>
 	"String.h"
 
-1550880163 source:c:\users\ale\desktop\taller-i\main.cpp
+1550949549 source:c:\users\ale\desktop\taller-i\main.cpp
 	"Pruebas.h"
 
-1550880223 c:\users\ale\desktop\taller-i\pruebas.h
+1550949438 c:\users\ale\desktop\taller-i\pruebas.h
 	"String.h"
 	"ListaString.h"
 	"Archivo.h"
 	"Termino.h"
 	"ListaTerminos.h"
 	"Polinomio.h"
+	"ABBPolinomio.h"
 
-1550880111 c:\users\ale\desktop\taller-i\polinomio.h
+1550948785 c:\users\ale\desktop\taller-i\polinomio.h
 	"String.h"
 	"ListaTerminos.h"
 	"ListaString.h"
 
-1550880151 source:c:\users\ale\desktop\taller-i\polinomio.cpp
+1550944247 source:c:\users\ale\desktop\taller-i\polinomio.cpp
 	"Polinomio.h"
 
-1550880199 source:c:\users\ale\desktop\taller-i\pruebas.cpp
+1550949534 source:c:\users\ale\desktop\taller-i\pruebas.cpp
 	"Pruebas.h"
 
 1550846980 source:c:\users\ale\desktop\taller-i\string.cpp
 	"String.h"
 
-1550846980 source:c:\users\ale\desktop\taller-i\termino.cpp
+1550944118 source:c:\users\ale\desktop\taller-i\termino.cpp
 	"Termino.h"
 
 1550793476 source:c:\users\german ana\dropbox\ude\taller i\proyecto\taller-ii\taller-i\archivo.cpp
@@ -304,9 +305,9 @@
 1550860002 c:\users\ale\desktop\taller-i\polinomio.cpp
 	"Polinomio.h"
 
-1550880276 source:c:\users\ale\desktop\taller-i\abbpolinomio.cpp
+1550948658 source:c:\users\ale\desktop\taller-i\abbpolinomio.cpp
 	"ABBPolinomio.h"
 
-1550880379 c:\users\ale\desktop\taller-i\abbpolinomio.h
+1550948770 c:\users\ale\desktop\taller-i\abbpolinomio.h
 	"Polinomio.h"
 

@@ -6,36 +6,38 @@
 typedef struct nodoA { Polinomio info;
     nodoA * hizq;
     nodoA * hder;
-} nodo;
+} nodoABB;
 
-typedef nodo * ABBPolinomio;
+typedef nodoABB * ABBPolinomio;
 
 void ABBPolinomioCrear(ABBPolinomio &a);
+///Crear ABB
 
 boolean ABBPolinomioEsVacio(ABBPolinomio a);
+///retorna si es abb es vacio.
 
 Polinomio ABBPolinomioDarRaiz(ABBPolinomio a);
+///retorno raiz
 
 ABBPolinomio ABBPolinomioDarHijoIzq(ABBPolinomio a);
+///retorna hijo izquierdo
 
 ABBPolinomio ABBPolinomioDarHjoDer(ABBPolinomio a);
+///retorna hijo derecho.
 
 void ListarABBPolinomio(ABBPolinomio a);
-//Precondición: árbol no sea vacío
+///Precondición: árbol no sea vacío.
 
 boolean ABBPolinomioExiste(ABBPolinomio a, String nombrePolinomio);
 
 void ABBPolinomioInsertar(ABBPolinomio &a, Polinomio p);
-//Precondición: polinomio no debe existir en el árbol
+///Precondición: polinomio no debe existir en el árbol.
 
-boolean existeEnArbol(ABBPolinomio a, String s);
+Polinomio darPolinomio(ABBPolinomio a, String nombrePol);
+///Precondición: nombrePolinomio existe en el ÁBB.
 
-Polinomio obtenerPolinomio(ABBPolinomio a, String s);
-//Precondición: s existe en el Árbol
-
-void ABBPolinomioEliminar (ABBPolinomio &a);
-//Precondicion: a no sea vacio
-
+void ABBPolinomioEliminar(ABBPolinomio &a);
+///Precondicion: a no sea vacio.
 
 
 #endif // ABBPOLINOMIO_H_INCLUDED

@@ -39,13 +39,13 @@ void ListarABB(ABBPolinomio a)
 {
      if (a != NULL)
      {
-         printf (" %d ", a -> info);
-         ListarABB(a -> hizq); ///ListarOrdenado(a -> hizq);
-         ListarABB(a -> hder); ///ListarOrdenado(a -> hder);
+         ListarABB(a->hizq); ///ListarOrdenado(a -> hizq);
+         mostrarPolinomio(a->info);
+         ListarABB(a->hder); ///ListarOrdenado(a -> hder);
      }
 }
 
-boolean existe(ABBPolinomio a, String nombrePolinomio)
+boolean ABBPolinomioExiste(ABBPolinomio a, String nombrePolinomio)
 {
     String straux;
     if (a == NULL)
@@ -59,36 +59,67 @@ boolean existe(ABBPolinomio a, String nombrePolinomio)
         {
             if (strmen(nombrePolinomio,straux))
             {
-                existe(a->hizq,nombrePolinomio);
+                return ABBPolinomioExiste(a->hizq,nombrePolinomio);
             }
             else
             {
-                existe(a->hder,nombrePolinomio);
+                return ABBPolinomioExiste(a->hder,nombrePolinomio);
             }
         }
     }
 }
 
-//void insertar(ABBPolinomio &a, Polinomio p)
-//{
+void ABBPolinomioInsertar(ABBPolinomio &a, Polinomio p)
+{
+    if(a == NULL)
+    {
+        a = new nodoABB;
+        a->info = p;
+        a->hizq = NULL;
+        a->hder = NULL;
+    }
+    else
+    {
+        String auxABB,auxPol;
+        strcrear(auxABB);
+        strcrear(auxPol);
 
-//}
-//Precondición: polinomio no debe existir en el árbol
+        darNombrePolinomio(a->info,auxABB);
+        darNombrePolinomio(p,auxPol);
+        if (strmen(auxABB,auxPol))
+            ABBPolinomioInsertar(a->hizq, p);
+        else
+            ABBPolinomioInsertar(a->hder, p);
+    }
+}
 
-//boolean existeEnArbol(ABBPolinomio a, String s)
-//{
+Polinomio darPolinomio(ABBPolinomio a, String nombrePol)
+{
+    String straux;
+    darNombrePolinomio(a->info,straux);
+    if(streq(straux,nombrePol))
+        return a->info;
+    else
+    {
+        if (strmen(nombrePol,straux))
+        {
+            ABBPolinomioExiste(a->hizq,nombrePol);
+        }
+        else
+        {
+            ABBPolinomioExiste(a->hder,nombrePol);
+        }
+    }
+}
 
-//}
-
-//Polinomio obtenerPolinomio(ABBPolinomio a, String s)
-//{
-
-//}
-//Precondición: s existe en el Árbol
-
-//void Eliminar (ABBPolinomio &a)
-//{
-
-//}
-//Precondicion: a no sea vacio
+void ABBPolinomioEliminar(ABBPolinomio &a)
+{
+    if(a != NULL)
+    {
+        ABBPolinomioEliminar(a->hizq);
+        ABBPolinomioEliminar(a->hder);
+        borrarPolinomio(a->info);
+        a = NULL;
+    }
+}
 

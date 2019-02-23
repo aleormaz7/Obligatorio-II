@@ -25,6 +25,9 @@ int main()
 
     ///pruebasEsRaiz();
 
+    PruebasABBPolinomio();
+
+
 
 
 }
