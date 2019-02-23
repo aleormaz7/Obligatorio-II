@@ -10,22 +10,22 @@ typedef struct nodoA { Polinomio info;
 
 typedef nodo * ABBPolinomio;
 
-void Crear(ABBPolinomio &a);
+void ABBPolinomioCrear(ABBPolinomio &a);
 
-boolean esVacio(ABBPolinomio a);
+boolean ABBPolinomioEsVacio(ABBPolinomio a);
 
-Polinomio darRaiz(ABBPolinomio a);
+Polinomio ABBPolinomioDarRaiz(ABBPolinomio a);
 
-ABBPolinomio darHijoIzq(ABBPolinomio a);
+ABBPolinomio ABBPolinomioDarHijoIzq(ABBPolinomio a);
 
-ABBPolinomio darHjoDer(ABBPolinomio a);
+ABBPolinomio ABBPolinomioDarHjoDer(ABBPolinomio a);
 
-void ListarABB(ABBPolinomio a);
+void ListarABBPolinomio(ABBPolinomio a);
 //Precondición: árbol no sea vacío
 
-boolean existe(ABBPolinomio a, String nombrePolinomio);
+boolean ABBPolinomioExiste(ABBPolinomio a, String nombrePolinomio);
 
-void insertar(ABBPolinomio &a, Polinomio p);
+void ABBPolinomioInsertar(ABBPolinomio &a, Polinomio p);
 //Precondición: polinomio no debe existir en el árbol
 
 boolean existeEnArbol(ABBPolinomio a, String s);
@@ -33,7 +33,7 @@ boolean existeEnArbol(ABBPolinomio a, String s);
 Polinomio obtenerPolinomio(ABBPolinomio a, String s);
 //Precondición: s existe en el Árbol
 
-void Eliminar (ABBPolinomio &a);
+void ABBPolinomioEliminar (ABBPolinomio &a);
 //Precondicion: a no sea vacio
 
 

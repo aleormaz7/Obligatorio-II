@@ -1,11 +1,11 @@
 #include "ABBPolinomio.h"
 
-void Crear(ABBPolinomio &a)
+void ABBPolinomioCrear(ABBPolinomio &a)
 {
     a = NULL;
 }
 
-boolean esVacio(ABBPolinomio a)
+boolean ABBPolinomioEsVacio(ABBPolinomio a)
 {
     boolean resu = FALSE;
     if (a==NULL)
@@ -16,7 +16,7 @@ boolean esVacio(ABBPolinomio a)
 }
 
 //Precondición: Arbol NO vacío
-Polinomio darRaiz(ABBPolinomio a)
+Polinomio ABBPolinomioDarRaiz(ABBPolinomio a)
 {
     return a->info;
 }

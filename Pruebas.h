@@ -42,4 +42,6 @@ void pruebaDarExtencion();
 
 void pruebaControlPunto();
 
+void pruebasSumarPolinomiosMain();
+
 #endif // PRUEBAS_H_INCLUDED

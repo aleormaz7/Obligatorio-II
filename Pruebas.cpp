@@ -128,6 +128,21 @@ void pruebasSumarPolinomios()
     listaTerminosMostrar(ListaResultado);
 }
 
+
+void pruebasSumarPolinomiosMain()
+{
+    String s;
+    ListaString ls;
+    strcrear(s);
+    CrearListaString(ls);
+    printf("\nIngrese comando: ");
+    scan(s);
+    partirString(s,ls);
+
+
+}
+
+
 void pruebasEvaluarPolinomio()
 {
     ListaTerminos lista;
