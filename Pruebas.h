@@ -36,4 +36,10 @@ void pruebasEvaluarPolinomio();
 
 void pruebasEsRaiz();
 
+void pruebaStringAlfanumerico();
+
+void pruebaDarExtencion();
+
+void pruebaControlPunto();
+
 #endif // PRUEBAS_H_INCLUDED

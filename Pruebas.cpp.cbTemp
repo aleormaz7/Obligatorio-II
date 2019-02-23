@@ -14,7 +14,7 @@ void pruebaStringAlfanumerico()
     if(esAlfanumerico(s))
         printf("\n El String es alfanumerico");
     else
-        printf("\n El String NOOOO es alfanumerico");
+        printf("\n El String NOOOO es alfanumerico");*/
 
 }
 
