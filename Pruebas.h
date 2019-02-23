@@ -5,6 +5,7 @@
 #include "ListaString.h"
 #include "Archivo.h"
 #include "Termino.h"
+#include "ListaTerminos.h"
 #include "Polinomio.h"
 
 void pruebaModuloString();

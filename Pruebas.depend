@@ -117,63 +117,64 @@
 1550791458 source:c:\users\german ana\dropbox\ude\taller i\proyecto\taller-i\termino.cpp
 	"Termino.h"
 
-1550708994 source:c:\users\ale\desktop\taller-i\archivo.cpp
+1550846980 source:c:\users\ale\desktop\taller-i\archivo.cpp
 	"archivo.h"
 
-1550708994 c:\users\ale\desktop\taller-i\archivo.h
+1550846980 c:\users\ale\desktop\taller-i\archivo.h
 	"String.h"
 
-1550708994 c:\users\ale\desktop\taller-i\string.h
+1550846980 c:\users\ale\desktop\taller-i\string.h
 	"Boolean.h"
 
-1550708994 c:\users\ale\desktop\taller-i\boolean.h
+1550846980 c:\users\ale\desktop\taller-i\boolean.h
 	<stdio.h>
 
-1550708994 source:c:\users\ale\desktop\taller-i\boolean.cpp
+1550846980 source:c:\users\ale\desktop\taller-i\boolean.cpp
 	"Boolean.h"
 
-1550747109 source:c:\users\ale\desktop\taller-i\listastring.cpp
+1550846980 source:c:\users\ale\desktop\taller-i\listastring.cpp
 	"ListaString.h"
 
-1550747109 c:\users\ale\desktop\taller-i\listastring.h
+1550846980 c:\users\ale\desktop\taller-i\listastring.h
 	"String.h"
 
-1550748784 source:c:\users\ale\desktop\taller-i\listaterminos.cpp
+1550877177 source:c:\users\ale\desktop\taller-i\listaterminos.cpp
 	"ListaTerminos.h"
 
-1550747109 c:\users\ale\desktop\taller-i\listaterminos.h
+1550877177 c:\users\ale\desktop\taller-i\listaterminos.h
 	"Termino.h"
 	"Boolean.h"
 
-1550708994 c:\users\ale\desktop\taller-i\termino.h
+1550846980 c:\users\ale\desktop\taller-i\termino.h
 	<stdio.h>
 	"String.h"
 
-1550748924 source:c:\users\ale\desktop\taller-i\main.cpp
+1550880163 source:c:\users\ale\desktop\taller-i\main.cpp
 	"Pruebas.h"
 
-1550747109 c:\users\ale\desktop\taller-i\pruebas.h
+1550880223 c:\users\ale\desktop\taller-i\pruebas.h
 	"String.h"
 	"ListaString.h"
 	"Archivo.h"
 	"Termino.h"
+	"ListaTerminos.h"
 	"Polinomio.h"
 
-1550748559 c:\users\ale\desktop\taller-i\polinomio.h
+1550880111 c:\users\ale\desktop\taller-i\polinomio.h
 	"String.h"
 	"ListaTerminos.h"
 	"ListaString.h"
 
-1550748760 source:c:\users\ale\desktop\taller-i\polinomio.cpp
+1550880151 source:c:\users\ale\desktop\taller-i\polinomio.cpp
 	"Polinomio.h"
 
-1550748592 source:c:\users\ale\desktop\taller-i\pruebas.cpp
+1550880199 source:c:\users\ale\desktop\taller-i\pruebas.cpp
 	"Pruebas.h"
 
-1550708994 source:c:\users\ale\desktop\taller-i\string.cpp
+1550846980 source:c:\users\ale\desktop\taller-i\string.cpp
 	"String.h"
 
-1550747110 source:c:\users\ale\desktop\taller-i\termino.cpp
+1550846980 source:c:\users\ale\desktop\taller-i\termino.cpp
 	"Termino.h"
 
 1550793476 source:c:\users\german ana\dropbox\ude\taller i\proyecto\taller-ii\taller-i\archivo.cpp
@@ -293,4 +294,19 @@
 
 1550875339 source:c:\users\german ana\dropbox\ude\taller i\proyecto\taller-i\taller-i\main.cpp
 	"Pruebas.h"
+
+1550878820 source:c:\users\ale\desktop\taller-i\abbpolinomios.cpp
+	"ABBPolinomios.h"
+
+1550878829 c:\users\ale\desktop\taller-i\abbpolinomios.h
+	"Polinomio.cpp"
+
+1550860002 c:\users\ale\desktop\taller-i\polinomio.cpp
+	"Polinomio.h"
+
+1550880276 source:c:\users\ale\desktop\taller-i\abbpolinomio.cpp
+	"ABBPolinomio.h"
+
+1550880379 c:\users\ale\desktop\taller-i\abbpolinomio.h
+	"Polinomio.h"
 

@@ -11,16 +11,20 @@ int main()
 
     ///pruebasModuloTermino();
 
+    ///pruebasModuloPolinomio();
 
+    ///pruebasSumarPolinomios();
 
-      ///  pruebasSumarPolinomios();
-///    pruebasReducirPolinomio();
-        ///pruebasMultiplicarPolinomio();
-///        pruebasControlTerminoIndependienteNoNulo();
- ///   pruebasEvaluarPolinomio();
-        pruebasEsRaiz();
+    ///pruebasReducirPolinomio();
 
-///pruebasModuloPolinomio();
+    ///pruebasMultiplicarPolinomio();
+
+    ///pruebasControlTerminoIndependienteNoNulo();
+
+    ///pruebasEvaluarPolinomio();
+
+    ///pruebasEsRaiz();
+
 
 
 }

@@ -345,49 +345,32 @@ void pruebasModuloArchivo()
 
 void pruebasModuloPolinomio()
 {
-    ///**pruebas (version sin chequeo)
-    /*String nombrePol,nombrePol2;
-    strcrear(nombrePol);
-    strcrear(nombrePol2);
-    printf("\nIngrese nombre polinomio:");
-    scan(nombrePol);
-    Polinomio p,p2;
-    ListaTerminos lt,lt2;
-    listaTerminosCrear(lt);
-    listaTerminosCrear(lt2);
-    Termino tA1,tA2;
-    CrearTermino(tA1,5,3);
-    listaTerminosInsertarOrdenado(lt,tA1);
-    CrearTermino(tA2,-2,1);
-    listaTerminosInsertarOrdenado(lt,tA2);
-    crearPolinomio(p,nombrePol,lt);
-    mostrarPolinomio(p);
-    /////////////////////////////////////////
-    printf("\nPruebaDarLista2");
-    darListaTerminosPolinomio(p,lt2);
-    listaTerminosMostrar(lt2);*/
-    ///**
-
     Polinomio p;
-    ListaString ls;
-    String s,nomComandoAux;
+    String lineaComando;
+    ListaString listaS;
+    ListaTerminos lt;
 
-    CrearListaString(ls);
-    strcrear(nomComandoAux);
 
-    strcrear(s);
+    strcrear(lineaComando);
+
+    strcrear(lineaComando);
     printf("\ningrese toda la linea del comando con sus parametros: ");
-    scan(s);
-    //print(s);
+    scan(lineaComando);
 
 
-    printf("\nIngrese comando crear(magia): ");
-    scan(nomComandoAux);
-    //print(nomComandoAux);
+    CrearListaString(listaS);
 
-    crearPolinomio(p,s);
+    ///Partir el String en una lista de strings
+    partirString(lineaComando,listaS);
+    listaTerminosCrear(p.listaTerminos);
+
+    crearPolinomio(p,listaS);
     printf("\n Polinomio: ");
     mostrarPolinomio(p);
 
+
+    printf("\nPruebaDarLista");
+    darListaTerminosPolinomio(p,lt);
+    listaTerminosMostrar(lt);
 
 }
