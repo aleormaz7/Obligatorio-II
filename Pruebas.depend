@@ -149,10 +149,10 @@
 	<stdio.h>
 	"String.h"
 
-1550949549 source:c:\users\ale\desktop\taller-i\main.cpp
+1551094900 source:c:\users\ale\desktop\taller-i\main.cpp
 	"Pruebas.h"
 
-1550949438 c:\users\ale\desktop\taller-i\pruebas.h
+1551094476 c:\users\ale\desktop\taller-i\pruebas.h
 	"String.h"
 	"ListaString.h"
 	"Archivo.h"
@@ -169,7 +169,7 @@
 1550944247 source:c:\users\ale\desktop\taller-i\polinomio.cpp
 	"Polinomio.h"
 
-1550949534 source:c:\users\ale\desktop\taller-i\pruebas.cpp
+1551094884 source:c:\users\ale\desktop\taller-i\pruebas.cpp
 	"Pruebas.h"
 
 1550846980 source:c:\users\ale\desktop\taller-i\string.cpp

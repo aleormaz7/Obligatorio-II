@@ -85,6 +85,7 @@ void sumarPolinomios(ListaTerminos listaA, ListaTerminos listaB, ListaTerminos &
             }
             else
             {
+               /// quizas este if y el anterior se puedan unificar en uno solo (incluso sin necesitar if)
                if((DarCoefTermino(listaB->info))!= 0)
                   {
                     CrearTermino(terminoAux,((DarCoefTermino(listaB->info) )),DarGradoTermino(listaB->info));
@@ -97,6 +98,7 @@ void sumarPolinomios(ListaTerminos listaA, ListaTerminos listaB, ListaTerminos &
         {
 			if(listaB == NULL)
 			{
+			    /// quizas este if y el anterior se puedan unificar en uno solo (incluso sin necesitar if)
                 if(DarGradoTermino(listaA->info) == 0)
                 {
                     CrearTermino(terminoAux,((DarCoefTermino(listaA->info))),0);
@@ -151,6 +153,9 @@ void sumarPolinomios(ListaTerminos listaA, ListaTerminos listaB, ListaTerminos &
 		}
 
 	}
+	/// si, tras hacer la suma de ambos, la listaResultado quedo vacia => ponerle un solo nodo con (0,0)
+	/// de esta manera, evitamos el "peligro" de que quede en NULL y perjudique otras operaciones posteriores
+
     controlTerminoIndependienteNoNulo(listaResultado);
     /// una vez hecha la suma, verificar si tiene grado mayor a 0 y termino independiente igual a 0
     /// en caso de tenerlo, ir hasta el final y elimnarlo
@@ -193,6 +198,8 @@ void multiplicarPolinomios(ListaTerminos listaA, ListaTerminos listaB, ListaTerm
         reduceListaTerminos(listaResultadoAux,listaResuladoFinal);
         destuirListaTerminos(listaResultadoAux);
         controlTerminoIndependienteNoNulo(listaResuladoFinal);
+        /// si, tras hacer la multiplicacion de ambos, la listaResultado quedo vacia => ponerle un solo nodo con (0,0)
+        /// de esta manera, evitamos el "peligro" de que quede en NULL y perjudique otras operaciones posteriores
 	}
 }
 

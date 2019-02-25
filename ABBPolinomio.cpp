@@ -103,11 +103,17 @@ Polinomio darPolinomio(ABBPolinomio a, String nombrePol)
     {
         if (strmen(nombrePol,straux))
         {
+            /// OJO ACA!!! Llaman a ABBPolinomioExiste, que devuelve un boolean!!!
+            /// habria que llamar recursivamente a la propia darPolinomio
+            /// y retornar algo
             ABBPolinomioExiste(a->hizq,nombrePol);
         }
         else
         {
+            /// OJO ACA!!! Llaman a ABBPolinomioExiste, que devuelve un boolean!!!
+            /// habria que llamar recursivamente a la propia darPolinomio
             ABBPolinomioExiste(a->hder,nombrePol);
+            /// y retornar algo
         }
     }
 }

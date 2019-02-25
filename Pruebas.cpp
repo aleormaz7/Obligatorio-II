@@ -445,3 +445,32 @@ void PruebasABBPolinomio()
 
 }
 
+void pruebasListaTermino()
+{
+    Termino t1,t2,t3;
+
+    CrearTermino(t1,3,2);
+    CrearTermino(t2,2,1);
+    CrearTermino(t3,1,0);
+
+    ListaTerminos listaT;
+    listaTerminosCrear(listaT);
+
+
+    InsBackListaTermino(listaT,t1);
+    InsBackListaTermino(listaT,t2);
+    InsBackListaTermino(listaT,t3);
+
+
+    bajarListaTerminos(listaT,"listaTerminos.txt");
+
+
+    levantarListaTerminos(listaT,"listaTerminos.txt");
+
+
+    listaTerminosMostrar(listaT);
+
+
+
+}
+

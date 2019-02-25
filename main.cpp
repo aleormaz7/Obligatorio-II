@@ -1,6 +1,5 @@
 #include "Pruebas.h"
 
-
 int main()
 {
     ///pruebaModuloString();
@@ -25,10 +24,10 @@ int main()
 
     ///pruebasEsRaiz();
 
-    PruebasABBPolinomio();
+    ///PruebasABBPolinomio();
 
+    pruebasListaTermino();
 
 
 
 }
-

@@ -47,5 +47,7 @@ void pruebasSumarPolinomiosMain();
 
 void PruebasABBPolinomio();
 
+void pruebasListaTermino();
+
 
 #endif // PRUEBAS_H_INCLUDED

@@ -67,6 +67,10 @@ void crearPolinomio(Polinomio &p, ListaString listaS)
                     }
                     else///SINO
                     {
+                        /// FEDE: Todo el codigo anterior a este es de parseo => hacerlo antes de acá
+                        /// es decir, antes de invocar a crearPolinomio
+                        /// decidan si acá quieren permitir al usuario crear un polinomio nulo de entrada o no
+
                         int coef1 = convertirStringAEntero(listaS->info);
 
                         ///SI 3er String entero = 0
@@ -94,7 +98,6 @@ void crearPolinomio(Polinomio &p, ListaString listaS)
                                 grado--;
                                 i--;
                             }
-                            ///TODO: InsertarPolinomio en ABB de Polinomios.
                         }
                     }
                 }
@@ -112,12 +115,14 @@ void darListaTerminosPolinomio(Polinomio p, ListaTerminos &listaT)
 void mostrarPolinomio(Polinomio p)
 {
     print(p.nombre);
+    /// no deberiamos mostrar un guion o dos puntos o algo entre el nombre y la lista de terminos???
     listaTerminosMostrar(p.listaTerminos);
 }
 
 
 void darNombrePolinomio(Polinomio p, String &s)
 {
+    /// llamar a strcrear(s)
     strcop(s,p.nombre);
 }
 
