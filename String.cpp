@@ -62,40 +62,6 @@ void scan(String &s)
     strdestruir(aux);
 }
 
-
-void strcon(String &s1, String s2)
-{
-    String aux = new char[MAX];
-
-    int largoS1 = strlar(s1);
-    int largoS2 = strlar(s2);
-
-    int i = 0, j = 0;
-    while(i < largoS1)
-    {
-        aux[i] = s1[i];
-        i++;
-    }
-    while(j < largoS2)
-    {
-        aux[i] = s2[j];
-        i++;
-        j++;
-    }
-
-    strdestruir(s1);
-    strcop(s1,aux);
-
-}
-
-void strswp(String &s1, String &s2)
-{
-    String aux;
-    aux = s1;
-    s1 = s2;
-    s2 = aux;
-}
-
 void print(String s)
 {
     int i = 0;
@@ -140,35 +106,6 @@ boolean streq(String s1, String s2)
 
     return iguales;
 }
-
-void Bajar_String (String s, FILE * f)
-{
-	int i = 0;
-	while(s[i]!= '\0')
-	{
-		fwrite(&s[i],sizeof(char),1,f);
-		i++;
-	}
-	fwrite(&s[i],sizeof(char),1,f);
-}
-
-void Levantar_String (String &s, FILE * f)
-{
-	String aux = new char[MAX];
-	int i=0;
-	char c;
-	fread(&c,sizeof(char),1,f);
-	while(!feof(f) &&  c!= '\0')
-	{
-		aux[i] = c;
-		i++;
-		fread(&c,sizeof(char),1,f);
-	}
-	aux[i] = c;
-	strcop(s,aux);
-	strdestruir(aux);
-}
-
 
 boolean esEntero(String s)
 {
