@@ -470,7 +470,14 @@ void pruebasListaTermino()
 
     listaTerminosMostrar(listaT);
 
+}
 
-
+void pruebasPasoMinusculas()
+{
+    String s;
+    strcrear(s);
+    scan(s);
+    llevoAMinusculas(s);
+    print(s);
 }
 

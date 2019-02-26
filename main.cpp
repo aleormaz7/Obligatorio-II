@@ -26,7 +26,9 @@ int main()
 
     ///PruebasABBPolinomio();
 
-    pruebasListaTermino();
+   /// pruebasListaTermino();
+
+    pruebasPasoMinusculas();
 
 
 

@@ -227,7 +227,6 @@ void retornaExtension(String s, String &sExtension)
     String aux;
     aux = new char[MAX];
     boolean encontrePunto = FALSE;
-  //  String auxStringLista;
 
     while(s[i] != '\0' && !encontrePunto)
     {
@@ -262,4 +261,15 @@ int cntPuntos(String s)
     }
 
     return cntPuntos;
+}
+
+void llevoAMinusculas(String &s)
+{
+    int i = 0;
+    while(s[i] !='\0')
+    {
+        if(s[i] >= 65 && s[i] <= 90)
+            s[i] = s[i] + 32;
+        i++;
+    }
 }

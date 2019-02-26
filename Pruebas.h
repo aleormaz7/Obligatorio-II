@@ -49,5 +49,5 @@ void PruebasABBPolinomio();
 
 void pruebasListaTermino();
 
-
+void pruebasPasoMinusculas();
 #endif // PRUEBAS_H_INCLUDED
