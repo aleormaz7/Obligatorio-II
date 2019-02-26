@@ -26,20 +26,13 @@ void sumarPolinomios(ListaTerminos listaA, ListaTerminos listaB, ListaTerminos &
 
 void multiplicarPolinomios(ListaTerminos listaA, ListaTerminos listaB, ListaTerminos &listaResultado);
 
-//void levantarTerminos(file * f, ListaTerminos &listaT);
-
-//void bajarTerminos(file * f, ListaTerminos listaT);
-
 boolean representaPolinomioNulo(ListaTerminos listaT);
 /*Precondicion: listaT no es vacia */
 
 void reduceListaTerminos(ListaTerminos listaT, ListaTerminos &listaResultante);
 /*Precondicion: listaT no es vacia && listaT no representa un ponilomio nulo*/
 
-int mayorGradoListaTerminos(ListaTerminos listaT);
-/*Precondicion: listaT no es vacia */
-
-ListaTerminos listaTerminosCopiar(ListaTerminos listaT);
+void listaTerminosCopiar(ListaTerminos listaTOri,ListaTerminos &listaResu);
 
 void destuirListaTerminos(ListaTerminos &listaT);
 /*Precondicion: listaT no es vacia*/

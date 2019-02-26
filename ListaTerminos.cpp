@@ -230,18 +230,14 @@ int mayorGradoListaTerminos(ListaTerminos listaT)
     return DarGradoTermino(listaT->info);
 }
 
-ListaTerminos listaTerminosCopiar(ListaTerminos listaT)
+void listaTerminosCopiar(ListaTerminos listaTOri,ListaTerminos &listaResu)
 {
-    ListaTerminos listaRetorno;
-    listaTerminosCrear(listaRetorno);
-
-    while(listaT != NULL)
+    while(listaTOri != NULL)
     {
         Termino tAux;
-        CrearTermino(tAux,DarCoefTermino(listaT->info),DarGradoTermino(listaT->info));
-        listaTerminosInsertarOrdenado(listaRetorno,tAux);
+        CrearTermino(tAux,DarCoefTermino(listaTOri->info),DarGradoTermino(listaTOri->info));
+        listaTerminosInsertarOrdenado(listaResu,tAux);
     }
-    return listaRetorno;
 }
 
 void destuirListaTerminos(ListaTerminos &L) /// no deberia ir L por referencia???
