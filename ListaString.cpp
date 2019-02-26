@@ -28,7 +28,6 @@ void partirString(String s, ListaString &ls)
     String aux;
     aux = new char[MAX];
     boolean Primer = TRUE,Ultimo = FALSE;
-  //  String auxStringLista;
 
     while(s[i] != '\0')
     {
@@ -58,8 +57,6 @@ void partirString(String s, ListaString &ls)
                     auxStringLista = new char[MAX];
                     strcop(auxStringLista,aux);
                     InsBackListaString(ls,auxStringLista);
-                    //strdestruir(aux);
-                    //aux = new char[MAX];
                     i++;
                     j=0;
                 }else{i++;}
@@ -72,6 +69,7 @@ void partirString(String s, ListaString &ls)
     auxStringLista = new char[MAX];
     strcop(auxStringLista,aux);
     InsBackListaString(ls,auxStringLista);
+    llevoAMinusculas(ls->info);
     strdestruir(aux);
 }
 

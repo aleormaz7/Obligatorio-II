@@ -4,7 +4,7 @@ int main()
 {
     ///pruebaModuloString();
 
-    ///pruebaListaStrings();
+    pruebaListaStrings();
 
     ///pruebasModuloArchivo();
 
@@ -28,7 +28,7 @@ int main()
 
    /// pruebasListaTermino();
 
-    pruebasPasoMinusculas();
+    ///pruebasPasoMinusculas();
 
 
 
