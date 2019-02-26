@@ -41,7 +41,7 @@ int mayorGradoListaTerminos(ListaTerminos listaT);
 
 ListaTerminos listaTerminosCopiar(ListaTerminos listaT);
 
-void destuirListaTerminos(ListaTerminos listaT);
+void destuirListaTerminos(ListaTerminos &listaT);
 /*Precondicion: listaT no es vacia*/
 
 void controlTerminoIndependienteNoNulo(ListaTerminos &listaT);

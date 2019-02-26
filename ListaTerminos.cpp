@@ -73,45 +73,21 @@ long int evaluarPolinomio(ListaTerminos listaT, int valor)
 
 void sumarPolinomios(ListaTerminos listaA, ListaTerminos listaB, ListaTerminos &listaResultado)
 {
-    while(listaA != NULL || listaB != NULL)     /// meditar... es || o es &&?
-    {                                           /// SI, pero NO con el comentario, Si quedaba como estaba daba problemas cuando uno de los polinomios no tenia termi independiente.
-        Termino terminoAux;                     /// para eso se agrego una correccion al recorrer la lista
+    Termino terminoAux;
+    while(listaA != NULL || listaB != NULL)
+    {
         if(listaA == NULL)
         {
-            if(DarGradoTermino(listaB->info) == 0)
-            {
-                CrearTermino(terminoAux,((DarCoefTermino(listaB->info))),0);
-                listaTerminosInsertarOrdenado(listaResultado,terminoAux);
-            }
-            else
-            {
-               /// quizas este if y el anterior se puedan unificar en uno solo (incluso sin necesitar if)
-               if((DarCoefTermino(listaB->info))!= 0)
-                  {
-                    CrearTermino(terminoAux,((DarCoefTermino(listaB->info) )),DarGradoTermino(listaB->info));
-                    listaTerminosInsertarOrdenado(listaResultado,terminoAux);
-                  }
-            }
+            CrearTermino(terminoAux,((DarCoefTermino(listaB->info))),0);
+            listaTerminosInsertarOrdenado(listaResultado,terminoAux);
             listaB = listaB->Sig;
         }
         else
         {
 			if(listaB == NULL)
 			{
-			    /// quizas este if y el anterior se puedan unificar en uno solo (incluso sin necesitar if)
-                if(DarGradoTermino(listaA->info) == 0)
-                {
-                    CrearTermino(terminoAux,((DarCoefTermino(listaA->info))),0);
-                    listaTerminosInsertarOrdenado(listaResultado,terminoAux);
-                }
-                else
-                {
-                   if((DarCoefTermino(listaA->info))!= 0)
-                    {
-                        CrearTermino(terminoAux,((DarCoefTermino(listaA->info) )),DarGradoTermino(listaA->info));
-                        listaTerminosInsertarOrdenado(listaResultado,terminoAux);
-                    }
-                }
+                CrearTermino(terminoAux,((DarCoefTermino(listaA->info))),0);
+                listaTerminosInsertarOrdenado(listaResultado,terminoAux);
                 listaA = listaA->Sig;
 			}
 			else
@@ -151,12 +127,19 @@ void sumarPolinomios(ListaTerminos listaA, ListaTerminos listaB, ListaTerminos &
 				}
 			}
 		}
-
 	}
+	if(listaResultado == NULL)
+	{
+        CrearTermino(terminoAux,0,0);
+		listaTerminosInsertarOrdenado(listaResultado,terminoAux);
+	}
+	else
+        controlTerminoIndependienteNoNulo(listaResultado);
+
 	/// si, tras hacer la suma de ambos, la listaResultado quedo vacia => ponerle un solo nodo con (0,0)
 	/// de esta manera, evitamos el "peligro" de que quede en NULL y perjudique otras operaciones posteriores
 
-    controlTerminoIndependienteNoNulo(listaResultado);
+
     /// una vez hecha la suma, verificar si tiene grado mayor a 0 y termino independiente igual a 0
     /// en caso de tenerlo, ir hasta el final y elimnarlo
     /// la idea es que no queden terminos independientes nulos cuando no es el polinomio nulo
@@ -197,7 +180,13 @@ void multiplicarPolinomios(ListaTerminos listaA, ListaTerminos listaB, ListaTerm
 		}
         reduceListaTerminos(listaResultadoAux,listaResuladoFinal);
         destuirListaTerminos(listaResultadoAux);
-        controlTerminoIndependienteNoNulo(listaResuladoFinal);
+        if(listaResuladoFinal == NULL)
+        {
+            CrearTermino(tAux,0,0);
+            listaTerminosInsertarOrdenado(listaResuladoFinal,tAux);
+        }
+        else
+            controlTerminoIndependienteNoNulo(listaResuladoFinal);
         /// si, tras hacer la multiplicacion de ambos, la listaResultado quedo vacia => ponerle un solo nodo con (0,0)
         /// de esta manera, evitamos el "peligro" de que quede en NULL y perjudique otras operaciones posteriores
 	}
@@ -255,7 +244,7 @@ ListaTerminos listaTerminosCopiar(ListaTerminos listaT)
     return listaRetorno;
 }
 
-void destuirListaTerminos(ListaTerminos L) /// no deberia ir L por referencia???
+void destuirListaTerminos(ListaTerminos &L) /// no deberia ir L por referencia???
 {
     if(L -> Sig == NULL)
     {
@@ -266,7 +255,6 @@ void destuirListaTerminos(ListaTerminos L) /// no deberia ir L por referencia???
         destuirListaTerminos(L->Sig);
         delete L;
     }
-
 }
 
 void controlTerminoIndependienteNoNulo(ListaTerminos &L)
