@@ -4,7 +4,7 @@ int main()
 {
     ///pruebaModuloString();
 
-    pruebaListaStrings();
+    ///pruebaListaStrings();
 
     ///pruebasModuloArchivo();
 
@@ -30,6 +30,7 @@ int main()
 
     ///pruebasPasoMinusculas();
 
+    mainSumarPolinomios();
 
 
 }

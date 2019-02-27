@@ -561,7 +561,7 @@ void mainSumarPolinomios()
                         }
                         else
                         {
-                            printf("\nError: el nombre ingresado para el segundo Polinomio a sumar - ");
+                            printf("\nError: el nombre ingresado para el segundo Polinomio - ");
                             print(ls->Sig->Sig->Sig->info);
                             printf(" -, no es un alfanumerico, y es imposible encontrarlo en el sistema.");
                         }

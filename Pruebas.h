@@ -50,4 +50,6 @@ void PruebasABBPolinomio();
 void pruebasListaTermino();
 
 void pruebasPasoMinusculas();
+
+void mainSumarPolinomios();
 #endif // PRUEBAS_H_INCLUDED
