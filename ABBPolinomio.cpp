@@ -58,13 +58,9 @@ boolean ABBPolinomioExiste(ABBPolinomio a, String nombrePolinomio)
         else
         {
             if (strmen(nombrePolinomio,straux))
-            {
                 return ABBPolinomioExiste(a->hizq,nombrePolinomio);
-            }
             else
-            {
                 return ABBPolinomioExiste(a->hder,nombrePolinomio);
-            }
         }
     }
 }
@@ -86,7 +82,7 @@ void ABBPolinomioInsertar(ABBPolinomio &a, Polinomio p)
 
         darNombrePolinomio(a->info,auxABB);
         darNombrePolinomio(p,auxPol);
-        if (strmen(auxABB,auxPol))
+        if (strmen(auxPol,auxABB))
             ABBPolinomioInsertar(a->hizq, p);
         else
             ABBPolinomioInsertar(a->hder, p);
