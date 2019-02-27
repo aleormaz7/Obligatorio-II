@@ -125,7 +125,7 @@
 1550846980 c:\users\ale\desktop\taller-i\archivo.h
 	"String.h"
 
-1550846980 c:\users\ale\desktop\taller-i\string.h
+1551238234 c:\users\ale\desktop\taller-i\string.h
 	"Boolean.h"
 
 1550846980 c:\users\ale\desktop\taller-i\boolean.h
@@ -134,16 +134,16 @@
 1550846980 source:c:\users\ale\desktop\taller-i\boolean.cpp
 	"Boolean.h"
 
-1550944692 source:c:\users\ale\desktop\taller-i\listastring.cpp
+1551238234 source:c:\users\ale\desktop\taller-i\listastring.cpp
 	"ListaString.h"
 
 1550846980 c:\users\ale\desktop\taller-i\listastring.h
 	"String.h"
 
-1550945059 source:c:\users\ale\desktop\taller-i\listaterminos.cpp
+1551238234 source:c:\users\ale\desktop\taller-i\listaterminos.cpp
 	"ListaTerminos.h"
 
-1550944118 c:\users\ale\desktop\taller-i\listaterminos.h
+1551238234 c:\users\ale\desktop\taller-i\listaterminos.h
 	"Termino.h"
 	"Boolean.h"
 
@@ -151,10 +151,10 @@
 	<stdio.h>
 	"String.h"
 
-1551094900 source:c:\users\ale\desktop\taller-i\main.cpp
+1551238234 source:c:\users\ale\desktop\taller-i\main.cpp
 	"Pruebas.h"
 
-1551094476 c:\users\ale\desktop\taller-i\pruebas.h
+1551238234 c:\users\ale\desktop\taller-i\pruebas.h
 	"String.h"
 	"ListaString.h"
 	"Archivo.h"
@@ -168,13 +168,13 @@
 	"ListaTerminos.h"
 	"ListaString.h"
 
-1550944247 source:c:\users\ale\desktop\taller-i\polinomio.cpp
+1551294697 source:c:\users\ale\desktop\taller-i\polinomio.cpp
 	"Polinomio.h"
 
-1551094884 source:c:\users\ale\desktop\taller-i\pruebas.cpp
+1551294758 source:c:\users\ale\desktop\taller-i\pruebas.cpp
 	"Pruebas.h"
 
-1550846980 source:c:\users\ale\desktop\taller-i\string.cpp
+1551238234 source:c:\users\ale\desktop\taller-i\string.cpp
 	"String.h"
 
 1550944118 source:c:\users\ale\desktop\taller-i\termino.cpp
@@ -307,7 +307,7 @@
 1550860002 c:\users\ale\desktop\taller-i\polinomio.cpp
 	"Polinomio.h"
 
-1550948658 source:c:\users\ale\desktop\taller-i\abbpolinomio.cpp
+1551238234 source:c:\users\ale\desktop\taller-i\abbpolinomio.cpp
 	"ABBPolinomio.h"
 
 1550948770 c:\users\ale\desktop\taller-i\abbpolinomio.h

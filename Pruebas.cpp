@@ -367,8 +367,70 @@ void pruebasModuloPolinomio()
     partirString(lineaComando,listaS);
     listaTerminosCrear(p.listaTerminos);
 
-    crearPolinomio(p,listaS);
+    ///SI el 1º String es “crear”
+    if(streq(listaS->info,"crear"))
+    {
+        ///SI luego del 1º String No hay Por lo menos 2 strings más(3)(osea si hay 2 o menos)
+        if(LargoListaString(listaS) <= 2)
+        {
+            printf("\nError: cantidad de parámetros incorrecta, debe indicar nombre de Polinomio y Por lo menos un coeficiente");
+        }
+        ///SINO
+        else
+        {
+            ///avanzar en listaS a 2do string
+            listaS = listaS->Sig;
+
+            ///SI el 2º String no representa sólo caracteres alfanuméricos
+            if(!esAlfanumerico(listaS->info))
+            {
+                printf("\nError: el nombre de Polinomio debe ser alfanumérico");
+            }
+            else///SINO
+            {
+
+                ///ya que nombre es alfanumerico, copio nombre de polinomio en variable aux para tenerlo por separado
+                strcrear(p.nombre);
+                strcop(p.nombre,listaS->info);
+
+
+                //if(ABBPolinomioExiste(a,listaS))
+                //{
+                //    printf("Error: Ya existe un polinomio con el nombre ingresado");
+                //}
+                //else
+                //{
+                    ///avanzar en listaS a 3er string
+                    listaS = listaS->Sig;
+
+                    ///SI a partir del 3º String no son todos numéricos (*1C*)
+                    int largo = LargoListaString(listaS) + 2;///mas 2 de los dos que me movi
+
+                    ///TODO: revisar aca xq esta funcion empieza en 2 y yo ya estoy parado en 2, entonces aca empezaria en 4 ??
+                    if(!CoeficientesEnteros(listaS))
+                    {
+                        printf("\nError: los coeficientes deben ser numéricos.");
+                    }
+                    else
+                    {
+                        //printf("\nSon coef numericos");
+                        crearPolinomio(p,listaS);
+                    }
+                //}
+            }
+        }
+    }
+
     printf("\n Polinomio: ");
+
+
+    if(p.listaTerminos == NULL)
+    {
+        p.listaTerminos->info.coef = 0;
+        p.listaTerminos->info.grado = 0;
+        printf("Polinomio es nulo");
+    }
+
     mostrarPolinomio(p);
 
     printf("\nPruebaDarLista");
