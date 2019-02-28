@@ -19,12 +19,7 @@ void crearPolinomio(Polinomio &p, ListaString listaS)
             CrearTermino(auxT,coef1,0);
             listaTerminosInsertarOrdenado(p.listaTerminos,auxT);///(polinomio con un solo termino)
         }
-        else
-        {
-            ///Por lo tanto polinomio quedaria = NULL (termino independiente 0);
-            CrearTermino(auxT,0,0);
-            listaTerminosInsertarOrdenado(p.listaTerminos,auxT);
-        }
+
     }
     else///SINO
     {
@@ -35,9 +30,7 @@ void crearPolinomio(Polinomio &p, ListaString listaS)
         if(coef1 == 0)
         {
             printf("\nError: Si existen 2 o más términos, el de mayor grado no puede ser cero.");
-            ///Por lo tanto polinomio quedaria = NULL;
-            CrearTermino(auxT,0,0);
-            listaTerminosInsertarOrdenado(p.listaTerminos,auxT);
+
         }
         else///SINO
         {
