@@ -53,5 +53,7 @@ void pruebasPasoMinusculas();
 
 void mainSumarPolinomios();
 
+void mainMultiplicarPolinomios();
+
 void pruebaStringAEnteroYEsNumero();
 #endif // PRUEBAS_H_INCLUDED

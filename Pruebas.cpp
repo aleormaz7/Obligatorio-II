@@ -597,44 +597,51 @@ void mainSumarPolinomios()
             {
                 if(esAlfanumerico(ls->Sig->info)) ///Nombre del Poli resultante
                 {
-                    if(esAlfanumerico(ls->Sig->Sig->info)) ///Nombre del primer Poli
+                    if(!ABBPolinomioExiste(abb,ls->Sig->info)) ///Si existe un Poli con en nombre del resultante
                     {
-                        if(esAlfanumerico(ls->Sig->Sig->Sig->info)) ///Nombre del segundo Poli
+                        if(esAlfanumerico(ls->Sig->Sig->info)) ///Nombre del primer Poli
                         {
-                            if(ABBPolinomioExiste(abb,ls->Sig->Sig->info))
+                            if(esAlfanumerico(ls->Sig->Sig->Sig->info)) ///Nombre del segundo Poli
                             {
-                                if(ABBPolinomioExiste(abb,ls->Sig->Sig->Sig->info))
-                                 {
-                                         printf("\nTodo en orden......");
-                                 }
-                                 else
-                                 {
-                                    printf("\nError: el segundo Polinomio a sumar, indicado con el nombre ");
-                                    print(ls->Sig->Sig->Sig->info);
+                                if(ABBPolinomioExiste(abb,ls->Sig->Sig->info))
+                                {
+                                    if(ABBPolinomioExiste(abb,ls->Sig->Sig->Sig->info))
+                                     {
+                                             printf("\nTodo en orden......");
+                                     }
+                                     else
+                                     {
+                                        printf("\nError: el segundo Polinomio a sumar, indicado con el nombre ");
+                                        print(ls->Sig->Sig->Sig->info);
+                                        printf("\nno existe en memoria.");
+                                     }
+                                }
+                                else
+                                {
+                                    printf("\nError: el primer Polinomio a sumar, indicado con el nombre ");
+                                    print(ls->Sig->Sig->info);
                                     printf("\nno existe en memoria.");
-                                 }
+                                }
                             }
                             else
                             {
-                                printf("\nError: el primer Polinomio a sumar, indicado con el nombre ");
-                                print(ls->Sig->Sig->info);
-                                printf("\nno existe en memoria.");
+                                printf("\nError: el nombre ingresado para el segundo Polinomio a sumar - ");
+                                print(ls->Sig->Sig->Sig->info);
+                                printf(" -, no es un alfanumerico, y es imposible encontrarlo en el sistema.");
                             }
                         }
                         else
                         {
-                            printf("\nError: el nombre ingresado para el segundo Polinomio a sumar - ");
-                            print(ls->Sig->Sig->Sig->info);
+                            printf("\nError: el nombre ingresado para el primer Polinomio a sumar- ");
+                            print(ls->Sig->Sig->info);
                             printf(" -, no es un alfanumerico, y es imposible encontrarlo en el sistema.");
                         }
                     }
                     else
                     {
-                        printf("\nError: el nombre ingresado para el primer Polinomio a sumar- ");
-                        print(ls->Sig->Sig->info);
-                        printf(" -, no es un alfanumerico, y es imposible encontrarlo en el sistema.");
+                        printf("\nError: en el sistema ya existe un Polinomio con el nombre ingresado para indeficiar al resulatante, nombre ingresado: ");
+                        print(ls->Sig->info);
                     }
-
                 }
                 else
                 {
@@ -648,7 +655,140 @@ void mainSumarPolinomios()
         }
         else
         {
-            printf("\nError: no se reconoce el comando.");
+            printf("\nError: no se reconoce el comando: ");
+            print(ls->info);
+        }
+    }while(!streq("salir",ls->info));
+}
+
+void mainMultiplicarPolinomios()
+{
+    ///Creo los polinomios a Multiplicar
+    Polinomio PoliA,PoliB;
+    ListaTerminos LtA,LtB,ListaResultado;
+    listaTerminosCrear(LtA);
+    listaTerminosCrear(LtB);
+    listaTerminosCrear(ListaResultado);
+    ABBPolinomio abb;
+    ABBPolinomioCrear(abb);
+
+    Termino tA1,tA2,tA3,tB1,tB2,tB3;
+    tA1.coef  = 3;
+    tA1.grado = 6;
+    listaTerminosInsertarOrdenado(LtA,tA1);
+
+    tA2.coef  = 2;
+    tA2.grado = 2;
+    listaTerminosInsertarOrdenado(LtA,tA2);
+
+    tA2.coef  = -4;
+    tA2.grado = 1;
+    listaTerminosInsertarOrdenado(LtA,tA2);
+
+    tA3.coef  = 3;
+    tA3.grado = 0;
+    listaTerminosInsertarOrdenado(LtA,tA3);
+
+    PoliA.nombre = "pepe";
+    PoliA.listaTerminos = LtA;
+    ABBPolinomioInsertar(abb,PoliA);
+
+    tB1.coef  = 3;
+    tB1.grado = 2;
+    listaTerminosInsertarOrdenado(LtB,tB1);
+
+    tB2.coef  = 1;
+    tB2.grado = 1;
+    listaTerminosInsertarOrdenado(LtB,tB2);
+
+    tB3.coef  = 1;
+    tB3.grado = 0;
+    listaTerminosInsertarOrdenado(LtB,tB3);
+
+    PoliB.nombre = "lolo";
+    PoliB.listaTerminos = LtB;
+    ABBPolinomioInsertar(abb,PoliB);
+
+/////////////
+    String s;
+    ListaString ls;
+
+
+    do
+    {
+        strcrear(s);
+        CrearListaString(ls);
+
+        printf("\nIngrese comando: ");
+        scan(s);
+        partirString(s,ls);
+
+        if(streq("multiplicar",ls->info))
+        {
+            if(LargoListaString(ls) == 4)
+            {
+                if(esAlfanumerico(ls->Sig->info)) ///Nombre del Poli resultante
+                {
+                    if(!ABBPolinomioExiste(abb,ls->Sig->info)) ///Si existe un Poli con en nombre del resultante
+                    {
+                        if(esAlfanumerico(ls->Sig->Sig->info)) ///Nombre del primer Poli
+                        {
+                            if(esAlfanumerico(ls->Sig->Sig->Sig->info)) ///Nombre del segundo Poli
+                            {
+                                if(ABBPolinomioExiste(abb,ls->Sig->Sig->info))
+                                {
+                                    if(ABBPolinomioExiste(abb,ls->Sig->Sig->Sig->info))
+                                     {
+                                             printf("\nTodo en orden......");
+                                     }
+                                     else
+                                     {
+                                        printf("\nError: el segundo Polinomio a multiplicar, indicado con el nombre ");
+                                        print(ls->Sig->Sig->Sig->info);
+                                        printf("\nno existe en memoria.");
+                                     }
+                                }
+                                else
+                                {
+                                    printf("\nError: el primer Polinomio a multiplicar, indicado con el nombre ");
+                                    print(ls->Sig->Sig->info);
+                                    printf("\nno existe en memoria.");
+                                }
+                            }
+                            else
+                            {
+                                printf("\nError: el nombre ingresado para el segundo Polinomio a multiplicar - ");
+                                print(ls->Sig->Sig->Sig->info);
+                                printf(" -, no es un alfanumerico, y es imposible encontrarlo en el sistema.");
+                            }
+                        }
+                        else
+                        {
+                            printf("\nError: el nombre ingresado para el primer Polinomio a multiplicar- ");
+                            print(ls->Sig->Sig->info);
+                            printf(" -, no es un alfanumerico, y es imposible encontrarlo en el sistema.");
+                        }
+                    }
+                    else
+                    {
+                        printf("\nError: en el sistema ya existe un Polinomio con el nombre ingresado para indeficiar al resulatante, nombre ingresado: ");
+                        print(ls->Sig->info);
+                    }
+                }
+                else
+                {
+                   printf("\nError: el nombre ingresado para identificar al Polinimio resultante - ");
+                   print(ls->Sig->info);
+                   printf(" - , no es un alfanumerico.");
+                }
+            }
+            else
+                printf("\nError: la cantidad de parametros no es correcta para el comando,\n se esperan 3 parametros y fueron ingresados %d",LargoListaString(ls)- 1);
+        }
+        else
+        {
+            printf("\nError: no se reconoce el comando: ");
+            print(ls->info);
         }
     }while(!streq("salir",ls->info));
 }
