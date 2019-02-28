@@ -2,7 +2,6 @@
 
 void crearPolinomio(Polinomio &p, ListaString listaS)
 {
-
     int largo = LargoListaString(listaS) + 2;///mas 2 de los dos que me movi
     Termino auxT;
     ///Inicializo Grado
@@ -49,14 +48,15 @@ void crearPolinomio(Polinomio &p, ListaString listaS)
                 ///Paso NodoLista a entero
                 int coefAux = convertirStringAEntero(listaS->info);
                 ///SI NodoLista es distinto de cero
+
                 if(coefAux != 0)
                 {
                     ///Creo Término (NodoLista Entero y Grado)
                     CrearTermino(auxT,coefAux,grado);
                     ///Agrego Término a Lista de términos
                     listaTerminosInsertarOrdenado(p.listaTerminos,auxT);
-                    listaS = listaS->Sig;
                 }
+                listaS = listaS->Sig;
                 grado--;
                 i--;
             }

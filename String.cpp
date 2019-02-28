@@ -129,7 +129,9 @@ boolean esEntero(String s)
 
 long int convertirStringAEntero(String s)
 {
-    int i = (strlar(s)-1),exponente = 0, largoString = strlar(s);
+    int i = (strlar(s)-1);
+    int exponente = 0;
+    int largoString = strlar(s);
     long int EnteroResultante = 0;
 
 

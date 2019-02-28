@@ -10,7 +10,7 @@ int main()
 
     ///pruebasModuloTermino();
 
-    ///pruebasModuloPolinomio();
+    pruebasModuloPolinomio();
 
     ///pruebasSumarPolinomios();
 
@@ -32,7 +32,7 @@ int main()
 
     ///mainSumarPolinomios();
 
-    pruebaStringAEnteroYEsNumero();
+    ///pruebaStringAEnteroYEsNumero();
 
 
 }
