@@ -653,3 +653,21 @@ void mainSumarPolinomios()
     }while(!streq("salir",ls->info));
 }
 
+void pruebaStringAEnteroYEsNumero()
+{
+    String s;
+    strcrear(s);
+    long int numero;
+    scan(s);
+
+    if(esEntero(s))
+        printf("\nValor es entero");
+    else
+        printf("\nValor NOO es entero");
+
+    numero = convertirStringAEntero(s);
+    printf("\nValor convertido: %li",numero);
+
+
+}
+

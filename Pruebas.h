@@ -52,4 +52,6 @@ void pruebasListaTermino();
 void pruebasPasoMinusculas();
 
 void mainSumarPolinomios();
+
+void pruebaStringAEnteroYEsNumero();
 #endif // PRUEBAS_H_INCLUDED

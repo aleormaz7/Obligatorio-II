@@ -114,7 +114,12 @@ boolean esEntero(String s)
 	while(s[i] != '\0' && entero)
     {
         if (s[i] < 48 || s[i] > 57)
-            entero = FALSE;
+        {
+            if(i == 0 && strlar(s) > 1 && s[i] == 45) ///considero el valor negativo
+                i++;
+            else
+                entero = FALSE;
+        }
         else
             i++;
     }
@@ -185,6 +190,9 @@ long int convertirStringAEntero(String s)
                 EnteroResultante = 9;
             else
                 EnteroResultante = EnteroResultante + 9 * exponente;
+            break;
+        case 45:
+                EnteroResultante = EnteroResultante * -1;
             break;
       }
 
