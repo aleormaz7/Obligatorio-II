@@ -19,6 +19,12 @@ void crearPolinomio(Polinomio &p, ListaString listaS)
             CrearTermino(auxT,coef1,0);
             listaTerminosInsertarOrdenado(p.listaTerminos,auxT);///(polinomio con un solo termino)
         }
+        else
+        {
+            ///Si coef es 0 creo termino nulo(0,0)
+            CrearTermino(auxT,0,0);
+            listaTerminosInsertarOrdenado(p.listaTerminos,auxT);
+        }
 
     }
     else///SINO
