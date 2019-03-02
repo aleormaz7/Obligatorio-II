@@ -232,9 +232,9 @@ int mayorGradoListaTerminos(ListaTerminos listaT)
 
 void listaTerminosCopiar(ListaTerminos listaTOri,ListaTerminos &listaResu)
 {
+    Termino tAux;
     while(listaTOri != NULL)
     {
-        Termino tAux;
         CrearTermino(tAux,DarCoefTermino(listaTOri->info),DarGradoTermino(listaTOri->info));
         listaTerminosInsertarOrdenado(listaResu,tAux);
         listaTOri = listaTOri->Sig;

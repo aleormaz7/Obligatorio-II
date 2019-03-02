@@ -65,8 +65,11 @@ void crearPolinomio(Polinomio &p, ListaString listaS)
 
 void crearPolinomioResultante(Polinomio &p,String nombre, ListaTerminos lst)
 {
+    ListaTerminos ListaPol;
+    listaTerminosCrear(ListaPol);
     strcop(p.nombre,nombre);
-    listaTerminosCopiar(lst,p.listaTerminos);
+    listaTerminosCopiar(lst,ListaPol);
+    p.listaTerminos = ListaPol;
 }
 
 void darListaTerminosPolinomio(Polinomio p, ListaTerminos &listaT)
@@ -78,7 +81,7 @@ void darListaTerminosPolinomio(Polinomio p, ListaTerminos &listaT)
 void mostrarPolinomio(Polinomio p)
 {
     print(p.nombre);
-    printf(":");
+    printf(" = ");
     listaTerminosMostrar(p.listaTerminos);
 }
 
