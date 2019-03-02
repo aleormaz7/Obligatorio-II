@@ -234,38 +234,39 @@ boolean esAlfanumerico(String s)
 void retornaExtensionNombre(String s, String &sExtension, String &sNombre)
 {
     int i=0,j=0;
-    String auxExtencion,auxNombre;
-    auxExtencion = new char[MAX];
-    auxNombre = new char[MAX];
+    String aux;
+    aux = new char[MAX];
     boolean encontrePunto = FALSE;
 
+    ///Primero cargo el nombre lo copio, destruyo el string y cargo la extencion
     while(s[i] != '\0' && !encontrePunto)
     {
         if(s[i] == '.')
             encontrePunto = TRUE;
         else
         {
-            auxNombre[j] = s[i];
+            aux[j] = s[i];
             i++;
             j++;
         }
     }
-    auxNombre[j] = '\0';
-    strcop(sNombre,auxNombre);
-    strdestruir(auxNombre);
+    aux[j] = '\0';
+    strcop(sNombre,aux);
+    strdestruir(aux);
     i++;
     j = 0;
 
+    aux = new char[MAX];
     while(s[i] != '\0')
     {
-        auxExtencion[j] = s[i];
+        aux[j] = s[i];
         i++;
         j++;
     }
 
-    auxExtencion[j] = '\0';
-    strcop(sExtension,auxExtencion);
-    strdestruir(auxExtencion);
+    aux[j] = '\0';
+    strcop(sExtension,aux);
+    strdestruir(aux);
 }
 
 int cntPuntos(String s)

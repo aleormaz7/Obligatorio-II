@@ -28,7 +28,7 @@ void pruebaDarExtencion()
     printf("\nString cargado: ");
     print(s);
     retornaExtensionNombre(s,extencion,nombre);
-    printf("\Nombre: ");
+    printf("\nNombre: ");
     print(nombre);
     printf("\nExtencion: ");
     print(extencion);
