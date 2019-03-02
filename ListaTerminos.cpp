@@ -237,6 +237,7 @@ void listaTerminosCopiar(ListaTerminos listaTOri,ListaTerminos &listaResu)
         Termino tAux;
         CrearTermino(tAux,DarCoefTermino(listaTOri->info),DarGradoTermino(listaTOri->info));
         listaTerminosInsertarOrdenado(listaResu,tAux);
+        listaTOri = listaTOri->Sig;
     }
 }
 

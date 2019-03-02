@@ -24,5 +24,7 @@ void darNombrePolinomio(Polinomio p, String &s);
 void borrarPolinomio(Polinomio &p);
 /* borra nombre y lista de terminos del polinomio*/
 
+void crearPolinomioResultante(Polinomio &p,String nombre, ListaTerminos lst);
+
 
 #endif // POLINOMIO_H_INCLUDED

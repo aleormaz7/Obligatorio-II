@@ -63,6 +63,12 @@ void crearPolinomio(Polinomio &p, ListaString listaS)
     }
 }
 
+void crearPolinomioResultante(Polinomio &p,String nombre, ListaTerminos lst)
+{
+    strcop(p.nombre,nombre);
+    listaTerminosCopiar(lst,p.listaTerminos);
+}
+
 void darListaTerminosPolinomio(Polinomio p, ListaTerminos &listaT)
 {
     listaTerminosCrear(listaT);
