@@ -225,10 +225,6 @@ void reduceListaTerminos(ListaTerminos listaT, ListaTerminos &listaResultante)
 	listaTerminosInsertarOrdenado(listaResultante,tAux);
 }
 
-int mayorGradoListaTerminos(ListaTerminos listaT)
-{
-    return DarGradoTermino(listaT->info);
-}
 
 void listaTerminosCopiar(ListaTerminos listaTOri,ListaTerminos &listaResu)
 {
@@ -307,6 +303,7 @@ void bajarListaTerminos(ListaTerminos lt, String nomArch)
         BajarTermino(lt->info,f);
         lt = lt->Sig;
     }
+    fclose (f);
 }
 
 void InsBackListaTermino(ListaTerminos &L, Termino t)

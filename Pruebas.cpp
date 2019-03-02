@@ -980,12 +980,31 @@ void mainGuardar()
                                 if(!ExisteArchivo(ls->Sig->Sig->info))
                                 {
                                     printf("\nTodo en orden hasta aca.....");
+                                    Polinomio Poli = darPolinomio(abb,ls->Sig->info);
+                                    ListaTerminos LstAux;
+                                    listaTerminosCrear(LstAux);
+                                    darListaTerminosPolinomio(Poli,LstAux);
+                                    bajarListaTerminos(LstAux,ls->Sig->Sig->info);
+                                    printf("\nResultado:  Polinomio almacenado correctamente en ");
+                                    print(ls->Sig->Sig->info);
                                 }
                                 else
                                 {
-                                    printf("\nYa existen en disco un archivo con el nombre - ");
+                                    printf("\nYa existen en disco un archivo con el nombre -");
                                     print(ls->Sig->Sig->info);
-                                    printf(" - ¿Desea sobreescribirlo?");
+                                    printf("- \n\tDesea sobreescribirlo? (S - si, N - No) ");
+                                    char respuesta;
+                                    scanf("%c",&respuesta);
+                                    if(respuesta == 's' || respuesta == 'S')
+                                    {
+                                        Polinomio Poli = darPolinomio(abb,ls->Sig->info);
+                                        ListaTerminos LstAux;
+                                        listaTerminosCrear(LstAux);
+                                        darListaTerminosPolinomio(Poli,LstAux);
+                                        bajarListaTerminos(LstAux,ls->Sig->Sig->info);
+                                        printf("\nResultado:  Polinomio almacenado correctamente en ");
+                                        print(ls->Sig->Sig->info);
+                                    }
                                 }
                             }
                             else
