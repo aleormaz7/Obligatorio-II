@@ -619,12 +619,10 @@ void mainSumarPolinomios()
                                             darListaTerminosPolinomio(PoliA,LstPoliA);
                                             darListaTerminosPolinomio(PoliB,LstPoliB);
 
-                                            printf("\nTodo en orden...... \t");
                                             sumarPolinomios(LstPoliA,LstPoliB,LstResultado);
                                             crearPolinomioResultante(PoliResultante,ls->Sig->info,LstResultado);
                                             ABBPolinomioInsertar(abb,PoliResultante);
                                             listaTerminosMostrar(LstResultado);
-                                            printf("\nResultado: \t");
                                             mostrarPolinomio(PoliResultante);
                                      }
                                      else

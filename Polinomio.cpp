@@ -65,11 +65,10 @@ void crearPolinomio(Polinomio &p, ListaString listaS)
 
 void crearPolinomioResultante(Polinomio &p,String nombre, ListaTerminos lst)
 {
-    ListaTerminos ListaPol;
-    listaTerminosCrear(ListaPol);
+    listaTerminosCrear(p.listaTerminos);
+    strcrear(p.nombre);
     strcop(p.nombre,nombre);
-    listaTerminosCopiar(lst,ListaPol);
-    p.listaTerminos = ListaPol;
+    listaTerminosCopiar(lst,p.listaTerminos);
 }
 
 void darListaTerminosPolinomio(Polinomio p, ListaTerminos &listaT)
