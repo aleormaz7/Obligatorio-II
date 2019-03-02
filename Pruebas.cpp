@@ -622,8 +622,10 @@ void mainSumarPolinomios()
                                             sumarPolinomios(LstPoliA,LstPoliB,LstResultado);
                                             crearPolinomioResultante(PoliResultante,ls->Sig->info,LstResultado);
                                             ABBPolinomioInsertar(abb,PoliResultante);
-                                            listaTerminosMostrar(LstResultado);
+                                            printf("Resultado : ");
                                             mostrarPolinomio(PoliResultante);
+                                            ///Destruir listas????
+
                                      }
                                      else
                                      {
@@ -755,7 +757,25 @@ void mainMultiplicarPolinomios()
                                 {
                                     if(ABBPolinomioExiste(abb,ls->Sig->Sig->Sig->info))
                                      {
-                                             printf("\nTodo en orden......");
+
+                                            ListaTerminos LstResultado,LstPoliA,LstPoliB;
+                                            listaTerminosCrear(LstResultado);
+                                            listaTerminosCrear(LstPoliA);
+                                            listaTerminosCrear(LstPoliB);
+
+                                            Polinomio PoliA = darPolinomio(abb,ls->Sig->Sig->info);
+                                            Polinomio PoliB = darPolinomio(abb,ls->Sig->Sig->Sig->info);
+                                            Polinomio PoliResultante;
+
+                                            darListaTerminosPolinomio(PoliA,LstPoliA);
+                                            darListaTerminosPolinomio(PoliB,LstPoliB);
+
+                                            multiplicarPolinomios(LstPoliA,LstPoliB,LstResultado);
+                                            crearPolinomioResultante(PoliResultante,ls->Sig->info,LstResultado);
+                                            ABBPolinomioInsertar(abb,PoliResultante);
+                                            printf("Resultado : ");
+                                            mostrarPolinomio(PoliResultante);
+
                                      }
                                      else
                                      {

@@ -30,8 +30,9 @@ int main()
 
     ///pruebasPasoMinusculas();
 
-    mainSumarPolinomios();
+///   mainSumarPolinomios();
 
+       mainMultiplicarPolinomios();
     ///pruebaStringAEnteroYEsNumero();
 
 
