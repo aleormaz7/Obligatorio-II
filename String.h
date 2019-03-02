@@ -42,6 +42,7 @@ long int convertirStringAEntero(String s);
 /* Precondición largo String > 0 */
 
 void retornaExtensionNombre(String s, String &sExtension, String &sNombre);
+/* Precondición: cntPuntos(s) ==  1*/
 
 int cntPuntos(String s);
 
