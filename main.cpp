@@ -34,8 +34,10 @@ int main()
      ///  mainMultiplicarPolinomios();
      ///mainMostrar();
      /// mainEvaluar();
-        mainEsRaiz();
+       /// mainEsRaiz();
     ///pruebaStringAEnteroYEsNumero();
+
+    pruebaDarExtencion();
 
 
 }

@@ -63,6 +63,8 @@ void mainEvaluar();
 
 void mainEsRaiz();
 
+void mainGuardar();
+
 void crearEstructurasPruebas(ABBPolinomio &abb);
 
 #endif // PRUEBAS_H_INCLUDED

@@ -231,11 +231,12 @@ boolean esAlfanumerico(String s)
     return alfanumerico;
 }
 
-void retornaExtension(String s, String &sExtension)
+void retornaExtensionNombre(String s, String &sExtension, String &sNombre)
 {
     int i=0,j=0;
-    String aux;
-    aux = new char[MAX];
+    String auxExtencion,auxNombre;
+    auxExtencion = new char[MAX];
+    auxNombre = new char[MAX];
     boolean encontrePunto = FALSE;
 
     while(s[i] != '\0' && !encontrePunto)
@@ -243,21 +244,28 @@ void retornaExtension(String s, String &sExtension)
         if(s[i] == '.')
             encontrePunto = TRUE;
         else
+        {
+            auxNombre[j] = s[i];
             i++;
+            j++;
+        }
     }
-
+    auxNombre[j] = '\0';
+    strcop(sNombre,auxNombre);
+    strdestruir(auxNombre);
     i++;
+    j = 0;
 
     while(s[i] != '\0')
     {
-        aux[j] = s[i];
+        auxExtencion[j] = s[i];
         i++;
         j++;
     }
 
-    aux[j] = '\0';
-    strcop(sExtension,aux);
-    strdestruir(aux);
+    auxExtencion[j] = '\0';
+    strcop(sExtension,auxExtencion);
+    strdestruir(auxExtencion);
 }
 
 int cntPuntos(String s)

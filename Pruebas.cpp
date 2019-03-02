@@ -19,14 +19,17 @@ void pruebaStringAlfanumerico()
 void pruebaDarExtencion()
 {
      ///Pruebas dar extencion
-    String s,extencion;
+    String s,extencion,nombre;
     strcrear(s);
     strcrear(extencion);
+    strcrear(nombre);
     printf("\nIngrese String: ");
     scan(s);
     printf("\nString cargado: ");
     print(s);
-    retornaExtension(s,extencion);
+    retornaExtensionNombre(s,extencion,nombre);
+    printf("\Nombre: ");
+    print(nombre);
     printf("\nExtencion: ");
     print(extencion);
 }
@@ -849,7 +852,7 @@ void mainEvaluar()
             else
             {
                 printf("\nError: la cantidad de parametros no es correcta para el comando - evaluar - ");
-                printf(", para el mismo se esperan 2 parametros y fueron ingresados %d",LargoListaString(ls)- 1);
+                printf(", para el mismo se esperan 2 parametros(nombre Polinomio y valor a evaluar) y fueron ingresados %d",LargoListaString(ls)- 1);
             }
 
         }
@@ -927,7 +930,7 @@ void mainEsRaiz()
             else
             {
                 printf("\nError: la cantidad de parametros no es correcta para el comando - es raiz - ");
-                printf("\n, para el mismo se esperan 2 parametros y fueron ingresados %d",LargoListaString(ls)- 1);
+                printf("\n, para el mismo se esperan 2 parametros(nombre Polinomio y valor a evaluar) y fueron ingresados %d",LargoListaString(ls)- 1);
             }
         }
         else
@@ -936,6 +939,82 @@ void mainEsRaiz()
             print(ls->info);
         }
     }while(!streq("salir",ls->info));
+}
+
+void mainGuardar()
+{
+    ///Creo Polinimios para evaluar
+    ABBPolinomio abb;
+    ABBPolinomioCrear(abb);
+    crearEstructurasPruebas(abb);
+
+/////////////
+    String s;
+    ListaString ls;
+
+    do
+    {
+        strcrear(s);
+        CrearListaString(ls);
+
+        printf("\nIngrese comando: ");
+        scan(s);
+        partirString(s,ls);
+
+        if(streq("guardar",ls->info))
+        {
+            if(LargoListaString(ls) == 3)
+            {
+                if(esAlfanumerico(ls->Sig->info)) ///Nombre del Poli a guardar
+                {
+                    if(ABBPolinomioExiste(abb,ls->Sig->info)) ///Si existe el Poli a guardar
+                    {
+                        if(esEntero(ls->Sig->Sig->info)) ///valor a evaluar si es raiz
+                        {
+                            long int e = convertirStringAEntero(ls->Sig->Sig->info);
+                            ListaTerminos LstPoliEvaluar;
+                            listaTerminosCrear(LstPoliEvaluar);
+                            Polinomio PoliEvaluar = darPolinomio(abb,ls->Sig->info);
+                            darListaTerminosPolinomio(PoliEvaluar,LstPoliEvaluar);
+
+                            if(evaluarPolinomio(LstPoliEvaluar,e)== 0 )
+                                printf("Resultado : es raiz");
+                            else
+                                printf("Resultado : No es raiz");
+                        }
+                        else
+                        {
+                            printf("\nError: el parametro correspondiente con el valor a evaluar si es raiz del Polinomio - ");
+                            print(ls->Sig->Sig->info);
+                            printf(" -, no representa un numero entero. No es posible evaluar si es raiz del Polinimio.");
+                        }
+                    }
+                    else
+                    {
+                        printf("\nError: en el sistema no existe un Polinomio con el nombre: ");
+                        print(ls->Sig->info);
+                    }
+                }
+                else
+                {
+                   printf("\nError: el nombre ingresado para el Polinimio a guardar - ");
+                   print(ls->Sig->info);
+                   printf(" - , no es un alfanumerico, es imposible identificarlo en el sistema.");
+                }
+            }
+            else
+            {
+                printf("\nError: la cantidad de parametros no es correcta para el comando - guardar - ");
+                printf("\n, para el mismo se esperan 2 parametros(jhjh) y fueron ingresados %d",LargoListaString(ls)- 1);
+            }
+        }
+        else
+        {
+            printf("\nError: no se reconoce el comando: ");
+            print(ls->info);
+        }
+    }while(!streq("salir",ls->info));
+
 }
 
 void pruebaStringAEnteroYEsNumero()
