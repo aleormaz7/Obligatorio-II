@@ -59,6 +59,5 @@ void pruebaStringAEnteroYEsNumero();
 
 void mainMostrar();
 
-void mainEvaluar();
 
 #endif // PRUEBAS_H_INCLUDED

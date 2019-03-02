@@ -33,7 +33,7 @@ int main()
 
      ///  mainMultiplicarPolinomios();
      ///mainMostrar();
-      mainEvaluar();
+     void mainEvaluar();
     ///pruebaStringAEnteroYEsNumero();
 
 

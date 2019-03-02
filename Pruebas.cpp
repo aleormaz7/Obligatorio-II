@@ -917,6 +917,124 @@ void mainMostrar()
     }while(!streq("salir",ls->info));
 }
 
+
+void mainEvaluar()
+{
+    ///Creo Polinimios para evaluar
+    Polinomio PoliA,PoliB;
+    ListaTerminos LtA,LtB,ListaResultado;
+    listaTerminosCrear(LtA);
+    listaTerminosCrear(LtB);
+    listaTerminosCrear(ListaResultado);
+    ABBPolinomio abb;
+    ABBPolinomioCrear(abb);
+
+    Termino tA1,tA2,tA3,tB1,tB2,tB3;
+    tA1.coef  = 3;
+    tA1.grado = 6;
+    listaTerminosInsertarOrdenado(LtA,tA1);
+
+    tA2.coef  = 2;
+    tA2.grado = 2;
+    listaTerminosInsertarOrdenado(LtA,tA2);
+
+    tA2.coef  = -4;
+    tA2.grado = 1;
+    listaTerminosInsertarOrdenado(LtA,tA2);
+
+    tA3.coef  = 3;
+    tA3.grado = 0;
+    listaTerminosInsertarOrdenado(LtA,tA3);
+
+    PoliA.nombre = "pepe";
+    PoliA.listaTerminos = LtA;
+    ABBPolinomioInsertar(abb,PoliA);
+
+    tB1.coef  = 3;
+    tB1.grado = 2;
+    listaTerminosInsertarOrdenado(LtB,tB1);
+
+    tB2.coef  = 1;
+    tB2.grado = 1;
+    listaTerminosInsertarOrdenado(LtB,tB2);
+
+    tB3.coef  = 1;
+    tB3.grado = 0;
+    listaTerminosInsertarOrdenado(LtB,tB3);
+
+    PoliB.nombre = "lolo";
+    PoliB.listaTerminos = LtB;
+    ABBPolinomioInsertar(abb,PoliB);
+
+/////////////
+    String s;
+    ListaString ls;
+
+    do
+    {
+        strcrear(s);
+        CrearListaString(ls);
+
+        printf("\nIngrese comando: ");
+        scan(s);
+        partirString(s,ls);
+
+        if(streq("evaluar",ls->info))
+        {
+            if(LargoListaString(ls) == 3)
+            {
+                if(esAlfanumerico(ls->Sig->info)) ///Nombre del Poli a evaluar
+                {
+                    if(ABBPolinomioExiste(abb,ls->Sig->info)) ///Si existe el Poli a evaluar
+                    {
+                        if(esEntero(ls->Sig->Sig->info)) ///valor a evaluar
+                        {
+                            long int e = convertirStringAEntero(ls->Sig->Sig->info);
+                            ListaTerminos LstPoliEvaluar;
+                            listaTerminosCrear(LstPoliEvaluar);
+                            Polinomio PoliEvaluar = darPolinomio(abb,ls->Sig->info);
+                            darListaTerminosPolinomio(PoliEvaluar,LstPoliEvaluar);
+
+                            printf("Resultado : %li",evaluarPolinomio(LstPoliEvaluar,e));
+
+                        }
+                        else
+                        {
+                            printf("\nError: el parametro correspondiente con el valor a evaluar - ");
+                            print(ls->Sig->Sig->info);
+                            printf(" -, no representa un numero entero. No es posible evaluar el Polinimio.");
+                        }
+                    }
+                    else
+                    {
+                        printf("\nError: en el sistema no existe un Polinomio con el nombre: ");
+                        print(ls->Sig->info);
+                    }
+                }
+                else
+                {
+                   printf("\nError: el nombre ingresado del Polinimio a evaluar - ");
+                   print(ls->Sig->info);
+                   printf(" - , no es un alfanumerico, es imposible identificarlo en el sistema.");
+                }
+            }
+            else
+            {
+                printf("\nError: la cantidad de parametros no es correcta para el comando - ");
+                print(ls->info);
+                printf(" -, para el mismo se esperan 2 parametros y fueron ingresados %d",LargoListaString(ls)- 1);
+            }
+
+        }
+        else
+        {
+            printf("\nError: no se reconoce el comando: ");
+            print(ls->info);
+        }
+    }while(!streq("salir",ls->info));
+
+}
+
 void pruebaStringAEnteroYEsNumero()
 {
     String s;
