@@ -2,7 +2,6 @@
 
 void pruebaStringAlfanumerico()
 {
-
     ///Pruebas Strinf alfanumerico
     String s;
     strcrear(s);
@@ -15,7 +14,6 @@ void pruebaStringAlfanumerico()
         printf("\n El String es alfanumerico");
     else
         printf("\n El String NOOOO es alfanumerico");
-
 }
 
 void pruebaDarExtencion()
@@ -31,7 +29,6 @@ void pruebaDarExtencion()
     retornaExtension(s,extencion);
     printf("\nExtencion: ");
     print(extencion);
-
 }
 
 void pruebaControlPunto()
@@ -45,9 +42,7 @@ void pruebaControlPunto()
     print(s);
 
     printf("\nEl String tiene %d puntos",cntPuntos(s));
-
 }
-
 
 void pruebaListaStrings()
 {
@@ -157,7 +152,6 @@ void pruebasEvaluarPolinomio()
     printf("\nResultado de la evaluacion:  %li",evaluarPolinomio(lista,valor));
 
 }
-
 
 void pruebasEsRaiz()
 {
@@ -532,55 +526,13 @@ void pruebasPasoMinusculas()
 void mainSumarPolinomios()
 {
     ///Creo los polinomios a Sumar
-    Polinomio PoliA,PoliB;
-    ListaTerminos LtA,LtB,ListaResultado;
-    listaTerminosCrear(LtA);
-    listaTerminosCrear(LtB);
-    listaTerminosCrear(ListaResultado);
+
     ABBPolinomio abb;
     ABBPolinomioCrear(abb);
-
-    Termino tA1,tA2,tA3,tB1,tB2,tB3;
-    tA1.coef  = 3;
-    tA1.grado = 6;
-    listaTerminosInsertarOrdenado(LtA,tA1);
-
-    tA2.coef  = 2;
-    tA2.grado = 2;
-    listaTerminosInsertarOrdenado(LtA,tA2);
-
-    tA2.coef  = -4;
-    tA2.grado = 1;
-    listaTerminosInsertarOrdenado(LtA,tA2);
-
-    tA3.coef  = 3;
-    tA3.grado = 0;
-    listaTerminosInsertarOrdenado(LtA,tA3);
-
-    PoliA.nombre = "pepe";
-    PoliA.listaTerminos = LtA;
-    ABBPolinomioInsertar(abb,PoliA);
-
-    tB1.coef  = 3;
-    tB1.grado = 2;
-    listaTerminosInsertarOrdenado(LtB,tB1);
-
-    tB2.coef  = 1;
-    tB2.grado = 1;
-    listaTerminosInsertarOrdenado(LtB,tB2);
-
-    tB3.coef  = 1;
-    tB3.grado = 0;
-    listaTerminosInsertarOrdenado(LtB,tB3);
-
-    PoliB.nombre = "lolo";
-    PoliB.listaTerminos = LtB;
-    ABBPolinomioInsertar(abb,PoliB);
-
+    crearEstructurasPruebas(abb);
 /////////////
     String s;
     ListaString ls;
-
 
     do
     {
@@ -680,56 +632,14 @@ void mainSumarPolinomios()
 
 void mainMultiplicarPolinomios()
 {
-    ///Creo los polinomios a Multiplicar
-    Polinomio PoliA,PoliB;
-    ListaTerminos LtA,LtB,ListaResultado;
-    listaTerminosCrear(LtA);
-    listaTerminosCrear(LtB);
-    listaTerminosCrear(ListaResultado);
+    ///Creo los polinimios a Multiplicar
     ABBPolinomio abb;
     ABBPolinomioCrear(abb);
-
-    Termino tA1,tA2,tA3,tB1,tB2,tB3;
-    tA1.coef  = 3;
-    tA1.grado = 6;
-    listaTerminosInsertarOrdenado(LtA,tA1);
-
-    tA2.coef  = 2;
-    tA2.grado = 2;
-    listaTerminosInsertarOrdenado(LtA,tA2);
-
-    tA2.coef  = -4;
-    tA2.grado = 1;
-    listaTerminosInsertarOrdenado(LtA,tA2);
-
-    tA3.coef  = 3;
-    tA3.grado = 0;
-    listaTerminosInsertarOrdenado(LtA,tA3);
-
-    PoliA.nombre = "pepe";
-    PoliA.listaTerminos = LtA;
-    ABBPolinomioInsertar(abb,PoliA);
-
-    tB1.coef  = 3;
-    tB1.grado = 2;
-    listaTerminosInsertarOrdenado(LtB,tB1);
-
-    tB2.coef  = 1;
-    tB2.grado = 1;
-    listaTerminosInsertarOrdenado(LtB,tB2);
-
-    tB3.coef  = 1;
-    tB3.grado = 0;
-    listaTerminosInsertarOrdenado(LtB,tB3);
-
-    PoliB.nombre = "lolo";
-    PoliB.listaTerminos = LtB;
-    ABBPolinomioInsertar(abb,PoliB);
+    crearEstructurasPruebas(abb);
 
 /////////////
     String s;
     ListaString ls;
-
 
     do
     {
@@ -831,55 +741,14 @@ void mainMultiplicarPolinomios()
 void mainMostrar()
 {
     ///Creo Polinimios para mostrar
-    Polinomio PoliA,PoliB;
-    ListaTerminos LtA,LtB,ListaResultado;
-    listaTerminosCrear(LtA);
-    listaTerminosCrear(LtB);
-    listaTerminosCrear(ListaResultado);
+
     ABBPolinomio abb;
     ABBPolinomioCrear(abb);
-
-    Termino tA1,tA2,tA3,tB1,tB2,tB3;
-    tA1.coef  = 3;
-    tA1.grado = 6;
-    listaTerminosInsertarOrdenado(LtA,tA1);
-
-    tA2.coef  = 2;
-    tA2.grado = 2;
-    listaTerminosInsertarOrdenado(LtA,tA2);
-
-    tA2.coef  = -4;
-    tA2.grado = 1;
-    listaTerminosInsertarOrdenado(LtA,tA2);
-
-    tA3.coef  = 3;
-    tA3.grado = 0;
-    listaTerminosInsertarOrdenado(LtA,tA3);
-
-    PoliA.nombre = "pepe";
-    PoliA.listaTerminos = LtA;
-    ABBPolinomioInsertar(abb,PoliA);
-
-    tB1.coef  = 3;
-    tB1.grado = 2;
-    listaTerminosInsertarOrdenado(LtB,tB1);
-
-    tB2.coef  = 1;
-    tB2.grado = 1;
-    listaTerminosInsertarOrdenado(LtB,tB2);
-
-    tB3.coef  = 1;
-    tB3.grado = 0;
-    listaTerminosInsertarOrdenado(LtB,tB3);
-
-    PoliB.nombre = "lolo";
-    PoliB.listaTerminos = LtB;
-    ABBPolinomioInsertar(abb,PoliB);
+    crearEstructurasPruebas(abb);
 
 /////////////
     String s;
     ListaString ls;
-
 
     do
     {
@@ -921,50 +790,9 @@ void mainMostrar()
 void mainEvaluar()
 {
     ///Creo Polinimios para evaluar
-    Polinomio PoliA,PoliB;
-    ListaTerminos LtA,LtB,ListaResultado;
-    listaTerminosCrear(LtA);
-    listaTerminosCrear(LtB);
-    listaTerminosCrear(ListaResultado);
     ABBPolinomio abb;
     ABBPolinomioCrear(abb);
-
-    Termino tA1,tA2,tA3,tB1,tB2,tB3;
-    tA1.coef  = 3;
-    tA1.grado = 6;
-    listaTerminosInsertarOrdenado(LtA,tA1);
-
-    tA2.coef  = 2;
-    tA2.grado = 2;
-    listaTerminosInsertarOrdenado(LtA,tA2);
-
-    tA2.coef  = -4;
-    tA2.grado = 1;
-    listaTerminosInsertarOrdenado(LtA,tA2);
-
-    tA3.coef  = 3;
-    tA3.grado = 0;
-    listaTerminosInsertarOrdenado(LtA,tA3);
-
-    PoliA.nombre = "pepe";
-    PoliA.listaTerminos = LtA;
-    ABBPolinomioInsertar(abb,PoliA);
-
-    tB1.coef  = 3;
-    tB1.grado = 2;
-    listaTerminosInsertarOrdenado(LtB,tB1);
-
-    tB2.coef  = 1;
-    tB2.grado = 1;
-    listaTerminosInsertarOrdenado(LtB,tB2);
-
-    tB3.coef  = 1;
-    tB3.grado = 0;
-    listaTerminosInsertarOrdenado(LtB,tB3);
-
-    PoliB.nombre = "lolo";
-    PoliB.listaTerminos = LtB;
-    ABBPolinomioInsertar(abb,PoliB);
+    crearEstructurasPruebas(abb);
 
 /////////////
     String s;
@@ -1020,9 +848,8 @@ void mainEvaluar()
             }
             else
             {
-                printf("\nError: la cantidad de parametros no es correcta para el comando - ");
-                print(ls->info);
-                printf(" -, para el mismo se esperan 2 parametros y fueron ingresados %d",LargoListaString(ls)- 1);
+                printf("\nError: la cantidad de parametros no es correcta para el comando - evaluar - ");
+                printf(", para el mismo se esperan 2 parametros y fueron ingresados %d",LargoListaString(ls)- 1);
             }
 
         }
@@ -1033,6 +860,82 @@ void mainEvaluar()
         }
     }while(!streq("salir",ls->info));
 
+}
+
+
+void mainEsRaiz()
+{
+    ///Creo Polinimios para evaluar
+    ABBPolinomio abb;
+    ABBPolinomioCrear(abb);
+    crearEstructurasPruebas(abb);
+
+/////////////
+    String s;
+    ListaString ls;
+
+    do
+    {
+        strcrear(s);
+        CrearListaString(ls);
+
+        printf("\nIngrese comando: ");
+        scan(s);
+        partirString(s,ls);
+
+        if(streq("esraiz",ls->info))
+        {
+            if(LargoListaString(ls) == 3)
+            {
+                if(esAlfanumerico(ls->Sig->info)) ///Nombre del Poli a evaluar si es raiz
+                {
+                    if(ABBPolinomioExiste(abb,ls->Sig->info)) ///Si existe el Poli a evaluar si es raiz
+                    {
+                        if(esEntero(ls->Sig->Sig->info)) ///valor a evaluar si es raiz
+                        {
+                            long int e = convertirStringAEntero(ls->Sig->Sig->info);
+                            ListaTerminos LstPoliEvaluar;
+                            listaTerminosCrear(LstPoliEvaluar);
+                            Polinomio PoliEvaluar = darPolinomio(abb,ls->Sig->info);
+                            darListaTerminosPolinomio(PoliEvaluar,LstPoliEvaluar);
+
+                            if(evaluarPolinomio(LstPoliEvaluar,e)== 0 )
+                                printf("Resultado : es raiz");
+                            else
+                                printf("Resultado : No es raiz");
+                        }
+                        else
+                        {
+                            printf("\nError: el parametro correspondiente con el valor a evaluar si es raiz del Polinomio - ");
+                            print(ls->Sig->Sig->info);
+                            printf(" -, no representa un numero entero. No es posible evaluar si es raiz del Polinimio.");
+                        }
+                    }
+                    else
+                    {
+                        printf("\nError: en el sistema no existe un Polinomio con el nombre: ");
+                        print(ls->Sig->info);
+                    }
+                }
+                else
+                {
+                   printf("\nError: el nombre ingresado del Polinimio a evaluar si es raiz - ");
+                   print(ls->Sig->info);
+                   printf(" - , no es un alfanumerico, es imposible identificarlo en el sistema.");
+                }
+            }
+            else
+            {
+                printf("\nError: la cantidad de parametros no es correcta para el comando - es raiz - ");
+                printf("\n, para el mismo se esperan 2 parametros y fueron ingresados %d",LargoListaString(ls)- 1);
+            }
+        }
+        else
+        {
+            printf("\nError: no se reconoce el comando: ");
+            print(ls->info);
+        }
+    }while(!streq("salir",ls->info));
 }
 
 void pruebaStringAEnteroYEsNumero()
@@ -1049,7 +952,51 @@ void pruebaStringAEnteroYEsNumero()
 
     numero = convertirStringAEntero(s);
     printf("\nValor convertido: %li",numero);
-
-
 }
 
+void crearEstructurasPruebas(ABBPolinomio &abb)
+{
+     ///Creo los polinomios e inserto en el ABB
+    Polinomio PoliA,PoliB;
+    ListaTerminos LtA,LtB,ListaResultado;
+    listaTerminosCrear(LtA);
+    listaTerminosCrear(LtB);
+    listaTerminosCrear(ListaResultado);
+
+    Termino tA1,tA2,tA3,tB1,tB2,tB3;
+    tA1.coef  = 3;
+    tA1.grado = 6;
+    listaTerminosInsertarOrdenado(LtA,tA1);
+
+    tA2.coef  = 2;
+    tA2.grado = 2;
+    listaTerminosInsertarOrdenado(LtA,tA2);
+
+    tA2.coef  = -4;
+    tA2.grado = 1;
+    listaTerminosInsertarOrdenado(LtA,tA2);
+
+    tA3.coef  = 3;
+    tA3.grado = 0;
+    listaTerminosInsertarOrdenado(LtA,tA3);
+
+    PoliA.nombre = "pepe";
+    PoliA.listaTerminos = LtA;
+    ABBPolinomioInsertar(abb,PoliA);
+
+    tB1.coef  = 3;
+    tB1.grado = 2;
+    listaTerminosInsertarOrdenado(LtB,tB1);
+
+    tB2.coef  = 1;
+    tB2.grado = 1;
+    listaTerminosInsertarOrdenado(LtB,tB2);
+
+    tB3.coef  = 1;
+    tB3.grado = 0;
+    listaTerminosInsertarOrdenado(LtB,tB3);
+
+    PoliB.nombre = "lolo";
+    PoliB.listaTerminos = LtB;
+    ABBPolinomioInsertar(abb,PoliB);
+}
