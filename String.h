@@ -41,7 +41,7 @@ boolean esAlfanumerico(String s);
 long int convertirStringAEntero(String s);
 /* Precondición largo String > 0 */
 
-void retornaExtensionNombre(String s, String &sExtension, String &sNombre);
+void retornaExtensionNombre(String s,  String &sNombre, String &sExtension);
 /* Precondición: cntPuntos(s) ==  1*/
 
 int cntPuntos(String s);

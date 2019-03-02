@@ -231,7 +231,7 @@ boolean esAlfanumerico(String s)
     return alfanumerico;
 }
 
-void retornaExtensionNombre(String s, String &sExtension, String &sNombre)
+void retornaExtensionNombre(String s,  String &sNombre, String &sExtension)
 {
     int i=0,j=0;
     String aux;

@@ -27,7 +27,7 @@ void pruebaDarExtencion()
     scan(s);
     printf("\nString cargado: ");
     print(s);
-    retornaExtensionNombre(s,extencion,nombre);
+    retornaExtensionNombre(s,nombre,extencion);
     printf("\nNombre: ");
     print(nombre);
     printf("\nExtencion: ");
@@ -969,24 +969,45 @@ void mainGuardar()
                 {
                     if(ABBPolinomioExiste(abb,ls->Sig->info)) ///Si existe el Poli a guardar
                     {
-                        if(esEntero(ls->Sig->Sig->info)) ///valor a evaluar si es raiz
+                        if(cntPuntos(ls->Sig->Sig->info) == 1)
                         {
-                            long int e = convertirStringAEntero(ls->Sig->Sig->info);
-                            ListaTerminos LstPoliEvaluar;
-                            listaTerminosCrear(LstPoliEvaluar);
-                            Polinomio PoliEvaluar = darPolinomio(abb,ls->Sig->info);
-                            darListaTerminosPolinomio(PoliEvaluar,LstPoliEvaluar);
-
-                            if(evaluarPolinomio(LstPoliEvaluar,e)== 0 )
-                                printf("Resultado : es raiz");
+                            String nombreArch,extensionArch;
+                            strcrear(nombreArch);
+                            strcrear(extensionArch);
+                            retornaExtensionNombre(ls->Sig->Sig->info,nombreArch,extensionArch);
+                            if(streq("txt",extensionArch))
+                            {
+                                if(!ExisteArchivo(ls->Sig->Sig->info))
+                                {
+                                    printf("\nTodo en orden hasta aca.....");
+                                }
+                                else
+                                {
+                                    printf("\nYa existen en disco un archivo con el nombre - ");
+                                    print(ls->Sig->Sig->info);
+                                    printf(" - ¿Desea sobreescribirlo?");
+                                }
+                            }
                             else
-                                printf("Resultado : No es raiz");
+                            {
+                                printf("\nError: la extension del archivo a guardar no es txt. La misma es: ");
+                                print(extensionArch);
+                            }
                         }
                         else
                         {
-                            printf("\nError: el parametro correspondiente con el valor a evaluar si es raiz del Polinomio - ");
+                            if(cntPuntos(ls->Sig->Sig->info) == 0)
+                            {
+                                printf("\nError: no es posible determinar la extencion del archivo a guardar, no se encontro ningun punto en el nombre de archivo ingresado.",cntPuntos(ls->Sig->Sig->info));
+                                printf(" Nombre de archivo ingresado: ");
+                                print(ls->Sig->Sig->info);
+                            }
+                            else
+                            {
+                            printf("\nError: no es posible determinar la extencion del archivo a guardar, se encontraron %i puntos en el nombre de archivo ingresado.",cntPuntos(ls->Sig->Sig->info));
+                            printf(" Nombre de archivo ingresado: ");
                             print(ls->Sig->Sig->info);
-                            printf(" -, no representa un numero entero. No es posible evaluar si es raiz del Polinimio.");
+                            }
                         }
                     }
                     else
@@ -1004,8 +1025,13 @@ void mainGuardar()
             }
             else
             {
-                printf("\nError: la cantidad de parametros no es correcta para el comando - guardar - ");
-                printf("\n, para el mismo se esperan 2 parametros(jhjh) y fueron ingresados %d",LargoListaString(ls)- 1);
+                if(LargoListaString(ls)- 1 == 0)
+                    printf("\nError: No se encontraron parametros, para el comando -guardar-, se esperan que se ingresen 2 parametros(nombre del Polinomio y nombre del archivo).");
+                else
+                {
+                    printf("\nError: la cantidad de parametros no es correcta para el comando -guardar- ");
+                    printf("\n, para el mismo se esperan 2 parametros(nombre del Polinomio y nombre del archivo) y fueron ingresados %d",LargoListaString(ls)- 1);
+                }
             }
         }
         else
