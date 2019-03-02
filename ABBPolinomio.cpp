@@ -35,13 +35,14 @@ ABBPolinomio darHijoDer(ABBPolinomio a)
 
 //Precondición: árbol no sea vacío
 /// void ListarOrdenado(ABBPolinomios a)
-void ListarABB(ABBPolinomio a)
+void ABBPolinomioListar(ABBPolinomio a)
 {
      if (a != NULL)
      {
-         ListarABB(a->hizq); ///ListarOrdenado(a -> hizq);
+         ABBPolinomioListar(a->hizq); ///ListarOrdenado(a -> hizq);
          mostrarPolinomio(a->info);
-         ListarABB(a->hder); ///ListarOrdenado(a -> hder);
+         printf("\n\t");
+         ABBPolinomioListar(a->hder); ///ListarOrdenado(a -> hder);
      }
 }
 

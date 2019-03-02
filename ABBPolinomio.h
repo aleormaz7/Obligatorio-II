@@ -25,7 +25,7 @@ ABBPolinomio ABBPolinomioDarHijoIzq(ABBPolinomio a);
 ABBPolinomio ABBPolinomioDarHjoDer(ABBPolinomio a);
 ///retorna hijo derecho.
 
-void ListarABBPolinomio(ABBPolinomio a);
+void ABBPolinomioListar(ABBPolinomio a);
 ///Precondición: árbol no sea vacío.
 
 boolean ABBPolinomioExiste(ABBPolinomio a, String nombrePolinomio);

@@ -90,10 +90,10 @@
 	<stdio.h>
 	"String.h"
 
-1551537187 source:c:\users\german ana\dropbox\ude\taller i\proyecto\taller-i\main.cpp
+1551538068 source:c:\users\german ana\dropbox\ude\taller i\proyecto\taller-i\main.cpp
 	"Pruebas.h"
 
-1551484059 c:\users\german ana\dropbox\ude\taller i\proyecto\taller-i\pruebas.h
+1551537582 c:\users\german ana\dropbox\ude\taller i\proyecto\taller-i\pruebas.h
 	"String.h"
 	"ListaString.h"
 	"Archivo.h"
@@ -110,7 +110,7 @@
 	"ListaTerminos.h"
 	"ListaString.h"
 
-1551536727 source:c:\users\german ana\dropbox\ude\taller i\proyecto\taller-i\pruebas.cpp
+1551538448 source:c:\users\german ana\dropbox\ude\taller i\proyecto\taller-i\pruebas.cpp
 	"Pruebas.h"
 
 1551484059 source:c:\users\german ana\dropbox\ude\taller i\proyecto\taller-i\string.cpp
@@ -313,9 +313,9 @@
 1550948770 c:\users\ale\desktop\taller-i\abbpolinomio.h
 	"Polinomio.h"
 
-1551484059 source:c:\users\german ana\dropbox\ude\taller i\proyecto\taller-i\abbpolinomio.cpp
+1551538539 source:c:\users\german ana\dropbox\ude\taller i\proyecto\taller-i\abbpolinomio.cpp
 	"ABBPolinomio.h"
 
-1551484059 c:\users\german ana\dropbox\ude\taller i\proyecto\taller-i\abbpolinomio.h
+1551538233 c:\users\german ana\dropbox\ude\taller i\proyecto\taller-i\abbpolinomio.h
 	"Polinomio.h"
 

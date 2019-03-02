@@ -29,10 +29,10 @@ int main()
    /// pruebasListaTermino();
 
     ///pruebasPasoMinusculas();
+        mainSumarPolinomios();
 
-///   mainSumarPolinomios();
-
-       mainMultiplicarPolinomios();
+     ///  mainMultiplicarPolinomios();
+     ////mainMostrar();
     ///pruebaStringAEnteroYEsNumero();
 
 

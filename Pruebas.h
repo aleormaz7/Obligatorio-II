@@ -56,4 +56,8 @@ void mainSumarPolinomios();
 void mainMultiplicarPolinomios();
 
 void pruebaStringAEnteroYEsNumero();
+
+void mainMostrar();
+
+
 #endif // PRUEBAS_H_INCLUDED
