@@ -35,7 +35,8 @@ int main()
      ///mainMostrar();
      /// mainEvaluar();
        /// mainEsRaiz();
-       mainGuardar();
+     ///  mainGuardar();
+     mainRecuperar();
     ///pruebaStringAEnteroYEsNumero();
 
     ///pruebaDarExtencion();

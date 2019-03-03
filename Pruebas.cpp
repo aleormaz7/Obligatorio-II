@@ -1089,7 +1089,7 @@ void mainRecuperar()
         scan(s);
         partirString(s,ls);
 
-        if(streq("guardar",ls->info))
+        if(streq("recuperar",ls->info))
         {
             if(LargoListaString(ls) == 3)
             {
@@ -1109,7 +1109,6 @@ void mainRecuperar()
                                 {
                                     if(ExisteArchivo(ls->Sig->Sig->info))
                                     {
-                                        printf("\nTodo en orden hasta aca.....");
                                         ListaTerminos LstAux;
                                         listaTerminosCrear(LstAux);
 
@@ -1120,6 +1119,7 @@ void mainRecuperar()
                                             crearPolinomioResultante(Poli,ls->Sig->info,LstAux);
                                             ABBPolinomioInsertar(abb,Poli);
                                             destuirListaTerminos(LstAux);
+                                            printf("\nResultado : ");
                                             mostrarPolinomio(Poli);
                                         }
                                         else

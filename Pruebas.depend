@@ -79,7 +79,7 @@
 1551484059 c:\users\german ana\dropbox\ude\taller i\proyecto\taller-i\listastring.h
 	"String.h"
 
-1551569867 source:c:\users\german ana\dropbox\ude\taller i\proyecto\taller-i\listaterminos.cpp
+1551570658 source:c:\users\german ana\dropbox\ude\taller i\proyecto\taller-i\listaterminos.cpp
 	"ListaTerminos.h"
 
 1551484059 c:\users\german ana\dropbox\ude\taller i\proyecto\taller-i\listaterminos.h
@@ -90,10 +90,10 @@
 	<stdio.h>
 	"String.h"
 
-1551565494 source:c:\users\german ana\dropbox\ude\taller i\proyecto\taller-i\main.cpp
+1551618668 source:c:\users\german ana\dropbox\ude\taller i\proyecto\taller-i\main.cpp
 	"Pruebas.h"
 
-1551554766 c:\users\german ana\dropbox\ude\taller i\proyecto\taller-i\pruebas.h
+1551618657 c:\users\german ana\dropbox\ude\taller i\proyecto\taller-i\pruebas.h
 	"String.h"
 	"ListaString.h"
 	"Archivo.h"
@@ -110,13 +110,13 @@
 	"ListaTerminos.h"
 	"ListaString.h"
 
-1551570197 source:c:\users\german ana\dropbox\ude\taller i\proyecto\taller-i\pruebas.cpp
+1551618715 source:c:\users\german ana\dropbox\ude\taller i\proyecto\taller-i\pruebas.cpp
 	"Pruebas.h"
 
 1551565175 source:c:\users\german ana\dropbox\ude\taller i\proyecto\taller-i\string.cpp
 	"String.h"
 
-1551484059 source:c:\users\german ana\dropbox\ude\taller i\proyecto\taller-i\termino.cpp
+1551617160 source:c:\users\german ana\dropbox\ude\taller i\proyecto\taller-i\termino.cpp
 	"Termino.h"
 
 1550846980 source:c:\users\ale\desktop\taller-i\archivo.cpp
