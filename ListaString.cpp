@@ -1,11 +1,9 @@
 #include "ListaString.h"
 
-
 void CrearListaString(ListaString &L)
 {
     L = NULL;
 }
-
 
 void InsBackListaString(ListaString &L, String s)
 {
@@ -20,7 +18,6 @@ void InsBackListaString(ListaString &L, String s)
         InsBackListaString(L->Sig,s);
     }
 }
-
 
 void partirString(String s, ListaString &ls)
 {
@@ -72,7 +69,6 @@ void partirString(String s, ListaString &ls)
     llevoAMinusculas(ls->info);
     strdestruir(aux);
 }
-
 
 int LargoListaString (ListaString L)
 {
@@ -136,4 +132,3 @@ void obtenerString(ListaString L, int pos, String &s)
     }
     strcop(s,L->info);
 }
-

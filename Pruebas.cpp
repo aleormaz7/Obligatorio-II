@@ -1189,7 +1189,6 @@ void mainRecuperar()
             print(ls->info);
         }
     }while(!streq("salir",ls->info));
-
 }
 
 void pruebaStringAEnteroYEsNumero()

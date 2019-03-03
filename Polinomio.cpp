@@ -84,7 +84,6 @@ void mostrarPolinomio(Polinomio p)
     listaTerminosMostrar(p.listaTerminos);
 }
 
-
 void darNombrePolinomio(Polinomio p, String &s)
 {
     strcrear(s);

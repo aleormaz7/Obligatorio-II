@@ -1,14 +1,11 @@
 #ifndef TERMINO_H_INCLUDED
 #define TERMINO_H_INCLUDED
 
-#include <stdio.h>
-
 #include "String.h"
 
-typedef struct {
-    long int coef;
-    int grado;
-} Termino;
+typedef struct {long int coef;
+                int grado;
+               } Termino;
 
 void CrearTermino(Termino &t, long int coef, int grado);
 
