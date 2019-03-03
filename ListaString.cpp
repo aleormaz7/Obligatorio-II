@@ -149,7 +149,7 @@ void ListaStringAListaTerminos(ListaString ls, ListaTerminos &Lst)
         if(coef1 != 0)
         {
             CrearTermino(auxT,coef1,0);
-            listaTerminosInsertarOrdenado(Lst,auxT);///(polinomio con un solo termino)
+            listaTerminosInsertarOrdenado(Lst,auxT);
         }
         else
         {
@@ -163,14 +163,10 @@ void ListaStringAListaTerminos(ListaString ls, ListaTerminos &Lst)
         ///PARA CADA NodoLista en Lista String
         while(ls != NULL)
         {
-            ///Paso NodoLista a entero
             int coefAux = convertirStringAEntero(ls->info);
-            ///SI NodoLista es distinto de cero
             if(coefAux != 0)
             {
-                ///Creo Término (NodoLista Entero y Grado)
                 CrearTermino(auxT,coefAux,grado);
-                ///Agrego Término a Lista de términos
                 listaTerminosInsertarOrdenado(Lst,auxT);
             }
             ls = ls->Sig;
