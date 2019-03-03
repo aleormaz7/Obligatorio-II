@@ -158,18 +158,15 @@ void ListaStringAListaTerminos(ListaString ls, ListaTerminos &Lst)
             CrearTermino(auxT,0,0);
             listaTerminosInsertarOrdenado(Lst,auxT);
         }
-
     }
     else///SINO
     {
-
         int coef1 = convertirStringAEntero(ls->info);
 
         ///SI 3er String entero = 0
         if(coef1 == 0)
         {
             printf("\nError: Si existen 2 o más términos, el de mayor grado no puede ser cero.");
-
         }
         else///SINO
         {

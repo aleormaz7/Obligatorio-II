@@ -2,8 +2,46 @@
 
 void comandoCrear(ABBPolinomio &abb, ListaString ls)
 {
+    if(LargoListaString(ls) > 2)
+    {
+        if(!esAlfanumerico(ls->Sig->info))
+        {
+            if(!ABBPolinomioExiste(abb,ls->Sig->info))
+            {
+                ls = ls->Sig->Sig;
+                ///ya que nombre es alfanumerico, copio nombre de polinomio en variable aux para tenerlo por separado
+                String nombrePoli;
+                strcrear(nombrePoli);
+                strcop(nombrePoli,ls->info);
 
+                ls = ls->Sig;
+                if(CoeficientesEnteros(ls))
+                {
+
+
+                }
+                else
+                    printf("\nError: alguno de los coeficientes ingresados, no representan un valor entero.");
+            }
+            else
+            {
+                printf("\nError: ya existe en el sistema, un Poliomio con el nombre ingresado. Nombre ingresado: ");
+                print(ls->Sig->info);
+            }
+        }
+        else
+        {
+            printf("\nError: el nombre ingresado para indentificar al Polinomio no es alfanumerico. Nombre ingresado: ");
+            print(ls->Sig->info);
+        }
+    }
+    else
+    {
+        printf("\nError: la cantidad de parametros no es correcta para el comando -crear- ");
+        printf("\n, para el mismo se esperan como minimo 2 parametros(nombre del Polinomio y sus coeficientes) y fueron ingresados %d",LargoListaString(ls)- 1);
+    }
 }
+
 
 void comandoSumar(ABBPolinomio &abb, ListaString ls)
 {
