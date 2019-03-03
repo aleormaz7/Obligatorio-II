@@ -44,6 +44,8 @@
 		<Unit filename="ListaTerminos.h" />
 		<Unit filename="Polinomio.cpp" />
 		<Unit filename="Polinomio.h" />
+		<Unit filename="ProcesadorComandos.cpp" />
+		<Unit filename="ProcesadorComandos.h" />
 		<Unit filename="Pruebas.cpp" />
 		<Unit filename="Pruebas.h">
 			<Option target="&lt;{~None~}&gt;" />
