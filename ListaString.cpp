@@ -135,15 +135,14 @@ void obtenerString(ListaString L, int pos, String &s)
 
 void ListaStringAListaTerminos(ListaString ls, ListaTerminos &Lst)
 {
-    int largo = LargoListaString(ls) + 2;///mas 2 de los dos que me movi
+    int largo = LargoListaString(ls);
     Termino auxT;
     ///Inicializo Grado
-    int grado = largo-3;///largo - 3(dos menos por crear y nombrePol y otro menos por el termino independiente grado cero)
+    int grado = largo - 1;
 
-    ///SI largo de listaString == 3
-    if(largo == 3)
+    if(largo == 1)
     {
-        ///Paso 3er String a entero
+        ///Paso 1er String a entero
         int coef1 = convertirStringAEntero(ls->info);
 
         ///si el coef del termino independiente no es cero inserto termino en polinomio
@@ -159,36 +158,23 @@ void ListaStringAListaTerminos(ListaString ls, ListaTerminos &Lst)
             listaTerminosInsertarOrdenado(Lst,auxT);
         }
     }
-    else///SINO
+    else
     {
-        int coef1 = convertirStringAEntero(ls->info);
-
-        ///SI 3er String entero = 0
-        if(coef1 == 0)
+        ///PARA CADA NodoLista en Lista String
+        while(ls != NULL)
         {
-            printf("\nError: Si existen 2 o más términos, el de mayor grado no puede ser cero.");
-        }
-        else///SINO
-        {
-            ///PARA CADA NodoLista en Lista String desde el final hasta el primero + 2
-            int i = largo;
-            while(i > 2)
+            ///Paso NodoLista a entero
+            int coefAux = convertirStringAEntero(ls->info);
+            ///SI NodoLista es distinto de cero
+            if(coefAux != 0)
             {
-                ///Paso NodoLista a entero
-                int coefAux = convertirStringAEntero(ls->info);
-                ///SI NodoLista es distinto de cero
-
-                if(coefAux != 0)
-                {
-                    ///Creo Término (NodoLista Entero y Grado)
-                    CrearTermino(auxT,coefAux,grado);
-                    ///Agrego Término a Lista de términos
-                    listaTerminosInsertarOrdenado(Lst,auxT);
-                }
-                ls = ls->Sig;
-                grado--;
-                i--;
+                ///Creo Término (NodoLista Entero y Grado)
+                CrearTermino(auxT,coefAux,grado);
+                ///Agrego Término a Lista de términos
+                listaTerminosInsertarOrdenado(Lst,auxT);
             }
+            ls = ls->Sig;
+            grado--;
         }
     }
 }

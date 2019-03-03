@@ -16,18 +16,17 @@ void comandoCrear(ABBPolinomio &abb, ListaString ls)
                 ls = ls->Sig->Sig;
                 if(CoeficientesEnteros(ls))
                 {
-                    if(LargoListaString(ls) > 3)
+                    if(LargoListaString(ls) > 1 && streq("0",ls->info))
+                        printf("\nError: si ingresea 2 o mas coeficientes, el de coeficiente de mayor grado no puede ser cero.");
+                    else
                     {
-                        if(streq("0",ls->info))
-                        {
-                            ListaTerminos ListaTermPoli;
-                            listaTerminosCrear(ListaTermPoli);
-                            ListaStringAListaTerminos(ls,ListaTermPoli);
-                            Polinomio Poli;
-                            crearPolinomioResultante(Poli,nombrePoli,ListaTermPoli);
-                        }
-                        else
-                            printf("\nError: existen mas de 2 coeficientes, por lo que el de mayor grado no puede ser cero.");
+                        ListaTerminos ListaTermPoli;
+                        listaTerminosCrear(ListaTermPoli);
+                        ListaStringAListaTerminos(ls,ListaTermPoli);
+                        Polinomio Poli;
+                        crearPolinomioResultante(Poli,nombrePoli,ListaTermPoli);
+                        ABBPolinomioInsertar(abb,Poli);
+                        mostrarPolinomio(Poli);
                     }
                 }
                 else

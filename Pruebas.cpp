@@ -385,7 +385,6 @@ void pruebasModuloPolinomio()
             }
             else///SINO
             {
-
                 ///ya que nombre es alfanumerico, copio nombre de polinomio en variable aux para tenerlo por separado
                 strcrear(p.nombre);
                 strcop(p.nombre,listaS->info);
