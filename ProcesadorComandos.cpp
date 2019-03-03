@@ -4,17 +4,16 @@ void comandoCrear(ABBPolinomio &abb, ListaString ls)
 {
     if(LargoListaString(ls) > 2)
     {
-        if(!esAlfanumerico(ls->Sig->info))
+        if(esAlfanumerico(ls->Sig->info))
         {
             if(!ABBPolinomioExiste(abb,ls->Sig->info))
             {
-                ls = ls->Sig->Sig;
                 ///ya que nombre es alfanumerico, copio nombre de polinomio en variable aux para tenerlo por separado
                 String nombrePoli;
                 strcrear(nombrePoli);
                 strcop(nombrePoli,ls->info);
 
-                ls = ls->Sig;
+                ls = ls->Sig->Sig;
                 if(CoeficientesEnteros(ls))
                 {
 
