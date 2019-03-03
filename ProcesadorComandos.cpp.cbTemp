@@ -459,8 +459,3 @@ void comandoRecuperar(ABBPolinomio &abb, ListaString ls)
         }
     }
 }
-
-void comandoSalir(ABBPolinomio &abb, ListaString ls)
-{
-
-}
