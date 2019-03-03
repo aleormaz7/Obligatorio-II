@@ -12,7 +12,6 @@ void comandoCrear(ABBPolinomio &abb, ListaString ls)
                 String nombrePoli;
                 strcrear(nombrePoli);
                 strcop(nombrePoli,ls->Sig->info);
-                print(nombrePoli);
 
                 ls = ls->Sig->Sig;
                 if(CoeficientesEnteros(ls))
