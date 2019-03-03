@@ -11,7 +11,8 @@ void comandoCrear(ABBPolinomio &abb, ListaString ls)
                 ///ya que nombre es alfanumerico, copio nombre de polinomio en variable aux para tenerlo por separado
                 String nombrePoli;
                 strcrear(nombrePoli);
-                strcop(nombrePoli,ls->info);
+                strcop(nombrePoli,ls->Sig->info);
+                print(nombrePoli);
 
                 ls = ls->Sig->Sig;
                 if(CoeficientesEnteros(ls))
