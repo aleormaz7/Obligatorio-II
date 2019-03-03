@@ -2,6 +2,7 @@
 #define LISTASTRING_H_INCLUDED
 
 #include "String.h"
+#include "ListaTerminos.h"
 
 
 typedef struct nodoS  { String info;
@@ -37,5 +38,8 @@ void obtenerString(ListaString ls, int pos, String &s);
 /*Precondicion: posicion <= al largo de lista*/
 
 void MostrarListaString (ListaString L);
+
+void ListaStringAListaTerminos(ListaString ls, ListaTerminos &Lst);
+
 
 #endif // LISTASTRING_H_INCLUDED
