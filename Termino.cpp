@@ -8,7 +8,7 @@ void CrearTermino(Termino &t, long int coef, int grado)
 
 void MostrarTermino(Termino t)
 {
-    ///No guardamos 0, salvo en el termino independiente cuando es Polinomio nulo
+    ///No guardamos 0, salvo en el termino independiente para representar el Polinomio nulo
     if(t.grado > 1)
     {
         if(t.coef > 1)
@@ -75,8 +75,6 @@ int DarGradoTermino(Termino t)
     return t.grado;
 }
 
-
-
 void BajarTermino(Termino t, FILE * f)
 {
     fwrite(&t.coef,sizeof(long int),1,f);
@@ -88,15 +86,3 @@ void LevantarTermino(Termino &t, FILE * f)
     fread(&t.coef, sizeof(long int), 1, f);
     fread(&t.grado, sizeof(int), 1, f);
 }
-
-
-///Esto habria que ver cuando se Levante o Baje cada termino a la lista de Terminos
-/*
-    while(!feof(f))
-    {
-        ///TODO: Agregar/Insertar termino en ListaTerminos(y despues en el ABB).
-        fread(&t.coef, sizeof(long int), 1, f);
-        fread(&t.grado, sizeof(long int), 1, f);
-    }
-    fclose(f);
-*/
