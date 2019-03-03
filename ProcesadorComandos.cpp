@@ -13,10 +13,10 @@ void comandoCrear(ABBPolinomio &abb, ListaString ls)
                 strcrear(nombrePoli);
                 strcop(nombrePoli,ls->Sig->info);
 
-                ls = ls->Sig->Sig;
-                if(CoeficientesEnteros(ls))
+                ListaString LsAux = ls->Sig->Sig;
+                if(CoeficientesEnteros(LsAux))
                 {
-                    if(LargoListaString(ls) > 1 && streq("0",ls->info))
+                    if(LargoListaString(LsAux) > 1 && streq("0",LsAux->info))
                         printf("\nError: si ingresea 2 o mas coeficientes, el de coeficiente de mayor grado no puede ser cero.");
                     else
                     {
@@ -31,6 +31,8 @@ void comandoCrear(ABBPolinomio &abb, ListaString ls)
                 }
                 else
                     printf("\nError: alguno de los coeficientes ingresados, no representan un valor entero.");
+                destruirListaString(LsAux);
+                strdestruir(nombrePoli);
             }
             else
             {
