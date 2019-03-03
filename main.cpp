@@ -3,43 +3,26 @@
 int main()
 {
     ///pruebaModuloString();
-
     ///pruebaListaStrings();
-
     ///pruebasModuloArchivo();
-
     ///pruebasModuloTermino();
-
-   /// pruebasModuloPolinomio();
-
+    ///pruebasModuloPolinomio();
     ///pruebasSumarPolinomios();
-
     ///pruebasReducirPolinomio();
-
     ///pruebasMultiplicarPolinomio();
-
     ///pruebasControlTerminoIndependienteNoNulo();
-
     ///pruebasEvaluarPolinomio();
-
     ///pruebasEsRaiz();
-
     ///PruebasABBPolinomio();
-
-   /// pruebasListaTermino();
-
+    ///pruebasListaTermino();
     ///pruebasPasoMinusculas();
-       /// mainSumarPolinomios();
-
-     ///  mainMultiplicarPolinomios();
-     ///mainMostrar();
-     /// mainEvaluar();
-       /// mainEsRaiz();
-     ///  mainGuardar();
-     mainRecuperar();
+    ///mainSumarPolinomios();
+    ///mainMultiplicarPolinomios();
+    ///mainMostrar();
+    ///mainEvaluar();
+    ///mainEsRaiz();
+    ///mainGuardar();
+    ///mainRecuperar();
     ///pruebaStringAEnteroYEsNumero();
-
     ///pruebaDarExtencion();
-
-
 }
