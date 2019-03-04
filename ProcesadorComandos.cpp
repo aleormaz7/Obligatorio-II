@@ -17,7 +17,7 @@ void comandoCrear(ABBPolinomio &abb, ListaString ls)
                 if(CoeficientesEnteros(LsAux))
                 {
                     if(LargoListaString(LsAux) > 1 && streq("0",LsAux->info))
-                        printf("\nError: si ingresea 2 o mas coeficientes, el de coeficiente de mayor grado no puede ser cero.");
+                        printf("Resultado:\t Error: si ingresea 2 o mas coeficientes, el de coeficiente de mayor grado no puede ser cero.");
                     else
                     {
                         ListaTerminos ListaTermPoli;
@@ -26,30 +26,31 @@ void comandoCrear(ABBPolinomio &abb, ListaString ls)
                         Polinomio Poli;
                         crearPolinomioResultante(Poli,nombrePoli,ListaTermPoli);
                         ABBPolinomioInsertar(abb,Poli);
+                        printf("Resultado:\t ");
                         mostrarPolinomio(Poli);
                     }
                 }
                 else
-                    printf("\nError: alguno de los coeficientes ingresados, no representan un valor entero.");
+                    printf("Resultado:\t Error: alguno de los coeficientes ingresados, no representan un valor entero.");
                 destruirListaString(LsAux);
                 strdestruir(nombrePoli);
             }
             else
             {
-                printf("\nError: ya existe en el sistema, un Poliomio con el nombre ingresado. Nombre ingresado: ");
+                printf("Resultado:\t Error: ya existe en el sistema, un Poliomio con el nombre ingresado. Nombre ingresado: ");
                 print(ls->Sig->info);
             }
         }
         else
         {
-            printf("\nError: el nombre ingresado para indentificar al Polinomio no es alfanumerico. Nombre ingresado: ");
+            printf("Resultado:\t Error: el nombre ingresado para indentificar al Polinomio no es alfanumerico. Nombre ingresado: ");
             print(ls->Sig->info);
         }
     }
     else
     {
-        printf("\nError: la cantidad de parametros no es correcta para el comando -crear- ");
-        printf("\n, para el mismo se esperan como minimo 2 parametros(nombre del Polinomio y sus coeficientes) y fueron ingresados %d",LargoListaString(ls)- 1);
+        printf("Resultado:\t Error: la cantidad de parametros no es correcta para el comando -crear-, ");
+        printf("\n\t\t para el mismo se esperan como minimo 2 parametros(nombre del Polinomio y sus coeficientes),\n\t\t en su lugar fueron ingresados %d",LargoListaString(ls)- 1);
     }
 }
 
@@ -94,47 +95,47 @@ void comandoSumar(ABBPolinomio &abb, ListaString ls)
                              }
                              else
                              {
-                                printf("\nError: el segundo Polinomio a sumar, indicado con el nombre ");
+                                printf("Resultado:\t Error: el segundo Polinomio a sumar, indicado con el nombre ");
                                 print(ls->Sig->Sig->Sig->info);
                                 printf("\nno existe en memoria.");
                              }
                         }
                         else
                         {
-                            printf("\nError: el primer Polinomio a sumar, indicado con el nombre ");
+                            printf("Resultado:\t Error: el primer Polinomio a sumar, indicado con el nombre ");
                             print(ls->Sig->Sig->info);
                             printf("\nno existe en memoria.");
                         }
                     }
                     else
                     {
-                        printf("\nError: el nombre ingresado para el segundo Polinomio a sumar - ");
+                        printf("Resultado:\t Error: el nombre ingresado para el segundo Polinomio a sumar - ");
                         print(ls->Sig->Sig->Sig->info);
                         printf(" -, no es un alfanumerico, y es imposible encontrarlo en el sistema.");
                     }
                 }
                 else
                 {
-                    printf("\nError: el nombre ingresado para el primer Polinomio a sumar- ");
+                    printf("Resultado:\t Error: el nombre ingresado para el primer Polinomio a sumar- ");
                     print(ls->Sig->Sig->info);
                     printf(" -, no es un alfanumerico, y es imposible encontrarlo en el sistema.");
                 }
             }
             else
             {
-                printf("\nError: en el sistema ya existe un Polinomio con el nombre ingresado para indeficiar al resulatante, nombre ingresado: ");
+                printf("Resultado:\t Error: en el sistema ya existe un Polinomio con el nombre ingresado para indeficiar al resulatante, nombre ingresado: ");
                 print(ls->Sig->info);
             }
         }
         else
         {
-           printf("\nError: el nombre ingresado para identificar al Polinimio resultante - ");
+           printf("Resultado:\t Error: el nombre ingresado para identificar al Polinimio resultante - ");
            print(ls->Sig->info);
            printf(" - , no es un alfanumerico.");
         }
     }
     else
-        printf("\nError: la cantidad de parametros no es correcta para el comando,\n se esperan 3 parametros y fueron ingresados %d",LargoListaString(ls)- 1);
+        printf("Resultado:\t Error: la cantidad de parametros no es correcta para el comando,\n se esperan 3 parametros y fueron ingresados %d",LargoListaString(ls)- 1);
 }
 
 void comandoMultiplicar(ABBPolinomio &abb, ListaString ls)
@@ -179,47 +180,47 @@ void comandoMultiplicar(ABBPolinomio &abb, ListaString ls)
                              }
                              else
                              {
-                                printf("\nError: el segundo Polinomio a multiplicar, indicado con el nombre ");
+                                printf("Resultado:\t Error: el segundo Polinomio a multiplicar, indicado con el nombre ");
                                 print(ls->Sig->Sig->Sig->info);
                                 printf("\nno existe en memoria.");
                              }
                         }
                         else
                         {
-                            printf("\nError: el primer Polinomio a multiplicar, indicado con el nombre ");
+                            printf("Resultado:\t Error: el primer Polinomio a multiplicar, indicado con el nombre ");
                             print(ls->Sig->Sig->info);
                             printf("\nno existe en memoria.");
                         }
                     }
                     else
                     {
-                        printf("\nError: el nombre ingresado para el segundo Polinomio a multiplicar - ");
+                        printf("Resultado:\t Error: el nombre ingresado para el segundo Polinomio a multiplicar - ");
                         print(ls->Sig->Sig->Sig->info);
                         printf(" -, no es un alfanumerico, y es imposible encontrarlo en el sistema.");
                     }
                 }
                 else
                 {
-                    printf("\nError: el nombre ingresado para el primer Polinomio a multiplicar- ");
+                    printf("Resultado:\t Error: el nombre ingresado para el primer Polinomio a multiplicar- ");
                     print(ls->Sig->Sig->info);
                     printf(" -, no es un alfanumerico, y es imposible encontrarlo en el sistema.");
                 }
             }
             else
             {
-                printf("\nError: en el sistema ya existe un Polinomio con el nombre ingresado para indeficiar al resulatante, nombre ingresado: ");
+                printf("Resultado:\t Error: en el sistema ya existe un Polinomio con el nombre ingresado para indeficiar al resulatante, nombre ingresado: ");
                 print(ls->Sig->info);
             }
         }
         else
         {
-           printf("\nError: el nombre ingresado para identificar al Polinimio resultante - ");
+           printf("Resultado:\t Error: el nombre ingresado para identificar al Polinimio resultante - ");
            print(ls->Sig->info);
            printf(" - , no es un alfanumerico.");
         }
     }
     else
-        printf("\nError: la cantidad de parametros no es correcta para el comando,\n se esperan 3 parametros y fueron ingresados %d",LargoListaString(ls)- 1);
+        printf("Resultado:\t Error: la cantidad de parametros no es correcta para el comando,\n se esperan 3 parametros y fueron ingresados %d",LargoListaString(ls)- 1);
 }
 
 void comandoEvaluar(ABBPolinomio abb, ListaString ls)
@@ -242,27 +243,27 @@ void comandoEvaluar(ABBPolinomio abb, ListaString ls)
                 }
                 else
                 {
-                    printf("\nError: el parametro correspondiente con el valor a evaluar - ");
+                    printf("Resultado:\t Error: el parametro correspondiente con el valor a evaluar - ");
                     print(ls->Sig->Sig->info);
                     printf(" -, no representa un numero entero. No es posible evaluar el Polinimio.");
                 }
             }
             else
             {
-                printf("\nError: en el sistema no existe un Polinomio con el nombre: ");
+                printf("Resultado:\t Error: en el sistema no existe un Polinomio con el nombre: ");
                 print(ls->Sig->info);
             }
         }
         else
         {
-           printf("\nError: el nombre ingresado del Polinimio a evaluar - ");
+           printf("Resultado:\t Error: el nombre ingresado del Polinimio a evaluar - ");
            print(ls->Sig->info);
            printf(" - , no es un alfanumerico, es imposible identificarlo en el sistema.");
         }
     }
     else
     {
-        printf("\nError: la cantidad de parametros no es correcta para el comando - evaluar - ");
+        printf("Resultado:\t Error: la cantidad de parametros no es correcta para el comando - evaluar - ");
         printf(", para el mismo se esperan 2 parametros(nombre Polinomio y valor a evaluar) y fueron ingresados %d",LargoListaString(ls)- 1);
     }
 }
@@ -290,27 +291,27 @@ void comandoEsRaiz(ABBPolinomio abb, ListaString ls)
                 }
                 else
                 {
-                    printf("\nError: el parametro correspondiente con el valor a evaluar si es raiz del Polinomio - ");
+                    printf("Resultado:\t Error: el parametro correspondiente con el valor a evaluar si es raiz del Polinomio - ");
                     print(ls->Sig->Sig->info);
                     printf(" -, no representa un numero entero. No es posible evaluar si es raiz del Polinimio.");
                 }
             }
             else
             {
-                printf("\nError: en el sistema no existe un Polinomio con el nombre: ");
+                printf("Resultado:\t Error: en el sistema no existe un Polinomio con el nombre: ");
                 print(ls->Sig->info);
             }
         }
         else
         {
-           printf("\nError: el nombre ingresado del Polinimio a evaluar si es raiz - ");
+           printf("Resultado:\t Error: el nombre ingresado del Polinimio a evaluar si es raiz - ");
            print(ls->Sig->info);
            printf(" - , no es un alfanumerico, es imposible identificarlo en el sistema.");
         }
     }
     else
     {
-        printf("\nError: la cantidad de parametros no es correcta para el comando - es raiz - ");
+        printf("Resultado:\t Error: la cantidad de parametros no es correcta para el comando - es raiz - ");
         printf("\n, para el mismo se esperan 2 parametros(nombre Polinomio y valor a evaluar) y fueron ingresados %d",LargoListaString(ls)- 1);
     }
 }
@@ -325,10 +326,10 @@ void comandoMostrar(ABBPolinomio abb, ListaString ls)
             ABBPolinomioListar(abb);
         }
         else
-           printf("\nNo existen polinomios en memoria, no hay nada para listar.");
+           printf("Resultado:\t No existen polinomios en memoria, no hay nada para listar.");
     }
     else
-         printf("\nError: El comando -mostrar- no acepta parametros.");
+         printf("Resultado:\t Error: El comando -mostrar- no acepta parametros.");
 }
 
 void comandoGuardar(ABBPolinomio abb, ListaString ls)
@@ -380,13 +381,13 @@ void comandoGuardar(ABBPolinomio abb, ListaString ls)
                         }
                         else
                         {
-                            printf("\nError: la extension del archivo a guardar no es txt. La misma es: ");
+                            printf("Resultado:\t Error: la extension del archivo a guardar no es txt. La misma es: ");
                             print(extensionArch);
                         }
                     }
                     else
                     {
-                        printf("\nError: el nombre ingresado para el archivo en cual se desea guardar el Polinomio, no es elfanumeroco. Nombre ingresado es: ");
+                        printf("Resultado:\t Error: el nombre ingresado para el archivo en cual se desea guardar el Polinomio, no es elfanumeroco. Nombre ingresado es: ");
                         print(nombreArch);
                     }
                 }
@@ -394,13 +395,13 @@ void comandoGuardar(ABBPolinomio abb, ListaString ls)
                 {
                     if(cntPuntos(ls->Sig->Sig->info) == 0)
                     {
-                        printf("\nError: no es posible determinar la extencion del archivo a guardar, no se encontro ningun punto en el nombre de archivo ingresado.",cntPuntos(ls->Sig->Sig->info));
+                        printf("Resultado:\t Error: no es posible determinar la extencion del archivo a guardar, no se encontro ningun punto en el nombre de archivo ingresado.",cntPuntos(ls->Sig->Sig->info));
                         printf(" Nombre de archivo ingresado: ");
                         print(ls->Sig->Sig->info);
                     }
                     else
                     {
-                    printf("\nError: no es posible determinar la extencion del archivo a guardar, se encontraron %i puntos en el nombre de archivo ingresado.",cntPuntos(ls->Sig->Sig->info));
+                    printf("Resultado:\t Error: no es posible determinar la extencion del archivo a guardar, se encontraron %i puntos en el nombre de archivo ingresado.",cntPuntos(ls->Sig->Sig->info));
                     printf(" Nombre de archivo ingresado: ");
                     print(ls->Sig->Sig->info);
                     }
@@ -408,13 +409,13 @@ void comandoGuardar(ABBPolinomio abb, ListaString ls)
             }
             else
             {
-                printf("\nError: en el sistema no existe un Polinomio con el nombre: ");
+                printf("Resultado:\t Error: en el sistema no existe un Polinomio con el nombre: ");
                 print(ls->Sig->info);
             }
         }
         else
         {
-           printf("\nError: el nombre ingresado para el Polinimio a guardar - ");
+           printf("Resultado:\t Error: el nombre ingresado para el Polinimio a guardar - ");
            print(ls->Sig->info);
            printf(" - , no es un alfanumerico, es imposible identificarlo en el sistema.");
         }
@@ -422,10 +423,10 @@ void comandoGuardar(ABBPolinomio abb, ListaString ls)
     else
     {
         if(LargoListaString(ls)- 1 == 0)
-            printf("\nError: No se encontraron parametros, para el comando -guardar-, se esperan que se ingresen 2 parametros(nombre del Polinomio y nombre del archivo).");
+            printf("Resultado:\t Error: No se encontraron parametros, para el comando -guardar-, se esperan que se ingresen 2 parametros(nombre del Polinomio y nombre del archivo).");
         else
         {
-            printf("\nError: la cantidad de parametros no es correcta para el comando -guardar- ");
+            printf("Resultado:\t Error: la cantidad de parametros no es correcta para el comando -guardar- ");
             printf("\n, para el mismo se esperan 2 parametros(nombre del Polinomio y nombre del archivo) y fueron ingresados %d",LargoListaString(ls)- 1);
         }
     }
@@ -465,23 +466,23 @@ void comandoRecuperar(ABBPolinomio &abb, ListaString ls)
                                     mostrarPolinomio(Poli);
                                 }
                                 else
-                                    printf("\nError: ocurrio un error inesperado al recuperar la informacion del archivo.");
+                                    printf("Resultado:\t Error: ocurrio un error inesperado al recuperar la informacion del archivo.");
                             }
                             else
                             {
-                                printf("\nError: no se encontro en el disco el archivo ");
+                                printf("Resultado:\t Error: no se encontro en el disco el archivo ");
                                 print(ls->Sig->Sig->info);
                             }
                         }
                         else
                         {
-                            printf("\nError: la extension del archivo del cual se desea recuperar el Polinomio no es txt. La misma es: ");
+                            printf("Resultado:\t Error: la extension del archivo del cual se desea recuperar el Polinomio no es txt. La misma es: ");
                             print(extensionArch);
                         }
                     }
                     else
                     {
-                        printf("\nError: el nombre del archivo del cual se desea recuperar el Polinomio no es alfanumerico. Nombre ingresado es: ");
+                        printf("Resultado:\t Error: el nombre del archivo del cual se desea recuperar el Polinomio no es alfanumerico. Nombre ingresado es: ");
                         print(nombreArch);
                     }
                 }
@@ -489,13 +490,13 @@ void comandoRecuperar(ABBPolinomio &abb, ListaString ls)
                 {
                     if(cntPuntos(ls->Sig->Sig->info) == 0)
                     {
-                        printf("\nError: no es posible determinar la extension del archivo del cual se desea recuperar el Polinomio, no se encontro ningun punto en el nombre de archivo ingresado.",cntPuntos(ls->Sig->Sig->info));
+                        printf("Resultado:\t Error: no es posible determinar la extension del archivo del cual se desea recuperar el Polinomio, no se encontro ningun punto en el nombre de archivo ingresado.",cntPuntos(ls->Sig->Sig->info));
                         printf(" Nombre de archivo ingresado: ");
                         print(ls->Sig->Sig->info);
                     }
                     else
                     {
-                    printf("\nError: no es posible determinar la extencion del archivo del cual se desea recuperar el Polinomio, se encontraron %i puntos en el nombre de archivo ingresado.",cntPuntos(ls->Sig->Sig->info));
+                    printf("Resultado:\t Error: no es posible determinar la extencion del archivo del cual se desea recuperar el Polinomio, se encontraron %i puntos en el nombre de archivo ingresado.",cntPuntos(ls->Sig->Sig->info));
                     printf(" Nombre de archivo ingresado: ");
                     print(ls->Sig->Sig->info);
                     }
@@ -503,13 +504,13 @@ void comandoRecuperar(ABBPolinomio &abb, ListaString ls)
             }
             else
             {
-                printf("\nError: ya existe en el sistema un Polinomio con el nombre: ");
+                printf("Resultado:\t Error: ya existe en el sistema un Polinomio con el nombre: ");
                 print(ls->Sig->info);
             }
         }
         else
         {
-           printf("\nError: el nombre ingresado para el Polinimio que se desea recuperar -");
+           printf("Resultado:\t Error: el nombre ingresado para el Polinimio que se desea recuperar -");
            print(ls->Sig->info);
            printf("- , no es un alfanumerico.");
         }
@@ -517,10 +518,10 @@ void comandoRecuperar(ABBPolinomio &abb, ListaString ls)
     else
     {
         if(LargoListaString(ls)- 1 == 0)
-            printf("\nError: No se encontraron parametros, para el comando -recuperar-, se esperan que se ingresen 2 parametros(nombre del Polinomio y nombre del archivo).");
+            printf("Resultado:\t Error: No se encontraron parametros, para el comando -recuperar-, se esperan que se ingresen 2 parametros(nombre del Polinomio y nombre del archivo).");
         else
         {
-            printf("\nError: la cantidad de parametros no es correcta para el comando -recuperar- ");
+            printf("Resultado:\t Error: la cantidad de parametros no es correcta para el comando -recuperar- ");
             printf("\n, para el mismo se esperan 2 parametros(nombre del Polinomio y nombre del archivo) y fueron ingresados %d",LargoListaString(ls)- 1);
         }
     }
@@ -529,4 +530,5 @@ void comandoRecuperar(ABBPolinomio &abb, ListaString ls)
 void comandoSalir(ABBPolinomio &abb, ListaString ls)
 {
     ABBPolinomioEliminar(abb);
+    printf("Resultado:\t hasta la proxima.\n");
 }
