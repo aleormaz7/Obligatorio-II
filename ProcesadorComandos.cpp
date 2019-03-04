@@ -43,14 +43,14 @@ void comandoCrear(ABBPolinomio &abb, ListaString ls)
         }
         else
         {
-            printf("Resultado:\t Error: el nombre ingresado para indentificar al Polinomio no es alfanumerico.\n\t Nombre ingresado: ");
+            printf("Resultado:\t Error: el nombre ingresado para indentificar al Polinomio no es alfanumerico.\n\t\t Nombre ingresado: ");
             print(ls->Sig->info);
         }
     }
     else
     {
         if(LargoListaString(ls) == 1)
-            printf("Resultado:\t Error: no se ingresaron parametros luego del comando -crear-, ");
+            printf("Resultado:\t Error: no se ingresaron parametros luego del comando -crear-");
         else
         {
             printf("Resultado:\t Error: la cantidad de parametros no es correcta para el comando -crear-, ");
