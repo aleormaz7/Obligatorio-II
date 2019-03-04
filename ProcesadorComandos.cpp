@@ -59,7 +59,6 @@ void comandoCrear(ABBPolinomio &abb, ListaString ls)
     }
 }
 
-
 void comandoSumar(ABBPolinomio &abb, ListaString ls)
 {
     if(LargoListaString(ls) == 4)
@@ -140,7 +139,7 @@ void comandoSumar(ABBPolinomio &abb, ListaString ls)
         }
     }
     else
-        printf("Resultado:\t Error: la cantidad de parametros no es correcta para el comando,\n se esperan 3 parametros y fueron ingresados %d",LargoListaString(ls)- 1);
+        printf("Resultado:\t Error: la cantidad de parametros no es correcta para el comando,\n\t\t se esperan 3 parametros y fueron ingresados %d",LargoListaString(ls)- 1);
 }
 
 void comandoMultiplicar(ABBPolinomio &abb, ListaString ls)
