@@ -87,7 +87,10 @@ void comandoSumar(ABBPolinomio &abb, ListaString ls)
                                     ABBPolinomioInsertar(abb,PoliResultante);
                                     printf("Resultado : ");
                                     mostrarPolinomio(PoliResultante);
-                                    ///Destruir listas????
+                                    ///Destruir lista??? es necesario apuntarlas A y B a NULL?
+                                    destuirListaTerminos(LstResultado);
+                                    LstPoliA = NULL;
+                                    LstPoliB = NULL;
                              }
                              else
                              {
@@ -169,6 +172,10 @@ void comandoMultiplicar(ABBPolinomio &abb, ListaString ls)
                                     printf("Resultado : ");
                                     mostrarPolinomio(PoliResultante);
 
+                                    ///Destruir lista??? es necesario apuntarlas A y B a NULL?
+                                    destuirListaTerminos(LstResultado);
+                                    LstPoliA = NULL;
+                                    LstPoliB = NULL;
                              }
                              else
                              {
@@ -232,7 +239,6 @@ void comandoEvaluar(ABBPolinomio abb, ListaString ls)
                     darListaTerminosPolinomio(PoliEvaluar,LstPoliEvaluar);
 
                     printf("Resultado : %li",evaluarPolinomio(LstPoliEvaluar,e));
-
                 }
                 else
                 {
@@ -311,7 +317,18 @@ void comandoEsRaiz(ABBPolinomio abb, ListaString ls)
 
 void comandoMostrar(ABBPolinomio abb, ListaString ls)
 {
-
+    if(LargoListaString(ls) == 1)
+    {
+        if(!ABBPolinomioEsVacio(abb)) /// Controlo que el abb no este vacio.
+        {
+            printf("Resultado   : ");
+            ABBPolinomioListar(abb);
+        }
+        else
+           printf("\nNo existen polinomios en memoria, no hay nada para listar.");
+    }
+    else
+         printf("\nError: El comando -mostrar- no acepta parametros.");
 }
 
 void comandoGuardar(ABBPolinomio abb, ListaString ls)
@@ -511,5 +528,5 @@ void comandoRecuperar(ABBPolinomio &abb, ListaString ls)
 
 void comandoSalir(ABBPolinomio &abb, ListaString ls)
 {
-
+    ABBPolinomioEliminar(abb);
 }
