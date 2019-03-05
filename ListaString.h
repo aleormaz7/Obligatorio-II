@@ -11,7 +11,6 @@ typedef struct nodoS  { String info;
 
 typedef nodoString * ListaString;
 
-
 void CrearListaString(ListaString &L);
 ///Crea la lista vacia
 
@@ -27,19 +26,19 @@ int LargoListaString (ListaString L);
 
 void destruirListaString(ListaString &ls);
 ///Libera la menoria dinamica referente a la misma
-/*Preconducion Ls no es vacia*/
+/*Preconducion: Ls no es vacia*/
 
 boolean CoeficientesEnteros(ListaString ls);
-///Controla que todos los String que se coindicen con coefientes, representen un entero
-/*Precondicion: Primer String de lista sea “crear” y el largo de la lista sea mayor a 2*/
+///Retorna TRUE si todos los Stings de la lista representan un valor numerico entero
+/*Precondicion: largo de la lista sea > 0*/
 
 void obtenerString(ListaString ls, int pos, String &s);
 ///Retorna el String almacenado en una pocicion dada de la lista
 /*Precondicion: posicion <= al largo de lista*/
 
-void MostrarListaString (ListaString L);
-
 void ListaStringAListaTerminos(ListaString ls, ListaTerminos &Lst);
+///Recibe un lista de String y retorna una lista de Terminos coeficientes/Grado.
+/*Precondicion: Largo de Ls >0 && todos sus nodos representan valores numericos enteros*/
 
 
 #endif // LISTASTRING_H_INCLUDED

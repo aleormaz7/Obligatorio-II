@@ -78,17 +78,6 @@ int LargoListaString (ListaString L)
         return 1 + LargoListaString(L ->Sig);
 }
 
-void MostrarListaString (ListaString L)
-{
-    printf(" - ");
-    if (L != NULL)
-    {
-        print(L->info);
-        MostrarListaString(L ->Sig);
-
-    }
-}
-
 void destruirListaString(ListaString &L)
 {
     if(L -> Sig == NULL)
@@ -102,7 +91,6 @@ void destruirListaString(ListaString &L)
         strdestruir(L->info);
         delete L;
     }
-
 }
 
 boolean CoeficientesEnteros(ListaString L)
