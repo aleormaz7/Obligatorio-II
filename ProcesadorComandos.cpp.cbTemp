@@ -368,9 +368,9 @@ void comandoGuardar(ABBPolinomio abb, ListaString ls)
                                 }
                                 else
                                 {
-                                    printf("\t\t Ya existen en disco un archivo con el nombre -");
+                                    printf("\n\t\t Ya existen en disco un archivo con el nombre -");
                                     print(ls->Sig->Sig->info);
-                                    printf("-\n\t\t Desea sobreescribirlo? (S - si, N - No) ");
+                                    printf("- \n\tDesea sobreescribirlo? (S - si, N - No) ");
                                     char respuesta;
                                     scanf("%c",&respuesta);
                                     if(respuesta == 's' || respuesta == 'S')
