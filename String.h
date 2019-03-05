@@ -18,9 +18,9 @@ int strlar(String s);
 /// strcop recibe dos strings y copia el segundo en el primero.
 void strcop(String &s1, String s2);
 
-/// scan lee un string desde el teclado. Se tomarán en cuenta los primeros 79 caracteres
-///   significativos en caso de que el largo del string sea mayor o igual a 80. Un string
-///   finaliza cuando se lea un carácter ‘nueva línea’ el cual se sustituirá por uno nulo.
+/// scan lee un string desde el teclado. Tomando en cuenta los primeros 79 caracteres
+/// significativos en caso de que el largo del string sea mayor o igual a 80. Un string
+/// finaliza cuando se lea un carácter ‘nueva línea’ el cual se sustituirá por uno nulo.
 void scan(String &s);
 
 /// print despliega un string por pantalla.
@@ -35,16 +35,17 @@ boolean streq(String s1, String s2);
 
 ///Retorna True si el String representa un valor numerico entero
 boolean esEntero(String s);
+/*Precondicion: largo de s > 0*/
 
 ///Retorna True si todos los caracteres del String son alfanumericos
 boolean esAlfanumerico(String s);
 /*Precondicion: largo Sting > 0*/
 
-///Retorna el valor numeroco entero, representado por el String
+///Retorna el valor numerico entero, representado por el String
 long int convertirStringAEntero(String s);
 /* Precondición largo String > 0  && esEntero(s) == TRUE*/
 
-///Dado un String que es el nombre de un archivo, retorna el nombre y la extension del mismo
+///Dado un String que es el nombre y extension de un archivo, retorna dos Strings: nombre y extension
 void retornaExtensionNombre(String s,  String &sNombre, String &sExtension);
 /* Precondición: cntPuntos(s) ==  1*/
 

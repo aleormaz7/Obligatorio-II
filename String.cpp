@@ -4,7 +4,6 @@ void strcrear(String &s)
 {
     s = new char[1];
     s[0] = '\0';
-
 }
 
 void strdestruir(String &s)
@@ -21,7 +20,6 @@ int strlar(String s)
     {
         i++;
     }
-
     return i;
 }
 
@@ -58,7 +56,6 @@ void scan(String &s)
     aux[i] = '\0';
 
     strcop(s,aux);
-
     strdestruir(aux);
 }
 
@@ -133,7 +130,6 @@ long int convertirStringAEntero(String s)
     int exponente = 0;
     int largoString = strlar(s);
     long int EnteroResultante = 0;
-
 
     while (i >= 0)
     {
@@ -278,7 +274,6 @@ int cntPuntos(String s)
             cntPuntos++;
         i++;
     }
-
     return cntPuntos;
 }
 
