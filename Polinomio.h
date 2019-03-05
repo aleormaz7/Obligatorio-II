@@ -1,5 +1,5 @@
-#ifndef POLINOMIO_H_INCLUDED
-#define POLINOMIO_H_INCLUDED
+#ifndef _POLINOMIO
+#define _POLINOMIO
 
 #include "String.h"
 #include "ListaTerminos.h"

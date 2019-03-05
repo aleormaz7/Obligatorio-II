@@ -1,5 +1,5 @@
-#ifndef LISTASTRING_H_INCLUDED
-#define LISTASTRING_H_INCLUDED
+#ifndef _LISTASTRING
+#define _LISTASTRING
 
 #include "String.h"
 #include "ListaTerminos.h"

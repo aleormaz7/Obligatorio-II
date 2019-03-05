@@ -1,5 +1,5 @@
-#ifndef LISTATERMINOS_H_INCLUDED
-#define LISTATERMINOS_H_INCLUDED
+#ifndef _LISTATERMINOS
+#define _LISTATERMINOS
 
 #include "Termino.h"
 #include "Boolean.h"

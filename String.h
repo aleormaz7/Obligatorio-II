@@ -1,5 +1,5 @@
-#ifndef STRING_H_INCLUDED
-#define STRING_H_INCLUDED
+#ifndef _STRING
+#define _STRING
 
 #include "Boolean.h"
 

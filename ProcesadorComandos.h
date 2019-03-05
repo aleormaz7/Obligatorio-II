@@ -1,5 +1,5 @@
-#ifndef PROCESADORCOMANDOS_H_INCLUDED
-#define PROCESADORCOMANDOS_H_INCLUDED
+#ifndef _PROCESADORCOMANDOS
+#define _PROCESADORCOMANDOS
 
 #include "ListaString.h"
 #include "ABBPolinomio.h"

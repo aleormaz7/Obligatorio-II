@@ -1,5 +1,5 @@
-#ifndef _ABBPOLINOMIO
-#define _ABBPOLINOMIO
+#ifndef ABBPOLINOMIO_H_INCLUDED
+#define ABBPOLINOMIO_H_INCLUDED
 
 #include "Polinomio.h"
 

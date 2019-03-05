@@ -1,5 +1,5 @@
-#ifndef PRUEBAS_H_INCLUDED
-#define PRUEBAS_H_INCLUDED
+#ifndef _PRUEBAS
+#define _PRUEBAS
 
 #include "String.h"
 #include "ListaString.h"

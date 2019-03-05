@@ -1,5 +1,5 @@
-#ifndef TERMINO_H_INCLUDED
-#define TERMINO_H_INCLUDED
+#ifndef _TERMINO
+#define _TERMINO
 
 #include "String.h"
 
