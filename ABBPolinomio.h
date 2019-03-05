@@ -4,26 +4,26 @@
 #include "Polinomio.h"
 
 typedef struct nodoA { Polinomio info;
-    nodoA * hizq;
-    nodoA * hder;
-} nodoABB;
+                        nodoA * hizq;
+                        nodoA * hder;
+                     } nodoABB;
 
 typedef nodoABB * ABBPolinomio;
 
 void ABBPolinomioCrear(ABBPolinomio &a);
-///Crear ABB
+///Crear ABB apuntando a NULL
 
 boolean ABBPolinomioEsVacio(ABBPolinomio a);
 ///retorna si es abb es vacio.
 
-Polinomio ABBPolinomioDarRaiz(ABBPolinomio a);
-///retorno raiz
+Polinomio ABBPolinomioDarRaiz(ABBPolinomio a);///retorna el nodo raiz
+///Precondición: ABB NO vacío
 
-ABBPolinomio ABBPolinomioDarHijoIzq(ABBPolinomio a);
-///retorna hijo izquierdo
+ABBPolinomio ABBPolinomioDarHijoIzq(ABBPolinomio a);///retorna hijo izquierdo
+///Precondición: ABB NO vacío
 
-ABBPolinomio ABBPolinomioDarHjoDer(ABBPolinomio a);
-///retorna hijo derecho.
+ABBPolinomio ABBPolinomioDarHjoDer(ABBPolinomio a);///retorna hijo derecho.
+///Precondición: ABB NO vacío
 
 void ABBPolinomioListar(ABBPolinomio a);
 ///Precondición: árbol no sea vacío.

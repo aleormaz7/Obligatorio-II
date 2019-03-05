@@ -8,26 +8,22 @@ void ABBPolinomioCrear(ABBPolinomio &a)
 boolean ABBPolinomioEsVacio(ABBPolinomio a)
 {
     boolean resu = FALSE;
-    if (a==NULL)
-    {
+    if (a == NULL)
         resu = TRUE;
-    }
     return resu;
 }
 
-//Precondición: Arbol NO vacío
+
 Polinomio ABBPolinomioDarRaiz(ABBPolinomio a)
 {
     return a->info;
 }
 
-//Precondición: Arbol NO vacío
 ABBPolinomio darHijoIzq(ABBPolinomio a)
 {
     return a->hizq;
 }
 
-//Precondición: Arbol NO vacío
 ABBPolinomio darHijoDer(ABBPolinomio a)
 {
     return a->hder;
