@@ -25,19 +25,18 @@ ABBPolinomio ABBPolinomioDarHijoIzq(ABBPolinomio a);///retorna hijo izquierdo
 ABBPolinomio ABBPolinomioDarHjoDer(ABBPolinomio a);///retorna hijo derecho.
 ///Precondición: ABB NO vacío
 
-void ABBPolinomioListar(ABBPolinomio a);
+void ABBPolinomioListar(ABBPolinomio a);///Lista los polinimios almacenados en el ABB, se listas en Orden
 ///Precondición: árbol no sea vacío.
 
 boolean ABBPolinomioExiste(ABBPolinomio a, String nombrePolinomio);
 
-void ABBPolinomioInsertar(ABBPolinomio &a, Polinomio p);
-///Precondición: polinomio no debe existir en el árbol.
+void ABBPolinomioInsertar(ABBPolinomio &a, Polinomio p);///Inserta el Polinomio ordendo alfabeticamente segun el nombre del mismo
+///Precondición: Polinomio no existe en ABB.
 
-Polinomio darPolinomio(ABBPolinomio a, String nombrePol);
-///Precondición: nombrePolinomio existe en el ÁBB.
+Polinomio darPolinomio(ABBPolinomio a, String nombrePol);///retorna el Polinomio deseado
+///Precondición: Polinomio existe en ABB.
 
-void ABBPolinomioEliminar(ABBPolinomio &a);
-///Precondicion: a no sea vacio.
-
+void ABBPolinomioEliminar(ABBPolinomio &a);///Elimina cada uno de los Polinomios de ABB, liberando la memoria dinamica utilizada.
+///Precondicion: ABB no sea vacio.
 
 #endif // ABBPOLINOMIO_H_INCLUDED

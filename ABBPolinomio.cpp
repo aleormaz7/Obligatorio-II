@@ -13,7 +13,6 @@ boolean ABBPolinomioEsVacio(ABBPolinomio a)
     return resu;
 }
 
-
 Polinomio ABBPolinomioDarRaiz(ABBPolinomio a)
 {
     return a->info;
@@ -29,8 +28,7 @@ ABBPolinomio darHijoDer(ABBPolinomio a)
     return a->hder;
 }
 
-//Precondición: árbol no sea vacío
-/// void ListarOrdenado(ABBPolinomios a)
+
 void ABBPolinomioListar(ABBPolinomio a)
 {
      if (a != NULL)
