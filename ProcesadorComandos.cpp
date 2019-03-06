@@ -22,7 +22,7 @@ void comandoCrear(ABBPolinomio &abb, ListaString ls)
                     {
                         ListaTerminos ListaTermPoli;
                         listaTerminosCrear(ListaTermPoli);
-                        ListaStringAListaTerminos(ls,ListaTermPoli);
+                        ListaStringAListaTerminos(LsAux,ListaTermPoli);
                         Polinomio Poli;
                         crearPolinomioResultante(Poli,nombrePoli,ListaTermPoli);
                         ABBPolinomioInsertar(abb,Poli);

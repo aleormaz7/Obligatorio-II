@@ -75,7 +75,10 @@ int LargoListaString (ListaString L)
     if (L == NULL)
         return 0;
     else
-        return 1 + LargoListaString(L ->Sig);
+    {
+         return 1 + LargoListaString(L ->Sig);
+    }
+
 }
 
 void destruirListaString(ListaString &L)
@@ -124,6 +127,7 @@ void obtenerString(ListaString L, int pos, String &s)
 void ListaStringAListaTerminos(ListaString ls, ListaTerminos &Lst)
 {
     int largo = LargoListaString(ls);
+
     Termino auxT;
     ///Inicializo Grado
     int grado = largo - 1;

@@ -61,40 +61,40 @@
 1551568896 source:c:\users\german ana\dropbox\ude\taller i\proyecto\taller-i\archivo.cpp
 	"archivo.h"
 
-1551568884 c:\users\german ana\dropbox\ude\taller i\proyecto\taller-i\archivo.h
+1551829081 c:\users\german ana\dropbox\ude\taller i\proyecto\taller-i\archivo.h
 	"String.h"
 
-1551827368 c:\users\german ana\dropbox\ude\taller i\proyecto\taller-i\string.h
+1551829176 c:\users\german ana\dropbox\ude\taller i\proyecto\taller-i\string.h
 	"Boolean.h"
 
-1551827082 c:\users\german ana\dropbox\ude\taller i\proyecto\taller-i\boolean.h
+1551829101 c:\users\german ana\dropbox\ude\taller i\proyecto\taller-i\boolean.h
 	<stdio.h>
 
 1551484059 source:c:\users\german ana\dropbox\ude\taller i\proyecto\taller-i\boolean.cpp
 	"Boolean.h"
 
-1551646442 source:c:\users\german ana\dropbox\ude\taller i\proyecto\taller-i\listastring.cpp
+1551915636 source:c:\users\german ana\dropbox\ude\taller i\proyecto\taller-i\listastring.cpp
 	"ListaString.h"
 
-1551637422 c:\users\german ana\dropbox\ude\taller i\proyecto\taller-i\listastring.h
+1551829784 c:\users\german ana\dropbox\ude\taller i\proyecto\taller-i\listastring.h
 	"String.h"
 	"ListaTerminos.h"
 
 1551570658 source:c:\users\german ana\dropbox\ude\taller i\proyecto\taller-i\listaterminos.cpp
 	"ListaTerminos.h"
 
-1551484059 c:\users\german ana\dropbox\ude\taller i\proyecto\taller-i\listaterminos.h
+1551829130 c:\users\german ana\dropbox\ude\taller i\proyecto\taller-i\listaterminos.h
 	"Termino.h"
 	"Boolean.h"
 
-1551624043 c:\users\german ana\dropbox\ude\taller i\proyecto\taller-i\termino.h
+1551829187 c:\users\german ana\dropbox\ude\taller i\proyecto\taller-i\termino.h
 	"String.h"
 
 1551716049 source:c:\users\german ana\dropbox\ude\taller i\proyecto\taller-i\main.cpp
 	"ABBPolinomio.h"
 	"ProcesadorComandos.h"
 
-1551618657 c:\users\german ana\dropbox\ude\taller i\proyecto\taller-i\pruebas.h
+1551829165 c:\users\german ana\dropbox\ude\taller i\proyecto\taller-i\pruebas.h
 	"String.h"
 	"ListaString.h"
 	"Archivo.h"
@@ -106,15 +106,15 @@
 1551624868 source:c:\users\german ana\dropbox\ude\taller i\proyecto\taller-i\polinomio.cpp
 	"Polinomio.h"
 
-1551624402 c:\users\german ana\dropbox\ude\taller i\proyecto\taller-i\polinomio.h
+1551829142 c:\users\german ana\dropbox\ude\taller i\proyecto\taller-i\polinomio.h
 	"String.h"
 	"ListaTerminos.h"
 	"ListaString.h"
 
-1551646305 source:c:\users\german ana\dropbox\ude\taller i\proyecto\taller-i\pruebas.cpp
+1551915100 source:c:\users\german ana\dropbox\ude\taller i\proyecto\taller-i\pruebas.cpp
 	"Pruebas.h"
 
-1551565175 source:c:\users\german ana\dropbox\ude\taller i\proyecto\taller-i\string.cpp
+1551827489 source:c:\users\german ana\dropbox\ude\taller i\proyecto\taller-i\string.cpp
 	"String.h"
 
 1551617160 source:c:\users\german ana\dropbox\ude\taller i\proyecto\taller-i\termino.cpp
@@ -314,16 +314,16 @@
 1550948770 c:\users\ale\desktop\taller-i\abbpolinomio.h
 	"Polinomio.h"
 
-1551538539 source:c:\users\german ana\dropbox\ude\taller i\proyecto\taller-i\abbpolinomio.cpp
+1551828641 source:c:\users\german ana\dropbox\ude\taller i\proyecto\taller-i\abbpolinomio.cpp
 	"ABBPolinomio.h"
 
-1551827705 c:\users\german ana\dropbox\ude\taller i\proyecto\taller-i\abbpolinomio.h
+1551829059 c:\users\german ana\dropbox\ude\taller i\proyecto\taller-i\abbpolinomio.h
 	"Polinomio.h"
 
 1551807507 source:c:\users\german ana\dropbox\ude\taller i\proyecto\taller-i\procesadorcomandos.cpp
 	"ProcesadorComandos.h"
 
-1551627321 c:\users\german ana\dropbox\ude\taller i\proyecto\taller-i\procesadorcomandos.h
+1551829153 c:\users\german ana\dropbox\ude\taller i\proyecto\taller-i\procesadorcomandos.h
 	"ListaString.h"
 	"ABBPolinomio.h"
 	"Archivo.h"

@@ -68,7 +68,7 @@ void pruebaListaStrings()
     partirString(s,Ls);
     printf("\nLargo de lista es: %d ", LargoListaString(Ls));
     printf("\n");
-    MostrarListaString(Ls);
+   /// MostrarListaString(Ls);
 
     if(CoeficientesEnteros(Ls))
         printf("\nTodos numericos");
