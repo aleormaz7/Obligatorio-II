@@ -178,8 +178,16 @@ void multiplicarPolinomios(ListaTerminos listaA, ListaTerminos listaB, ListaTerm
 			}
 			listaA = listaA->Sig;
 		}
-        reduceListaTerminos(listaResultadoAux,listaResuladoFinal);
-        destuirListaTerminos(listaResultadoAux);
+
+		if(listaResultadoAux->Sig != NULL) ///Si resulta una lista con un solo coeficiente, no hay nada a reducir
+        {
+            reduceListaTerminos(listaResultadoAux,listaResuladoFinal);
+            destuirListaTerminos(listaResultadoAux);
+        }
+        else
+            listaTerminosCopiar(listaResultadoAux,listaResuladoFinal);
+
+
         if(listaResuladoFinal == NULL)
         {
             CrearTermino(tAux,0,0);
