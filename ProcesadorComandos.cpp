@@ -4,22 +4,18 @@ void comandoCrear(ABBPolinomio &abb, ListaString ls)
 {
     if(LargoListaString(ls) > 2)
     {
-        /// viola modularizacion, mejor llamar a obtenerString(ls, 2, s);
-        if(esAlfanumerico(ls->Sig->info))
+        String nombrePoli;
+        strcrear(nombrePoli);
+        obtenerString(ls,1,nombrePoli);
+        if(nombrePoli)
         {
-            if(!ABBPolinomioExiste(abb,ls->Sig->info))
+            if(!ABBPolinomioExiste(abb,nombrePoli))
             {
-                ///ya que nombre es alfanumerico, copio nombre de polinomio en variable aux para tenerlo por separado
-                String nombrePoli;
-                strcrear(nombrePoli);
-                strcop(nombrePoli,ls->Sig->info);
-
                 /// OJO con esto, generan copia solo del puntero y no de los nodos apuntados
                 /// esto genera que al destruir LsAux, de rebote se destruye tambien la lista ls original
                 /// entonces, cuando luego en el main la quieren destruir, se rompe el programa
                 /// porque ya habia sido destruida aca adentro
                 ListaString LsAux = ls->Sig->Sig;
-
 
                 if(CoeficientesEnteros(LsAux))
                 {
@@ -39,20 +35,20 @@ void comandoCrear(ABBPolinomio &abb, ListaString ls)
                 }
                 else
                     printf("Resultado:\t Error: alguno de los coeficientes ingresados, no representan un valor entero.");
-                destruirListaString(LsAux);
-                strdestruir(nombrePoli);
             }
             else
             {
                 printf("Resultado:\t Error: ya existe en el sistema, un Poliomio con el nombre ingresado. Nombre ingresado: ");
-                print(ls->Sig->info);
+                print(nombrePoli);
             }
         }
         else
         {
             printf("Resultado:\t Error: el nombre ingresado para indentificar al Polinomio no es alfanumerico.\n\t\t Nombre ingresado: ");
-            print(ls->Sig->info);
+            print(nombrePoli);
+            print(nombrePoli);
         }
+        strdestruir(nombrePoli);
     }
     else
     {
@@ -545,10 +541,14 @@ void comandoRecuperar(ABBPolinomio &abb, ListaString ls)
     }
 }
 
-void comandoSalir(ABBPolinomio &abb, ListaString ls)
+void comandoSalir(ABBPolinomio &abb, boolean &fin, ListaString ls)
 {
-    /// controlar que efectivamente ls tenga una sola palabra y que esa palabra sea solamente salir
-    /// similar a lo que ya hacen en el comando mostrar
-    ABBPolinomioEliminar(abb);
-    printf("Resultado:\t hasta la proxima.\n");
+    if(LargoListaString(ls) == 1)
+    {
+        ABBPolinomioEliminar(abb);
+        printf("Resultado:\t hasta la proxima.\n");
+        fin = TRUE;
+    }
+    else
+         printf("Resultado:\t Error: El comando -salir- no acepta parametros.");
 }

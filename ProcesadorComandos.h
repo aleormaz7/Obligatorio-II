@@ -21,6 +21,6 @@ void comandoGuardar(ABBPolinomio abb, ListaString ls);
 
 void comandoRecuperar(ABBPolinomio &abb, ListaString ls);
 
-void comandoSalir(ABBPolinomio &abb, ListaString ls);
+void comandoSalir(ABBPolinomio &abb, boolean &fin, ListaString ls);
 
 #endif // PROCESADORCOMANDOS_H_INCLUDED

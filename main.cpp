@@ -6,52 +6,54 @@ int main()
     ///Creo Polinimios para recuperar
     ABBPolinomio abb;
     ABBPolinomioCrear(abb);
-    String s;
+    String s,comando;
     ListaString ls;
+    boolean fin = FALSE;
 
     do
     {
         strcrear(s);
+        strcrear(comando);
         CrearListaString(ls);
 
         printf("\nIngrese comando: ");
         scan(s);
         partirString(s,ls);
-
-        if(streq("crear",ls->info))
+        obtenerString(ls,0,comando);
+        if(streq("crear",comando))
             comandoCrear(abb,ls);
         else
         {
-           if(streq("sumar",ls->info))
+           if(streq("sumar",comando))
                 comandoSumar(abb,ls);
            else
            {
-               if(streq("multiplicar",ls->info))
+               if(streq("multiplicar",comando))
                     comandoMultiplicar(abb,ls);
                else
                {
-                   if(streq("evaluar",ls->info))
+                   if(streq("evaluar",comando))
                         comandoEvaluar(abb,ls);
                    else
                    {
-                       if(streq("esraiz",ls->info))
+                       if(streq("esraiz",comando))
                             comandoEsRaiz(abb,ls);
                        else
                        {
-                           if(streq("mostrar",ls->info))
+                           if(streq("mostrar",comando))
                                 comandoMostrar(abb,ls);
                            else
                            {
-                               if(streq("guardar",ls->info))
+                               if(streq("guardar",comando))
                                     comandoGuardar(abb,ls);
                                else
                                {
-                                   if(streq("recuperar",ls->info))
+                                   if(streq("recuperar",comando))
                                         comandoRecuperar(abb,ls);
                                    else
                                    {
-                                       if(streq("salir",ls->info))
-                                            comandoSalir(abb,ls);
+                                       if(streq("salir",comando))
+                                            comandoSalir(abb,fin,ls);
                                        else
                                             print("\nError: no se reconoce el comando.");
                                    }
@@ -62,9 +64,10 @@ int main()
                }
            }
         }
-        ///strdestruir(s);
-        ///destruirListaString(ls);
-    }while(!streq("salir",ls->info));
+    strdestruir(s);
+    strdestruir(comando);
+    destruirListaString(ls);
+    }while(!fin);
 /////////////
 
     ///pruebaModuloString();
