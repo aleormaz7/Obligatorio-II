@@ -9,8 +9,7 @@ typedef struct { String nombre;
                  ListaTerminos listaTerminos;
                } Polinomio;
 
-void crearPolinomio(Polinomio &p, ListaString listaS);
-/* crea polinomio: */
+void crearPolinomio(Polinomio &p,String nombre, ListaTerminos lst);
 
 void darListaTerminosPolinomio(Polinomio p, ListaTerminos &listaT);
 /* devuelve lista de terminos del polinomio */
@@ -24,6 +23,5 @@ void darNombrePolinomio(Polinomio p, String &s);
 void borrarPolinomio(Polinomio &p);
 /* borra nombre y lista de terminos del polinomio*/
 
-void crearPolinomioResultante(Polinomio &p,String nombre, ListaTerminos lst);
 
 #endif // POLINOMIO_H_INCLUDED

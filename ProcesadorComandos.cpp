@@ -31,7 +31,7 @@ void comandoCrear(ABBPolinomio &abb, ListaString ls)
                         listaTerminosCrear(ListaTermPoli);
                         ListaStringAListaTerminos(LsAux,ListaTermPoli);
                         Polinomio Poli;
-                        crearPolinomioResultante(Poli,nombrePoli,ListaTermPoli);
+                        crearPolinomio(Poli,nombrePoli,ListaTermPoli);
                         ABBPolinomioInsertar(abb,Poli);
                         printf("Resultado:\t ");
                         mostrarPolinomio(Poli);
@@ -95,7 +95,7 @@ void comandoSumar(ABBPolinomio &abb, ListaString ls)
                                     darListaTerminosPolinomio(PoliB,LstPoliB);
 
                                     sumarPolinomios(LstPoliA,LstPoliB,LstResultado);
-                                    crearPolinomioResultante(PoliResultante,ls->Sig->info,LstResultado);
+                                    crearPolinomio(PoliResultante,ls->Sig->info,LstResultado);
                                     ABBPolinomioInsertar(abb,PoliResultante);
                                     printf("Resultado : ");
                                     mostrarPolinomio(PoliResultante);
@@ -179,7 +179,7 @@ void comandoMultiplicar(ABBPolinomio &abb, ListaString ls)
                                     darListaTerminosPolinomio(PoliB,LstPoliB);
 
                                     multiplicarPolinomios(LstPoliA,LstPoliB,LstResultado);
-                                    crearPolinomioResultante(PoliResultante,ls->Sig->info,LstResultado);
+                                    crearPolinomio(PoliResultante,ls->Sig->info,LstResultado);
                                     ABBPolinomioInsertar(abb,PoliResultante);
                                     printf("Resultado : ");
                                     mostrarPolinomio(PoliResultante);
@@ -477,7 +477,7 @@ void comandoRecuperar(ABBPolinomio &abb, ListaString ls)
                                 if(LstAux != NULL)
                                 {
                                     Polinomio Poli;
-                                    crearPolinomioResultante(Poli,ls->Sig->info,LstAux);
+                                    crearPolinomio(Poli,ls->Sig->info,LstAux);
                                     ABBPolinomioInsertar(abb,Poli);
                                     destuirListaTerminos(LstAux);
                                     printf("\nResultado : ");
