@@ -53,7 +53,7 @@ int main()
                                        if(streq("salir",ls->info))
                                             comandoSalir(abb,ls);
                                        else
-                                            print("\nError: no se renoce el comando.");
+                                            print("\nError: no se reconoce el comando.");
                                    }
                                }
                            }
@@ -62,8 +62,8 @@ int main()
                }
            }
         }
-//   strdestruir(s);
-//  destruirListaString(ls);
+        ///strdestruir(s);
+        ///destruirListaString(ls);
     }while(!streq("salir",ls->info));
 /////////////
 

@@ -1,7 +1,7 @@
 #ifndef _TERMINO
 #define _TERMINO
 
-#include "String.h"
+#include "String.h" /// mejor cambiarlo por stdio
 
 typedef struct {long int coef;
                 int grado;

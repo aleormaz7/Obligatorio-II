@@ -4,6 +4,7 @@ void comandoCrear(ABBPolinomio &abb, ListaString ls)
 {
     if(LargoListaString(ls) > 2)
     {
+        /// viola modularizacion, mejor llamar a obtenerString(ls, 2, s);
         if(esAlfanumerico(ls->Sig->info))
         {
             if(!ABBPolinomioExiste(abb,ls->Sig->info))
@@ -13,7 +14,13 @@ void comandoCrear(ABBPolinomio &abb, ListaString ls)
                 strcrear(nombrePoli);
                 strcop(nombrePoli,ls->Sig->info);
 
+                /// OJO con esto, generan copia solo del puntero y no de los nodos apuntados
+                /// esto genera que al destruir LsAux, de rebote se destruye tambien la lista ls original
+                /// entonces, cuando luego en el main la quieren destruir, se rompe el programa
+                /// porque ya habia sido destruida aca adentro
                 ListaString LsAux = ls->Sig->Sig;
+
+
                 if(CoeficientesEnteros(LsAux))
                 {
                     if(LargoListaString(LsAux) > 1 && streq("0",LsAux->info))
@@ -383,6 +390,8 @@ void comandoGuardar(ABBPolinomio abb, ListaString ls)
                                         printf("\nResultado:  Polinomio almacenado correctamente en ");
                                         print(ls->Sig->Sig->info);
                                     }
+                                    /// ponerle un else para que si la respuesta es cualquier cosa en vez de N
+                                    /// que muestre algun mensaje de error
                                 }
                             }
                             else
@@ -538,6 +547,8 @@ void comandoRecuperar(ABBPolinomio &abb, ListaString ls)
 
 void comandoSalir(ABBPolinomio &abb, ListaString ls)
 {
+    /// controlar que efectivamente ls tenga una sola palabra y que esa palabra sea solamente salir
+    /// similar a lo que ya hacen en el comando mostrar
     ABBPolinomioEliminar(abb);
     printf("Resultado:\t hasta la proxima.\n");
 }

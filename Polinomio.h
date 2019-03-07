@@ -3,7 +3,7 @@
 
 #include "String.h"
 #include "ListaTerminos.h"
-#include "ListaString.h"
+#include "ListaString.h"        /// ver si esta inclusion es realmente necesaria
 
 typedef struct { String nombre;
                  ListaTerminos listaTerminos;
