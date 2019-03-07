@@ -263,7 +263,7 @@ void controlTerminoIndependienteNoNulo(ListaTerminos &L)
     /// Verifica si tiene grado mayor a 0 y termino independiente igual a 0
     /// en caso de tenerlo, ir hasta el final y elimnarlo
     /// la idea es que no queden terminos independientes nulos cuando no es el polinomio nulo
-    if(DarGradoTermino(L->info) > 0)
+    if(DarGradoTermino(L->info) > 0 && L->Sig != NULL) /* Cubro el caso que venga un temino solo y no sea en independiente*/
     {
         if(DarCoefTermino(L->info) != 0)
         {
