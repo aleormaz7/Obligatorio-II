@@ -166,3 +166,8 @@ void ListaStringAListaTerminos(ListaString ls, ListaTerminos &Lst)
         }
     }
 }
+
+void ListaStringAvanza(ListaString ls, ListaString &lsSoloTerminos)
+{
+    lsSoloTerminos = ls->Sig->Sig;
+}

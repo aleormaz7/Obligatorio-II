@@ -36,7 +36,6 @@
 		<Unit filename="ABBPolinomio.h" />
 		<Unit filename="Archivo.cpp" />
 		<Unit filename="Archivo.h" />
-		<Unit filename="Boolean.cpp" />
 		<Unit filename="Boolean.h" />
 		<Unit filename="ListaString.cpp" />
 		<Unit filename="ListaString.h" />

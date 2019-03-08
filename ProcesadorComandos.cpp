@@ -15,11 +15,16 @@ void comandoCrear(ABBPolinomio &abb, ListaString ls)
                 /// esto genera que al destruir LsAux, de rebote se destruye tambien la lista ls original
                 /// entonces, cuando luego en el main la quieren destruir, se rompe el programa
                 /// porque ya habia sido destruida aca adentro
-                ListaString LsAux = ls->Sig->Sig;
+                ListaString LsAux;
+                CrearListaString(LsAux);
+                ListaStringAvanza(ls,LsAux);
 
                 if(CoeficientesEnteros(LsAux))
                 {
-                    if(LargoListaString(LsAux) > 1 && streq("0",LsAux->info))
+                    String coefStringAux;
+                    strcrear(coefStringAux);
+                    obtenerString(LsAux,0,coefStringAux);
+                    if(LargoListaString(LsAux) > 1 && streq("0",coefStringAux))
                         printf("Resultado:\t Error: si ingresea 2 o mas coeficientes, el de coeficiente de mayor grado no puede ser cero.");
                     else
                     {

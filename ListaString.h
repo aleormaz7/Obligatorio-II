@@ -40,5 +40,7 @@ void ListaStringAListaTerminos(ListaString ls, ListaTerminos &Lst);
 ///Recibe un lista de String y retorna una lista de Terminos coeficientes/Grado.
 /*Precondicion: Largo de Ls >0 && todos sus nodos representan valores numericos enteros*/
 
+void ListaStringAvanza(ListaString ls, ListaString &lsSoloTerminos);
+
 
 #endif // LISTASTRING_H_INCLUDED
