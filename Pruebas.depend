@@ -67,7 +67,7 @@
 1551829176 c:\users\german ana\dropbox\ude\taller i\proyecto\taller-i\string.h
 	"Boolean.h"
 
-1551829101 c:\users\german ana\dropbox\ude\taller i\proyecto\taller-i\boolean.h
+1552002411 c:\users\german ana\dropbox\ude\taller i\proyecto\taller-i\boolean.h
 	<stdio.h>
 
 1551484059 source:c:\users\german ana\dropbox\ude\taller i\proyecto\taller-i\boolean.cpp
@@ -90,7 +90,7 @@
 1551993422 c:\users\german ana\dropbox\ude\taller i\proyecto\taller-i\termino.h
 	"String.h"
 
-1551995673 source:c:\users\german ana\dropbox\ude\taller i\proyecto\taller-i\main.cpp
+1552000367 source:c:\users\german ana\dropbox\ude\taller i\proyecto\taller-i\main.cpp
 	"ABBPolinomio.h"
 	"ProcesadorComandos.h"
 
@@ -321,10 +321,10 @@
 1551829059 c:\users\german ana\dropbox\ude\taller i\proyecto\taller-i\abbpolinomio.h
 	"Polinomio.h"
 
-1551994930 source:c:\users\german ana\dropbox\ude\taller i\proyecto\taller-i\procesadorcomandos.cpp
+1552002359 source:c:\users\german ana\dropbox\ude\taller i\proyecto\taller-i\procesadorcomandos.cpp
 	"ProcesadorComandos.h"
 
-1551829153 c:\users\german ana\dropbox\ude\taller i\proyecto\taller-i\procesadorcomandos.h
+1551995850 c:\users\german ana\dropbox\ude\taller i\proyecto\taller-i\procesadorcomandos.h
 	"ListaString.h"
 	"ABBPolinomio.h"
 	"Archivo.h"

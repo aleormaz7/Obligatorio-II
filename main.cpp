@@ -68,29 +68,4 @@ int main()
     strdestruir(comando);
     destruirListaString(ls);
     }while(!fin);
-/////////////
-
-    ///pruebaModuloString();
-    ///pruebaListaStrings();
-    ///pruebasModuloArchivo();
-    ///pruebasModuloTermino();
-    ///pruebasModuloPolinomio();
-    ///pruebasSumarPolinomios();
-    ///pruebasReducirPolinomio();
-    ///pruebasMultiplicarPolinomio();
-    ///pruebasControlTerminoIndependienteNoNulo();
-    ///pruebasEvaluarPolinomio();
-    ///pruebasEsRaiz();
-    ///PruebasABBPolinomio();
-    ///pruebasListaTermino();
-    ///pruebasPasoMinusculas();
-    ///mainSumarPolinomios();
-    ///mainMultiplicarPolinomios();
-    ///mainMostrar();
-    ///mainEvaluar();
-    ///mainEsRaiz();
-    ///mainGuardar();
-    ///mainRecuperar();
-    ///pruebaStringAEnteroYEsNumero();
-    ///pruebaDarExtencion();
 }
