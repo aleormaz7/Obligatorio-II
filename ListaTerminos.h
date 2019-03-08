@@ -10,12 +10,12 @@ typedef struct nodoT { Termino info;
 
 typedef nodoTermino * ListaTerminos;
 
-boolean listaTerminosEsVacia(ListaTerminos listaT);
-
 void listaTerminosCrear(ListaTerminos &listaT);
 
+boolean listaTerminosEsVacia(ListaTerminos listaT);
+
 void listaTerminosInsertarOrdenado(ListaTerminos &listaT, Termino t);
-/*inserta recursivamente ordenado por grado*/
+/*inserta recursivamente el termino en la lista, ordenado de mayor a menor por grado*/
 
 void listaTerminosMostrar(ListaTerminos listaT);
 
@@ -45,8 +45,11 @@ boolean esRaiz(ListaTerminos listaT, int valor);
 
 void levantarListaTerminos(ListaTerminos &lT,String nomArch);
 
+///Baja la lista de terminos al archivo
 void bajarListaTerminos(ListaTerminos lt, String nomArch);
+/*Precondicion: */
 
+///Inserta el termino al final de la lista
 void InsBackListaTermino(ListaTerminos &L, Termino t);
 
 #endif // LISTATERMINOS_H_INCLUDED

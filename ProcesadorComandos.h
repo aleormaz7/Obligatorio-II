@@ -1,7 +1,7 @@
 #ifndef _PROCESADORCOMANDOS
 #define _PROCESADORCOMANDOS
 
-#include "ListaString.h"
+///#include "ListaString.h"
 #include "ABBPolinomio.h"
 #include "Archivo.h"
 
