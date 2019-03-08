@@ -12,7 +12,7 @@ void strcrear(String &s);
 /// strdestruir libera la memoria ocupada por el string y lo deja nulo.
 void strdestruir(String &s);
 
-/// strlar devuelve el largo de un string. Se entiende por largo, la cantidad de caracteres antes del carácter nulo.
+/// strlar devuelve el largo de un string. Entendiendo por largo, la cantidad de caracteres antes del carácter nulo.
 int strlar(String s);
 
 /// strcop recibe dos strings y copia el segundo en el primero.

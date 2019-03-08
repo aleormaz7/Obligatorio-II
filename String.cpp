@@ -12,7 +12,6 @@ void strdestruir(String &s)
     s = NULL;
 }
 
-
 int strlar(String s)
 {
     int i = 0;
@@ -36,8 +35,6 @@ void strcop(String &s1, String s2)
     }
     s1[i] = '\0';
 }
-
-
 
 void scan(String &s)
 {
@@ -122,7 +119,6 @@ boolean esEntero(String s)
     }
     return entero;
 }
-
 
 long int convertirStringAEntero(String s)
 {
