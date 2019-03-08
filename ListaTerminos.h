@@ -2,7 +2,7 @@
 #define _LISTATERMINOS
 
 #include "Termino.h"
-#include "String.h"
+#include "String.h" ///Se hace este include, por los procedimientos de bajar y levantar de archivo
 
 typedef struct nodoT { Termino info;
                         nodoT * Sig;

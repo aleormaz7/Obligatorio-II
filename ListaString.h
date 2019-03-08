@@ -1,9 +1,7 @@
 #ifndef _LISTASTRING
 #define _LISTASTRING
 
-#include "String.h"
 #include "ListaTerminos.h"
-
 
 typedef struct nodoS  { String info;
                         nodoS * Sig;
