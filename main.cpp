@@ -1,4 +1,3 @@
-#include "ABBPolinomio.h"
 #include "ProcesadorComandos.h"
 
 int main()

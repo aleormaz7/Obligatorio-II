@@ -2,7 +2,7 @@
 #define _LISTATERMINOS
 
 #include "Termino.h"
-#include "String.h"
+#include "Boolean.h"
 
 typedef struct nodoT { Termino info;
                         nodoT * Sig;
