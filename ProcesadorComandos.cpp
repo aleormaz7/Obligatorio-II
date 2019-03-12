@@ -423,15 +423,20 @@ void comandoGuardar(ABBPolinomio abb, ListaString ls)
                                     strcrear(respuesta);
                                     scan(respuesta);
                                     llevoAMinusculas(respuesta);
-                                    if(strlar(respuesta) == 1 || streq("s",respuesta) || streq("n",respuesta))
+                                    if(strlar(respuesta) == 1 && (streq("s",respuesta) || streq("n",respuesta)))
                                     {
-                                        Polinomio Poli = darPolinomio(abb,nombPoliGuarda);
-                                        ListaTerminos LstAux;
-                                        listaTerminosCrear(LstAux);
-                                        darListaTerminosPolinomio(Poli,LstAux);
-                                        bajarListaTerminos(LstAux,nombArchLista);
-                                        printf("\nResultado:  Polinomio almacenado correctamente en ");
-                                        print(nombArchLista);
+                                        if(streq("s",respuesta))
+                                        {
+                                            Polinomio Poli = darPolinomio(abb,nombPoliGuarda);
+                                            ListaTerminos LstAux;
+                                            listaTerminosCrear(LstAux);
+                                            darListaTerminosPolinomio(Poli,LstAux);
+                                            bajarListaTerminos(LstAux,nombArchLista);
+                                            printf("\nResultado:  Polinomio almacenado correctamente en ");
+                                            print(nombArchLista);
+                                        }
+                                        else
+                                            printf("Resultado:\t no se guardo el Polinomio");
                                     }
                                     else
                                         printf("Resultado:\t Error: se esperaba S o N, no se guardo el archivo");
