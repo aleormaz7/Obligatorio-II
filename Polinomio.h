@@ -1,7 +1,6 @@
 #ifndef _POLINOMIO
 #define _POLINOMIO
 
-#include "String.h"
 #include "ListaTerminos.h"
 
 typedef struct { String nombre;
