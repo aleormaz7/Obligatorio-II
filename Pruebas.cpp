@@ -1,7 +1,7 @@
 #include "Pruebas.h"
 
 void pruebaStringAlfanumerico()
-{
+{/*
     ///Pruebas Strinf alfanumerico
     String s;
     strcrear(s);
@@ -13,11 +13,11 @@ void pruebaStringAlfanumerico()
     if(esAlfanumerico(s))
         printf("\n El String es alfanumerico");
     else
-        printf("\n El String NOOOO es alfanumerico");
+        printf("\n El String NOOOO es alfanumerico");*/
 }
 
 void pruebaDarExtencion()
-{
+{/*
      ///Pruebas dar extencion
     String s,extencion,nombre;
     strcrear(s);
@@ -31,11 +31,11 @@ void pruebaDarExtencion()
     printf("\nNombre: ");
     print(nombre);
     printf("\nExtencion: ");
-    print(extencion);
+    print(extencion);*/
 }
 
 void pruebaControlPunto()
-{
+{/*
      ///Pruebas controlar que tenga solo un punto
     String s;
     strcrear(s);
@@ -44,11 +44,11 @@ void pruebaControlPunto()
     printf("\nString cargado: ");
     print(s);
 
-    printf("\nEl String tiene %d puntos",cntPuntos(s));
+    printf("\nEl String tiene %d puntos",cntPuntos(s));*/
 }
 
 void pruebaListaStrings()
-{
+{/*
     ListaString Ls;
     CrearListaString(Ls);
     String s;
@@ -82,11 +82,11 @@ void pruebaListaStrings()
     printf("\nEl String el la posicion: %d es: ",pos);
     print(s);
 
-    destruirListaString(Ls);
+    destruirListaString(Ls);*/
 }
 
 void pruebasSumarPolinomios()
-{
+{/*
     ListaTerminos LtA,LtB,ListaResultado;
     listaTerminosCrear(LtA);
     listaTerminosCrear(LtB);
@@ -123,11 +123,11 @@ void pruebasSumarPolinomios()
 
 
     sumarPolinomios(LtA,LtB,ListaResultado);
-    listaTerminosMostrar(ListaResultado);
+    listaTerminosMostrar(ListaResultado);*/
 }
 
 void pruebasEvaluarPolinomio()
-{
+{/*
     ListaTerminos lista;
     listaTerminosCrear(lista);
     int valor;
@@ -152,12 +152,12 @@ void pruebasEvaluarPolinomio()
 
     printf("Valor a evaluar: ");
     scanf("%d",&valor);
-    printf("\nResultado de la evaluacion:  %li",evaluarPolinomio(lista,valor));
+    printf("\nResultado de la evaluacion:  %li",evaluarPolinomio(lista,valor));*/
 
 }
 
 void pruebasEsRaiz()
-{
+{/*
     ListaTerminos lista;
     listaTerminosCrear(lista);
     int valor;
@@ -179,11 +179,11 @@ void pruebasEsRaiz()
         printf("\nEs Raiz");
     else
         printf("\nNOO Es Raiz");
-
+*/
 }
 
 void pruebasMultiplicarPolinomio()
-{
+{/*
     ListaTerminos LtA,LtB,ListaResultado;
     listaTerminosCrear(LtA);
     listaTerminosCrear(LtB);
@@ -197,11 +197,12 @@ void pruebasMultiplicarPolinomio()
     tA2.coef  = 1;
     tA2.grado = 0;
     listaTerminosInsertarOrdenado(LtA,tA2);
-/*
+
     tA3.coef  = 16;
     tA3.grado = 0;
     listaTerminosInsertarOrdenado(LtA,tA3);
-*/
+
+
     tB1.coef  = 1;
     tB1.grado = 2;
     listaTerminosInsertarOrdenado(LtB,tB1);
@@ -209,18 +210,19 @@ void pruebasMultiplicarPolinomio()
     tB2.coef  = 1;
     tB2.grado = 0;
     listaTerminosInsertarOrdenado(LtB,tB2);
-/*
+
     tB3.coef  = 2;
     tB3.grado = 0;
     listaTerminosInsertarOrdenado(LtB,tB3);
-*/
+
 
     multiplicarPolinomios(LtA,LtB,ListaResultado);
     listaTerminosMostrar(ListaResultado);
+    */
 }
 
 void pruebasReducirPolinomio()
-{
+{/*
     ListaTerminos LtA,ListaResultado;
     listaTerminosCrear(LtA);
     listaTerminosCrear(ListaResultado);
@@ -251,11 +253,11 @@ void pruebasReducirPolinomio()
     listaTerminosInsertarOrdenado(LtA,tA6);
 
     reduceListaTerminos(LtA,ListaResultado);
-    listaTerminosMostrar(ListaResultado);
+    listaTerminosMostrar(ListaResultado);*/
 }
 
 void pruebasControlTerminoIndependienteNoNulo()
-{
+{/*
     ListaTerminos LtA;
     listaTerminosCrear(LtA);
 
@@ -273,30 +275,30 @@ void pruebasControlTerminoIndependienteNoNulo()
     listaTerminosInsertarOrdenado(LtA,tA3);
 
     controlTerminoIndependienteNoNulo(LtA);
-    listaTerminosMostrar(LtA);
+    listaTerminosMostrar(LtA);*/
 }
 
 void pruebasModuloTermino()
-{
+{/*
     ///MODULO TERMINO:
     //Termino t1,t2,t3;
 
     //CrearTermino(t1,1,3);
     //CrearTermino(t2,2,2);
 
-    /*
+
     printf("\n Termino1: ");
     MostrarTermino(t1);
     printf("\ncoef: %ld",DarCoefTermino(t1));
     printf("\ngrado: %d",DarGradoTermino(t1));
-    */
 
-    /*
+
+
     printf("\n Termino2: ");
     MostrarTermino(t2);
     printf("\ncoef: %ld",DarCoefTermino(t2));
     printf("\ngrado: %d",DarGradoTermino(t2));
-    */
+
 
     //String nomArch;
 
@@ -315,7 +317,7 @@ void pruebasModuloTermino()
     //BajarTermino(t2,f);
 
     ///Levantar termino
-    /*
+
     f = fopen("termino2.txt","rb");
     printf("\n Levantar Termino: ");
     LevantarTermino(t3,f);
@@ -345,7 +347,7 @@ void pruebasModuloArchivo()
 }
 
 void pruebasModuloPolinomio()
-{
+{/*
     Polinomio p;
     String lineaComando;
     ListaString listaS;
@@ -431,12 +433,12 @@ void pruebasModuloPolinomio()
 
     printf("\nPruebaDarLista");
     darListaTerminosPolinomio(p,lt);
-    listaTerminosMostrar(lt);
+    listaTerminosMostrar(lt);*/
 
 }
 
 void PruebasABBPolinomio()
-{
+{/*
     ABBPolinomio a;
     ABBPolinomioCrear(a);
 
@@ -485,12 +487,12 @@ void PruebasABBPolinomio()
     else
         printf("no existe");
 
-
+*/
 
 }
 
 void pruebasListaTermino()
-{
+{/*
     Termino t1,t2,t3;
 
     CrearTermino(t1,3,2);
@@ -513,20 +515,20 @@ void pruebasListaTermino()
 
 
     listaTerminosMostrar(listaT);
-
+*/
 }
 
 void pruebasPasoMinusculas()
-{
+{/*
     String s;
     strcrear(s);
     scan(s);
     llevoAMinusculas(s);
-    print(s);
+    print(s);*/
 }
 
 void mainSumarPolinomios()
-{
+{/*
     ///Creo los polinomios a Sumar
 
     ABBPolinomio abb;
@@ -629,11 +631,11 @@ void mainSumarPolinomios()
             printf("\nError: no se reconoce el comando: ");
             print(ls->info);
         }
-    }while(!streq("salir",ls->info));
+    }while(!streq("salir",ls->info));*/
 }
 
 void mainMultiplicarPolinomios()
-{
+{/*
     ///Creo los polinimios a Multiplicar
     ABBPolinomio abb;
     ABBPolinomioCrear(abb);
@@ -737,11 +739,11 @@ void mainMultiplicarPolinomios()
             printf("\nError: no se reconoce el comando: ");
             print(ls->info);
         }
-    }while(!streq("salir",ls->info));
+    }while(!streq("salir",ls->info));*/
 }
 
 void mainMostrar()
-{
+{/*
     ///Creo Polinimios para mostrar
 
     ABBPolinomio abb;
@@ -785,12 +787,12 @@ void mainMostrar()
             printf("\nError: no se reconoce el comando: ");
             print(ls->info);
         }
-    }while(!streq("salir",ls->info));
+    }while(!streq("salir",ls->info));*/
 }
 
 
 void mainEvaluar()
-{
+{/*
     ///Creo Polinimios para evaluar
     ABBPolinomio abb;
     ABBPolinomioCrear(abb);
@@ -861,12 +863,12 @@ void mainEvaluar()
             print(ls->info);
         }
     }while(!streq("salir",ls->info));
-
+*/
 }
 
 
 void mainEsRaiz()
-{
+{/*
     ///Creo Polinimios para evaluar
     ABBPolinomio abb;
     ABBPolinomioCrear(abb);
@@ -937,11 +939,11 @@ void mainEsRaiz()
             printf("\nError: no se reconoce el comando: ");
             print(ls->info);
         }
-    }while(!streq("salir",ls->info));
+    }while(!streq("salir",ls->info));*/
 }
 
 void mainGuardar()
-{
+{/*
     ///Creo Polinimios para evaluar
     ABBPolinomio abb;
     ABBPolinomioCrear(abb);
@@ -1065,11 +1067,11 @@ void mainGuardar()
             print(ls->info);
         }
     }while(!streq("salir",ls->info));
-
+*/
 }
 
 void mainRecuperar()
-{
+{/*
     ///Creo Polinimios para recuperar
     ABBPolinomio abb;
     ABBPolinomioCrear(abb);
@@ -1187,11 +1189,11 @@ void mainRecuperar()
             printf("\nError: no se reconoce el comando: ");
             print(ls->info);
         }
-    }while(!streq("salir",ls->info));
+    }while(!streq("salir",ls->info));*/
 }
 
 void pruebaStringAEnteroYEsNumero()
-{
+{/*
     String s;
     strcrear(s);
     long int numero;
@@ -1204,10 +1206,11 @@ void pruebaStringAEnteroYEsNumero()
 
     numero = convertirStringAEntero(s);
     printf("\nValor convertido: %li",numero);
+    */
 }
 
 void crearEstructurasPruebas(ABBPolinomio &abb)
-{
+{/*
      ///Creo los polinomios e inserto en el ABB
     Polinomio PoliA,PoliB;
     ListaTerminos LtA,LtB,ListaResultado;
@@ -1251,4 +1254,6 @@ void crearEstructurasPruebas(ABBPolinomio &abb)
     PoliB.nombre = "lolo";
     PoliB.listaTerminos = LtB;
     ABBPolinomioInsertar(abb,PoliB);
+    */
 }
+

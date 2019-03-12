@@ -8,28 +8,28 @@
 ///crear el Polinimio a partir de la lista de String
 void comandoCrear(ABBPolinomio &abb, ListaString ls);
 
-///Suma dos polinomios y genera otro con el resultado
+///a partir de la lista de String, suma dos polinomios y genera otro con el resultado
 void comandoSumar(ABBPolinomio &abb, ListaString ls);
 
-///Multiplica dos polinomios y genera otro con el resultado
+///a partir de la lista de String, multiplica dos polinomios y genera otro con el resultado
 void comandoMultiplicar(ABBPolinomio &abb, ListaString ls);
 
-///Evalua un polinomio, para el valor entero
+///a partir de la lista de String, evalua un polinomio para un valor entero
 void comandoEvaluar(ABBPolinomio abb, ListaString ls);
 
-///Evalua si el numero el valor entero
+///a partir de la lista de String, evalua si el numero el valor entero
 void comandoEsRaiz(ABBPolinomio abb, ListaString ls);
 
 ///lista los polinomios contenidos en memoria(ABB) ordenados alfabeticamente por su nombre
 void comandoMostrar(ABBPolinomio abb, ListaString ls);
 
-///Guarda un polinomio exitente en memoria en el archivo
+///a partir de la lista de String, guarda en un archivo .txt un polinomio exitente en memoria
 void comandoGuardar(ABBPolinomio abb, ListaString ls);
 
-///recupera un polinomio de un archivo y lo carga en el ABB
+///a partir de la lista de String, recupera un polinomio de un archivo .txt y lo carga en el ABB
 void comandoRecuperar(ABBPolinomio &abb, ListaString ls);
 
-///libera la memoria dinamica
+///libera la memoria dinamica utilzada en la ejecucion del programa
 void comandoSalir(ABBPolinomio &abb, boolean &fin, ListaString ls);
 
 #endif // PROCESADORCOMANDOS_H_INCLUDED

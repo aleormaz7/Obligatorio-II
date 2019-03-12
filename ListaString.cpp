@@ -24,7 +24,7 @@ void partirString(String s, ListaString &ls)
     int i=0,j=0;
     String aux;
     aux = new char[MAX];
-    boolean Primer = TRUE,Ultimo = FALSE;
+    boolean Primer = TRUE;
 
     while(s[i] != '\0')
     {
