@@ -10,9 +10,11 @@ typedef struct nodoT { Termino info;
 
 typedef nodoTermino * ListaTerminos;
 
-void listaTerminosCrear(ListaTerminos &listaT); ///crea la lista de terminos
+///crea la lista de terminos
+void listaTerminosCrear(ListaTerminos &listaT);
 
-boolean listaTerminosEsVacia(ListaTerminos listaT);///retorna TRUE si la lista de terminos es vacia
+///retorna TRUE si la lista de terminos es vacia
+boolean listaTerminosEsVacia(ListaTerminos listaT);
 
 void listaTerminosInsertarOrdenado(ListaTerminos &listaT, Termino t);
 /*inserta recursivamente el termino en la lista, ordenado de mayor a menor por grado*/
