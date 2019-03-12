@@ -28,6 +28,7 @@ ABBPolinomio ABBPolinomioDarHjoDer(ABBPolinomio a);///retorna hijo derecho.
 void ABBPolinomioListar(ABBPolinomio a);///Lista los polinimios almacenados en el ABB, se listas en Orden
 ///Precondición: árbol no sea vacío.
 
+///Retorna TRUE si en el ABB existe un polinimion con el nombrePolinomio
 boolean ABBPolinomioExiste(ABBPolinomio a, String nombrePolinomio);
 
 void ABBPolinomioInsertar(ABBPolinomio &a, Polinomio p);///Inserta el Polinomio ordendo alfabeticamente segun el nombre del mismo

@@ -10,34 +10,43 @@ typedef struct nodoT { Termino info;
 
 typedef nodoTermino * ListaTerminos;
 
-void listaTerminosCrear(ListaTerminos &listaT);
+void listaTerminosCrear(ListaTerminos &listaT); ///crea la lista de terminos
 
-boolean listaTerminosEsVacia(ListaTerminos listaT);
+boolean listaTerminosEsVacia(ListaTerminos listaT);///retorna TRUE si la lista de terminos es vacia
 
 void listaTerminosInsertarOrdenado(ListaTerminos &listaT, Termino t);
 /*inserta recursivamente el termino en la lista, ordenado de mayor a menor por grado*/
 
-void listaTerminosMostrar(ListaTerminos listaT);
+void listaTerminosMostrar(ListaTerminos listaT);///Lista los terminos de la lista
+/*Precondicion: ListaTerminos no es vacia*/
 
 long int evaluarPolinomio(ListaTerminos listaT, int valor);
+///evalua el Polinomio(su lista de terminos) para el valor numerico entero ingresado, retornando el valor resultante
 /*Precondicion: ListaTerminos no es vacia y grado mayor o*/
 
 void sumarPolinomios(ListaTerminos listaA, ListaTerminos listaB, ListaTerminos &listaResultado);
+///recibe dos polinomios(sus listas de terminos), los suma y crea otro con el resultado de la operacion
 
 void multiplicarPolinomios(ListaTerminos listaA, ListaTerminos listaB, ListaTerminos &listaResultado);
+///recibe dos polinomios(sus listas de terminos), los multiplica y crea otro con el resultado de la operacion
 
 boolean representaPolinomioNulo(ListaTerminos listaT);
+///Retorna si Polinomio(su lista de terminos) representa un Polinomio NULO
 /*Precondicion: listaT no es vacia */
 
 void reduceListaTerminos(ListaTerminos listaT, ListaTerminos &listaResultante);
+///Recibe una lista de terminos, resultante de una multiplicacion de dos Polinomios, y retorna una nueva con la reduccion de la misma
 /*Precondicion: listaT no es vacia && listaT no representa un ponilomio nulo*/
 
 void listaTerminosCopiar(ListaTerminos listaTOri,ListaTerminos &listaResu);
+///copia Termino por termino, una lista de terminos
 
-void destuirListaTerminos(ListaTerminos &listaT);
+void destuirListaTerminos(ListaTerminos &listaT);///Libera la memoria dinamica de una lista de Terminos
 /*Precondicion: listaT no es vacia*/
 
 void controlTerminoIndependienteNoNulo(ListaTerminos &listaT);
+/// Verifica si tiene grado mayor a 0 y termino independiente igual a 0
+/// en caso de tenerlo, se elimina. La idea es que no queden terminos independientes nulos cuando no es el polinomio nulo
 /*Precondicion: listaT no es vacia*/
 
 boolean esRaiz(ListaTerminos listaT, int valor);
