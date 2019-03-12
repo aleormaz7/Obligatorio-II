@@ -50,8 +50,10 @@ void controlTerminoIndependienteNoNulo(ListaTerminos &listaT);
 /*Precondicion: listaT no es vacia*/
 
 boolean esRaiz(ListaTerminos listaT, int valor);
+///retorna TRUE si el resultado de evular una lista de terminos para un valor numerico entero, es igual a 0
 /*Precondicion: ListaTerminos no es vacia y grado mayor o*/
 
+///Levanta la lista de terminos del archivo
 void levantarListaTerminos(ListaTerminos &lT,String nomArch);
 
 ///Baja la lista de terminos al archivo
