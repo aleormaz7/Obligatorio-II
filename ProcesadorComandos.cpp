@@ -127,7 +127,7 @@ void comandoSumar(ABBPolinomio &abb, ListaString ls)
                     {
                         printf("Resultado:\t Error: el nombre ingresado para el segundo Polinomio a sumar -");
                         print(nomPoliB);
-                        printf("-, no es un alfanumerico, y es imposible encontrarlo en el sistema.");
+                        printf("-, no es alfanumerico, y es imposible encontrarlo en el sistema.");
                     }
                     strdestruir(nomPoliB);
                 }
@@ -135,7 +135,7 @@ void comandoSumar(ABBPolinomio &abb, ListaString ls)
                 {
                     printf("Resultado:\t Error: el nombre ingresado para el primer Polinomio a sumar -");
                     print(nomPoliA);
-                    printf("-, no es un alfanumerico, y es imposible encontrarlo en el sistema.");
+                    printf("-, no es alfanumerico, y es imposible encontrarlo en el sistema.");
                 }
                 strdestruir(nomPoliA);
             }
@@ -149,7 +149,7 @@ void comandoSumar(ABBPolinomio &abb, ListaString ls)
         {
            printf("Resultado:\t Error: el nombre ingresado para identificar al Polinimio resultante -");
            print(nomPoliResultante);
-           printf("- , no es un alfanumerico.");
+           printf("- , no es alfanumerico.");
         }
         strdestruir(nomPoliResultante);
     }
@@ -223,7 +223,7 @@ void comandoMultiplicar(ABBPolinomio &abb, ListaString ls)
                     {
                         printf("Resultado:\t Error: el nombre ingresado para el segundo Polinomio a multiplicar -");
                         print(nomPoliB);
-                        printf("-, no es un alfanumerico, y es imposible encontrarlo en el sistema.");
+                        printf("-, no es alfanumerico, y es imposible encontrarlo en el sistema.");
                     }
                     strdestruir(nomPoliB);
                 }
@@ -231,7 +231,7 @@ void comandoMultiplicar(ABBPolinomio &abb, ListaString ls)
                 {
                     printf("Resultado:\t Error: el nombre ingresado para el primer Polinomio a multiplicar -");
                     print(nomPoliA);
-                    printf("-, no es un alfanumerico, y es imposible encontrarlo en el sistema.");
+                    printf("-, no es alfanumerico, y es imposible encontrarlo en el sistema.");
                 }
                 strdestruir(nomPoliA);
             }
@@ -245,7 +245,7 @@ void comandoMultiplicar(ABBPolinomio &abb, ListaString ls)
         {
            printf("Resultado:\t Error: el nombre ingresado para identificar al Polinimio resultante -");
            print(nomPoliResultante);
-           printf("- , no es un alfanumerico.");
+           printf("- , no es alfanumerico.");
         }
         strdestruir(nomPoliResultante);
     }
@@ -295,7 +295,7 @@ void comandoEvaluar(ABBPolinomio abb, ListaString ls)
         {
            printf("Resultado:\t Error: el nombre ingresado del Polinimio a evaluar -");
            print(nombPoliEvaluar);
-           printf("- , no es un alfanumerico, es imposible identificarlo en el sistema.");
+           printf("- , no es alfanumerico, es imposible identificarlo en el sistema.");
         }
         strdestruir(nombPoliEvaluar);
     }
@@ -351,7 +351,7 @@ void comandoEsRaiz(ABBPolinomio abb, ListaString ls)
         {
            printf("Resultado:\t Error: el nombre ingresado del Polinimio a evaluar si es raiz -");
            print(nombPoliEvaluar);
-           printf("- , no es un alfanumerico, es imposible identificarlo en el sistema.");
+           printf("- , no es alfanumerico, es imposible identificarlo en el sistema.");
         }
         strdestruir(nombPoliEvaluar);
     }
@@ -488,7 +488,7 @@ void comandoGuardar(ABBPolinomio abb, ListaString ls)
         {
            printf("Resultado:\t Error: el nombre ingresado que identifica el Polinimio a guardar -");
            print(nombPoliGuarda);
-           printf("-\n\t\t , no es un alfanumerico, es imposible identificarlo en el sistema.");
+           printf("-\n\t\t , no es alfanumerico, es imposible identificarlo en el sistema.");
         }
         strdestruir(nombPoliGuarda);
     }
@@ -593,7 +593,7 @@ void comandoRecuperar(ABBPolinomio &abb, ListaString ls)
         {
            printf("Resultado:\t Error: el nombre ingresado para el Polinimio que se desea recuperar -");
            print(nombPoliRecupera);
-           printf("- , no es un alfanumerico.");
+           printf("- , no es alfanumerico.");
         }
         strdestruir(nombPoliRecupera);
     }
