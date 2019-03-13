@@ -73,16 +73,16 @@
 1551484059 source:c:\users\german ana\dropbox\ude\taller i\proyecto\taller-i\boolean.cpp
 	"Boolean.h"
 
-1552353869 source:c:\users\german ana\dropbox\ude\taller i\proyecto\taller-i\listastring.cpp
+1552431462 source:c:\users\german ana\dropbox\ude\taller i\proyecto\taller-i\listastring.cpp
 	"ListaString.h"
 
-1552085402 c:\users\german ana\dropbox\ude\taller i\proyecto\taller-i\listastring.h
+1552357177 c:\users\german ana\dropbox\ude\taller i\proyecto\taller-i\listastring.h
 	"ListaTerminos.h"
 
-1552084952 source:c:\users\german ana\dropbox\ude\taller i\proyecto\taller-i\listaterminos.cpp
+1552356076 source:c:\users\german ana\dropbox\ude\taller i\proyecto\taller-i\listaterminos.cpp
 	"ListaTerminos.h"
 
-1552085447 c:\users\german ana\dropbox\ude\taller i\proyecto\taller-i\listaterminos.h
+1552357218 c:\users\german ana\dropbox\ude\taller i\proyecto\taller-i\listaterminos.h
 	"Termino.h"
 	"String.h"
 
@@ -104,8 +104,7 @@
 1551993836 source:c:\users\german ana\dropbox\ude\taller i\proyecto\taller-i\polinomio.cpp
 	"Polinomio.h"
 
-1552085516 c:\users\german ana\dropbox\ude\taller i\proyecto\taller-i\polinomio.h
-	"String.h"
+1552355245 c:\users\german ana\dropbox\ude\taller i\proyecto\taller-i\polinomio.h
 	"ListaTerminos.h"
 
 1552354210 source:c:\users\german ana\dropbox\ude\taller i\proyecto\taller-i\pruebas.cpp
@@ -315,13 +314,13 @@
 1551828641 source:c:\users\german ana\dropbox\ude\taller i\proyecto\taller-i\abbpolinomio.cpp
 	"ABBPolinomio.h"
 
-1551829059 c:\users\german ana\dropbox\ude\taller i\proyecto\taller-i\abbpolinomio.h
+1552355546 c:\users\german ana\dropbox\ude\taller i\proyecto\taller-i\abbpolinomio.h
 	"Polinomio.h"
 
-1552353306 source:c:\users\german ana\dropbox\ude\taller i\proyecto\taller-i\procesadorcomandos.cpp
+1552432238 source:c:\users\german ana\dropbox\ude\taller i\proyecto\taller-i\procesadorcomandos.cpp
 	"ProcesadorComandos.h"
 
-1552353831 c:\users\german ana\dropbox\ude\taller i\proyecto\taller-i\procesadorcomandos.h
+1552355186 c:\users\german ana\dropbox\ude\taller i\proyecto\taller-i\procesadorcomandos.h
 	"ListaString.h"
 	"ABBPolinomio.h"
 	"Archivo.h"

@@ -576,7 +576,7 @@ void comandoRecuperar(ABBPolinomio &abb, ListaString ls)
                     }
                     else
                     {
-                    printf("Resultado:\t Error: no es posible determinar la extencion del archivo del cual se desea recuperar el Polinomio,\n\t\t se encontraron %i puntos en el nombre de archivo ingresado.",cntPuntos(nombArchLista));
+                    printf("Resultado:\t Error: no es posible determinar la extension del archivo del cual se desea recuperar el Polinomio,\n\t\t se encontraron %i puntos en el nombre de archivo ingresado.",cntPuntos(nombArchLista));
                     printf("\n\t\t Nombre de archivo ingresado: ");
                     print(nombArchLista);
                     }

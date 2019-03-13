@@ -127,7 +127,6 @@ void obtenerString(ListaString L, int pos, String &s)
 void ListaStringAListaTerminos(ListaString ls, ListaTerminos &Lst)
 {
     int largo = LargoListaString(ls);
-
     Termino auxT;
     ///Inicializo Grado
     int grado = largo - 1;
