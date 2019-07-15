@@ -1,14 +1,14 @@
 # depslib dependency file v1.0
-1563194470 source:c:\users\ale\desktop\taller-i\obligatorio\boolean.cpp
+1563204854 source:c:\users\ale\desktop\taller-i\obligatorio\boolean.cpp
 	"Boolean.h"
 
-1563193344 c:\users\ale\desktop\taller-i\obligatorio\boolean.h
+1563204867 c:\users\ale\desktop\taller-i\obligatorio\boolean.h
 	<stdio.h>
 
-1563194583 source:c:\users\ale\desktop\taller-i\obligatorio\grafo.cpp
+1563203886 source:c:\users\ale\desktop\taller-i\obligatorio\grafo.cpp
 	"Grafo.h"
 
-1563202204 c:\users\ale\desktop\taller-i\obligatorio\grafo.h
+1563204188 c:\users\ale\desktop\taller-i\obligatorio\grafo.h
 	"String.h"
 
 1563194557 c:\users\ale\desktop\taller-i\obligatorio\string.h
@@ -17,10 +17,10 @@
 1563194493 source:c:\users\ale\desktop\taller-i\obligatorio\main.cpp
 	"Pruebas.h"
 
-1563194411 c:\users\ale\desktop\taller-i\obligatorio\pruebas.h
+1563204205 c:\users\ale\desktop\taller-i\obligatorio\pruebas.h
 	"Grafo.h"
 
-1563194510 source:c:\users\ale\desktop\taller-i\obligatorio\pruebas.cpp
+1563204661 source:c:\users\ale\desktop\taller-i\obligatorio\pruebas.cpp
 	"Pruebas.h"
 
 1563194609 source:c:\users\ale\desktop\taller-i\obligatorio\string.cpp
