@@ -32,6 +32,14 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="Boolean.cpp" />
+		<Unit filename="Boolean.h" />
+		<Unit filename="Grafo.cpp" />
+		<Unit filename="Grafo.h" />
+		<Unit filename="Pruebas.cpp" />
+		<Unit filename="Pruebas.h" />
+		<Unit filename="String.cpp" />
+		<Unit filename="String.h" />
 		<Unit filename="main.cpp" />
 		<Extensions>
 			<code_completion />
