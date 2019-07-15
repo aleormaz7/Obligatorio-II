@@ -7,6 +7,11 @@ void PruebasGrafo()
 
     Grafo G;
 
+    Crear(G);
+
+    MostrarGrafo(G);
+
+
 
 }
 

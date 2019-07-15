@@ -8,7 +8,7 @@
 1563194583 source:c:\users\ale\desktop\taller-i\obligatorio\grafo.cpp
 	"Grafo.h"
 
-1563194575 c:\users\ale\desktop\taller-i\obligatorio\grafo.h
+1563202204 c:\users\ale\desktop\taller-i\obligatorio\grafo.h
 	"String.h"
 
 1563194557 c:\users\ale\desktop\taller-i\obligatorio\string.h
@@ -22,4 +22,7 @@
 
 1563194510 source:c:\users\ale\desktop\taller-i\obligatorio\pruebas.cpp
 	"Pruebas.h"
+
+1563194609 source:c:\users\ale\desktop\taller-i\obligatorio\string.cpp
+	"String.h"
 

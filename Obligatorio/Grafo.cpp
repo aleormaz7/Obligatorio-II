@@ -1,35 +1,30 @@
 #include "Grafo.h"
 
-
 void Crear(Grafo &G)
 {
-
+    for(int i = 0; i < N; i++)
+        for(int j = 0; j < N; j++)
+            G[i][j] = 0;
 }
 
-///2. Dados los nombres de dos ciudades, agregar un nuevo tramo entre ellas. Dicho tramo
-///   podrá luego ser incluido en alguna de las líneas que la empresa posee.
-boolean PerteneceArista(Grafo G, int codigoCiudad1, int codigoCiudad2)
+boolean PerteneceArista(Grafo G, int numeroCiudad1, int numeroCiudad2)
 {
+    boolean pertenece = FALSE;
+    if(G[numeroCiudad1][numeroCiudad2] == 1)
+        pertenece = TRUE;
 
-    return FALSE;
+    return pertenece;
 }
 
-///Inserta el nuevo vértice al grafo.//Precondición: el vértice no pertenece al grafo.
-void InsertarVertice(Grafo &G, int coidgoCiudad)
+void InsertarArista(Grafo &G, int numeroCiudad1, int numeroCiudad2)
 {
-
+   G[numeroCiudad1][numeroCiudad2] = 1;
+   G[numeroCiudad2][numeroCiudad1] = 1;
 }
 
-///Inserta la nueva arista al grafo.//Precondición: la arista no pertenece al grafo.
-void InsertarArista(Grafo &G, int codigoCiuadad1, int codigoCiuadad2)
+boolean ExisteTramoEntreDosCiudades(Grafo G, String nom1, String nom2)///
 {
-
-}
-
-///3. Dados los nombres de dos ciudades, saber si existe alguna secuencia de tramos que las
-///   una. Esta operación le servirá a la directiva de la empresa a la hora de idear recorridos para nuevas líneas.
-boolean ExisteTramoEntreDosCiudades(Grafo G, String nom1, String nom2)
-{
+    ///hacer funcion convertir nombre ciudad a string
 
     ///Lamar a DFS()
 
@@ -40,4 +35,21 @@ void DFS(Grafo G, int verticeActual, boolean visitado[N])
 {
 
 }
+
+
+///---------------------------------**
+///solo para pruebas despues se borran
+void MostrarGrafo(Grafo G)
+{
+     for(int i = 0; i < N; i++)
+     {
+        for(int j = 0; j < N; j++)
+        {
+            printf("|%d",G[i][j]);
+        }
+        printf("\n");
+     }
+}
+///---------------------------------**
+
 
