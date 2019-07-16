@@ -7,6 +7,10 @@ const int MAX = 80;
 
 typedef char * String;
 
+void MostrarString(String s);//muestra un string
+
+void CargarString(String s);//carga un string
+
 ///a) strcrear crea un string vacío (solo con el carácter ‘\0’)
 void strcrear(String &s);
 

@@ -25,9 +25,12 @@ void InsertarArista(Grafo &G, int numeroCiudad1, int numeroCiudad2)
 
 boolean ExisteTramoEntreDosCiudades(Grafo G, String nom1, String nom2)///
 {
-    ///hacer funcion convertir nombre ciudad a string
-
-    ///Lamar a DFS()
+    //ArrayBooleanos arreVisitado;
+    //CargarArrayBooleanosEnFalse(arreVisitado);
+    //DarNumero de String nom1
+    //DarNumero de String nom2
+    //DFS(G,) desde nom1
+    //if DFS llego a nom2 hay tramo sino no existe
 
     return TRUE;
 }

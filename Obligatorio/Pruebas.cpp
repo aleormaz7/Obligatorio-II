@@ -7,15 +7,12 @@ void PruebasGrafo()
     Grafo G;
     Crear(G);
 
-    /*String ciudad1,ciudad2,ciudad3,ciudad4;
-    strcrear(ciudad1);
-    strcrear(ciudad2);
-    strcrear(ciudad3);
-    strcrear(ciudad4);
+    /*String ciudad;
+    strcrear(ciudad);
 
     for(int i = 0; i < N; i++)
     {
-
+        CargarString();//y almacenarlo en struct ciudad y en ciudades
     }*/
 
     InsertarArista(G,0,1); //O-----1
@@ -25,12 +22,12 @@ void PruebasGrafo()
 
     MostrarGrafo(G);
 
-    printf("\nArrayBoolenesInit");
+    printf("\nArrayBoolenesInit: ");
     ArrayBooleanos arreBoleanos;
     CargarArrayBooleanosEnFalse(arreBoleanos);
     MostrarArrayBooleanos(arreBoleanos);
 
-    printf("\nDFS:");
+    printf("\nDFS: ");
     DFS(G,0,arreBoleanos);
     MostrarArrayBooleanos(arreBoleanos);
 

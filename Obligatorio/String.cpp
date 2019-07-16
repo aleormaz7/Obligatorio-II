@@ -1,5 +1,31 @@
 #include "String.h"
 
+void MostrarString(String s)
+{
+    int i = 0;
+    while(s[i] !='\0')
+    {
+        printf("%c",s[i]);
+        i++;
+    }
+}
+
+void CargarString(String &s)
+{
+    int i = 0;
+    char c;
+    fflush(stdin);
+    scanf("%c",&c);
+    while((c != '\n') && (i < MAX - 1))
+    {
+        s[i] = c;
+        i++;
+        scanf("%c",&c);
+    }
+    s[i] = '\0';
+}
+
+
 void strcrear(String &s)
 {
     s = new char[1];
