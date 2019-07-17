@@ -163,3 +163,16 @@ boolean streq(String s1, String s2)
 
     return iguales;
 }
+
+int SumaAscii(String nombreCiudad)
+{
+    int i = 0;
+    int suma = 0;
+    while(nombreCiudad[i] != '\0')
+    {
+        suma = suma + nombreCiudad[i];
+    }
+
+    return suma;
+
+}

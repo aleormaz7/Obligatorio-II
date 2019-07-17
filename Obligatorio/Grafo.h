@@ -4,12 +4,12 @@
 
 #include "String.h"
 
-const int N = 4;/*cantidad ciudades*/
+const int CANT_CIUDADES = 4;/*cantidad ciudades*/
 
-typedef int Grafo[N][N];/* Statico */
+typedef int Grafo[CANT_CIUDADES][CANT_CIUDADES];/* Statico */
 
 
-void Crear(Grafo &G);///Crear Grafo(Matriz) vacio
+void CrearGrafo(Grafo &G);///Crear Grafo(Matriz) vacio
 
 ///2. Dados los nombres de dos ciudades, agregar un nuevo tramo entre ellas. Dicho tramo
 ///   podrá luego ser incluido en alguna de las líneas que la empresa posee.
@@ -22,7 +22,7 @@ void InsertarArista(Grafo &G, int codigoCiuadad1, int codigoCiuadad2);
 ///   una. Esta operación le servirá a la directiva de la empresa a la hora de idear recorridos para nuevas líneas.
 boolean ExisteTramoEntreDosCiudades(Grafo G, String nom1, String nom2);
 
-void DFS(Grafo G, int verticeActual, boolean visitado[N]);
+void DFS(Grafo G, int verticeActual, boolean visitado[CANT_CIUDADES]);
 
 
 ///---------------------------------**

@@ -26,3 +26,71 @@
 1563235870 source:c:\users\ale\desktop\taller-i\obligatorio\string.cpp
 	"String.h"
 
+1563363742 source:c:\users\ale\desktop\obligatorio-prog-iii\obligatorio\boolean.cpp
+	"Boolean.h"
+
+1563363744 c:\users\ale\desktop\obligatorio-prog-iii\obligatorio\boolean.h
+	<stdio.h>
+
+1563366767 source:c:\users\ale\desktop\obligatorio-prog-iii\obligatorio\ciudad.cpp
+	"Ciudad.h"
+
+1563366572 c:\users\ale\desktop\obligatorio-prog-iii\obligatorio\ciudad.h
+	"String.h"
+
+1563366541 c:\users\ale\desktop\obligatorio-prog-iii\obligatorio\string.h
+	"Boolean.h"
+
+1563368214 source:c:\users\ale\desktop\obligatorio-prog-iii\obligatorio\grafo.cpp
+	"Grafo.h"
+
+1563365174 c:\users\ale\desktop\obligatorio-prog-iii\obligatorio\grafo.h
+	"String.h"
+
+1563368228 source:c:\users\ale\desktop\obligatorio-prog-iii\obligatorio\main.cpp
+	"Pruebas.h"
+
+1563320985 c:\users\ale\desktop\obligatorio-prog-iii\obligatorio\pruebas.h
+	"Grafo.h"
+
+1563364244 source:c:\users\ale\desktop\obligatorio-prog-iii\obligatorio\pruebas.cpp
+	"Pruebas.h"
+
+1563320985 source:c:\users\ale\desktop\obligatorio-prog-iii\obligatorio\string.cpp
+	"String.h"
+
+1563368202 source:c:\users\ale\desktop\obligatorio-prog-iii\obligatorio\ciudades.cpp
+	"Ciudades.h"
+
+1563367905 c:\users\ale\desktop\obligatorio-prog-iii\obligatorio\ciudades.h
+	"Ciudad.h"
+
+1563364350 source:c:\users\ale\desktop\obligatorio-prog-iii\obligatorio\linea.cpp
+	"Linea.h"
+
+1563364051 c:\users\ale\desktop\obligatorio-prog-iii\obligatorio\linea.h
+	"Recorrido.h"
+
+1563364141 c:\users\ale\desktop\obligatorio-prog-iii\obligatorio\recorrido.h
+	"Parada.h"
+
+1563362715 c:\users\ale\desktop\obligatorio-prog-iii\obligatorio\parada.h
+	"Ciudad.h"
+
+1563362035 source:c:\users\ale\desktop\obligatorio-prog-iii\obligatorio\lineas.cpp
+	"Lineas.h"
+
+1563363593 c:\users\ale\desktop\obligatorio-prog-iii\obligatorio\lineas.h
+	"Linea.h"
+
+1563362354 source:c:\users\ale\desktop\obligatorio-prog-iii\obligatorio\parada.cpp
+	"Parada.h"
+
+1563364290 source:c:\users\ale\desktop\obligatorio-prog-iii\obligatorio\recorrido.cpp
+	"Recorrido.h"
+
+1563365114 source:c:\users\ale\desktop\obligatorio-prog-iii\obligatorio\menu.cpp
+	"Menu.h"
+
+1563365081 c:\users\ale\desktop\obligatorio-prog-iii\obligatorio\menu.h
+

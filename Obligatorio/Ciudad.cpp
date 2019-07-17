@@ -17,9 +17,9 @@ void MostrarCiudad(Ciudad c)
     print(c.nombreCiudad);
 }
 
-void CargarCiudad(Ciudad &c, int codCiud)
+void CargarCiudad(Ciudad &c, int codigoCiudad)
 {
-    c.codigoCiudad = codCiud;
+    c.codigoCiudad = codigoCiudad;
     printf("\nNombre de la ciudad: ");
     strcrear(c.nombreCiudad);
     scan(c.nombreCiudad);

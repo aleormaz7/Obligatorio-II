@@ -5,7 +5,7 @@
 void PruebasGrafo()
 {
     Grafo G;
-    Crear(G);
+    CrearGrafo(G);
 
     /*String ciudad;
     strcrear(ciudad);
@@ -22,14 +22,10 @@ void PruebasGrafo()
 
     MostrarGrafo(G);
 
-    printf("\nArrayBoolenesInit: ");
-    ArrayBooleanos arreBoleanos;
-    CargarArrayBooleanosEnFalse(arreBoleanos);
-    MostrarArrayBooleanos(arreBoleanos);
 
     printf("\nDFS: ");
-    DFS(G,0,arreBoleanos);
-    MostrarArrayBooleanos(arreBoleanos);
+    //DFS(G,0,arreBoleanos);
+
 
 
 }

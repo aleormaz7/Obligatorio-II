@@ -21,21 +21,3 @@ void MostrarBoolean(boolean b)
 }
 
 
-void CargarArrayBooleanosEnFalse(ArrayBooleanos &arreBoleanos)
-{
-    for(int i= 0; i < TAM;i++)
-    {
-        arreBoleanos[i] = FALSE;
-    }
-
-}
-
-void MostrarArrayBooleanos(ArrayBooleanos arreBoleanos)
-{
-    for(int i= 0; i < TAM;i++)
-    {
-        MostrarBoolean(arreBoleanos[i]);
-        printf("|");
-    }
-}
-

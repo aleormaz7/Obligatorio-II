@@ -47,4 +47,6 @@ boolean strmen(String s1, String s2);
 boolean streq(String s1, String s2);
 
 
+int SumaAscii(String nombreCiudad);
+
 #endif // STRING_H_INCLUDED
