@@ -34,6 +34,10 @@
 		</Compiler>
 		<Unit filename="Boolean.cpp" />
 		<Unit filename="Boolean.h" />
+		<Unit filename="Ciudad.cpp" />
+		<Unit filename="Ciudad.h" />
+		<Unit filename="DiccionarioCiudades.cpp" />
+		<Unit filename="DiccionarioCiudades.h" />
 		<Unit filename="Grafo.cpp" />
 		<Unit filename="Grafo.h" />
 		<Unit filename="Pruebas.cpp" />
