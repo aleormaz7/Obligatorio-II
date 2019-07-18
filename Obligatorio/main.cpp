@@ -60,7 +60,10 @@ int main()
                         ciu1 = Find(ciudades,nom1);
                         ciu2 = Find(ciudades,nom2);
 
-                        InsertarArista(G,DarCodigo(ciu1),DarCodigo(ciu2));
+                        if(!PerteneceArista(G,DarCodigo(ciu1),DarCodigo(ciu2)))
+                            InsertarArista(G,DarCodigo(ciu1),DarCodigo(ciu2));
+                        else
+                            printf("\nYa existe un tramos entre estas ciudades.");
                         MostrarGrafo(G);
                     }
                     else
