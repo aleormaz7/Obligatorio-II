@@ -69,8 +69,8 @@ void scan(String &s)
     aux = new char[MAX];
     int i = 0;
     char c;
-    //fflush(stdin);
-    printf("Ingrese una cadena de caracteres: ");
+    fflush(stdin);
+    //printf("Ingrese una cadena de caracteres: ");
     scanf("%c",&c);
     while((c != '\n') && (i < MAX - 1))
     {
@@ -171,8 +171,7 @@ int SumaAscii(String nombreCiudad)
     while(nombreCiudad[i] != '\0')
     {
         suma = suma + nombreCiudad[i];
+        i++;
     }
-
     return suma;
-
 }

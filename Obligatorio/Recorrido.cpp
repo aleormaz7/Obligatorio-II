@@ -7,11 +7,21 @@ void Crear(Recorrido &r)
     r.ult = NULL;
 }
 
-void InsFront(Recorrido &r, Parada p)
+void InsBack(Recorrido &r, Parada p)
 {
-    //Nodo nodo = new Nodo;
-    //nodo->parada = p;
-   //to be continued
+    NodoRecorrido * nuevo = new NodoRecorrido;
+    nuevo->parada = p;
+    nuevo->sig = NULL;
+    if (r.ult == NULL)
+    {
+        r.ult = nuevo;
+        r.prim = nuevo;
+    }
+    else
+    {
+        r.ult->sig = nuevo;
+        r.ult = nuevo;
+    }
 }
 
 boolean EsVacia(Recorrido &r)
@@ -19,10 +29,36 @@ boolean EsVacia(Recorrido &r)
     return (boolean) (r.prim == NULL);
 }
 
-///MostrarRecorrido(Recorrido r);
+int Largo(Recorrido r)///VER ESTO ????????????????????
+{
+    if(r.prim == NULL)
+        return 0;
+    //else
+       //return 1 + Largo(r.prim->sig);
+       ///VER ESTO ????????????????????
+}
 
-///Primero //Devuelve el primer elemento de la secuencia.//Precondición: la secuencia no es vacía.
+void MostrarRecorrido(Recorrido r)
+{
+    while(r.prim != NULL)
+    {
+        MostrarParada(r.prim->parada);
+        r.prim = r.prim->sig;
+    }
+}
 
-///Resto ?// Secuencia ® SecuenciaDevuelve la secuencia sin su primer elemento.Precondición: la secuencia no es vacía
+/*void CargarRecorrido(Recorrido &r)
+{
 
-int Largo(Recorrido r);//Devuelve la cantidad de elementos de la secuencia.
+
+}*/
+
+void MostrarOrigen(Recorrido r)
+{
+   // MostrarParada(r.prim);
+}
+
+void MostrarDestino(Recorrido r)
+{
+    //MostrarParada(r.ult);
+}

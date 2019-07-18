@@ -16,29 +16,33 @@ boolean PerteneceArista(Grafo G, int numeroCiudad1, int numeroCiudad2)
     return pertenece;
 }
 
-void InsertarArista(Grafo &G, int numeroCiudad1, int numeroCiudad2)
+void InsertarArista(Grafo &G, int numeroCiudad1, int numeroCiudad2)//agregar Tramo
 {
     G[numeroCiudad1][numeroCiudad2] = 1;
     if(numeroCiudad1 != numeroCiudad2)
         G[numeroCiudad2][numeroCiudad1] = 1;
 }
 
-boolean ExisteTramoEntreDosCiudades(Grafo G, String nom1, String nom2)
+boolean ExisteSecuenciaDeTramoEntreDosCiudades(Grafo G, int codigoCiudad, int codigoCiudad2)
 {
+    boolean visitado[CANT_CIUDADES];
+    for(int i=0; i < CANT_CIUDADES; i++)
+    {
+        visitado[i] = FALSE;
+    }
 
+    DFS(G,codigoCiudad,visitado);
 
-    //DarNumero de String nom1
-    //DarNumero de String nom2
-    //DFS(G,) desde nom1
-    //if DFS llego a nom2 hay tramo sino no existe
-
-    return TRUE;
+    return visitado[codigoCiudad2];
 }
 
 void DFS(Grafo G, int verticeActual, boolean visitado[CANT_CIUDADES])
 {
+    //boolean encontre = FALSE;
     visitado[verticeActual] = TRUE;
-    for (int j = 0; j < CANT_CIUDADES; j++)
+    //int i = 0;
+    //while(i < CANT_CIUDADES && !encontre)
+    for(int j = 0; j < CANT_CIUDADES; j++)
     {
         if (G[verticeActual][j] == 1)
         {

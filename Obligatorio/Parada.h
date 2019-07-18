@@ -17,5 +17,4 @@ void MostrarParada(Parada p);
 void CargarParada(Parada &p);
 
 
-
 #endif // PARADA_H_INCLUDED

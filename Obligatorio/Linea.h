@@ -4,11 +4,11 @@
 #include "Recorrido.h"
 
 
-typedef struct { int numero;
+typedef struct { String numeroLinea;
                  Recorrido recorrido;
                 } Linea;
 
-int DarNumero(Linea l);
+void DarCodigoLinea(Linea l,String &nomLinea);
 
 Recorrido DarRecorrido(Linea l);
 

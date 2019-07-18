@@ -9,34 +9,30 @@ void MakeCiudades(Ciudades &C)
 {
     for(int i = 0; i < B; i++)
         CrearLista(C[i]);
-
 }
 
 boolean Member(Ciudades C, String nombreCiudad)
 {
     int cubeta = Dispersion(nombreCiudad);
-
     return PerteneceLista(C[cubeta],nombreCiudad);
 }
 
 void Insert(Ciudades &C, Ciudad ciu)
 {
     String auxNom;
-    //int cubeta = Dispersion(DarNombre(c,auxNom));
-    //Insfront(H[cubeta],ciu);
+    strcrear(auxNom);
+    DarNombre(ciu,auxNom);
+    int cubeta = Dispersion(auxNom);
+    Insfront(C[cubeta],ciu);
 }
 
 Ciudad Find(Ciudades C, String nomCiudad)
 {
+    int cubeta = Dispersion(nomCiudad);
 
-
+    return ObtenerEnLista(C[cubeta],nomCiudad);
 }
 
-///1. Registrar los nombres de todas las ciudades que visita la empresa. Esta operación se ejecutará solamente una vez.
-void AltaCiudad(String nombre)
-{
-
-}
 
 
 ///-------------------------------------------------------------/
@@ -47,15 +43,18 @@ void CrearLista(ListaCiudades &L)
     L = NULL;
 }
 
-boolean PerteneceLista(ListaCiudades L,String valor)
+boolean PerteneceLista(ListaCiudades L, String valor)
 {
-    /*if(L == NULL)
+    if(L == NULL)
     {
         return FALSE;
     }
     else
     {
-        if(darNumeroAsistente(L->info) == valor)
+        String auxNom;
+        strcrear(auxNom);
+        DarNombre(L->info,auxNom);
+        if(streq(auxNom,valor))
         {
             return TRUE;
         }
@@ -63,30 +62,53 @@ boolean PerteneceLista(ListaCiudades L,String valor)
         {
             return PerteneceLista(L->sig,valor);
         }
-    }*/
+    }
     return FALSE;
 }
 
 void Insfront(ListaCiudades &L, Ciudad c)
 {
-    ListaCiudades aux = new Nodo;
+    ListaCiudades aux = new NodoCiudades;
     aux->info = c;
     aux->sig = L;
     L = aux;
 }
 
-Ciudad ObtenerEnLista(ListaCiudades L, int codigoCiudad)/*clave=numero sorteo asistente otorgado*/
+Ciudad ObtenerEnLista(ListaCiudades L, String nombreCiudad)
 {
     ListaCiudades aux;
     Ciudad c;
     aux = L;
-    /*
-    while(darNumeroAsistente(aux->info) != clave)
+    String auxNom;
+    strcrear(auxNom);
+    DarNombre(L->info,auxNom);
+
+    while(!streq(auxNom,nombreCiudad))
     {
         aux = aux->sig;
+        DarNombre(aux->info,auxNom);
     }
-    */
     c = aux->info;
     return c;
 }
+
+void MostrarLista(ListaCiudades L)
+{
+    while(L != NULL)
+    {
+        MostrarCiudad(L->info);
+        L = L->sig;
+    }
+}
+
+///solo prueba
+void MostrarHash(Ciudades C)
+{
+    for(int i = 0; i < B; i++)
+    {
+        printf("\ni: %d",i);
+        MostrarLista(C[i]);
+    }
+}
+
 

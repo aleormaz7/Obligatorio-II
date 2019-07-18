@@ -3,27 +3,25 @@
 
 #include "Ciudad.h"
 
-const int B = 5;/*cant cubetas*/
+const int B = 4;/*cant cubetas*/
 
 typedef struct nodoL {  Ciudad info;
                         nodoL * sig;
-                     } Nodo;
+                     } NodoCiudades;
 
-typedef Nodo * ListaCiudades;
+typedef NodoCiudades * ListaCiudades;
 
 typedef ListaCiudades Ciudades[B];
 
 
 void MakeCiudades(Ciudades &C);
 
-boolean Member(Ciudades C,int clave); ///Determina si en el diccionario existe un elemento con la clave especificada
+boolean Member(Ciudades C, String nombreCiudad); ///Determina si en el diccionario existe un elemento con la clave especificada
 
 void Insert(Ciudades &C, Ciudad ciu);///Agrega la ciudad en el hash
 
-Ciudad Find(Ciudades C,String nomCiudad); ///Precondición: el elemento es miembro del diccionario.
+Ciudad Find(Ciudades C, String nomCiudad); ///Precondición: el elemento es miembro del diccionario.
 
-///1. Registrar los nombres de todas las ciudades que visita la empresa. Esta operación se ejecutará solamente una vez.
-void AltaCiudad(String nombre);
 
 
 /**/
@@ -34,9 +32,12 @@ boolean PerteneceLista(ListaCiudades L,String valor);
 
 void Insfront(ListaCiudades &L,Ciudad ciudad);
 
-Ciudad ObtenerEnLista(ListaCiudades L, int coidgoCiudad);/*clave=numero sorteo asistente otorgado*/
+Ciudad ObtenerEnLista(ListaCiudades L, String nombreCiudad);/*clave=numero sorteo asistente otorgado*/
 
+void MostrarLista(ListaCiudades L);
 
+///
+void MostrarHash(Ciudades C);
 
 
 #endif // CIUDADES_H_INCLUDED

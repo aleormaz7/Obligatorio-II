@@ -20,7 +20,7 @@ void InsertarArista(Grafo &G, int codigoCiuadad1, int codigoCiuadad2);
 
 ///3. Dados los nombres de dos ciudades, saber si existe alguna secuencia de tramos que las
 ///   una. Esta operación le servirá a la directiva de la empresa a la hora de idear recorridos para nuevas líneas.
-boolean ExisteTramoEntreDosCiudades(Grafo G, String nom1, String nom2);
+boolean ExisteSecuenciaDeTramoEntreDosCiudades(Grafo G, int codigoCiudad, int codigoCiudad2);
 
 void DFS(Grafo G, int verticeActual, boolean visitado[CANT_CIUDADES]);
 

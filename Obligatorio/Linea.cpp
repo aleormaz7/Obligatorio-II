@@ -1,9 +1,9 @@
 #include "Linea.h"
 
 
-int DarNumero(Linea l)
+void DarCodigoLinea(Linea l,String &nomLinea)
 {
-    return l.numero;
+    strcop(nomLinea,l.numeroLinea);
 }
 
 Recorrido DarRecorrido(Linea l)
@@ -11,11 +11,22 @@ Recorrido DarRecorrido(Linea l)
     return l.recorrido;
 }
 
+Linea DarLinea(Linea l)
+{
+
+
+}
+
 void MostrarLinea(Linea l)
 {
-    printf("Linea numero: %d", l.numero);
-    printf("\nRecorrido: ");
-    //MostrarRecorrido(l.recorrido);
+    printf("\n: Numero Linea: ");
+    MostrarString(l.numeroLinea);
+    /*printf("\n: Origen: ");
+    MostrarOrigen(l.recorrido);
+    printf("\n: Destino: ");
+    MostrarDestino(l.recorrido);
+    printf("\n: Cant Paradas: ");
+    printf("%d",Largo(l.recorrido));*/
 }
 
 void CargarLinea(Linea &l)
@@ -23,13 +34,10 @@ void CargarLinea(Linea &l)
     Linea linea;
     int num;
     Recorrido recorrido;
-    String s;
-    strcrear(s);
-    printf("Cargar linea:");
-    printf("\nNumero: ");
-    scanf("%d",num);
-    //CargarRecorrido(recorrido);
-    //linea.numero = num;
-    //linea.recorrido = recorrido;
+    String auxNumLinea;
+    strcrear(auxNumLinea);
+    printf("\n Cargar linea:");
+    printf("\n Numero Linea: ");
+    scan(auxNumLinea);
 }
 
