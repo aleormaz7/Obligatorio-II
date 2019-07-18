@@ -31,11 +31,12 @@ boolean ExisteSecuenciaDeTramoEntreDosCiudades(Grafo G, int codigoCiudad, int co
         visitado[i] = FALSE;
     }
 
-    DFS(G,codigoCiudad,visitado);
+    DFS(G,codigoCiudad,codigoCiudad2,visitado);
 
     return visitado[codigoCiudad2];
 }
 
+/*
 void DFS(Grafo G, int verticeActual, boolean visitado[CANT_CIUDADES])
 {
     //boolean encontre = FALSE;
@@ -51,7 +52,22 @@ void DFS(Grafo G, int verticeActual, boolean visitado[CANT_CIUDADES])
         }
     }
 }
+*/
 
+void DFS(Grafo G, int verticeActual, int v, boolean visitado[CANT_CIUDADES])
+{
+    visitado[verticeActual] = TRUE;
+    int i = 0;
+    while(i < CANT_CIUDADES && !visitado[v])
+    {
+        if (G[verticeActual][i] == 1)
+        {
+            if (!visitado[i])
+                DFS(G,i,v,visitado);
+        }
+        i++;
+    }
+}
 
 ///---------------------------------**
 ///solo para pruebas despues se borran

@@ -83,30 +83,36 @@ int main()
             strcrear(nom2);
             printf("\n Ingrese nombre 1er ciudad: ");
             scan(nom1);
+            StringAMayusculas(nom1);
             if(Member(ciudades,nom1))
             {
                 printf("\n Ingrese nombre 2da ciudad: ");
                 scan(nom2);
-                if(Member(ciudades,nom2))//si existe los dos nombres ingresados
+                StringAMayusculas(nom2);
+                if(streq(nom1,nom2))
+                   printf("\nSe ingreso la misma ciudad para origen/destino.");
+                else
                 {
-                    Ciudad ciu1,ciu2;
-                    ciu1 = Find(ciudades,nom1);
-                    ciu2 = Find(ciudades,nom2);
-
-                    if(ExisteSecuenciaDeTramoEntreDosCiudades(G,DarCodigo(ciu1),DarCodigo(ciu2)))
+                    if(Member(ciudades,nom2))//si existe los dos nombres ingresados
                     {
-                        printf("\nExiste tramo");
+                        Ciudad ciu1,ciu2;
+                        ciu1 = Find(ciudades,nom1);
+                        ciu2 = Find(ciudades,nom2);
+
+                        if(ExisteSecuenciaDeTramoEntreDosCiudades(G,DarCodigo(ciu1),DarCodigo(ciu2)))
+                        {
+                            printf("\nExiste tramo");
+                        }
+                        else
+                        {
+                            printf("\nNo existe tramo");
+                        }
                     }
                     else
                     {
-                        printf("\nNo existe tramo");
+                        printf("\n No existe ciudad con ese nombre en el grafo");
                     }
                 }
-                else
-                {
-                    printf("\n No existe ciudad con ese nombre en el grafo");
-                }
-
             }
             else
             {

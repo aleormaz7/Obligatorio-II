@@ -22,7 +22,7 @@ void InsertarArista(Grafo &G, int codigoCiuadad1, int codigoCiuadad2);
 ///   una. Esta operación le servirá a la directiva de la empresa a la hora de idear recorridos para nuevas líneas.
 boolean ExisteSecuenciaDeTramoEntreDosCiudades(Grafo G, int codigoCiudad, int codigoCiudad2);
 
-void DFS(Grafo G, int verticeActual, boolean visitado[CANT_CIUDADES]);
+void DFS(Grafo G, int verticeActual, int v, boolean visitado[CANT_CIUDADES]);
 
 
 ///---------------------------------**
