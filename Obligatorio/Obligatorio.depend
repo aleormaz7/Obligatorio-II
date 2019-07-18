@@ -99,3 +99,76 @@
 1563453310 c:\users\ale\desktop\obligatorio-prog-iii\obligatorio\menu.h
 	<stdio.h>
 
+1563404235 source:c:\users\german ana\dropbox\ude\programación iii\obligatorio\obligatorio-prog-iii\obligatorio\boolean.cpp
+	"Boolean.h"
+
+1563404235 c:\users\german ana\dropbox\ude\programación iii\obligatorio\obligatorio-prog-iii\obligatorio\boolean.h
+	<stdio.h>
+
+1563404235 source:c:\users\german ana\dropbox\ude\programación iii\obligatorio\obligatorio-prog-iii\obligatorio\ciudad.cpp
+	"Ciudad.h"
+
+1563404235 c:\users\german ana\dropbox\ude\programación iii\obligatorio\obligatorio-prog-iii\obligatorio\ciudad.h
+	"String.h"
+
+1563490570 c:\users\german ana\dropbox\ude\programación iii\obligatorio\obligatorio-prog-iii\obligatorio\string.h
+	"Boolean.h"
+
+1563475389 source:c:\users\german ana\dropbox\ude\programación iii\obligatorio\obligatorio-prog-iii\obligatorio\ciudades.cpp
+	"Ciudades.h"
+
+1563475389 c:\users\german ana\dropbox\ude\programación iii\obligatorio\obligatorio-prog-iii\obligatorio\ciudades.h
+	"Ciudad.h"
+
+1563475389 source:c:\users\german ana\dropbox\ude\programación iii\obligatorio\obligatorio-prog-iii\obligatorio\grafo.cpp
+	"Grafo.h"
+
+1563475389 c:\users\german ana\dropbox\ude\programación iii\obligatorio\obligatorio-prog-iii\obligatorio\grafo.h
+	"String.h"
+
+1563475389 source:c:\users\german ana\dropbox\ude\programación iii\obligatorio\obligatorio-prog-iii\obligatorio\linea.cpp
+	"Linea.h"
+
+1563475389 c:\users\german ana\dropbox\ude\programación iii\obligatorio\obligatorio-prog-iii\obligatorio\linea.h
+	"Recorrido.h"
+
+1563475389 c:\users\german ana\dropbox\ude\programación iii\obligatorio\obligatorio-prog-iii\obligatorio\recorrido.h
+	"Parada.h"
+
+1563475389 c:\users\german ana\dropbox\ude\programación iii\obligatorio\obligatorio-prog-iii\obligatorio\parada.h
+	"Ciudad.h"
+
+1563475389 source:c:\users\german ana\dropbox\ude\programación iii\obligatorio\obligatorio-prog-iii\obligatorio\lineas.cpp
+	"Lineas.h"
+
+1563475389 c:\users\german ana\dropbox\ude\programación iii\obligatorio\obligatorio-prog-iii\obligatorio\lineas.h
+	"Linea.h"
+
+1563475389 source:c:\users\german ana\dropbox\ude\programación iii\obligatorio\obligatorio-prog-iii\obligatorio\main.cpp
+	"Menu.h"
+	"Grafo.h"
+	"Ciudades.h"
+	"Ciudad.h"
+	"Lineas.h"
+
+1563475389 c:\users\german ana\dropbox\ude\programación iii\obligatorio\obligatorio-prog-iii\obligatorio\menu.h
+	<stdio.h>
+
+1563475389 source:c:\users\german ana\dropbox\ude\programación iii\obligatorio\obligatorio-prog-iii\obligatorio\menu.cpp
+	"Menu.h"
+
+1563475389 source:c:\users\german ana\dropbox\ude\programación iii\obligatorio\obligatorio-prog-iii\obligatorio\parada.cpp
+	"Parada.h"
+
+1563404235 source:c:\users\german ana\dropbox\ude\programación iii\obligatorio\obligatorio-prog-iii\obligatorio\pruebas.cpp
+	"Pruebas.h"
+
+1563321137 c:\users\german ana\dropbox\ude\programación iii\obligatorio\obligatorio-prog-iii\obligatorio\pruebas.h
+	"Grafo.h"
+
+1563475389 source:c:\users\german ana\dropbox\ude\programación iii\obligatorio\obligatorio-prog-iii\obligatorio\recorrido.cpp
+	"Recorrido.h"
+
+1563475389 source:c:\users\german ana\dropbox\ude\programación iii\obligatorio\obligatorio-prog-iii\obligatorio\string.cpp
+	"String.h"
+

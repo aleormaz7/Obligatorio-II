@@ -44,10 +44,12 @@ int main()
                  strcrear(nom2);
                  printf("\n Ingrese nombre 1er ciudad: ");
                  scan(nom1);
+                 StringAMayusculas(nom1);
                  if(Member(ciudades,nom1))
                  {
                     printf("\n Ingrese nombre 2da ciudad: ");
                     scan(nom2);
+                    StringAMayusculas(nom2);
                     if(Member(ciudades,nom2))//si existe los dos nombres ingresados
                     {
                         Ciudad ciu1,ciu2;
@@ -62,14 +64,11 @@ int main()
                     {
                         printf("\n No existe ciudad con ese nombre en el grafo");
                     }
-
                  }
                  else
                  {
                      printf("\n No existe ciudad con ese nombre en el grafo");
-
                  }
-
                 break;
             case 3:
                 printf("\n Dados los nombres de dos ciudades, saber si existe alguna secuencia de tramos que las una. ");
@@ -105,9 +104,7 @@ int main()
                  else
                  {
                      printf("\n No existe ciudad con ese nombre en el grafo");
-
                  }
-
                 break;
             case 4:
                 printf("\n Ingresar una nueva línea a la empresa: ");
@@ -132,8 +129,5 @@ int main()
             default: printf("\nOpcion invalida.\n");
                 break;
         }
-
     } while (opc != 8); // Si la opcion seleccionada del menu principal es 4 , salir del programa.
 }
-
-

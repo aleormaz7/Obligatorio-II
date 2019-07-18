@@ -49,4 +49,6 @@ boolean streq(String s1, String s2);
 
 int SumaAscii(String nombreCiudad);
 
+void StringAMayusculas(String &s);
+
 #endif // STRING_H_INCLUDED
