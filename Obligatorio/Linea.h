@@ -24,7 +24,7 @@ void AgregarParadaARecorridoDeLinea(Linea &l, int numeroCiudad1, int numeroCiuda
 
 //7. Dado el código que identifica a una línea, listar todas las paradas (número de parada y
 //   nombre de ciudad) de su recorrido.
-void ListarParadasDeRecorridoEnLinea(Linea l, int codigoLinea);
+void ListarParadasDeRecorridoEnLinea(Linea l);
 
 
 #endif // LINEA_H_INCLUDED

@@ -12,8 +12,7 @@ int DarCodigo(Ciudad c)
 
 void MostrarCiudad(Ciudad c)
 {
-    printf("\nCodigo de la ciudad: %d", c.codigoCiudad);
-    printf("\nNombre: ");
+    printf("\nCiudad: ");
     print(c.nombreCiudad);
 }
 

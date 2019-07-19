@@ -15,6 +15,7 @@ void MostrarParada(Parada p)
 {
     printf("\nParada: ");
     printf("%d",p.numero);
+    printf(" - ");
     MostrarCiudad(p.ciudad);
 }
 

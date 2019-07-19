@@ -11,11 +11,6 @@ Recorrido DarRecorrido(Linea l)
     return l.recorrido;
 }
 
-Linea DarLinea(Linea l)
-{
-
-
-}
 
 void MostrarLinea(Linea l)
 {
@@ -49,5 +44,11 @@ void CargarLinea(Linea &l)
         printf("\nNo es posible especificar un recorrido a la linea,");
         printf("\nya que aun no se han especificado tramos entre ciudades.");
     }*/
+}
+
+void ListarParadasDeRecorridoEnLinea(Linea l)
+{
+
+
 }
 

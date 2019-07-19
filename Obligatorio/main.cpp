@@ -150,9 +150,19 @@ int main()
                 printf("\nNo es posible agregar paradas, ya que aun no se han registrados tramos entre ciudades.");
             break;
         case 7:
-
+                String nombLinea;
+                strcrear(nombLinea);
+                printf("\nIngrese linea: ");
+                scan(nombLinea);
+                StringAMayusculas(nombLinea);
+                if(MemberLinea(lineasEmpresa,nombLinea))
+                {
+                    Linea l = FindLinea(lineasEmpresa,nombLinea);
+                    ListarParadasDeRecorridoEnLinea(l);
+                }
+                else
+                    printf("\nNo existe Linea con ese nombre.");
             break;
-
         default:
             printf("\nOpcion invalida.\n");
             break;

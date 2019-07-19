@@ -9,7 +9,7 @@ void MostrarMenu(int &opcion)
     printf("4. Ingresar una nueva linea a la empresa. \n");
     printf("5. \n");
     printf("6. Agregar parada a linea\n");
-    printf("7. Dado el código que identifica a una línea, listar todas las paradas (número de parada y nombre de ciudad) de su recorrido.\n");
+    printf("7. \n");
     printf("8. Volver al menu principal \n");
     scanf("%d",&opcion);
 }
