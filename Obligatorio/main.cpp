@@ -11,14 +11,31 @@
 int main()
 {
     Grafo G;
+    CrearGrafo(G);
+
     Lineas lineasEmpresa;
     MakeLineas(lineasEmpresa);
-    CrearGrafo(G);
-    MostrarGrafo(G);
+
     Ciudades ciudades;
     MakeCiudades(ciudades);
 
-    String nom1,nom2;
+
+
+    printf(" Registre las %d ciudades del sistema.\n",CANT_CIUDADES);
+    printf("\nCargar nombre de todas las ciudades: \n");
+    for(int i = 0; i < CANT_CIUDADES; i++)
+    {
+        Ciudad c;
+        CargarCiudad(c,i);
+        Insert(ciudades,c);
+    }
+
+    /* BORRAR */
+    printf("\n");
+    MostrarHash(ciudades);
+    printf("\n");
+    MostrarGrafo(G);
+    /* FIN BORRAR */
 
     int opc;
     do
@@ -28,18 +45,8 @@ int main()
         switch(opc)
         {
         case 1:
-            printf("\n.Cargar nombre de todas las ciudades: \n");
-            for(int i = 0; i < CANT_CIUDADES; i++)
-            {
-                Ciudad c;
-                CargarCiudad(c,i);
-                Insert(ciudades,c);
-            }
-            MostrarHash(ciudades);
-            break;
-        case 2:
             printf("\n.: Agregar nuevo Tramo \n");
-
+            String nom1,nom2;
             strcrear(nom1);
             strcrear(nom2);
             printf("\n Ingrese nombre 1er ciudad: ");
@@ -77,7 +84,7 @@ int main()
                 printf("\n No existe una ciudad con ese nombre en la agencia.");
             }
             break;
-        case 3:
+        case 2:
             printf("\n Dados los nombres de dos ciudades, saber si existe alguna secuencia de tramos que las una. ");
             strcrear(nom1);
             strcrear(nom2);
@@ -119,7 +126,7 @@ int main()
                 printf("\n No existe ciudad con ese nombre en el grafo");
             }
             break;
-        case 4:
+        case 3:
             Linea linea;
             CargarLinea(linea);
             ///4. Ingresar una nueva línea a la empresa, chequeando que no existiera previamente otra
@@ -127,10 +134,10 @@ int main()
             InsertLinea(lineasEmpresa,linea);
             ListarLineas(lineasEmpresa);
             break;
-        case 5:
+        case 4:
 
             break;
-        case 6:
+        case 5:
             if(ExiteAlMenosUnTramo(G))
             {
                 Linea l;
@@ -149,7 +156,7 @@ int main()
             else
                 printf("\nNo es posible agregar paradas, ya que aun no se han registrados tramos entre ciudades.");
             break;
-        case 7:
+        case 6:
                 String nombLinea;
                 strcrear(nombLinea);
                 printf("\nIngrese linea: ");
@@ -168,5 +175,5 @@ int main()
             break;
         }
     }
-    while (opc != 8);   // Si la opcion seleccionada del menu principal es 4 , salir del programa.
+    while (opc != 7);   // Si la opcion seleccionada del menu principal es 4 , salir del programa.
 }
