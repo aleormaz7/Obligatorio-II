@@ -54,16 +54,16 @@ void DFS(Grafo G, int verticeActual, boolean visitado[CANT_CIUDADES])
 }
 */
 
-void DFS(Grafo G, int verticeActual, int v, boolean visitado[CANT_CIUDADES])
+void DFS(Grafo G, int verticeActual, int destino, boolean visitado[CANT_CIUDADES])
 {
     visitado[verticeActual] = TRUE;
     int i = 0;
-    while(i < CANT_CIUDADES && !visitado[v])
+    while(i < CANT_CIUDADES && !visitado[destino])
     {
         if (G[verticeActual][i] == 1)
         {
             if (!visitado[i])
-                DFS(G,i,v,visitado);
+                DFS(G,i,destino,visitado);
         }
         i++;
     }
