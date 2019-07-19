@@ -124,12 +124,12 @@ int main()
             break;
         case 3:
             Linea linea;
-            CargarLinea(linea,G);
+            CargarLinea(linea);
             InsertLinea(lineasEmpresa,linea);
             ListarLineas(lineasEmpresa);
             break;
         case 4:
-
+            ListarLineas(lineasEmpresa);
             break;
         case 5:
             {

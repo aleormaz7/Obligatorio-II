@@ -126,12 +126,11 @@
 1563558657 c:\users\german ana\dropbox\ude\programación iii\obligatorio\obligatorio-prog-iii\obligatorio\grafo.h
 	"String.h"
 
-1563564650 source:c:\users\german ana\dropbox\ude\programación iii\obligatorio\obligatorio-prog-iii\obligatorio\linea.cpp
+1563566865 source:c:\users\german ana\dropbox\ude\programación iii\obligatorio\obligatorio-prog-iii\obligatorio\linea.cpp
 	"Linea.h"
 
-1563561526 c:\users\german ana\dropbox\ude\programación iii\obligatorio\obligatorio-prog-iii\obligatorio\linea.h
+1563566476 c:\users\german ana\dropbox\ude\programación iii\obligatorio\obligatorio-prog-iii\obligatorio\linea.h
 	"Recorrido.h"
-	"Grafo.h"
 
 1563564639 c:\users\german ana\dropbox\ude\programación iii\obligatorio\obligatorio-prog-iii\obligatorio\recorrido.h
 	"Parada.h"
@@ -145,7 +144,7 @@
 1563475389 c:\users\german ana\dropbox\ude\programación iii\obligatorio\obligatorio-prog-iii\obligatorio\lineas.h
 	"Linea.h"
 
-1563564352 source:c:\users\german ana\dropbox\ude\programación iii\obligatorio\obligatorio-prog-iii\obligatorio\main.cpp
+1563567014 source:c:\users\german ana\dropbox\ude\programación iii\obligatorio\obligatorio-prog-iii\obligatorio\main.cpp
 	"Menu.h"
 	"Grafo.h"
 	"Ciudades.h"
@@ -155,7 +154,7 @@
 1563475389 c:\users\german ana\dropbox\ude\programación iii\obligatorio\obligatorio-prog-iii\obligatorio\menu.h
 	<stdio.h>
 
-1563560257 source:c:\users\german ana\dropbox\ude\programación iii\obligatorio\obligatorio-prog-iii\obligatorio\menu.cpp
+1563566564 source:c:\users\german ana\dropbox\ude\programación iii\obligatorio\obligatorio-prog-iii\obligatorio\menu.cpp
 	"Menu.h"
 
 1563563767 source:c:\users\german ana\dropbox\ude\programación iii\obligatorio\obligatorio-prog-iii\obligatorio\parada.cpp
@@ -167,7 +166,7 @@
 1563321137 c:\users\german ana\dropbox\ude\programación iii\obligatorio\obligatorio-prog-iii\obligatorio\pruebas.h
 	"Grafo.h"
 
-1563565238 source:c:\users\german ana\dropbox\ude\programación iii\obligatorio\obligatorio-prog-iii\obligatorio\recorrido.cpp
+1563566920 source:c:\users\german ana\dropbox\ude\programación iii\obligatorio\obligatorio-prog-iii\obligatorio\recorrido.cpp
 	"Recorrido.h"
 
 1563548350 source:c:\users\german ana\dropbox\ude\programación iii\obligatorio\obligatorio-prog-iii\obligatorio\string.cpp

@@ -64,10 +64,16 @@ void MostrarRecorrido(Recorrido r)
 
 void MostrarOrigen(Recorrido r)
 {
-   // MostrarParada(r.prim);
+    if(r.prim == NULL)
+        printf(" No asignado.");
+    else
+        MostrarParada(r.prim->parada);
 }
 
 void MostrarDestino(Recorrido r)
 {
-    //MostrarParada(r.ult);
+    if(r.ult == NULL)
+        printf(" No asignado.");
+    else
+        MostrarParada(r.ult->parada);
 }

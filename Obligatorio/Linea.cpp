@@ -14,17 +14,17 @@ Recorrido DarRecorrido(Linea l)
 
 void MostrarLinea(Linea l)
 {
-    printf("\n: Numero Linea: ");
+    printf("\nLinea: ");
     MostrarString(l.numeroLinea);
-    /*printf("\n: Origen: ");
+    printf(" || Origen: ");
     MostrarOrigen(l.recorrido);
-    printf("\n: Destino: ");
+    printf(" || Destino: ");
     MostrarDestino(l.recorrido);
-    printf("\n: Cant Paradas: ");
-    printf("%d",Largo(l.recorrido));*/
+    printf(" || Cant. de paradas: ");
+    printf("%d",LargoRecorrido(l.recorrido));
 }
 
-void CargarLinea(Linea &l, Grafo g)
+void CargarLinea(Linea &l)
 {
     int num;
     Recorrido recorrido;
@@ -36,17 +36,21 @@ void CargarLinea(Linea &l, Grafo g)
     scan(auxNumLinea);
     StringAMayusculas(auxNumLinea);
     strcop(l.numeroLinea, auxNumLinea);
+    /*
     if(ExiteAlMenosUnTramo(g))
     {
          printf("\nQuiere agregar el recorrido de la linea?");
     }
     else
         printf("\nSe creo exitosamente la linea, pero no es posible especificar un recorrido,\nya que aun no se han especificado tramos entre ciudades.");
+    */
 }
 
 void ListarParadasDeRecorridoEnLinea(Linea l)
 {
-
-
+    printf("\nLinea: ");
+    print(l.numeroLinea);
+    printf(", ");
+    MostrarRecorrido(l.recorrido);
 }
 

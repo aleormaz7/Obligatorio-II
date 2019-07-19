@@ -2,8 +2,6 @@
 #define LINEA_H_INCLUDED
 
 #include "Recorrido.h"
-#include "Grafo.h"
-
 
 typedef struct { String numeroLinea;
                  Recorrido recorrido;
@@ -15,7 +13,7 @@ Recorrido DarRecorrido(Linea l);
 
 void MostrarLinea(Linea l);
 
-void CargarLinea(Linea &l, Grafo g);
+void CargarLinea(Linea &l);
 
 //6. Dado el código que identifica a una línea, agregar una nueva parada a su recorrido. Se
 //   debe chequear que efectivamente exista un tramo entre la nueva parada y la última parada
