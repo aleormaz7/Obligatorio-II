@@ -26,7 +26,7 @@ void Insert(Ciudades &C, Ciudad ciu)
     Insfront(C[cubeta],ciu);
 }
 
-Ciudad Find(Ciudades C, String nomCiudad)
+Ciudad FindCiudad(Ciudades C, String nomCiudad)
 {
     int cubeta = Dispersion(nomCiudad);
 

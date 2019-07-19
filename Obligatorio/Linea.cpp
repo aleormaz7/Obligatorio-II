@@ -24,26 +24,24 @@ void MostrarLinea(Linea l)
     printf("%d",Largo(l.recorrido));*/
 }
 
-void CargarLinea(Linea &l)
+void CargarLinea(Linea &l, Grafo g)
 {
     int num;
     Recorrido recorrido;
+    CrearRecorrido(recorrido);
+    l.recorrido = recorrido;
     String auxNumLinea;
     strcrear(auxNumLinea);
     printf("\n Numero Linea: ");
     scan(auxNumLinea);
     StringAMayusculas(auxNumLinea);
     strcop(l.numeroLinea, auxNumLinea);
-    /*
-    if(ExiteAlMenosUnTramo())
+    if(ExiteAlMenosUnTramo(g))
     {
          printf("\nQuiere agregar el recorrido de la linea?");
     }
     else
-    {
-        printf("\nNo es posible especificar un recorrido a la linea,");
-        printf("\nya que aun no se han especificado tramos entre ciudades.");
-    }*/
+        printf("\nSe creo exitosamente la linea, pero no es posible especificar un recorrido,\nya que aun no se han especificado tramos entre ciudades.");
 }
 
 void ListarParadasDeRecorridoEnLinea(Linea l)

@@ -14,7 +14,7 @@ Ciudad DarCiudad(Parada p);
 
 void MostrarParada(Parada p);
 
-void CargarParada(Parada &p);
+void CargarParada(Parada &p, int numParada, Ciudad ciudParada);
 
 
 #endif // PARADA_H_INCLUDED

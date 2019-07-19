@@ -19,9 +19,8 @@ void MostrarParada(Parada p)
     MostrarCiudad(p.ciudad);
 }
 
-void CargarParada(Parada &p)
+void CargarParada(Parada &p, int numParada, Ciudad ciudParada)
 {
-    printf("\nCargar Parada: ");
-
-
+    p.ciudad = ciudParada;
+    p.numero = numParada;
 }

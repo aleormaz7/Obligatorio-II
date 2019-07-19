@@ -64,8 +64,8 @@ int main()
                     if(Member(ciudades,nom2))//si existe los dos nombres ingresados
                     {
                         Ciudad ciu1,ciu2;
-                        ciu1 = Find(ciudades,nom1);
-                        ciu2 = Find(ciudades,nom2);
+                        ciu1 = FindCiudad(ciudades,nom1);
+                        ciu2 = FindCiudad(ciudades,nom2);
 
                         if(!PerteneceArista(G,DarCodigo(ciu1),DarCodigo(ciu2)))
                             InsertarArista(G,DarCodigo(ciu1),DarCodigo(ciu2));
@@ -103,8 +103,8 @@ int main()
                     if(Member(ciudades,nom2))//si existe los dos nombres ingresados
                     {
                         Ciudad ciu1,ciu2;
-                        ciu1 = Find(ciudades,nom1);
-                        ciu2 = Find(ciudades,nom2);
+                        ciu1 = FindCiudad(ciudades,nom1);
+                        ciu2 = FindCiudad(ciudades,nom2);
 
                         if(ExisteSecuenciaDeTramoEntreDosCiudades(G,DarCodigo(ciu1),DarCodigo(ciu2)))
                         {
@@ -116,21 +116,15 @@ int main()
                         }
                     }
                     else
-                    {
-                        printf("\n No existe ciudad con ese nombre en el grafo");
-                    }
+                        printf("\n No existe ciudad con ese nombre en el sistema");
                 }
             }
             else
-            {
-                printf("\n No existe ciudad con ese nombre en el grafo");
-            }
+                printf("\n No existe ciudad con ese nombre en el sistema");
             break;
         case 3:
             Linea linea;
-            CargarLinea(linea);
-            ///4. Ingresar una nueva línea a la empresa, chequeando que no existiera previamente otra
-            ///   línea con el mismo código alfanumérico.
+            CargarLinea(linea,G);
             InsertLinea(lineasEmpresa,linea);
             ListarLineas(lineasEmpresa);
             break;
@@ -138,9 +132,7 @@ int main()
 
             break;
         case 5:
-            if(ExiteAlMenosUnTramo(G))
             {
-                Linea l;
                 String nombLinea;
                 strcrear(nombLinea);
                 printf("\nIngrese linea: ");
@@ -148,13 +140,32 @@ int main()
                 StringAMayusculas(nombLinea);
                 if(MemberLinea(lineasEmpresa,nombLinea))
                 {
+                    Linea l = FindLinea(lineasEmpresa,nombLinea);
+                    Recorrido r = DarRecorrido(l);
+                    if(LargoRecorrido(r) == 0)
+                    {
+                        printf("\nIndique el origen del recorrido: ");
+                        String ciudAux;
+                        strcrear(ciudAux);
+                        scan(ciudAux);
+                        StringAMayusculas(ciudAux);
+                        if(Member(ciudades,ciudAux))
+                        {
+                            Ciudad ciudadParada = FindCiudad(ciudades,ciudAux);
+                            Parada p;
+                            CargarParada(p,1,ciudadParada);
+                            InsBackRecorrido(r,p);
+                        }
+                        else
+                            printf("\n No existe ciudad con ese nombre en el sistema");
 
+                    }
+                    if(!ExiteAlMenosUnTramo(G))
+                        printf("\nNo es posible agregar paradas, ya que esta linea tiene asignado un origen y aun no se han registrados tramos entre ciudades.");
                 }
                 else
                     printf("\nNo existe Linea con ese nombre.");
             }
-            else
-                printf("\nNo es posible agregar paradas, ya que aun no se han registrados tramos entre ciudades.");
             break;
         case 6:
                 String nombLinea;
@@ -175,5 +186,5 @@ int main()
             break;
         }
     }
-    while (opc != 7);   // Si la opcion seleccionada del menu principal es 4 , salir del programa.
+    while (opc != 7);
 }

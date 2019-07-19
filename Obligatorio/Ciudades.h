@@ -20,7 +20,7 @@ boolean Member(Ciudades C, String nombreCiudad); ///Determina si en el diccionar
 
 void Insert(Ciudades &C, Ciudad ciu);///Agrega la ciudad en el hash
 
-Ciudad Find(Ciudades C, String nomCiudad); ///Precondición: el elemento es miembro del diccionario.
+Ciudad FindCiudad(Ciudades C, String nomCiudad); ///Precondición: el elemento es miembro del diccionario.
 
 
 

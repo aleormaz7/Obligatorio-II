@@ -14,13 +14,13 @@ typedef struct {
 } Recorrido;
 
 
-void Crear(Recorrido &r);
+void CrearRecorrido(Recorrido &r);
 
-void InsBack(Recorrido &r, Parada p);
+void InsBackRecorrido(Recorrido &r, Parada p);
 
 boolean EsVacia(Recorrido &r);
 
-int Largo(Recorrido r);//Devuelve la cantidad de elementos de la secuencia.
+int LargoRecorrido(Recorrido r);//Devuelve la cantidad de elementos de la secuencia.
 
 void MostrarRecorrido(Recorrido r);
 
