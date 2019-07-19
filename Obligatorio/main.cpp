@@ -133,7 +133,12 @@ int main()
 
             break;
         case 6:
-
+            if(ExiteAlMenosUnTramo(G))
+            {
+                printf("\nNo es posible agregar paradas, ya que aun no se han registrados tramos entre ciudades.");
+            }
+            else
+                printf("\nNo es posible agregar paradas, ya que aun no se han registrados tramos entre ciudades.");
             break;
         case 7:
 

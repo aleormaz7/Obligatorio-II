@@ -69,6 +69,26 @@ void DFS(Grafo G, int verticeActual, int v, boolean visitado[CANT_CIUDADES])
     }
 }
 
+
+boolean ExiteAlMenosUnTramo(Grafo g)
+{
+    boolean hay = FALSE;
+    int i = 0;
+    while(i < CANT_CIUDADES && !hay)
+    {
+        int j = 0;
+        while(j< CANT_CIUDADES && !hay)
+        {
+            if(g[i][j] == 1)
+                hay = TRUE;
+            else
+                j++;
+        }
+        i++;
+    }
+    return hay;
+}
+
 ///---------------------------------**
 ///solo para pruebas despues se borran
 void MostrarGrafo(Grafo G)

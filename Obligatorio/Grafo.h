@@ -29,5 +29,7 @@ void DFS(Grafo G, int verticeActual, int v, boolean visitado[CANT_CIUDADES]);
 ///solo para pruebas despues se borran
 void MostrarGrafo(Grafo G);
 
+boolean ExiteAlMenosUnTramo(Grafo g);
+
 ///---------------------------------**
 #endif // GRAFO_H_INCLUDED
