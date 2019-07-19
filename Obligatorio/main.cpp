@@ -11,8 +11,8 @@
 int main()
 {
     Grafo G;
-    Lineas lineasABB;
-    MakeLineas(lineasABB);
+    Lineas lineasEmpresa;
+    MakeLineas(lineasEmpresa);
     CrearGrafo(G);
     MostrarGrafo(G);
     Ciudades ciudades;
@@ -120,14 +120,12 @@ int main()
             }
             break;
         case 4:
-            printf("\n Ingresar una nueva línea a la empresa: ");
             Linea linea;
-            printf("\nIngrese linea: ");
             CargarLinea(linea);
             ///4. Ingresar una nueva línea a la empresa, chequeando que no existiera previamente otra
             ///   línea con el mismo código alfanumérico.
-            InsertLinea(lineasABB,linea);
-            ListarLineas(lineasABB);
+            InsertLinea(lineasEmpresa,linea);
+            ListarLineas(lineasEmpresa);
             break;
         case 5:
 
@@ -135,7 +133,18 @@ int main()
         case 6:
             if(ExiteAlMenosUnTramo(G))
             {
-                printf("\nNo es posible agregar paradas, ya que aun no se han registrados tramos entre ciudades.");
+                Linea l;
+                String nombLinea;
+                strcrear(nombLinea);
+                printf("\nIngrese linea: ");
+                scan(nombLinea);
+                StringAMayusculas(nombLinea);
+                if(MemberLinea(lineasEmpresa,nombLinea))
+                {
+
+                }
+                else
+                    printf("\nNo existe Linea con ese nombre.");
             }
             else
                 printf("\nNo es posible agregar paradas, ya que aun no se han registrados tramos entre ciudades.");

@@ -6,7 +6,7 @@ void MostrarMenu(int &opcion)
     printf("1. Registrar los nombres de todas las ciudades que visita la empresa \n");
     printf("2. Dados los nombres de dos ciudades, agregar un nuevo tramo entre ellas. \n");
     printf("3. Dados los nombres de dos ciudades, saber si existe alguna secuencia de tramos que las una. \n");
-    printf("4. Ingresar una nueva línea a la empresa. \n");
+    printf("4. Ingresar una nueva linea a la empresa. \n");
     printf("5. \n");
     printf("6. Agregar parada a linea\n");
     printf("7. \n");

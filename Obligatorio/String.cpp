@@ -70,7 +70,6 @@ void scan(String &s)
     int i = 0;
     char c;
     fflush(stdin);
-    //printf("Ingrese una cadena de caracteres: ");
     scanf("%c",&c);
     while((c != '\n') && (i < MAX - 1))
     {

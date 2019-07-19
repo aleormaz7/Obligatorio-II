@@ -31,13 +31,23 @@ void MostrarLinea(Linea l)
 
 void CargarLinea(Linea &l)
 {
-    Linea linea;
     int num;
     Recorrido recorrido;
     String auxNumLinea;
     strcrear(auxNumLinea);
-    printf("\n Cargar linea:");
     printf("\n Numero Linea: ");
     scan(auxNumLinea);
+    StringAMayusculas(auxNumLinea);
+    strcop(l.numeroLinea, auxNumLinea);
+    /*
+    if(ExiteAlMenosUnTramo())
+    {
+         printf("\nQuiere agregar el recorrido de la linea?");
+    }
+    else
+    {
+        printf("\nNo es posible especificar un recorrido a la linea,");
+        printf("\nya que aun no se han especificado tramos entre ciudades.");
+    }*/
 }
 
