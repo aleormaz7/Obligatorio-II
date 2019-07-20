@@ -19,17 +19,30 @@ int main()
     Ciudades ciudades;
     MakeCiudades(ciudades);
 
-    String nombLinea;
-
-
     printf(" Registre las %d ciudades del sistema.\n",CANT_CIUDADES);
     printf("\nCargar nombre de todas las ciudades: \n");
-    for(int i = 0; i < CANT_CIUDADES; i++)
+
+    ///Se hace la iteracion con while para asegurarnos de no cargar ciudades repetidas
+    int i = 0;
+
+    do
     {
         Ciudad c;
         CargarCiudad(c,i);
-        Insert(ciudades,c);
-    }
+        String nombCiudAux;
+        strcrear(nombCiudAux);
+        DarNombre(c,nombCiudAux);
+        if(!Member(ciudades, nombCiudAux))
+        {
+            Insert(ciudades,c);
+            i++;
+        }
+        else
+        {
+            printf("\nYa se cargo una ciudad con el nombre: ");
+            print(nombCiudAux);
+        }
+    }while(i < CANT_CIUDADES);
 
     /* BORRAR */
     printf("\n");
@@ -133,6 +146,7 @@ int main()
             ListarLineas(lineasEmpresa);
             break;
         case 5:
+                String nombLinea;
                 strcrear(nombLinea);
                 printf("\nIngrese linea: ");
                 scan(nombLinea);
