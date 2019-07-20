@@ -20,6 +20,11 @@ void InsertLinea(Lineas &lineas, Linea l); /*Precondición: que no exista previam
 
 Linea FindLinea(Lineas l, String codigoLinea); //Precondición: el elemento es miembro del diccionario.
 
+
+void ModifyLinea(Lineas &l,Linea linea);//Sustituye el viejo elemento de tipo T en el diccionario por el nuevo elemento.
+//Precondición: el elemento a sustituir es miembro del diccionario.
+
+
 //5. Listar los datos básicos de todas las líneas de la empresa (código, origen, destino y
 //    cantidad de paradas), ordenados por código alfanumérico de menor a mayor.
 void ListarLineas(Lineas l);

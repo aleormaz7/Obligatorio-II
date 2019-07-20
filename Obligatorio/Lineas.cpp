@@ -34,25 +34,34 @@ boolean MemberLinea(Lineas l,String codigoLinea) //Determina si en el diccionari
 
 void InsertLinea(Lineas &lineas, Linea l) /*Precondición: que no exista previamente codigoalfanumerico*/
 {
+    String cod,cod2;
+    strcrear(cod);///preguntar si es necesario
+    strcrear(cod2);
+
     if(lineas == NULL)
     {
         lineas = new NodoLineaABB;
         lineas->linea = l;
         lineas->hIzq = NULL;
         lineas->hDer = NULL;
+        printf("\n es null");
     }
     else
     {
-        String cod, cod2;
-        strcrear(cod);//preguntar si es necesario
-        strcrear(cod2);
         DarCodigoLinea(lineas->linea,cod);
         DarCodigoLinea(l,cod2);
 
         if(strmen(cod,cod2))
+        {
+            printf("\n a la izq");
             InsertLinea(lineas->hIzq,l);
+        }
         else
+        {
+            printf("\n a la der");
             InsertLinea(lineas->hDer,l);
+        }
+
     }
 }
 
@@ -74,14 +83,39 @@ Linea FindLinea(Lineas l, String codigoLinea) //Precondición: el elemento es mie
     }
 }
 
+void ModifyLinea(Lineas &l,Linea linea)
+{
+    String cod,cod2;
+    strcrear(cod);
+    strcrear(cod2);
+    DarCodigoLinea(l->linea,cod);
+    DarCodigoLinea(linea,cod2);
+    if(streq(cod,cod2))
+    {
+        l->linea = linea;
+    }
+    else
+    {
+        if(strmen(cod,cod2))
+             ModifyLinea(l->hIzq,linea);
+        else
+             ModifyLinea(l->hDer,linea);
+    }
+
+}
+
+
 ///5. Listar los datos básicos de todas las líneas de la empresa (código, origen, destino y
 ///    cantidad de paradas), ordenados por código alfanumérico de menor a mayor.
 void ListarLineas(Lineas l)
 {
     if(l != NULL)
     {
+
         ListarLineas(l->hIzq);
         MostrarLinea(l->linea);
         ListarLineas(l->hDer);
     }
 }
+
+

@@ -172,3 +172,76 @@
 1563548350 source:c:\users\german ana\dropbox\ude\programación iii\obligatorio\obligatorio-prog-iii\obligatorio\string.cpp
 	"String.h"
 
+1563363742 source:c:\users\ale\desktop\ude\programacion 3\codeblocks\obligatorio-prog-iii\obligatorio\boolean.cpp
+	"Boolean.h"
+
+1563363744 c:\users\ale\desktop\ude\programacion 3\codeblocks\obligatorio-prog-iii\obligatorio\boolean.h
+	<stdio.h>
+
+1563629761 source:c:\users\ale\desktop\ude\programacion 3\codeblocks\obligatorio-prog-iii\obligatorio\ciudad.cpp
+	"Ciudad.h"
+
+1563366572 c:\users\ale\desktop\ude\programacion 3\codeblocks\obligatorio-prog-iii\obligatorio\ciudad.h
+	"String.h"
+
+1563573899 c:\users\ale\desktop\ude\programacion 3\codeblocks\obligatorio-prog-iii\obligatorio\string.h
+	"Boolean.h"
+
+1563573899 source:c:\users\ale\desktop\ude\programacion 3\codeblocks\obligatorio-prog-iii\obligatorio\ciudades.cpp
+	"Ciudades.h"
+
+1563573899 c:\users\ale\desktop\ude\programacion 3\codeblocks\obligatorio-prog-iii\obligatorio\ciudades.h
+	"Ciudad.h"
+
+1563573899 source:c:\users\ale\desktop\ude\programacion 3\codeblocks\obligatorio-prog-iii\obligatorio\grafo.cpp
+	"Grafo.h"
+
+1563573899 c:\users\ale\desktop\ude\programacion 3\codeblocks\obligatorio-prog-iii\obligatorio\grafo.h
+	"String.h"
+
+1563626631 source:c:\users\ale\desktop\ude\programacion 3\codeblocks\obligatorio-prog-iii\obligatorio\linea.cpp
+	"Linea.h"
+
+1563573899 c:\users\ale\desktop\ude\programacion 3\codeblocks\obligatorio-prog-iii\obligatorio\linea.h
+	"Recorrido.h"
+
+1563632288 c:\users\ale\desktop\ude\programacion 3\codeblocks\obligatorio-prog-iii\obligatorio\recorrido.h
+	"Parada.h"
+
+1563573899 c:\users\ale\desktop\ude\programacion 3\codeblocks\obligatorio-prog-iii\obligatorio\parada.h
+	"Ciudad.h"
+
+1563631345 source:c:\users\ale\desktop\ude\programacion 3\codeblocks\obligatorio-prog-iii\obligatorio\lineas.cpp
+	"Lineas.h"
+
+1563631059 c:\users\ale\desktop\ude\programacion 3\codeblocks\obligatorio-prog-iii\obligatorio\lineas.h
+	"Linea.h"
+
+1563632384 source:c:\users\ale\desktop\ude\programacion 3\codeblocks\obligatorio-prog-iii\obligatorio\main.cpp
+	"Menu.h"
+	"Grafo.h"
+	"Ciudades.h"
+	"Ciudad.h"
+	"Lineas.h"
+
+1563453310 c:\users\ale\desktop\ude\programacion 3\codeblocks\obligatorio-prog-iii\obligatorio\menu.h
+	<stdio.h>
+
+1563573899 source:c:\users\ale\desktop\ude\programacion 3\codeblocks\obligatorio-prog-iii\obligatorio\menu.cpp
+	"Menu.h"
+
+1563573899 source:c:\users\ale\desktop\ude\programacion 3\codeblocks\obligatorio-prog-iii\obligatorio\parada.cpp
+	"Parada.h"
+
+1563368251 source:c:\users\ale\desktop\ude\programacion 3\codeblocks\obligatorio-prog-iii\obligatorio\pruebas.cpp
+	"Pruebas.h"
+
+1563320985 c:\users\ale\desktop\ude\programacion 3\codeblocks\obligatorio-prog-iii\obligatorio\pruebas.h
+	"Grafo.h"
+
+1563632281 source:c:\users\ale\desktop\ude\programacion 3\codeblocks\obligatorio-prog-iii\obligatorio\recorrido.cpp
+	"Recorrido.h"
+
+1563573899 source:c:\users\ale\desktop\ude\programacion 3\codeblocks\obligatorio-prog-iii\obligatorio\string.cpp
+	"String.h"
+

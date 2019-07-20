@@ -1,6 +1,5 @@
 #include "Linea.h"
 
-
 void DarCodigoLinea(Linea l,String &nomLinea)
 {
     strcop(nomLinea,l.numeroLinea);
@@ -26,7 +25,6 @@ void MostrarLinea(Linea l)
 
 void CargarLinea(Linea &l)
 {
-    int num;
     Recorrido recorrido;
     CrearRecorrido(recorrido);
     l.recorrido = recorrido;
@@ -36,6 +34,7 @@ void CargarLinea(Linea &l)
     scan(auxNumLinea);
     StringAMayusculas(auxNumLinea);
     strcop(l.numeroLinea, auxNumLinea);
+
     /*
     if(ExiteAlMenosUnTramo(g))
     {
@@ -46,6 +45,7 @@ void CargarLinea(Linea &l)
     */
 }
 
+//7.
 void ListarParadasDeRecorridoEnLinea(Linea l)
 {
     printf("\nLinea: ");

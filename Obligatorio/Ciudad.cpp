@@ -23,4 +23,5 @@ void CargarCiudad(Ciudad &c, int codigoCiudad)
     strcrear(c.nombreCiudad);
     scan(c.nombreCiudad);
     StringAMayusculas(c.nombreCiudad);
+    //strcop()
 }

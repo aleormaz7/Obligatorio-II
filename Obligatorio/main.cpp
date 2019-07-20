@@ -19,6 +19,7 @@ int main()
     Ciudades ciudades;
     MakeCiudades(ciudades);
 
+    String nombLinea;
 
 
     printf(" Registre las %d ciudades del sistema.\n",CANT_CIUDADES);
@@ -132,8 +133,6 @@ int main()
             ListarLineas(lineasEmpresa);
             break;
         case 5:
-            {
-                String nombLinea;
                 strcrear(nombLinea);
                 printf("\nIngrese linea: ");
                 scan(nombLinea);
@@ -142,9 +141,30 @@ int main()
                 {
                     Linea l = FindLinea(lineasEmpresa,nombLinea);
                     Recorrido r = DarRecorrido(l);
+
+                    boolean SePuedeIngresarRecorrido = FALSE;
+                    printf("LargoR %d",LargoRecorrido(r));
                     if(LargoRecorrido(r) == 0)
                     {
                         printf("\nIndique el origen del recorrido: ");
+                        SePuedeIngresarRecorrido = TRUE;
+                    }
+                    else
+                    {
+                        printf("\nboolean");
+                        MostrarBoolean(SePuedeIngresarRecorrido);
+
+                        if(!ExiteAlMenosUnTramo(G))
+                            printf("\nNo es posible agregar paradas, ya que esta linea tiene asignado un origen y aun no se han registrados tramos entre ciudades.");
+                        else
+                        {
+                            printf("\nIndique parada en el recorrido: ");
+                            SePuedeIngresarRecorrido = TRUE;
+                        }
+                    }
+
+                    if(SePuedeIngresarRecorrido)
+                    {
                         String ciudAux;
                         strcrear(ciudAux);
                         scan(ciudAux);
@@ -153,22 +173,25 @@ int main()
                         {
                             Ciudad ciudadParada = FindCiudad(ciudades,ciudAux);
                             Parada p;
-                            CargarParada(p,1,ciudadParada);
+                            printf("\nantes insertar largo:%d",LargoRecorrido(r));
+                            CargarParada(p,(LargoRecorrido(r)+1),ciudadParada);
+
                             InsBackRecorrido(r,p);
+                            l.recorrido = r;///???????????????????????????
+                            ModifyLinea(lineasEmpresa,l);
+
+                            printf("\ndespues cargar largo:%d",LargoRecorrido(r));
                         }
                         else
                             printf("\n No existe ciudad con ese nombre en el sistema");
-
                     }
-                    if(!ExiteAlMenosUnTramo(G))
-                        printf("\nNo es posible agregar paradas, ya que esta linea tiene asignado un origen y aun no se han registrados tramos entre ciudades.");
                 }
                 else
                     printf("\nNo existe Linea con ese nombre.");
-            }
+
             break;
         case 6:
-                String nombLinea;
+
                 strcrear(nombLinea);
                 printf("\nIngrese linea: ");
                 scan(nombLinea);
