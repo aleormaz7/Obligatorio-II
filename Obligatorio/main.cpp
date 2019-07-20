@@ -205,7 +205,6 @@ int main()
 
             break;
         case 6:
-
                 strcrear(nombLinea);
                 printf("\nIngrese linea: ");
                 scan(nombLinea);
