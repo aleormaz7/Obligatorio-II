@@ -139,8 +139,22 @@ int main()
         case 3:
             Linea linea;
             CargarLinea(linea);///????????????????????????? explota aleatoriamente
-            InsertLinea(lineasEmpresa,linea);///???????????????
-            ListarLineas(lineasEmpresa);
+            String nomLineaInserta;
+            strcrear(nomLineaInserta);
+            DarCodigoLinea(linea,nomLineaInserta);
+            if(strlar(nomLineaInserta) > 0)
+            {
+                 if(!MemberLinea(lineasEmpresa,nomLineaInserta))
+                {
+                    InsertLinea(lineasEmpresa,linea);///???????????????
+                    ListarLineas(lineasEmpresa);
+                }
+                else
+                    printf("\nYa existe una linea con ese codigo");
+            }
+            else
+                printf("\nEl numero de linea no puede ser vacio.");
+
             break;
         case 4:
             ListarLineas(lineasEmpresa);

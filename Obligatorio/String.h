@@ -9,8 +9,6 @@ typedef char * String;
 
 void MostrarString(String s);//muestra un string
 
-void CargarString(String s);//carga un string
-
 ///a) strcrear crea un string vacío (solo con el carácter ‘\0’)
 void strcrear(String &s);
 
@@ -28,14 +26,6 @@ void strcop(String &s1, String s2);
 ///   finaliza cuando se lea un carácter ‘nueva línea’ el cual se sustituirá por uno nulo.
 void scan(String &s);
 
-///f) strcon recibe dos strings y concatena el segundo string al final del primero, la concatenación
-///   deberá quedar sobre el primero de los dos. En caso de que el largo de los strings
-///   exceda los 79 caracteres, no se tomarán los caracteres excedentes del segundo string.
-void strcon(String &s1, String s2);
-
-///g) strswp recibe dos strings y devuelve el primero en el segundo y viceversa.
-void strswp(String &s1, String &s2);
-
 ///h) print despliega un string por pantalla.
 void print(String s);
 
@@ -45,7 +35,6 @@ boolean strmen(String s1, String s2);
 
 ///j) streq reciba dos strings y devuelve TRUE si ambos strings son iguales o FALSE en caso contrario.
 boolean streq(String s1, String s2);
-
 
 int SumaAscii(String nombreCiudad);
 

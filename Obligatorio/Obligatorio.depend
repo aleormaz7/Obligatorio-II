@@ -111,7 +111,7 @@
 1563404235 c:\users\german ana\dropbox\ude\programación iii\obligatorio\obligatorio-prog-iii\obligatorio\ciudad.h
 	"String.h"
 
-1563490570 c:\users\german ana\dropbox\ude\programación iii\obligatorio\obligatorio-prog-iii\obligatorio\string.h
+1563739093 c:\users\german ana\dropbox\ude\programación iii\obligatorio\obligatorio-prog-iii\obligatorio\string.h
 	"Boolean.h"
 
 1563563565 source:c:\users\german ana\dropbox\ude\programación iii\obligatorio\obligatorio-prog-iii\obligatorio\ciudades.cpp
@@ -126,7 +126,7 @@
 1563558657 c:\users\german ana\dropbox\ude\programación iii\obligatorio\obligatorio-prog-iii\obligatorio\grafo.h
 	"String.h"
 
-1563718922 source:c:\users\german ana\dropbox\ude\programación iii\obligatorio\obligatorio-prog-iii\obligatorio\linea.cpp
+1563739789 source:c:\users\german ana\dropbox\ude\programación iii\obligatorio\obligatorio-prog-iii\obligatorio\linea.cpp
 	"Linea.h"
 
 1563566476 c:\users\german ana\dropbox\ude\programación iii\obligatorio\obligatorio-prog-iii\obligatorio\linea.h
@@ -138,13 +138,13 @@
 1563563775 c:\users\german ana\dropbox\ude\programación iii\obligatorio\obligatorio-prog-iii\obligatorio\parada.h
 	"Ciudad.h"
 
-1563718629 source:c:\users\german ana\dropbox\ude\programación iii\obligatorio\obligatorio-prog-iii\obligatorio\lineas.cpp
+1563738949 source:c:\users\german ana\dropbox\ude\programación iii\obligatorio\obligatorio-prog-iii\obligatorio\lineas.cpp
 	"Lineas.h"
 
 1563646168 c:\users\german ana\dropbox\ude\programación iii\obligatorio\obligatorio-prog-iii\obligatorio\lineas.h
 	"Linea.h"
 
-1563664102 source:c:\users\german ana\dropbox\ude\programación iii\obligatorio\obligatorio-prog-iii\obligatorio\main.cpp
+1563739577 source:c:\users\german ana\dropbox\ude\programación iii\obligatorio\obligatorio-prog-iii\obligatorio\main.cpp
 	"Menu.h"
 	"Grafo.h"
 	"Ciudades.h"
@@ -169,7 +169,7 @@
 1563646168 source:c:\users\german ana\dropbox\ude\programación iii\obligatorio\obligatorio-prog-iii\obligatorio\recorrido.cpp
 	"Recorrido.h"
 
-1563548350 source:c:\users\german ana\dropbox\ude\programación iii\obligatorio\obligatorio-prog-iii\obligatorio\string.cpp
+1563739193 source:c:\users\german ana\dropbox\ude\programación iii\obligatorio\obligatorio-prog-iii\obligatorio\string.cpp
 	"String.h"
 
 1563363742 source:c:\users\ale\desktop\ude\programacion 3\codeblocks\obligatorio-prog-iii\obligatorio\boolean.cpp

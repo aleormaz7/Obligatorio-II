@@ -2,6 +2,7 @@
 
 void DarCodigoLinea(Linea l,String &nomLinea)
 {
+    strcrear(nomLinea);
     strcop(nomLinea,l.numeroLinea);
 }
 
@@ -9,7 +10,6 @@ Recorrido DarRecorrido(Linea l)
 {
     return l.recorrido;
 }
-
 
 void MostrarLinea(Linea l)
 {
@@ -34,6 +34,7 @@ void CargarLinea(Linea &l)
     printf("\n Numero Linea: ");
     scan(auxNumLinea);
     StringAMayusculas(auxNumLinea);
+    strcrear(l.numeroLinea);
     strcop(l.numeroLinea, auxNumLinea);
     strdestruir(auxNumLinea);
 }

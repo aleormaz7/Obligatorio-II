@@ -1,5 +1,4 @@
 #include "String.h"
-
 void MostrarString(String s)
 {
     int i = 0;
@@ -9,22 +8,6 @@ void MostrarString(String s)
         i++;
     }
 }
-
-void CargarString(String &s)
-{
-    int i = 0;
-    char c;
-    fflush(stdin);
-    scanf("%c",&c);
-    while((c != '\n') && (i < MAX - 1))
-    {
-        s[i] = c;
-        i++;
-        scanf("%c",&c);
-    }
-    s[i] = '\0';
-}
-
 
 void strcrear(String &s)
 {
@@ -80,42 +63,7 @@ void scan(String &s)
     aux[i] = '\0';
 
     strcop(s,aux);
-
     strdestruir(aux);
-}
-
-void strcon(String &s1, String s2)
-{
-    String aux;
-    aux = new char[MAX];
-
-    int largoS1 = strlar(s1);
-    int largoS2 = strlar(s2);
-    //int largoTotal = largoS1 + largoS2 + 1;
-
-    int i = 0, j = 0;
-    while(i < largoS1)
-    {
-        aux[i] = s1[i];
-        i++;
-    }
-    while(j < largoS2)
-    {
-        aux[i] = s2[j];
-        i++;
-        j++;
-    }
-
-    strdestruir(s1);
-    strcop(s1,aux);
-}
-
-void strswp(String &s1, String &s2)
-{
-    String aux;
-    aux = s1;
-    s1 = s2;
-    s2 = aux;
 }
 
 void print(String s)

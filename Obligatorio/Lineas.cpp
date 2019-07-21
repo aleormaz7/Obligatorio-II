@@ -23,7 +23,7 @@ boolean MemberLinea(Lineas l,String codigoLinea) //Determina si en el diccionari
         }
         else
         {
-            if(strmen(cod,codigoLinea))
+            if(strmen(codigoLinea,cod))
                 return MemberLinea(l->hIzq,codigoLinea);
             else
                 return MemberLinea(l->hDer,codigoLinea);
@@ -34,9 +34,9 @@ boolean MemberLinea(Lineas l,String codigoLinea) //Determina si en el diccionari
 
 void InsertLinea(Lineas &lineas, Linea l) /*Precondición: que no exista previamente codigoalfanumerico*/
 {
-    String cod,cod2;
-    strcrear(cod);///preguntar si es necesario
-    strcrear(cod2);
+    String codLineaABB,codLineaInserta;
+    strcrear(codLineaABB);///preguntar si es necesario
+    strcrear(codLineaInserta);
 printf("\n Linea a agregar: " );
 print(l.numeroLinea);
 
@@ -54,10 +54,10 @@ print(l.numeroLinea);
 printf("\n Linea en la que estoy parado: " );
 print(lineas->linea.numeroLinea);
 
-        DarCodigoLinea(lineas->linea,cod);
-        DarCodigoLinea(l,cod2);
+        DarCodigoLinea(lineas->linea,codLineaABB);
+        DarCodigoLinea(l,codLineaInserta);
 
-        if(strmen(cod,cod2))
+        if(strmen(codLineaInserta,codLineaABB))
         {
             printf("\n a la izq");
             InsertLinea(lineas->hIzq,l);
@@ -67,7 +67,6 @@ print(lineas->linea.numeroLinea);
             printf("\n a la der");
             InsertLinea(lineas->hDer,l);
         }
-
     }
 }
 
@@ -82,7 +81,7 @@ Linea FindLinea(Lineas l, String codigoLinea) //Precondición: el elemento es mie
     }
     else
     {
-        if(strmen(cod,codigoLinea))
+        if(strmen(codigoLinea,cod))
             return FindLinea(l->hIzq,codigoLinea);
         else
             return FindLinea(l->hDer,codigoLinea);
@@ -91,25 +90,23 @@ Linea FindLinea(Lineas l, String codigoLinea) //Precondición: el elemento es mie
 
 void ModifyLinea(Lineas &l,Linea linea)
 {
-    String cod,cod2;
-    strcrear(cod);
-    strcrear(cod2);
-    DarCodigoLinea(l->linea,cod);
-    DarCodigoLinea(linea,cod2);
-    if(streq(cod,cod2))
+    String codLineaOriginal,codModifica;
+    strcrear(codLineaOriginal);
+    strcrear(codModifica);
+    DarCodigoLinea(l->linea,codLineaOriginal);
+    DarCodigoLinea(linea,codModifica);
+    if(streq(codLineaOriginal,codModifica))
     {
         l->linea = linea;
     }
     else
     {
-        if(strmen(cod,cod2))
+        if(strmen(codModifica,codLineaOriginal))
              ModifyLinea(l->hIzq,linea);
         else
              ModifyLinea(l->hDer,linea);
     }
-
 }
-
 
 ///5. Listar los datos básicos de todas las líneas de la empresa (código, origen, destino y
 ///    cantidad de paradas), ordenados por código alfanumérico de menor a mayor.
@@ -117,11 +114,8 @@ void ListarLineas(Lineas l)
 {
     if(l != NULL)
     {
-
         ListarLineas(l->hIzq);
         MostrarLinea(l->linea);
         ListarLineas(l->hDer);
     }
 }
-
-
