@@ -28,21 +28,14 @@ void CargarLinea(Linea &l)
     Recorrido recorrido;
     CrearRecorrido(recorrido);
     l.recorrido = recorrido;
+
     String auxNumLinea;
     strcrear(auxNumLinea);
     printf("\n Numero Linea: ");
     scan(auxNumLinea);
     StringAMayusculas(auxNumLinea);
     strcop(l.numeroLinea, auxNumLinea);
-
-    /*
-    if(ExiteAlMenosUnTramo(g))
-    {
-         printf("\nQuiere agregar el recorrido de la linea?");
-    }
-    else
-        printf("\nSe creo exitosamente la linea, pero no es posible especificar un recorrido,\nya que aun no se han especificado tramos entre ciudades.");
-    */
+    strdestruir(auxNumLinea);
 }
 
 //7.

@@ -37,6 +37,8 @@ void InsertLinea(Lineas &lineas, Linea l) /*Precondición: que no exista previame
     String cod,cod2;
     strcrear(cod);///preguntar si es necesario
     strcrear(cod2);
+printf("\n Linea a agregar: " );
+print(l.numeroLinea);
 
     if(lineas == NULL)
     {
@@ -44,10 +46,14 @@ void InsertLinea(Lineas &lineas, Linea l) /*Precondición: que no exista previame
         lineas->linea = l;
         lineas->hIzq = NULL;
         lineas->hDer = NULL;
-        printf("\n es null");
+        printf("\nLinea Agregada");
+        print(lineas->linea.numeroLinea);
     }
     else
     {
+printf("\n Linea en la que estoy parado: " );
+print(lineas->linea.numeroLinea);
+
         DarCodigoLinea(lineas->linea,cod);
         DarCodigoLinea(l,cod2);
 
