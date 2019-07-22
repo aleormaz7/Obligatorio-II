@@ -13,7 +13,7 @@ Ciudad DarCiudad(Parada p)
 
 void MostrarParada(Parada p)
 {
-    printf("\nParada: ");
+    printf("\Parada: ");
     printf("%d",p.numero);
     printf(" - ");
     MostrarCiudad(p.ciudad);

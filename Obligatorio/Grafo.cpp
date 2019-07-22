@@ -7,7 +7,7 @@ void CrearGrafo(Grafo &G)
             G[i][j] = 0;
 }
 
-boolean PerteneceArista(Grafo G, int numeroCiudad1, int numeroCiudad2)
+boolean ExisteTramo(Grafo G, int numeroCiudad1, int numeroCiudad2)
 {
     boolean pertenece = FALSE;
     if(G[numeroCiudad1][numeroCiudad2] == 1)

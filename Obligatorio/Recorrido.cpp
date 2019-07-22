@@ -24,7 +24,7 @@ void InsBackRecorrido(Recorrido &r, Parada p)
     }
 }
 
-boolean EsVacia(Recorrido &r)
+boolean RecorridoVacio(Recorrido &r)
 {
     return (boolean) (r.prim == NULL);
 }
@@ -76,4 +76,9 @@ void MostrarDestino(Recorrido r)
         printf(" No asignado.");
     else
         MostrarParada(r.ult->parada);
+}
+
+Parada Destino (Recorrido r)
+{
+    return r.ult->parada;
 }

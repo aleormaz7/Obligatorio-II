@@ -18,7 +18,7 @@ void CrearRecorrido(Recorrido &r);
 
 void InsBackRecorrido(Recorrido &r, Parada p);
 
-boolean EsVacia(Recorrido &r);
+boolean RecorridoVacio(Recorrido &r);
 
 int LargoRecorrido(Recorrido r);//Devuelve la cantidad de elementos de la secuencia.
 
@@ -29,6 +29,10 @@ void MostrarRecorrido(Recorrido r);
 void MostrarOrigen(Recorrido r);
 
 void MostrarDestino(Recorrido r);
+
+//Precondición: !EsVacia(r)
+Parada Destino (Recorrido r);
+
 
 
 #endif // RECORRIDO_H_INCLUDED

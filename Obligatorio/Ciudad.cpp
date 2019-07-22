@@ -12,7 +12,7 @@ int DarCodigo(Ciudad c)
 
 void MostrarCiudad(Ciudad c)
 {
-    printf("\nCiudad: ");
+    printf(" Ciudad: ");
     print(c.nombreCiudad);
 }
 
@@ -23,5 +23,4 @@ void CargarCiudad(Ciudad &c, int codigoCiudad)
     strcrear(c.nombreCiudad);
     scan(c.nombreCiudad);
     StringAMayusculas(c.nombreCiudad);
-    //strcop()
 }

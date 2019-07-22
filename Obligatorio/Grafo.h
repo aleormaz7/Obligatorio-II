@@ -13,7 +13,7 @@ void CrearGrafo(Grafo &G);///Crear Grafo(Matriz) vacio
 
 ///2. Dados los nombres de dos ciudades, agregar un nuevo tramo entre ellas. Dicho tramo
 ///   podrá luego ser incluido en alguna de las líneas que la empresa posee.
-boolean PerteneceArista(Grafo G, int codigoCiudad1, int codigoCiudad2);///ExisteTramo()
+boolean ExisteTramo(Grafo G, int codigoCiudad1, int codigoCiudad2);///ExisteTramo()
 
 ///(InsertarTramo) = Inserta la nueva arista al grafo.//Precondición: la arista no pertenece al grafo.
 void InsertarArista(Grafo &G, int codigoCiuadad1, int codigoCiuadad2);

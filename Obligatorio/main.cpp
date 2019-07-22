@@ -81,7 +81,7 @@ int main()
                         ciu1 = FindCiudad(ciudades,nom1);
                         ciu2 = FindCiudad(ciudades,nom2);
 
-                        if(!PerteneceArista(G,DarCodigo(ciu1),DarCodigo(ciu2)))
+                        if(!ExisteTramo(G,DarCodigo(ciu1),DarCodigo(ciu2)))
                             InsertarArista(G,DarCodigo(ciu1),DarCodigo(ciu2));
                         else
                             printf("\nYa existe un tramos entre estas ciudades.");
@@ -171,17 +171,14 @@ int main()
                     Recorrido r = DarRecorrido(l);
 
                     boolean SePuedeIngresarRecorrido = FALSE;
-                    printf("LargoR %d",LargoRecorrido(r));
-                    if(LargoRecorrido(r) == 0)
+                    if(RecorridoVacio(r))
                     {
-                        printf("\nIndique el origen del recorrido: ");
+                        printf("\nEsta linea aun no tiene seteado un recorrido, ");
+                        printf("\nindique la ciudad de origen del mismo: ");
                         SePuedeIngresarRecorrido = TRUE;
                     }
                     else
                     {
-                        printf("\nboolean");
-                        MostrarBoolean(SePuedeIngresarRecorrido);
-
                         if(!ExiteAlMenosUnTramo(G))
                             printf("\nNo es posible agregar paradas, ya que esta linea tiene asignado un origen y aun no se han registrados tramos entre ciudades.");
                         else
@@ -199,16 +196,33 @@ int main()
                         StringAMayusculas(ciudAux);
                         if(Member(ciudades,ciudAux))
                         {
-                            Ciudad ciudadParada = FindCiudad(ciudades,ciudAux);
-                            Parada p;
-                            printf("\nantes insertar largo:%d",LargoRecorrido(r));
-                            CargarParada(p,(LargoRecorrido(r)+1),ciudadParada);
+                            if(!RecorridoVacio(r))
+                            {
+                                Parada paradaDestino = Destino(r);
+                                Ciudad ciudaDestinoActual  = DarCiudad(paradaDestino);
+                                Ciudad ciudadNuevoDestino = FindCiudad(ciudades,ciudAux);
+                                if(ExisteTramo(G,DarCodigo(ciudaDestinoActual),DarCodigo(ciudadNuevoDestino)))
+                                {
+                                    Parada p;
+                                    CargarParada(p,(LargoRecorrido(r)+1),ciudadNuevoDestino);
 
-                            InsBackRecorrido(r,p);
-                            l.recorrido = r;///????????????????????????????????????????
-                            ModifyLinea(lineasEmpresa,l);
+                                    InsBackRecorrido(r,p);
+                                    l.recorrido = r;///????????????????????????????????????????
+                                    ModifyLinea(lineasEmpresa,l);
+                                }
+                                else
+                                    printf("\nNo se puede agregar la parada, ya que no se ha defindo un tramo entre estas ciudades");
+                            }
+                            else
+                            {
+                                Ciudad ciudadParada = FindCiudad(ciudades,ciudAux);
+                                Parada p;
+                                CargarParada(p,(LargoRecorrido(r)+1),ciudadParada);
 
-                            printf("\ndespues cargar largo:%d",LargoRecorrido(r));
+                                InsBackRecorrido(r,p);
+                                l.recorrido = r;///????????????????????????????????????????
+                                ModifyLinea(lineasEmpresa,l);
+                            }
                         }
                         else
                             printf("\n No existe ciudad con ese nombre en el sistema");
