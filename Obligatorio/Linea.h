@@ -18,7 +18,7 @@ void CargarLinea(Linea &l);
 //6. Dado el código que identifica a una línea, agregar una nueva parada a su recorrido. Se
 //   debe chequear que efectivamente exista un tramo entre la nueva parada y la última parada
 //   registrada hasta el momento en la línea.
-void AgregarParadaARecorridoDeLinea(Linea &l, int numeroCiudad1, int numeroCiudad2);
+void AgregarParadaARecorridoDeLinea(Linea &l, Parada p);
 
 //7. Dado el código que identifica a una línea, listar todas las paradas (número de parada y
 //   nombre de ciudad) de su recorrido.

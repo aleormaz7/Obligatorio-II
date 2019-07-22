@@ -36,8 +36,8 @@ Ciudad ObtenerEnLista(ListaCiudades L, String nombreCiudad);/*clave=numero sorte
 
 void MostrarLista(ListaCiudades L);
 
-///
-void MostrarHash(Ciudades C);
+///solo prueba
+//void MostrarHash(Ciudades C);
 
 
 #endif // CIUDADES_H_INCLUDED

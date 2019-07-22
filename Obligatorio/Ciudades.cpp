@@ -102,13 +102,13 @@ void MostrarLista(ListaCiudades L)
 }
 
 ///solo prueba
-void MostrarHash(Ciudades C)
+/*void MostrarHash(Ciudades C)
 {
     for(int i = 0; i < B; i++)
     {
         printf("\ni: %d",i);
         MostrarLista(C[i]);
     }
-}
+}*/
 
 

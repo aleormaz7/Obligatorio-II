@@ -12,7 +12,7 @@ void InsBackRecorrido(Recorrido &r, Parada p)
     NodoRecorrido * nuevo = new NodoRecorrido;
     nuevo->parada = p;
     nuevo->sig = NULL;
-    if (r.ult == NULL)
+    if(r.ult == NULL)
     {
         r.ult = nuevo;
         r.prim = nuevo;
@@ -29,15 +29,8 @@ boolean RecorridoVacio(Recorrido &r)
     return (boolean) (r.prim == NULL);
 }
 
-int LargoRecorrido(Recorrido r)///VER ESTO ????????????????????
+int LargoRecorrido(Recorrido r)
 {
-    /*
-    if(r.prim == NULL)
-        return 0;
-    else
-       return 1 + LargoRecorrido(r.prim->sig);
-       ///VER ESTO ????????????????????
-       */
     int Largo = 0;
     while(r.prim != NULL)
     {
@@ -51,16 +44,11 @@ void MostrarRecorrido(Recorrido r)
 {
     while(r.prim != NULL)
     {
-        MostrarParada(r.prim->parada);
+        MostrarParadaAlternativo(r.prim->parada);
         r.prim = r.prim->sig;
     }
 }
 
-/*void CargarRecorrido(Recorrido &r)
-{
-
-
-}*/
 
 void MostrarOrigen(Recorrido r)
 {

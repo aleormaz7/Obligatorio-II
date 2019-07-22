@@ -42,9 +42,14 @@ void CargarLinea(Linea &l)
 //7.
 void ListarParadasDeRecorridoEnLinea(Linea l)
 {
-    printf("\nLinea: ");
+    printf("\nLinea ");
     print(l.numeroLinea);
-    printf(", ");
+    printf(":");
     MostrarRecorrido(l.recorrido);
+}
+
+void AgregarParadaARecorridoDeLinea(Linea &l, Parada p)
+{
+    InsBackRecorrido(l.recorrido,p);
 }
 

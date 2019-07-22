@@ -37,8 +37,6 @@ void InsertLinea(Lineas &lineas, Linea l) /*Precondición: que no exista previame
     String codLineaABB,codLineaInserta;
     strcrear(codLineaABB);///preguntar si es necesario
     strcrear(codLineaInserta);
-printf("\n Linea a agregar: " );
-print(l.numeroLinea);
 
     if(lineas == NULL)
     {
@@ -46,27 +44,19 @@ print(l.numeroLinea);
         lineas->linea = l;
         lineas->hIzq = NULL;
         lineas->hDer = NULL;
-        printf("\nLinea Agregada");
-        print(lineas->linea.numeroLinea);
+
     }
     else
     {
-printf("\n Linea en la que estoy parado: " );
-print(lineas->linea.numeroLinea);
 
         DarCodigoLinea(lineas->linea,codLineaABB);
         DarCodigoLinea(l,codLineaInserta);
 
         if(strmen(codLineaInserta,codLineaABB))
-        {
-            printf("\n a la izq");
             InsertLinea(lineas->hIzq,l);
-        }
         else
-        {
-            printf("\n a la der");
             InsertLinea(lineas->hDer,l);
-        }
+
     }
 }
 

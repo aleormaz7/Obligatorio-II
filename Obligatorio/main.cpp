@@ -1,12 +1,11 @@
 #include "Menu.h"
-#include "Grafo.h" ///este include va en el menu o aca????
+#include "Grafo.h"
 #include "Ciudades.h"
 #include "Ciudad.h"
 #include "Lineas.h"
 
 
-/*cantidad de cubetas la funcion de disperion te puede tirar mas*/
-
+///TODO:ver cantidad de ciudades a ingresar y cantidad de cubetas
 
 int main()
 {
@@ -45,10 +44,10 @@ int main()
     }while(i < CANT_CIUDADES);
 
     /* BORRAR */
-    printf("\n");
-    MostrarHash(ciudades);
-    printf("\n");
-    MostrarGrafo(G);
+    //printf("\n");
+    //MostrarHash(ciudades);
+    //printf("\n");
+    //MostrarGrafo(G);
     /* FIN BORRAR */
 
     int opc;
@@ -85,7 +84,7 @@ int main()
                             InsertarArista(G,DarCodigo(ciu1),DarCodigo(ciu2));
                         else
                             printf("\nYa existe un tramos entre estas ciudades.");
-                        MostrarGrafo(G);
+
                     }
                     else
                     {
@@ -138,7 +137,7 @@ int main()
             break;
         case 3:
             Linea linea;
-            CargarLinea(linea);///????????????????????????? explota aleatoriamente
+            CargarLinea(linea);
             String nomLineaInserta;
             strcrear(nomLineaInserta);
             DarCodigoLinea(linea,nomLineaInserta);
@@ -146,7 +145,7 @@ int main()
             {
                  if(!MemberLinea(lineasEmpresa,nomLineaInserta))
                 {
-                    InsertLinea(lineasEmpresa,linea);///???????????????
+                    InsertLinea(lineasEmpresa,linea);
                     ListarLineas(lineasEmpresa);
                 }
                 else
@@ -205,9 +204,7 @@ int main()
                                 {
                                     Parada p;
                                     CargarParada(p,(LargoRecorrido(r)+1),ciudadNuevoDestino);
-
-                                    InsBackRecorrido(r,p);
-                                    l.recorrido = r;///????????????????????????????????????????
+                                    AgregarParadaARecorridoDeLinea(l,p);
                                     ModifyLinea(lineasEmpresa,l);
                                 }
                                 else
@@ -218,9 +215,7 @@ int main()
                                 Ciudad ciudadParada = FindCiudad(ciudades,ciudAux);
                                 Parada p;
                                 CargarParada(p,(LargoRecorrido(r)+1),ciudadParada);
-
-                                InsBackRecorrido(r,p);
-                                l.recorrido = r;///????????????????????????????????????????
+                                AgregarParadaARecorridoDeLinea(l,p);
                                 ModifyLinea(lineasEmpresa,l);
                             }
                         }

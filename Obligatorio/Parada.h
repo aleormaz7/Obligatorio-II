@@ -16,5 +16,7 @@ void MostrarParada(Parada p);
 
 void CargarParada(Parada &p, int numParada, Ciudad ciudParada);
 
+void MostrarParadaAlternativo(Parada p);
+
 
 #endif // PARADA_H_INCLUDED

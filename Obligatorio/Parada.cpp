@@ -13,10 +13,19 @@ Ciudad DarCiudad(Parada p)
 
 void MostrarParada(Parada p)
 {
-    printf("\Parada: ");
+    printf(" Parada: ");
     printf("%d",p.numero);
     printf(" - ");
     MostrarCiudad(p.ciudad);
+}
+
+void MostrarParadaAlternativo(Parada p)
+{
+    printf(" Parada: ");
+    printf("%d",p.numero);
+    printf(" - ");
+    MostrarCiudad(p.ciudad);
+    printf(" || ");
 }
 
 void CargarParada(Parada &p, int numParada, Ciudad ciudParada)
