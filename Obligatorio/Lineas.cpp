@@ -109,3 +109,11 @@ void ListarLineas(Lineas l)
         ListarLineas(l->hDer);
     }
 }
+
+boolean lineasVacia(Lineas l)
+{
+    boolean resu = FALSE;
+    if (l == NULL)
+        resu = TRUE;
+    return resu;
+}

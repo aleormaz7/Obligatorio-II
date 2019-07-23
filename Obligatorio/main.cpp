@@ -18,14 +18,14 @@ int main()
     Ciudades ciudades;
     MakeCiudades(ciudades);
 
-    printf(" Registre las %d ciudades del sistema.\n",CANT_CIUDADES);
-    printf("\nCargar nombre de todas las ciudades: \n");
+    printf(" Bienvenido, para comenzar debe registrar las %d ciudades del sistema.\n",CANT_CIUDADES);
 
     ///Se hace la iteracion con while para asegurarnos de no cargar ciudades repetidas
     int i = 0;
 
     do
     {
+        printf("\nCiudad numero %d",i + 1);
         Ciudad c;
         CargarCiudad(c,i);
         String nombCiudAux;
@@ -40,6 +40,7 @@ int main()
         {
             printf("\nYa se cargo una ciudad con el nombre: ");
             print(nombCiudAux);
+            printf("\n");
         }
     }while(i < CANT_CIUDADES);
 
@@ -58,7 +59,7 @@ int main()
         switch(opc)
         {
         case 1:
-            printf("\n.: Agregar nuevo Tramo \n");
+            printf("\n.: Agregar nuevo Tramo :.\n");
             String nom1,nom2;
             strcrear(nom1);
             strcrear(nom2);
@@ -74,28 +75,42 @@ int main()
                     printf("\nNo se puede agregar un tramo para la misma ciudad origen/destino.");
                 else
                 {
-                    if(Member(ciudades,nom2))//si existe los dos nombres ingresados
+                    if(Member(ciudades,nom2))///si existe los dos nombres ingresados
                     {
                         Ciudad ciu1,ciu2;
                         ciu1 = FindCiudad(ciudades,nom1);
                         ciu2 = FindCiudad(ciudades,nom2);
 
                         if(!ExisteTramo(G,DarCodigo(ciu1),DarCodigo(ciu2)))
+                        {
                             InsertarArista(G,DarCodigo(ciu1),DarCodigo(ciu2));
+                            printf("\nSe registro exitosamente el tramo entre ");
+                            print(nom1);
+                            printf(" y ");
+                            print(nom2);
+                        }
                         else
-                            printf("\nYa existe un tramos entre estas ciudades.");
-
+                        {
+                            printf("\n Error: ya existe un tramo entre ");
+                            print(nom1);
+                            printf(" y ");
+                            print(nom2);
+                        }
                     }
                     else
                     {
-                        printf("\n No existe una ciudad con ese nombre en la agencia.");
+                        printf("\n Error: en el sistema no existe la ciudad: ");
+                        print(nom2);
                     }
                 }
             }
             else
             {
-                printf("\n No existe una ciudad con ese nombre en la agencia.");
+                printf("\n Error: en el sistema no existe la ciudad: ");
+                print(nom1);
             }
+            strdestruir(nom1);
+            strdestruir(nom2);
             break;
         case 2:
             printf("\n Dados los nombres de dos ciudades, saber si existe alguna secuencia de tramos que las una. ");
@@ -110,7 +125,7 @@ int main()
                 scan(nom2);
                 StringAMayusculas(nom2);
                 if(streq(nom1,nom2))
-                   printf("\nSe ingreso la misma ciudad para origen/destino.");
+                   printf("\nError: ee ingreso la misma ciudad para origen/destino.");
                 else
                 {
                     if(Member(ciudades,nom2))//si existe los dos nombres ingresados
@@ -121,19 +136,33 @@ int main()
 
                         if(ExisteSecuenciaDeTramoEntreDosCiudades(G,DarCodigo(ciu1),DarCodigo(ciu2)))
                         {
-                            printf("\nExiste tramo");
+                            printf("\nExiste una secuencia de tramos entre la ciudad ");
+                            print(nom1);
+                            printf(" y la ciudad ");
+                            print(nom2);
                         }
                         else
                         {
-                            printf("\nNo existe tramo");
+                            printf("\nLamentablemente no existe una secuencia de tramos entre la ciudad ");
+                            print(nom1);
+                            printf(" y la ciudad ");
+                            print(nom2);
                         }
                     }
                     else
-                        printf("\n No existe ciudad con ese nombre en el sistema");
+                    {
+                        printf("\n Error: en el sistema no existe la ciudad: ");
+                        print(nom2);
+                    }
                 }
             }
             else
-                printf("\n No existe ciudad con ese nombre en el sistema");
+            {
+                printf("\n Error: en el sistema no existe la ciudad: ");
+                print(nom1);
+            }
+            strdestruir(nom1);
+            strdestruir(nom2);
             break;
         case 3:
             Linea linea;
@@ -146,17 +175,29 @@ int main()
                  if(!MemberLinea(lineasEmpresa,nomLineaInserta))
                 {
                     InsertLinea(lineasEmpresa,linea);
-                    ListarLineas(lineasEmpresa);
+                    printf("\nLa linea ");
+                    print(nomLineaInserta);
+                    printf(" se registro exitosamente");
                 }
                 else
-                    printf("\nYa existe una linea con ese codigo");
+                {
+                    printf("\nError: ya existe el registro de una linea con el codigo ");
+                    print(nomLineaInserta);
+                }
             }
             else
-                printf("\nEl numero de linea no puede ser vacio.");
-
+                printf("\nError: el numero de linea no puede ser vacio.");
+            strdestruir(nomLineaInserta);
             break;
         case 4:
-            ListarLineas(lineasEmpresa);
+            if(!lineasVacia(lineasEmpresa))
+            {
+                printf("\n .: Listado de lineas registradas en el sistema :.");
+                ListarLineas(lineasEmpresa);
+            }
+            else
+                printf("\n .: Aun no se han registrado lineas en el sistema :.");
+
             break;
         case 5:
                 String nombLinea;
@@ -179,14 +220,13 @@ int main()
                     else
                     {
                         if(!ExiteAlMenosUnTramo(G))
-                            printf("\nNo es posible agregar paradas, ya que esta linea tiene asignado un origen y aun no se han registrados tramos entre ciudades.");
+                            printf("\nError: no es posible agregar paradas, ya que esta linea tiene asignado un origen y en el sistema aun no se han registrados tramos entre ciudades.");
                         else
                         {
-                            printf("\nIndique parada en el recorrido: ");
+                            printf("\nIndique parada(ciudad) en el recorrido: ");
                             SePuedeIngresarRecorrido = TRUE;
                         }
                     }
-
                     if(SePuedeIngresarRecorrido)
                     {
                         String ciudAux;
@@ -206,9 +246,19 @@ int main()
                                     CargarParada(p,(LargoRecorrido(r)+1),ciudadNuevoDestino);
                                     AgregarParadaARecorridoDeLinea(l,p);
                                     ModifyLinea(lineasEmpresa,l);
+                                    printf("\nSe agrego exitosamente la parada al recorrido.");
                                 }
                                 else
-                                    printf("\nNo se puede agregar la parada, ya que no se ha defindo un tramo entre estas ciudades");
+                                {
+                                    printf("\nError: no se puede agregar la parada, ya que no se ha defindo un tramo entre ");
+                                    String nomCiudaDestino;
+                                    strcrear(nomCiudaDestino);
+                                    DarNombre(ciudaDestinoActual,nomCiudaDestino);
+                                    print(nomCiudaDestino);
+                                    printf(" y ");
+                                    print(ciudAux);
+                                    strdestruir(nomCiudaDestino);
+                                }
                             }
                             else
                             {
@@ -220,12 +270,20 @@ int main()
                             }
                         }
                         else
-                            printf("\n No existe ciudad con ese nombre en el sistema");
+                        {
+                            printf("\n Error: en el sistema no existe la ciudad: ");
+                            print(ciudAux);
+                        }
+                        strdestruir(ciudAux);
                     }
                 }
                 else
-                    printf("\nNo existe Linea con ese nombre.");
+                {
+                    printf("\nError: en el sistema no existe la linea:");
+                    print(nombLinea);
+                }
 
+                strdestruir(nombLinea);
             break;
         case 6:
                 strcrear(nombLinea);
@@ -238,7 +296,11 @@ int main()
                     ListarParadasDeRecorridoEnLinea(l);
                 }
                 else
-                    printf("\nNo existe Linea con ese nombre.");
+                {
+                    printf("\nError: no el sistema no existe la linea: ");
+                    print(nombLinea);
+                }
+                strdestruir(nombLinea);
             break;
         default:
             printf("\nOpcion invalida.\n");
