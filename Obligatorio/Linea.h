@@ -7,21 +7,25 @@ typedef struct { String numeroLinea;
                  Recorrido recorrido;
                 } Linea;
 
+/// Retorna un String con el codigo de la linea
 void DarCodigoLinea(Linea l,String &nomLinea);
 
+///Retorna el recorrido de la linea
 Recorrido DarRecorrido(Linea l);
 
+///Muestra en pantalla la informacion corresponiente a la linea
 void MostrarLinea(Linea l);
 
+/// Solicita y cargar la informacion necesaria de una linea
 void CargarLinea(Linea &l);
 
-//6. Dado el código que identifica a una línea, agregar una nueva parada a su recorrido. Se
-//   debe chequear que efectivamente exista un tramo entre la nueva parada y la última parada
-//   registrada hasta el momento en la línea.
-void AgregarParadaARecorridoDeLinea(Linea &l, Parada p);
 
-//7. Dado el código que identifica a una línea, listar todas las paradas (número de parada y
-//   nombre de ciudad) de su recorrido.
+/// Agrega la parada al recorrido de linea
+void AgregarParadaARecorridoDeLinea(Linea &l, Parada p);
+///Precondicion: Si recorrido !RecorridoVacio exitetramo(DestinoRecorido,nuevaParada)
+
+
+/// Lista la informacion de todas las paradas del recorrido(número de parada y nombre de ciudad)
 void ListarParadasDeRecorridoEnLinea(Linea l);
 
 

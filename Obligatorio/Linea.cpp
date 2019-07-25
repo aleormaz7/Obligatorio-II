@@ -14,7 +14,7 @@ Recorrido DarRecorrido(Linea l)
 void MostrarLinea(Linea l)
 {
     printf("\nLinea: ");
-    MostrarString(l.numeroLinea);
+    print(l.numeroLinea);
     printf(" || Origen: ");
     MostrarOrigen(l.recorrido);
     printf(" || Destino: ");

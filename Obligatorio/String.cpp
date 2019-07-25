@@ -1,8 +1,8 @@
 #include "String.h"
-void MostrarString(String s)
+void print(String s)
 {
     int i = 0;
-    while(s[i] !='\0')
+    while(s[i] != '\0')
     {
         printf("%c",s[i]);
         i++;
@@ -66,15 +66,6 @@ void scan(String &s)
     strdestruir(aux);
 }
 
-void print(String s)
-{
-    int i = 0;
-    while(s[i] != '\0')
-    {
-        printf("%c",s[i]);
-        i++;
-    }
-}
 
 boolean strmen(String s1, String s2)
 {

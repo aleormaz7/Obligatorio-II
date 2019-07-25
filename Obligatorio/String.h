@@ -7,37 +7,37 @@ const int MAX = 80;
 
 typedef char * String;
 
-void MostrarString(String s);//muestra un string
-
-///a) strcrear crea un string vacío (solo con el carácter ‘\0’)
+///crea un string vacío (solo con el carácter ‘\0’)
 void strcrear(String &s);
 
-///b) strdestruir libera la memoria ocupada por el string y lo deja nulo.
+///   Libera la memoria ocupada por el string y lo deja nulo.
 void strdestruir(String &s);
 
-///c) strlar devuelve el largo de un string. Se entiende por largo, la cantidad de caracteres antes del carácter nulo.
+///  Strlar devuelve el largo de un string. Se entiende por largo, la cantidad de caracteres antes del carácter nulo.
 int strlar(String s);
 
-///d) strcop recibe dos strings y copia el segundo en el primero.
+///  Recibe dos strings y copia el segundo en el primero.
 void strcop(String &s1, String s2);
 
-///e) scan lee un string desde el teclado. Se tomarán en cuenta los primeros 79 caracteres
+///   Lee un string desde el teclado. Tomando en cuenta los primeros 79 caracteres
 ///   significativos en caso de que el largo del string sea mayor o igual a 80. Un string
 ///   finaliza cuando se lea un carácter ‘nueva línea’ el cual se sustituirá por uno nulo.
 void scan(String &s);
 
-///h) print despliega un string por pantalla.
+///  Despliega un string por pantalla.
 void print(String s);
 
-///i) strmen recibe dos strings y devuelve TRUE si el primero de ellos es menor (en orden
+///   Recibe dos strings y devuelve TRUE si el primero de ellos es menor (en orden
 ///   alfabético) que el segundo, o FALSE en caso contrario.
 boolean strmen(String s1, String s2);
 
-///j) streq reciba dos strings y devuelve TRUE si ambos strings son iguales o FALSE en caso contrario.
+///   Recibe dos strings y devuelve TRUE si ambos strings son iguales o FALSE en caso contrario.
 boolean streq(String s1, String s2);
 
+/// Retorna el resultado de sumar los valores de los caracteres
 int SumaAscii(String nombreCiudad);
 
+/// Pasa el String a mayusculas
 void StringAMayusculas(String &s);
 
 #endif // STRING_H_INCLUDED

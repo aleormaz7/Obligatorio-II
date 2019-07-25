@@ -19,5 +19,3 @@ void MostrarBoolean(boolean b)
     else
         printf("TRUE");
 }
-
-
