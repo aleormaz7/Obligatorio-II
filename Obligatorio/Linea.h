@@ -19,14 +19,11 @@ void MostrarLinea(Linea l);
 /// Solicita y cargar la informacion necesaria de una linea
 void CargarLinea(Linea &l);
 
-
 /// Agrega la parada al recorrido de linea
 void AgregarParadaARecorridoDeLinea(Linea &l, Parada p);
 ///Precondicion: Si recorrido !RecorridoVacio exitetramo(DestinoRecorido,nuevaParada)
 
-
 /// Lista la informacion de todas las paradas del recorrido(número de parada y nombre de ciudad)
 void ListarParadasDeRecorridoEnLinea(Linea l);
-
 
 #endif // LINEA_H_INCLUDED

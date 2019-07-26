@@ -39,7 +39,6 @@ void CargarLinea(Linea &l)
     strdestruir(auxNumLinea);
 }
 
-//7.
 void ListarParadasDeRecorridoEnLinea(Linea l)
 {
     printf("\nLinea ");
