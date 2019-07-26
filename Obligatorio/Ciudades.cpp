@@ -1,42 +1,6 @@
 #include "Ciudades.h"
 
-int Dispersion(String nombreCiudad)
-{
-    return (SumaAscii(nombreCiudad) % B);
-}
-
-void MakeCiudades(Ciudades &C)
-{
-    for(int i = 0; i < B; i++)
-        CrearLista(C[i]);
-}
-
-boolean Member(Ciudades C, String nombreCiudad)
-{
-    int cubeta = Dispersion(nombreCiudad);
-    return PerteneceLista(C[cubeta],nombreCiudad);
-}
-
-void Insert(Ciudades &C, Ciudad ciu)
-{
-    String auxNom;
-    strcrear(auxNom);
-    DarNombre(ciu,auxNom);
-    int cubeta = Dispersion(auxNom);
-    Insfront(C[cubeta],ciu);
-}
-
-Ciudad FindCiudad(Ciudades C, String nomCiudad)
-{
-    int cubeta = Dispersion(nomCiudad);
-
-    return ObtenerEnLista(C[cubeta],nomCiudad);
-}
-
-
-
-///-------------------------------------------------------------/
-///Auxiliares lista
+/* Funciones solo del Modulo Ciudades */
 
 void CrearLista(ListaCiudades &L)
 {
@@ -101,14 +65,36 @@ void MostrarLista(ListaCiudades L)
     }
 }
 
-///solo prueba
-/*void MostrarHash(Ciudades C)
+int Dispersion(String nombreCiudad)
+{
+    return (SumaAscii(nombreCiudad) % B);
+}
+/* FIN: Funciones solo del Modulo Ciudades */
+
+void MakeCiudades(Ciudades &C)
 {
     for(int i = 0; i < B; i++)
-    {
-        printf("\ni: %d",i);
-        MostrarLista(C[i]);
-    }
-}*/
+        CrearLista(C[i]);
+}
 
+boolean Member(Ciudades C, String nombreCiudad)
+{
+    int cubeta = Dispersion(nombreCiudad);
+    return PerteneceLista(C[cubeta],nombreCiudad);
+}
 
+void Insert(Ciudades &C, Ciudad ciu)
+{
+    String auxNom;
+    strcrear(auxNom);
+    DarNombre(ciu,auxNom);
+    int cubeta = Dispersion(auxNom);
+    Insfront(C[cubeta],ciu);
+}
+
+Ciudad FindCiudad(Ciudades C, String nomCiudad)
+{
+    int cubeta = Dispersion(nomCiudad);
+
+    return ObtenerEnLista(C[cubeta],nomCiudad);
+}

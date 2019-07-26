@@ -6,30 +6,27 @@
 
 const int CANT_CIUDADES = 4;/*cantidad ciudades*/
 
-typedef int Grafo[CANT_CIUDADES][CANT_CIUDADES];/* Statico */
+typedef int Grafo[CANT_CIUDADES][CANT_CIUDADES];
 
 
-void CrearGrafo(Grafo &G);///Crear Grafo(Matriz) vacio
+///Crea el Grafo(Matriz) vacio
+void CrearGrafo(Grafo &G);
 
-///2. Dados los nombres de dos ciudades, agregar un nuevo tramo entre ellas. Dicho tramo
-///   podrá luego ser incluido en alguna de las líneas que la empresa posee.
-boolean ExisteTramo(Grafo G, int codigoCiudad1, int codigoCiudad2);///ExisteTramo()
+///Retorna si existe la arista, en este contexto retorna si existe un tramo entre las ciudades
+boolean ExisteTramo(Grafo G, int codigoCiudad1, int codigoCiudad2);
 
-///(InsertarTramo) = Inserta la nueva arista al grafo.//Precondición: la arista no pertenece al grafo.
+///(InsertarTramo) = Inserta la nueva arista al grafo. En este contexto se inserta un nuevo tramo entre dos ciudades.
 void InsertarArista(Grafo &G, int codigoCiuadad1, int codigoCiuadad2);
+///Precondición: la arista no pertenece al grafo. -> !ExisteTramo
 
-///3. Dados los nombres de dos ciudades, saber si existe alguna secuencia de tramos que las
-///   una. Esta operación le servirá a la directiva de la empresa a la hora de idear recorridos para nuevas líneas.
+/// Retorna si existe alguna secuencia de tramos entre dos ciudades; si existe un camino entre dos vertices
 boolean ExisteSecuenciaDeTramoEntreDosCiudades(Grafo G, int codigoCiudad, int codigoCiudad2);
 
+/// Ejecuta DFS para saber si existe un camino entre dos vertices(ciudades)
 void DFS(Grafo G, int verticeActual, int destino, boolean visitado[CANT_CIUDADES]);
 
-
-///---------------------------------**
-///solo para pruebas despues se borran
-void MostrarGrafo(Grafo G);
-
+/// Retorna TRUE si existe al menos una atista en el grafo.
+/// en este contexto quiere decir que existe al menos un tramo definido
 boolean ExiteAlMenosUnTramo(Grafo g);
 
-///---------------------------------**
 #endif // GRAFO_H_INCLUDED

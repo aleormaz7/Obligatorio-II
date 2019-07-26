@@ -36,24 +36,6 @@ boolean ExisteSecuenciaDeTramoEntreDosCiudades(Grafo G, int codigoCiudad, int co
     return visitado[codigoCiudad2];
 }
 
-/*
-void DFS(Grafo G, int verticeActual, boolean visitado[CANT_CIUDADES])
-{
-    //boolean encontre = FALSE;
-    visitado[verticeActual] = TRUE;
-    //int i = 0;
-    //while(i < CANT_CIUDADES && !encontre)
-    for(int j = 0; j < CANT_CIUDADES; j++)
-    {
-        if (G[verticeActual][j] == 1)
-        {
-            if (!visitado[j])
-                DFS(G,j,visitado);
-        }
-    }
-}
-*/
-
 void DFS(Grafo G, int verticeActual, int destino, boolean visitado[CANT_CIUDADES])
 {
     visitado[verticeActual] = TRUE;
@@ -68,7 +50,6 @@ void DFS(Grafo G, int verticeActual, int destino, boolean visitado[CANT_CIUDADES
         i++;
     }
 }
-
 
 boolean ExiteAlMenosUnTramo(Grafo g)
 {
@@ -88,20 +69,3 @@ boolean ExiteAlMenosUnTramo(Grafo g)
     }
     return hay;
 }
-
-///---------------------------------**
-///solo para pruebas despues se borran
-void MostrarGrafo(Grafo G)
-{
-     for(int i = 0; i < CANT_CIUDADES; i++)
-     {
-        for(int j = 0; j < CANT_CIUDADES; j++)
-        {
-            printf("|%d",G[i][j]);
-        }
-        printf("\n");
-     }
-}
-///---------------------------------**
-
-
