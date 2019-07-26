@@ -1,12 +1,11 @@
 #include "Lineas.h"
 
-
 void MakeLineas(Lineas &l)
 {
     l = NULL;
 }
 
-boolean MemberLinea(Lineas l,String codigoLinea) //Determina si en el diccionario existe un elemento con la clave especificada
+boolean MemberLinea(Lineas l,String codigoLinea)
 {
     if(l == NULL)
     {
@@ -31,11 +30,10 @@ boolean MemberLinea(Lineas l,String codigoLinea) //Determina si en el diccionari
     }
 }
 
-
-void InsertLinea(Lineas &lineas, Linea l) /*Precondición: que no exista previamente codigoalfanumerico*/
+void InsertLinea(Lineas &lineas, Linea l)
 {
     String codLineaABB,codLineaInserta;
-    strcrear(codLineaABB);///preguntar si es necesario
+    strcrear(codLineaABB);
     strcrear(codLineaInserta);
 
     if(lineas == NULL)
@@ -44,11 +42,9 @@ void InsertLinea(Lineas &lineas, Linea l) /*Precondición: que no exista previame
         lineas->linea = l;
         lineas->hIzq = NULL;
         lineas->hDer = NULL;
-
     }
     else
     {
-
         DarCodigoLinea(lineas->linea,codLineaABB);
         DarCodigoLinea(l,codLineaInserta);
 
@@ -56,11 +52,10 @@ void InsertLinea(Lineas &lineas, Linea l) /*Precondición: que no exista previame
             InsertLinea(lineas->hIzq,l);
         else
             InsertLinea(lineas->hDer,l);
-
     }
 }
 
-Linea FindLinea(Lineas l, String codigoLinea) //Precondición: el elemento es miembro del diccionario.
+Linea FindLinea(Lineas l, String codigoLinea)
 {
     String cod;
     strcrear(cod);
@@ -98,8 +93,6 @@ void ModifyLinea(Lineas &l,Linea linea)
     }
 }
 
-///5. Listar los datos básicos de todas las líneas de la empresa (código, origen, destino y
-///    cantidad de paradas), ordenados por código alfanumérico de menor a mayor.
 void ListarLineas(Lineas l)
 {
     if(l != NULL)

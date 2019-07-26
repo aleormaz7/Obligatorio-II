@@ -1,6 +1,4 @@
 #include "Recorrido.h"
-
-
 void CrearRecorrido(Recorrido &r)
 {
     r.prim = NULL;
@@ -48,7 +46,6 @@ void MostrarRecorrido(Recorrido r)
         r.prim = r.prim->sig;
     }
 }
-
 
 void MostrarOrigen(Recorrido r)
 {

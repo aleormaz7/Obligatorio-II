@@ -32,7 +32,6 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
-		<Unit filename="Boolean.cpp" />
 		<Unit filename="Boolean.h" />
 		<Unit filename="Ciudad.cpp" />
 		<Unit filename="Ciudad.h" />
@@ -48,8 +47,6 @@
 		<Unit filename="Menu.h" />
 		<Unit filename="Parada.cpp" />
 		<Unit filename="Parada.h" />
-		<Unit filename="Pruebas.cpp" />
-		<Unit filename="Pruebas.h" />
 		<Unit filename="Recorrido.cpp" />
 		<Unit filename="Recorrido.h" />
 		<Unit filename="String.cpp" />

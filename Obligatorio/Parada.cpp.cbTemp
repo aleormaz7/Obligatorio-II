@@ -1,5 +1,6 @@
 #include "Parada.h"
 
+
 int DarNumero(Parada p)
 {
     return p.numero;
