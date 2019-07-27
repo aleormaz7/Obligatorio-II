@@ -2,7 +2,7 @@
 #define GRAFO_H_INCLUDED
 
 
-#include "String.h"
+#include "Boolean.h"
 
 const int CANT_CIUDADES = 4;/*cantidad ciudades*/
 
