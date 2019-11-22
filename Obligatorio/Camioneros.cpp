@@ -40,6 +40,7 @@ Camioneros :: ~Camioneros()
 
 /*void listarCamioneroMaxTatuajes(Camionero*,&error)
 {
+
 }*/
 
 

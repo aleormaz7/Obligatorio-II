@@ -32,6 +32,14 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="Camion.cpp" />
+		<Unit filename="Camion.h" />
+		<Unit filename="CamionConRemolque.cpp" />
+		<Unit filename="CamionConRemolque.h" />
+		<Unit filename="CamionGrande.cpp" />
+		<Unit filename="CamionGrande.h" />
+		<Unit filename="CamionSimple.cpp" />
+		<Unit filename="CamionSimple.h" />
 		<Unit filename="Camionero.cpp" />
 		<Unit filename="Camionero.h" />
 		<Unit filename="Camioneros.cpp" />

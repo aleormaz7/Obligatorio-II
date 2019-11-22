@@ -29,27 +29,26 @@
 1574340832 source:c:\users\ale\desktop\mi obligatorio\camionero.cpp
 	"Camionero.h"
 
-1574453908 c:\users\ale\desktop\mi obligatorio\camionero.h
-	"String.h"
+1574457186 c:\users\ale\desktop\mi obligatorio\camionero.h
 	"Fecha.h"
 	"Objeto.h"
 
-1574449893 source:c:\users\ale\desktop\mi obligatorio\pruebas.cpp
+1574454251 source:c:\users\ale\desktop\mi obligatorio\pruebas.cpp
 	"Pruebas.h"
 
-1574453718 c:\users\ale\desktop\mi obligatorio\pruebas.h
+1574454258 c:\users\ale\desktop\mi obligatorio\pruebas.h
 	"Camioneros.h"
 	<limits>
 
-1574451658 source:c:\users\ale\desktop\mi obligatorio\camioneros.cpp
+1574455032 source:c:\users\ale\desktop\mi obligatorio\camioneros.cpp
 	"Camioneros.h"
 
 1574451716 c:\users\ale\desktop\mi obligatorio\camioneros.h
 	"Camionero.h"
 	"Iterador.h"
 
-1574340730 c:\users\ale\desktop\mi obligatorio\objeto.h
-	"String.h"
+1574461703 c:\users\ale\desktop\mi obligatorio\objeto.h
+	"Fecha.h"
 
 1574452365 source:c:\users\ale\desktop\mi obligatorio\iterador.cpp
 	"Iterador.h"
@@ -57,4 +56,29 @@
 1574450942 c:\users\ale\desktop\mi obligatorio\iterador.h
 	"Objeto.h"
 	"Iterador.h"
+
+1574457374 source:c:\users\ale\desktop\mi obligatorio\camion.cpp
+	"Camion.h"
+
+1574463206 c:\users\ale\desktop\mi obligatorio\camion.h
+	"Objeto.h"
+	"Camionero.h"
+
+1574462169 source:c:\users\ale\desktop\mi obligatorio\camionsimple.cpp
+	"CamionSimple.h"
+
+1574460691 c:\users\ale\desktop\mi obligatorio\camionsimple.h
+	"Camion.h"
+
+1574462206 source:c:\users\ale\desktop\mi obligatorio\camiongrande.cpp
+	"CamionGrande.h"
+
+1574461663 c:\users\ale\desktop\mi obligatorio\camiongrande.h
+	"Camion.h"
+
+1574462826 source:c:\users\ale\desktop\mi obligatorio\camionconremolque.cpp
+	"CamionConRemolque.h"
+
+1574462868 c:\users\ale\desktop\mi obligatorio\camionconremolque.h
+	"Camion.h"
 

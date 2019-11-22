@@ -2,10 +2,7 @@
 #define CAMIONERO_H_INCLUDED
 
 
-
-#include "String.h"
 #include "Fecha.h"
-
 #include "Objeto.h"
 
 class Camionero : public Objeto

@@ -1,8 +1,7 @@
 #ifndef OBJETO_H_INCLUDED
 #define OBJETO_H_INCLUDED
 
-#include "String.h"
-
+#include "Fecha.h"
 
 class Objeto
 {
