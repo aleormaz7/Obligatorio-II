@@ -314,3 +314,8 @@ void Fecha :: RestarUnDia()
     }
 }
 
+void Fecha :: MostrarFecha()
+{
+    cout << dia << "/" << mes << "/" <<  anio;
+}
+

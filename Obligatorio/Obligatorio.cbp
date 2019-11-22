@@ -32,8 +32,17 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="Camionero.cpp" />
+		<Unit filename="Camionero.h" />
+		<Unit filename="Camioneros.cpp" />
+		<Unit filename="Camioneros.h" />
 		<Unit filename="Fecha.cpp" />
 		<Unit filename="Fecha.h" />
+		<Unit filename="Iterador.cpp" />
+		<Unit filename="Iterador.h" />
+		<Unit filename="Objeto.h" />
+		<Unit filename="Pruebas.cpp" />
+		<Unit filename="Pruebas.h" />
 		<Unit filename="String.cpp" />
 		<Unit filename="String.h" />
 		<Unit filename="main.cpp" />

@@ -3,6 +3,7 @@
 
 
 #include <stdio.h>
+#include "String.h"
 
 class Fecha
 {
@@ -45,6 +46,8 @@ class Fecha
         void SumarUnDia();
 
         void RestarUnDia();
+
+        void MostrarFecha();
 
 
 };

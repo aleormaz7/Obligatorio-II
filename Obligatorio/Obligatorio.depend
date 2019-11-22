@@ -8,3 +8,53 @@
 	<string.h>
 	<iostream>
 
+1574335234 source:c:\users\ale\desktop\mi obligatorio\fecha.cpp
+	"Fecha.h"
+
+1574335144 c:\users\ale\desktop\mi obligatorio\fecha.h
+	<stdio.h>
+	"String.h"
+
+1574176984 source:c:\users\ale\desktop\mi obligatorio\string.cpp
+	"String.h"
+
+1574176931 c:\users\ale\desktop\mi obligatorio\string.h
+	<string.h>
+	<iostream>
+
+1574336057 source:c:\users\ale\desktop\mi obligatorio\main.cpp
+	"Pruebas.h"
+	"String.h"
+
+1574340832 source:c:\users\ale\desktop\mi obligatorio\camionero.cpp
+	"Camionero.h"
+
+1574453908 c:\users\ale\desktop\mi obligatorio\camionero.h
+	"String.h"
+	"Fecha.h"
+	"Objeto.h"
+
+1574449893 source:c:\users\ale\desktop\mi obligatorio\pruebas.cpp
+	"Pruebas.h"
+
+1574453718 c:\users\ale\desktop\mi obligatorio\pruebas.h
+	"Camioneros.h"
+	<limits>
+
+1574451658 source:c:\users\ale\desktop\mi obligatorio\camioneros.cpp
+	"Camioneros.h"
+
+1574451716 c:\users\ale\desktop\mi obligatorio\camioneros.h
+	"Camionero.h"
+	"Iterador.h"
+
+1574340730 c:\users\ale\desktop\mi obligatorio\objeto.h
+	"String.h"
+
+1574452365 source:c:\users\ale\desktop\mi obligatorio\iterador.cpp
+	"Iterador.h"
+
+1574450942 c:\users\ale\desktop\mi obligatorio\iterador.h
+	"Objeto.h"
+	"Iterador.h"
+
