@@ -101,9 +101,16 @@ void CamionerosPruebas()
         cout << "\nTipo = ";
         String tipo = objAux->getTipo();
         tipo.print();
+
+        Camionero * aux = (Camionero*) objAux;///casteo
+        cout << "\nNom";
+        aux->getNombre().print();
         cout << "\n";
     }
     ///---------------------------------------------------------------
+
+
+
 
 }
 

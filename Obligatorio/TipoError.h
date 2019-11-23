@@ -1,0 +1,6 @@
+#ifndef TIPOERROR_H_INCLUDED
+#define TIPOERROR_H_INCLUDED
+
+typedef enum {SIN_ERROR,EXISTE_CAMIONERO} tipoError;
+
+#endif // TIPOERROR_H_INCLUDED

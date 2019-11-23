@@ -2,16 +2,16 @@
 #define CAMIONCONREMOLQUE_H_INCLUDED
 
 
-#include "Camion.h"
+#include "CamionGrande.h"
 
-class CamionConRemolque : public Camion
+class CamionConRemolque : public CamionGrande
 {
     private:
         int capRemolque;
 
     public:
         CamionConRemolque();
-        CamionConRemolque(String,String,int,int);
+        CamionConRemolque(String,String,int,Camionero*,float,Fecha,int);
         CamionConRemolque(const CamionConRemolque &);
         ~CamionConRemolque();
         int getCapRemolque();

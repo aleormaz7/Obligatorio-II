@@ -5,12 +5,12 @@ CamionSimple :: CamionSimple() : Camion(), depto()
 
 }
 
-CamionSimple :: CamionSimple(String mat,String mar,int cant,String dep) : Camion(mat,mar,cant), depto(dep)
+CamionSimple :: CamionSimple(String mat,String mar,int cant,String dep,Camionero * c) : Camion(mat,mar,cant,c), depto(dep)
 {
 
 }
 
-CamionSimple :: CamionSimple(const CamionSimple &c) : Camion(), depto(c.depto) /// ver cabezal Camion(parametros)??
+CamionSimple :: CamionSimple(const CamionSimple &c) : Camion(c), depto(c.depto)
 {
 
 }

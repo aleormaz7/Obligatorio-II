@@ -37,9 +37,16 @@ String String :: operator=(const String &otro)
     return (*this);
 }
 
+
+
 int String :: operator==(String aux)
 {
     return (strcmp(cadena,aux.cadena) == 0);
+}
+
+int String :: operator!=(String aux)
+{
+    return (strcmp(cadena,aux.cadena) != 0);
 }
 
 bool String :: operator<(String aux)
@@ -82,4 +89,16 @@ void String :: print()
         cout << cadena[i];
         i++;
     }
+}
+
+int String :: SumaAscii(String matricula)
+{
+    int i = 0;
+    int suma = 0;
+    while(matricula.cadena[i] != '\0')
+    {
+        suma = suma + matricula.cadena[i];
+        i++;
+    }
+    return suma;
 }

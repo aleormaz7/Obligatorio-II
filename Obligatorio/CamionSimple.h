@@ -11,7 +11,7 @@ class CamionSimple : public Camion
 
     public:
         CamionSimple();
-        CamionSimple(String,String,int,String);
+        CamionSimple(String,String,int,String,Camionero *);
         CamionSimple(const CamionSimple &);
         ~CamionSimple();
         String getDepto();

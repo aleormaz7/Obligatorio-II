@@ -44,6 +44,10 @@
 		<Unit filename="Camionero.h" />
 		<Unit filename="Camioneros.cpp" />
 		<Unit filename="Camioneros.h" />
+		<Unit filename="Camiones.cpp" />
+		<Unit filename="Camiones.h" />
+		<Unit filename="Fachada.cpp" />
+		<Unit filename="Fachada.h" />
 		<Unit filename="Fecha.cpp" />
 		<Unit filename="Fecha.h" />
 		<Unit filename="Iterador.cpp" />
@@ -53,6 +57,7 @@
 		<Unit filename="Pruebas.h" />
 		<Unit filename="String.cpp" />
 		<Unit filename="String.h" />
+		<Unit filename="TipoError.h" />
 		<Unit filename="main.cpp" />
 		<Extensions>
 			<code_completion />

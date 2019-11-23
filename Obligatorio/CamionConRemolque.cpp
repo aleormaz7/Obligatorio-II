@@ -1,18 +1,18 @@
 #include "CamionConRemolque.h"
 
-CamionConRemolque :: CamionConRemolque()
+CamionConRemolque :: CamionConRemolque() : CamionGrande()
 {
-
+    capRemolque = 0;
 }
 
-CamionConRemolque :: CamionConRemolque(String,String,int,int)
+CamionConRemolque :: CamionConRemolque(String mat,String mar,int cant,Camionero * c,float vol,Fecha f,int cap) : CamionGrande(mat,mar,cant,c,vol,f)
 {
-
+    capRemolque = cap;
 }
 
-CamionConRemolque :: CamionConRemolque(const CamionConRemolque &)
+CamionConRemolque :: CamionConRemolque(const CamionConRemolque &c) : CamionGrande(c)
 {
-
+    capRemolque = c.capRemolque;
 }
 
 CamionConRemolque :: ~CamionConRemolque()
@@ -27,7 +27,7 @@ int CamionConRemolque :: getCapRemolque()
 
 String CamionConRemolque :: getTipo()
 {
-    return "CAMION CON REMOLQUE";
+    return "CAMION_CON_REMOLQUE";
 }
 
 float CamionConRemolque :: calcularMetrosCubicosAnuales()

@@ -19,10 +19,12 @@ class String
         ~String(); /// Destructor
         String operator=(const String &);///Asignacion
         int operator==(String);///Iguales
+        int operator!=(String);///No Iguales
         bool operator<(String);///Menor
         String operator+(String);///Concatenar
         void scan();///Leer
         void print();///Mostrar
+        int SumaAscii(String matricula);
 };
 
 

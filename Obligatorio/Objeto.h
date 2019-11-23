@@ -5,6 +5,9 @@
 
 class Objeto
 {
+    ///Constructor objeto ??
+
+
     public:
         virtual String getTipo() = 0;
 

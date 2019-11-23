@@ -11,11 +11,11 @@ class Camion : public Objeto
         String matricula;
         String marca;
         int cantViajesAnuales;
-        Camionero camionero;
+        Camionero * camionero;
 
     public:
         Camion();
-        Camion(String,String,int);
+        Camion(String,String,int,Camionero *);
         Camion(const Camion &);
         ~Camion();
         String getMatricula();
