@@ -101,8 +101,8 @@ int main()
         cout << aux->getCedula();
         cout << " - Nombre ";
         aux->getNombre().print();
-        cout << " - Cantidad de Tatuajes ";
-        aux->getCantTatuajes();
+        cout << " - Cantidad de Tatuajes " << aux->getCantTatuajes();
+
         cout << " - Fecha Nacimineto ";
         aux->getFechaNacimiento().MostrarFecha();
         cout << "\n";
