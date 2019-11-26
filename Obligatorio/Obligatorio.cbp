@@ -52,6 +52,8 @@
 		<Unit filename="Fecha.h" />
 		<Unit filename="Iterador.cpp" />
 		<Unit filename="Iterador.h" />
+		<Unit filename="Menu.cpp" />
+		<Unit filename="Menu.h" />
 		<Unit filename="Objeto.h" />
 		<Unit filename="Pruebas.cpp" />
 		<Unit filename="Pruebas.h" />

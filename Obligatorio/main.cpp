@@ -1,10 +1,15 @@
 #include "Pruebas.h"
-#include "String.h"
+#include "Menu.h"
 
 #include "Fachada.h"
 
 int main()
 {
+
+
+    int opc;
+    mostrarMenu(opc);
+
     //CamioneroPruebas();
 
     //CamionerosPruebas();

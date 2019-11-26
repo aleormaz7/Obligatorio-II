@@ -124,7 +124,7 @@
 	"Fecha.h"
 	"Objeto.h"
 
-1574780122 source:c:\users\german ana\documents\drive\ude\programacion iv\obligatorio\p4-obligatorio\obligatorio\camionconremolque.cpp
+1574783585 source:c:\users\german ana\documents\drive\ude\programacion iv\obligatorio\p4-obligatorio\obligatorio\camionconremolque.cpp
 	"CamionConRemolque.h"
 
 1574780122 c:\users\german ana\documents\drive\ude\programacion iv\obligatorio\p4-obligatorio\obligatorio\camionconremolque.h
@@ -156,10 +156,10 @@
 	"CamionGrande.h"
 	"CamionConRemolque.h"
 
-1574780122 source:c:\users\german ana\documents\drive\ude\programacion iv\obligatorio\p4-obligatorio\obligatorio\camiongrande.cpp
+1574783538 source:c:\users\german ana\documents\drive\ude\programacion iv\obligatorio\p4-obligatorio\obligatorio\camiongrande.cpp
 	"CamionGrande.h"
 
-1574520999 source:c:\users\german ana\documents\drive\ude\programacion iv\obligatorio\p4-obligatorio\obligatorio\camionsimple.cpp
+1574783587 source:c:\users\german ana\documents\drive\ude\programacion iv\obligatorio\p4-obligatorio\obligatorio\camionsimple.cpp
 	"CamionSimple.h"
 
 1574780122 c:\users\german ana\documents\drive\ude\programacion iv\obligatorio\p4-obligatorio\obligatorio\camionsimple.h
@@ -181,9 +181,9 @@
 1574511604 source:c:\users\german ana\documents\drive\ude\programacion iv\obligatorio\p4-obligatorio\obligatorio\iterador.cpp
 	"Iterador.h"
 
-1574780122 source:c:\users\german ana\documents\drive\ude\programacion iv\obligatorio\p4-obligatorio\obligatorio\main.cpp
+1574784645 source:c:\users\german ana\documents\drive\ude\programacion iv\obligatorio\p4-obligatorio\obligatorio\main.cpp
 	"Pruebas.h"
-	"String.h"
+	"Menu.h"
 	"Fachada.h"
 
 1574511604 c:\users\german ana\documents\drive\ude\programacion iv\obligatorio\p4-obligatorio\obligatorio\pruebas.h
@@ -279,4 +279,11 @@
 	"Pruebas.h"
 
 1574768216 c:\users\ale\desktop\p4-obligatorio\obligatorio\tipocamion.h
+
+1574784564 source:c:\users\german ana\documents\drive\ude\programacion iv\obligatorio\p4-obligatorio\obligatorio\menu.cpp
+	"Menu.h"
+	"String.h"
+
+1543882441 c:\users\german ana\documents\drive\ude\programacion iv\obligatorio\p4-obligatorio\obligatorio\menu.h
+	<stdio.h>
 
