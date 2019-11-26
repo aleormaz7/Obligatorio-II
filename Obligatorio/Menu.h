@@ -5,12 +5,7 @@
 
 void mostrarMenu(int &opcion);
 
-void mostrarSubMenuAltasyBajas(int &opcion);
+void mostrarSubMenuAltasyModificaciones(int &opcion);
 
-void mostrarSubMenuListados(int &opcion);
-
-void mostrarSubMenuConsultas(int &opcion);
-
-
-
+void mostrarSubMenuListadosConsultas(int &opcion);
 #endif // MENU_H_INCLUDED

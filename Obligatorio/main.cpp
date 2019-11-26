@@ -5,10 +5,71 @@
 
 int main()
 {
+    ///Menu
+    int opc,opcAltasModif;
+    do
+    {
+        mostrarMenu(opc);
+        if(opc == 1)
+        {
+            do
+            {
+                mostrarSubMenuAltasyModificaciones(opcAltasModif);
+                switch(opcAltasModif)
+                {
+                    case 1:
+                        break;
+                    case 2:
+                        break;
+                    case 3:
+                        break;
+                    case 4:
+                        break;
+                    default: printf("\nOpcion invalida.\n");
+                        break;
+                }
+            }while(opcAltasModif != 4);
+        }
+        else if(opc == 2)
+        {
+             do
+            {
+                mostrarSubMenuListadosConsultas(opc);
+                switch(opc)
+                {
+                    case 1:
+                        break;
+                    case 2:
+                        break;
+                    case 3:
+                        break;
+                    case 4:
+                        break;
+                    case 5:
+                        break;
+                    case 6:
+                        break;
+                    case 7:
+                        break;
+                    case 8:
+                        break;
+                    default: printf("\nOpcion invalida.\n");
+                        break;
+                }
+        }while(opc != 8);
+        }
+    }while(opc != 3);
 
 
-    int opc;
-    mostrarMenu(opc);
+
+
+
+
+
+
+
+
+
 
     //CamioneroPruebas();
 
