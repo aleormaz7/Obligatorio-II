@@ -11,7 +11,6 @@ void mostrarMenu(int &opcion)
     cout <<("3. Salir del programa \n");
     cout <<("Opcion: ");
     cin >> opcion;
-    //scanf("%d",&opcion);
 }
 
 void mostrarSubMenuAltasyModificaciones(int &opcion)
@@ -25,7 +24,6 @@ void mostrarSubMenuAltasyModificaciones(int &opcion)
     cout <<("4. Volver al menu principal \n");
     cout <<("Opcion: ");
     cin >> opcion;
-    //scanf("%d",&opcion);
 }
 
 
@@ -44,5 +42,4 @@ void mostrarSubMenuListadosConsultas(int &opcion)
     cout <<("8. Volver al menu principal \n");
     cout <<("Opcion: ");
     cin >> opcion;
-    //scanf("%d",&opcion);
 }

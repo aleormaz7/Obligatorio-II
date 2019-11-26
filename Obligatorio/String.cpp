@@ -70,7 +70,7 @@ void String :: scan()
 {
     int i = 0;
     char c;
-    cout << "\nIngrese una cadena de caracteres: " << endl;
+    //cout << "\nIngrese una cadena de caracteres: " << endl;
     c = cin.get();
     while((c != '\n') && (i < MAX - 1))
     {

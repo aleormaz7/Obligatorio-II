@@ -46,6 +46,8 @@
 		<Unit filename="Camioneros.h" />
 		<Unit filename="Camiones.cpp" />
 		<Unit filename="Camiones.h" />
+		<Unit filename="Controlador.cpp" />
+		<Unit filename="Controlador.h" />
 		<Unit filename="Fachada.cpp" />
 		<Unit filename="Fachada.h" />
 		<Unit filename="Fecha.cpp" />

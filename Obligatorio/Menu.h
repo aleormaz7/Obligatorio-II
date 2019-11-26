@@ -3,9 +3,8 @@
 
 #include <stdio.h>
 
-void mostrarMenu(int &opcion);
+    void mostrarMenu(int &opcion);
+    void mostrarSubMenuAltasyModificaciones(int &opcion);
+    void mostrarSubMenuListadosConsultas(int &opcion);
 
-void mostrarSubMenuAltasyModificaciones(int &opcion);
-
-void mostrarSubMenuListadosConsultas(int &opcion);
 #endif // MENU_H_INCLUDED
