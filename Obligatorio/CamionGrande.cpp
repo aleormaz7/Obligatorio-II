@@ -32,5 +32,5 @@ String CamionGrande :: getTipo()
 
 float CamionGrande :: calcularMetrosCubicosAnuales()
 {
-    //return cantViajesAnuales * volumen;;
+    return (getCantViajesAnuales() * volumen);
 }

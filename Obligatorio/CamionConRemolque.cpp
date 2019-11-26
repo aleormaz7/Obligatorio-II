@@ -32,7 +32,7 @@ String CamionConRemolque :: getTipo()
 
 float CamionConRemolque :: calcularMetrosCubicosAnuales()
 {
-    //float resu = CamionGrande :: calcularMetrosCubicosAnuales();
-    //resu = resu + (capRemolque * cantViajesAnuales);
-    return 0;
+    float resu = CamionGrande :: calcularMetrosCubicosAnuales();
+    resu = resu + (capRemolque * getCantViajesAnuales());
+    return resu;
 }
