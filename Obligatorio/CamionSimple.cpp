@@ -5,7 +5,7 @@ CamionSimple :: CamionSimple() : Camion(), depto()
 
 }
 
-CamionSimple :: CamionSimple(String mat,String mar,int cant,String dep,Camionero * c) : Camion(mat,mar,cant,c), depto(dep)
+CamionSimple :: CamionSimple(String mat,String mar,int cant,String dep) : Camion(mat,mar,cant), depto(dep)
 {
 
 }
@@ -32,5 +32,5 @@ String CamionSimple :: getTipo()
 
 float CamionSimple :: calcularMetrosCubicosAnuales()
 {
-    return 0;
+    //return cantViajesAnuales * 10;
 }

@@ -7,11 +7,11 @@
 class CamionConRemolque : public CamionGrande
 {
     private:
-        int capRemolque;
+        float capRemolque;
 
     public:
         CamionConRemolque();
-        CamionConRemolque(String,String,int,Camionero*,float,Fecha,int);
+        CamionConRemolque(String,String,int,float,Fecha,float);
         CamionConRemolque(const CamionConRemolque &);
         ~CamionConRemolque();
         int getCapRemolque();

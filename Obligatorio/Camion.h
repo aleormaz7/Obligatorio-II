@@ -15,13 +15,16 @@ class Camion : public Objeto
 
     public:
         Camion();
-        Camion(String,String,int,Camionero *);
+        Camion(String,String,int);
         Camion(const Camion &);
         ~Camion();
         String getMatricula();
         String getMarca();
         int getCantViajesAnuales();
         void setCantViajesAnuales(int);
+        Camionero * getCamionero();
+        void setCamionero(Camionero *);
+
         virtual String getTipo() = 0;
         virtual float calcularMetrosCubicosAnuales() = 0;
 };

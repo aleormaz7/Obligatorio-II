@@ -5,7 +5,7 @@ CamionConRemolque :: CamionConRemolque() : CamionGrande()
     capRemolque = 0;
 }
 
-CamionConRemolque :: CamionConRemolque(String mat,String mar,int cant,Camionero * c,float vol,Fecha f,int cap) : CamionGrande(mat,mar,cant,c,vol,f)
+CamionConRemolque :: CamionConRemolque(String mat,String mar,int cant,float vol,Fecha f,float cap) : CamionGrande(mat,mar,cant,vol,f)
 {
     capRemolque = cap;
 }
@@ -32,5 +32,7 @@ String CamionConRemolque :: getTipo()
 
 float CamionConRemolque :: calcularMetrosCubicosAnuales()
 {
-    return 0.0;
+    //float resu = CamionGrande :: calcularMetrosCubicosAnuales();
+    //resu = resu + (capRemolque * cantViajesAnuales);
+    return 0;
 }

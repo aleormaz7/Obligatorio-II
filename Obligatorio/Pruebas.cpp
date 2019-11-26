@@ -3,10 +3,12 @@
 
 
 
-void CamionerosPruebas()
+/*void CamionerosPruebas()
 {
+
+    ///
     //long cedula = 48136851;
-    cout << "Ingrese Cedula del Camionero: ";
+    cout << "Ingrese Cedula del Camionero 1: ";
     int cedula;
     cin >> cedula;
     if(!cin.fail())
@@ -22,7 +24,7 @@ void CamionerosPruebas()
     cin.ignore(numeric_limits <streamsize>::max(), '\n' );///
 
     String nombre;
-    cout << "Ingrese Nombre del Camionero: ";
+    cout << "Ingrese Nombre del Camionero 1: ";
     nombre.scan();
     int cntT = 2;
     Fecha fchNac = Fecha(20,11,2019);
@@ -35,7 +37,7 @@ void CamionerosPruebas()
     cout << "\nFecha Nacimiento: ";
     c1->getFechaNacimiento().MostrarFecha();
     ///--------------------------------------------------------------------------------------
-     cout << "Ingrese Cedula del Camionero 2: ";
+    cout << "Ingrese Cedula del Camionero 2: ";
     cin >> cedula;
     if(!cin.fail())
         cout << cedula << endl;
@@ -64,17 +66,52 @@ void CamionerosPruebas()
     c2->getFechaNacimiento().MostrarFecha();
     ///-------------------------------------------------------------------------------------
 
+    cin.clear();///
+    cin.ignore(numeric_limits <streamsize>::max(), '\n' );///
+
+    ///--------------------------------------------------------------------------------------
+    cout << "Ingrese Cedula del Camionero 3: ";
+    cin >> cedula;
+    if(!cin.fail())
+        cout << cedula << endl;
+    else
+    {
+        cin.clear();
+        cin.ignore(numeric_limits <streamsize>::max(), '\n' );
+        cout << "Ingreso invalido, debe ingresar solo numeros" << endl;
+    }
+
+    cin.clear();///
+    cin.ignore(numeric_limits <streamsize>::max(), '\n' );///
+
+
+    cout << "Ingrese Nombre del Camionero 3: ";
+    nombre.scan();
+    cntT = 6;
+    fchNac = Fecha(26,11,2019);
+    Camionero * c3 = new Camionero(cedula,nombre,cntT,fchNac);
+    cout << "\nCamionero: ";
+    cout << "\nCedula: " << c3->getCedula();
+    cout << "\nNombre: ";
+    c3->getNombre().print();
+    cout << "\nCantidad Tatuajes: " << c3->getCantTatuajes();
+    cout << "\nFecha Nacimiento: ";
+    c3->getFechaNacimiento().MostrarFecha();
+    ///-------------------------------------------------------------------------------------
+
+
     Camioneros diccioCamioneros = Camioneros();
 
     diccioCamioneros.Insert(c1);
     diccioCamioneros.Insert(c2);
+    diccioCamioneros.Insert(c3);
 
 
-    /*if(diccioCamioneros.Empty())
+    if(diccioCamioneros.Empty())
         cout << "\nEs vacio";
     else
         cout << "\nNo es vacio";
-    */
+
 
     if(diccioCamioneros.Member(1))///
         cout << "\nExiste c1";
@@ -93,6 +130,7 @@ void CamionerosPruebas()
     Iterador * iterador = new Iterador();
     iterador->insertarObjeto(c1);
     iterador->insertarObjeto(c2);
+    iterador->insertarObjeto(c3);
 
     while(iterador->hayMasObjetos())
     {
@@ -112,6 +150,6 @@ void CamionerosPruebas()
 
 
 
-}
+}*/
 
 

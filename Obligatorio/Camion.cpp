@@ -6,10 +6,10 @@ Camion :: Camion() : matricula(), marca()
     camionero = NULL;
 }
 
-Camion :: Camion(String mat,String mar,int cant,Camionero * c) : matricula(mat),marca(mar)
+Camion :: Camion(String mat,String mar,int cant) : matricula(mat),marca(mar)
 {
     cantViajesAnuales = cant;
-    camionero = c;
+    camionero = NULL;
 }
 
 Camion :: Camion(const Camion &c) : matricula(c.matricula), marca(c.marca)
@@ -21,6 +21,8 @@ Camion :: Camion(const Camion &c) : matricula(c.matricula), marca(c.marca)
 Camion :: ~Camion()
 {
     ///deberia borrar camionero?
+
+
 }
 
 String Camion :: getMatricula()
@@ -41,4 +43,14 @@ int Camion :: getCantViajesAnuales()
 void Camion :: setCantViajesAnuales(int cant)
 {
     cantViajesAnuales = cant;
+}
+
+Camionero * Camion :: getCamionero()
+{
+    return camionero;
+}
+
+void Camion :: setCamionero(Camionero * c)
+{
+    camionero = c;
 }

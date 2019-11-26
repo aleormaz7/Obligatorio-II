@@ -2,6 +2,9 @@
 #define CAMIONES_H_INCLUDED
 
 #include "Camion.h"
+#include "CamionSimple.h"
+#include "CamionGrande.h"
+#include "CamionConRemolque.h"
 
 const int B = 100;
 
@@ -42,6 +45,8 @@ class Camiones
         Camion * Find(String);
         ///retorna la mascota cuyo número es el ingresado
         ///precondición: la mascota es miembro de la colección
+
+
 
 };
 

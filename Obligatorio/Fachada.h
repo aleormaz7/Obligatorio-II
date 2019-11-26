@@ -16,7 +16,7 @@ class Fachada
     public:
         Fachada();
         void AltaCamionero(Camionero *,tipoError &error);
-
+        void AltaCamion(Camion * c,long cedula,tipoError &error);
 
         void ListadoCamioneros(Iterador &);
 

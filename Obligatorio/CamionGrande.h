@@ -12,7 +12,7 @@ class CamionGrande : public Camion
 
     public:
         CamionGrande();
-        CamionGrande(String,String,int,Camionero*,float,Fecha);
+        CamionGrande(String,String,int,float,Fecha);
         CamionGrande(const CamionGrande &);
         ~CamionGrande();
         float getVolumen();

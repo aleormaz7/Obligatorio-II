@@ -5,7 +5,7 @@ CamionGrande :: CamionGrande() : Camion(), fechaAdquirido()
     volumen = 0.0;
 }
 
-CamionGrande :: CamionGrande(String mat,String mar,int cant,Camionero * c,float vol,Fecha fch) : Camion(mat,mat,cant,c), fechaAdquirido(fch)
+CamionGrande :: CamionGrande(String mat,String mar,int cant,float vol,Fecha fch) : Camion(mat,mat,cant), fechaAdquirido(fch)
 {
     volumen = vol;
 }
@@ -32,5 +32,5 @@ String CamionGrande :: getTipo()
 
 float CamionGrande :: calcularMetrosCubicosAnuales()
 {
-    return 0;
+    //return cantViajesAnuales * volumen;;
 }
