@@ -1,6 +1,7 @@
 #ifndef CAMIONES_H_INCLUDED
 #define CAMIONES_H_INCLUDED
 
+#include "Iterador.h"
 #include "Camion.h"
 #include "CamionSimple.h"
 #include "CamionGrande.h"
@@ -30,6 +31,7 @@ class Camiones
         ///inserta la mascota al principio de la lista
         Camion * obtenerEnLista (Nodo *, String);
         ///obtiene la mascota con el número ingresado
+        void cargarIteradorC(Nodo *, Iterador &iter);
 
     public:
         Camiones();
@@ -45,6 +47,8 @@ class Camiones
         Camion * Find(String);
         ///retorna la mascota cuyo número es el ingresado
         ///precondición: la mascota es miembro de la colección
+
+        void listarCamiones(Iterador &iter);
 
 
 

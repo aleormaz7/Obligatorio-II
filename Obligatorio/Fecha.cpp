@@ -319,3 +319,16 @@ void Fecha :: MostrarFecha()
     cout << dia << "/" << mes << "/" <<  anio;
 }
 
+
+void Fecha :: CargarFecha()
+{
+    cout << "\nIngrese un dia: ";
+    cin >> dia;
+
+    cout << "\nIngrese un mes: ";
+    cin >> mes;
+
+    cout << "\nIngrese un anio: ";
+    cin >> anio;
+}
+

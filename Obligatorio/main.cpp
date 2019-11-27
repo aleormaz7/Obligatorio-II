@@ -23,19 +23,20 @@ int main()
                         altaCamionero(fachada);
                         break;
                     case 2:
+                        altaCamion(fachada);
                         break;
                     case 3:
                         break;
                     case 4:
                         break;
-                    default: printf("\nOpcion invalida.\n");
+                    default:  cout << "\nOpcion invalida.\n";
                         break;
                 }
             }while(opcAltasModif != 4);
         }
         else if(opc == 2)
         {
-             do
+            do
             {
                 mostrarSubMenuListadosConsultas(opc);
                 switch(opc)
@@ -57,10 +58,10 @@ int main()
                         break;
                     case 8:
                         break;
-                    default: printf("\nOpcion invalida.\n");
+                    default: cout << "\nOpcion invalida.\n";
                         break;
                 }
-        }while(opc != 8);
+            }while(opc != 8);
         }
     }while(opc != 3);
 

@@ -49,6 +49,7 @@ class Fecha
 
         void MostrarFecha();
 
+        void CargarFecha();
 
 };
 

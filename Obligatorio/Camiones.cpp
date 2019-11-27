@@ -82,3 +82,18 @@ Camion * Camiones :: Find(String mat)
     int cubeta = dispersion(mat);
     return obtenerEnLista(Hash[cubeta], mat);
 }
+
+void Camiones :: cargarIteradorC(Nodo * h, Iterador &iter)
+{
+    for (int i=0; i < B; i++)
+    {
+        //iter.insertarObjeto(h[i]);
+    }
+}
+
+void Camiones :: listarCamiones(Iterador &iter)
+{
+    //cargarIteradorC(Hash,iter);
+}
+
+

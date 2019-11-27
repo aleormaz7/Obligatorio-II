@@ -20,7 +20,8 @@ class Fachada
 
         void ListadoCamioneros(Iterador &);
 
-        //void AltaCamion(Camion *);
+        void ListadoCamiones(Iterador &iter);
+
 };
 
 
