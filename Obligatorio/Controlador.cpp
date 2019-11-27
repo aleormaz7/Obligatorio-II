@@ -185,14 +185,14 @@ void altaCamion(Fachada &f)
     f.AltaCamion(aux,cedula,error);
 
     if(error == SIN_ERROR)
-    {
         cout << "\nCamion ingresado en el Sistema";
-    }
     else
     {
-        cout << "\nYa existe camion con dicha matricula, y/o cedula del camionero no registrada en el sistema";
+        if(error == NO_EXISTE_CAMIONERO)
+            cout << "\nError: No existe un camionero con la cedula ingresada.";
+        else
+            cout << "\nError: Ya existe un camion con la matricula ingresada.";
     }
-
 }
 
 void listadoCamioneros(Fachada f)
@@ -219,4 +219,50 @@ void listadoCamioneros(Fachada f)
         cout << "\nNo hay camioneros registrados en el sistema.";
 }
 
+
+void detalleCamion(Fachada f)
+{
+    Camion * c = NULL;
+    tipoError error;
+    String mat;
+
+    cout << "\nDetalle de un Camion";
+    cout << "\nMatricula: ";
+    mat.scan();
+
+    f.DetalleCamion(mat,c,error);
+    if (error == NO_EXISTE_CAMION)
+        cout << "\nError: No exite un camion con la matricula ingresada";
+    else
+    {
+        cout << "Detalle:";
+        cout << "\nMatricula: ";
+        c->getMatricula().print();
+        cout << "\nMarca: ";
+        c->getMarca().print();
+        cout << "\nCantidad viajes anuales: " << c->getCantViajesAnuales();
+        cout << "\nMetros cubicos anuales: " << c->calcularMetrosCubicosAnuales();
+        if(c->getTipo() == "CAMION SIMPLE")
+        {
+            cout << "\nTipo de camion: Simple";
+            cout << "\nDepartamento: ";
+            ((CamionSimple *) c)->getDepto().print();
+        }
+        else
+        {
+            if(c->getTipo() == "CAMION GRANDE")
+            {
+                cout << "\nTipo de camion: Grande";
+                cout << "\nVolumen: " << ((CamionGrande *) c)->getVolumen();
+                cout << "\nFecha de adquirido: ";
+                ((CamionGrande *) c)->getFechaAdquirido().MostrarFecha();
+            }
+            else
+            {
+                cout << "\nTipo de camion: Con remolque";
+                cout << "\nCapacidad de remolque: " << ((CamionConRemolque *) c)->getCapRemolque();
+            }
+        }
+    }
+}
 

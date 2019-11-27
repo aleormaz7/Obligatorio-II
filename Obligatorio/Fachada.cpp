@@ -8,27 +8,20 @@ Fachada :: Fachada(): camioneros(), camiones()
 void Fachada :: AltaCamionero(Camionero * c,tipoError &error)
 {
     if(camioneros.Member(c->getCedula()))
-    {
         error = EXISTE_CAMIONERO;
-    }
     else
     {
         camioneros.Insert(c);
         error = SIN_ERROR;
-        //cout << "\nIngreso";
     }
 }
 
 void Fachada :: AltaCamion(Camion * c,long cedula,tipoError &error)
 {
     if(camiones.Member(c->getMatricula()))
-    {
         error = EXISTE_CAMION;
-        cout << "\nExiste camion con dicha mat";
-    }
     else
     {
-
         if(camioneros.Member(cedula))
         {
             Camionero * auxFind = camioneros.Find(cedula);
@@ -38,11 +31,7 @@ void Fachada :: AltaCamion(Camion * c,long cedula,tipoError &error)
             cout << "\n sin error, inserto";
         }
         else
-        {
             error = NO_EXISTE_CAMIONERO;
-            cout << "\nNo existe camionero con esa cedula";
-            ///PREGUNTAR: aunque no exista el camionero con esa cedula, se puede crear un camion sin camionero???
-        }
     }
 }
 
@@ -51,11 +40,10 @@ void Fachada :: ListadoCamioneros(Iterador &iter)
     camioneros.listarCamioneros(iter);
 }
 
-void Fachada :: ListadoCamiones(Iterador &iter)
+void Fachada :: DetalleCamion(String mat, Camion * &c, tipoError &error)
 {
-    camiones.listarCamiones(iter);
+    if(camiones.Member(mat))
+        c = camiones.Find(mat);
+    else
+        error = NO_EXISTE_CAMION;
 }
-
-
-
-

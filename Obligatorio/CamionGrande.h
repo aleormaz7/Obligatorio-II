@@ -17,6 +17,7 @@ class CamionGrande : public Camion
         ~CamionGrande();
         float getVolumen();
         String getTipo();
+        Fecha getFechaAdquirido();
         float calcularMetrosCubicosAnuales();
 };
 

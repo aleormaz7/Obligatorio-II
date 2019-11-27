@@ -19,8 +19,8 @@ class Fachada
         void AltaCamion(Camion * c,long cedula,tipoError &error);
 
         void ListadoCamioneros(Iterador &);
-
         void ListadoCamiones(Iterador &iter);
+        void DetalleCamion(String mat, Camion * &c, tipoError &error);
 
 };
 

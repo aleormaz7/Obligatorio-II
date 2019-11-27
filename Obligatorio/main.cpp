@@ -44,6 +44,7 @@ int main()
                     case 1:
                         break;
                     case 2:
+                        detalleCamion(fachada);
                         break;
                     case 3:
                         listadoCamioneros(fachada);

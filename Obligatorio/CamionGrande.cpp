@@ -30,7 +30,14 @@ String CamionGrande :: getTipo()
     return "CAMION GRANDE";
 }
 
+Fecha CamionGrande :: getFechaAdquirido()
+{
+    return fechaAdquirido;
+}
+
 float CamionGrande :: calcularMetrosCubicosAnuales()
 {
     return (getCantViajesAnuales() * volumen);
 }
+
+

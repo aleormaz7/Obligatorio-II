@@ -13,4 +13,6 @@ void altaCamion(Fachada &f);
 
 void listadoCamioneros(Fachada f);
 
+void detalleCamion(Fachada f);
+
 #endif // CONTROLADOR_H_INCLUDED
