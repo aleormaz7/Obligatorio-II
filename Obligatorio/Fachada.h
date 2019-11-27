@@ -15,12 +15,14 @@ class Fachada
 
     public:
         Fachada();
-        void AltaCamionero(Camionero *,tipoError &error);
-        void AltaCamion(Camion * c,long cedula,tipoError &error);
+        void AltaCamionero(Camionero *,tipoError &);
+        void AltaCamion(Camion *,long,tipoError &);
+        void ModificarViajesAnuales(int,String,Camion * &,tipoError &);
 
         void ListadoCamioneros(Iterador &);
-        void ListadoCamiones(Iterador &iter);
-        void DetalleCamion(String mat, Camion * &c, tipoError &error);
+        void ListadoCamiones(Iterador &);
+        void DetalleCamion(String,Camion * &,tipoError &);
+
 
 };
 

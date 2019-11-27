@@ -7,14 +7,16 @@ void altaCamionero(Fachada &f)
     cout << "\nCedula: ";
     int cedula;
     cin >> cedula;
+    cin.sync();
     if(!cin.fail())
     {
         //cout << cedula << endl;
     }
     else
     {
-        cin.clear();
-        cin.ignore(numeric_limits <streamsize>::max(), '\n' );
+        cin.sync();
+        //cin.clear();
+        //cin.ignore(numeric_limits <streamsize>::max(), '\n' );
         cout << "\nIngreso invalido, debe ingresar solo numeros" << endl;
     }
 
@@ -35,22 +37,25 @@ void altaCamionero(Fachada &f)
             fallo = false;
     }*/
 
-    cin.clear();///para que no se salte de pedir el nombre
-    cin.ignore(numeric_limits <streamsize>::max(), '\n' );///para que no se salte de pedir el nombre
+    //cin.clear();///para que no se salte de pedir el nombre
+    //cin.ignore(numeric_limits <streamsize>::max(), '\n' );///para que no se salte de pedir el nombre
 
     String nombre;
     cout << "\nNombre: ";
     nombre.scan();
+    cin.sync();
 
     cout << "\nCantidad de tatuajes: ";
     int cntT;
     cin >> cntT;
+    cin.sync();
 
     cout << "\nFecha de nacimiento: ";
     Fecha fchNac = Fecha();///PREGUNTAR: si fecha deberia ser un puntero???
     do
     {
         fchNac.CargarFecha();
+        cin.sync();
         if(!fchNac.esValida())
         {
             cout << "\nFecha nacimiento invalida";
@@ -84,47 +89,54 @@ void altaCamion(Fachada &f)
         cout << "\nTipos: 1-SIMPLE, 2-GRANDE, 3-CON REMOLQUE ";
         cout << "\nIngresar tipo:";
         cin >> tipo;
+        cin.sync();
         if(tipo <1 || tipo > 3)
             cout << "\nOpcion no valida.";
     }while((tipo <1 || tipo > 3));
 
-    cin.clear();///
-    cin.ignore(numeric_limits <streamsize>::max(), '\n' );///
+    //cin.clear();///
+    //cin.ignore(numeric_limits <streamsize>::max(), '\n' );///
 
     cout << "Ingrese datos del camion: ";
     String mat,mar;
     int cantViajes;
     cout << "\nMatricula: ";
     mat.scan();
+    cin.sync();
 
     cout << "\nMarca: ";
     mar.scan();
+    cin.sync();
     //cin.clear();///
 
     cout << "\nCantidad viajes anuales: ";
     cin >> cantViajes;
-    cin.clear();///
-    cin.ignore(numeric_limits <streamsize>::max(), '\n' );///
+    cin.sync();
+    //cin.clear();///
+    //cin.ignore(numeric_limits <streamsize>::max(), '\n' );///
 
     cout << "\nIngrese cedula del camionero que lo maneja: ";
     cin >> cedula;
     if(!cin.fail())
-        cout << cedula << endl;
+    {
+        //cout << cedula << endl;
+    }
     else
     {
         cin.clear();
         cin.ignore(numeric_limits <streamsize>::max(), '\n' );
         cout << "Ingreso invalido, debe ingresar solo numeros" << endl;
     }
+    cin.sync();
 
     Camion * aux;
+
     if(tipo == 1)
     {
-        cin.clear();///si pedi un numero antes hacer esto
-        cin.ignore(numeric_limits <streamsize>::max(), '\n' );///si pedi un numero antes hacer esto
         String depto = String();
         cout << "\nDepartamento: ";
         depto.scan();
+        cin.sync();
 
         aux = new CamionSimple(mat,mar,cantViajes,depto);
 
@@ -135,14 +147,17 @@ void altaCamion(Fachada &f)
         cout << "\nVolumen: ";
         cin >> vol;
 
-        cin.clear();///
-        cin.ignore(numeric_limits <streamsize>::max(), '\n' );///
+        cin.sync();
+
+        //cin.clear();///
+        //cin.ignore(numeric_limits <streamsize>::max(), '\n' );///
 
         cout << "\nFecha Adquirido: ";
         Fecha fchAdq = Fecha();///PREGUNTAR: si fecha deberia ser un puntero???
         do
         {
             fchAdq.CargarFecha();
+            cin.sync();
             if(!fchAdq.esValida())
             {
                 cout << "\nFecha Adquirido invalida";
@@ -157,26 +172,31 @@ void altaCamion(Fachada &f)
         cout << "\nVolumen: ";
         cin >> vol;
 
-        cin.clear();///
-        cin.ignore(numeric_limits <streamsize>::max(), '\n' );///
+        //cin.clear();///
+        //cin.ignore(numeric_limits <streamsize>::max(), '\n' );///
+        cin.sync();
+
 
         cout << "\nFecha Adquirido: ";
         Fecha fchAdq = Fecha();///PREGUNTAR: si fecha deberia ser un puntero???
         do
         {
             fchAdq.CargarFecha();
+            cin.sync();
             if(!fchAdq.esValida())
             {
                 cout << "\nFecha Adquirido invalida";
             }
         }while(!fchAdq.esValida());
 
-        cin.clear();///
-        cin.ignore(numeric_limits <streamsize>::max(), '\n' );///
+        //cin.clear();///
+        //cin.ignore(numeric_limits <streamsize>::max(), '\n' );///
 
         float capacidad;
         cout << "\nCapacidad remolque: ";
         cin >> capacidad;
+        cin.sync();
+
 
         aux = new CamionConRemolque(mat,mar,cantViajes,vol,fchAdq,capacidad);
     }
@@ -193,6 +213,35 @@ void altaCamion(Fachada &f)
         else
             cout << "\nError: Ya existe un camion con la matricula ingresada.";
     }
+}
+
+///*Nuevo*/
+void modificarViajesAnuales(Fachada &f)
+{
+    Camion * c = NULL;
+    tipoError error;
+    String mat;
+    int cant;
+    cin.sync();
+
+    cout << "\nIngrese matricula del camion: ";
+    mat.scan();
+    cin.sync();
+
+    cout << "\nIngrese cantidad de viajes anuales: ";
+    cin >> cant;
+    cin.sync();
+
+    f.ModificarViajesAnuales(cant,mat,c,error);
+    if(error == SIN_ERROR)
+    {
+        cout << "\nCantidad viajes anuales modificada";
+    }
+    else
+    {
+        cout << "\nNo existe camion con dicha matricula";
+    }
+    cin.sync();
 }
 
 void listadoCamioneros(Fachada f)
@@ -217,6 +266,8 @@ void listadoCamioneros(Fachada f)
     }
     else
         cout << "\nNo hay camioneros registrados en el sistema.";
+
+    cin.sync();
 }
 
 
@@ -226,9 +277,12 @@ void detalleCamion(Fachada f)
     tipoError error;
     String mat;
 
+    cin.sync();
+
     cout << "\nDetalle de un Camion";
     cout << "\nMatricula: ";
     mat.scan();
+    cin.sync();
 
     f.DetalleCamion(mat,c,error);
     if (error == NO_EXISTE_CAMION)
@@ -264,5 +318,8 @@ void detalleCamion(Fachada f)
             }
         }
     }
+    cin.sync();
 }
+
+
 

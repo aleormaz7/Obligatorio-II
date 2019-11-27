@@ -7,12 +7,14 @@
 #include "Fachada.h"
 #include <limits>
 
-void altaCamionero(Fachada &f);
+void altaCamionero(Fachada &);
 
-void altaCamion(Fachada &f);
+void altaCamion(Fachada &);
 
-void listadoCamioneros(Fachada f);
+void modificarViajesAnuales(Fachada &);
 
-void detalleCamion(Fachada f);
+void listadoCamioneros(Fachada);
+
+void detalleCamion(Fachada);
 
 #endif // CONTROLADOR_H_INCLUDED

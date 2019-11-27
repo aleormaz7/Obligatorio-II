@@ -26,8 +26,7 @@ int main()
                         altaCamion(fachada);
                         break;
                     case 3:
-                        break;
-                    case 4:
+                        modificarViajesAnuales(fachada);
                         break;
                     default:  cout << "\nOpcion invalida.\n";
                         break;

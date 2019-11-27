@@ -47,3 +47,19 @@ void Fachada :: DetalleCamion(String mat, Camion * &c, tipoError &error)
     else
         error = NO_EXISTE_CAMION;
 }
+
+///*NUEVO*/
+void Fachada :: ModificarViajesAnuales(int cant,String mat,Camion * &c,tipoError &error)
+{
+    if(camiones.Member(mat))
+    {
+        c = camiones.Find(mat);
+        c->setCantViajesAnuales(cant);
+        error = SIN_ERROR;
+    }
+    else
+    {
+        error = NO_EXISTE_CAMION;
+    }
+}
+

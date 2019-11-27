@@ -83,17 +83,17 @@ Camion * Camiones :: Find(String mat)
     return obtenerEnLista(Hash[cubeta], mat);
 }
 
-void Camiones :: cargarIteradorC(Nodo * h, Iterador &iter)
+void Camiones :: cargarIterador(Nodo * h, Iterador &iter)
 {
-    for (int i=0; i < B; i++)
+    for(int i=0; i < B; i++)
     {
-        //iter.insertarObjeto(h[i]);
+        //iter.insertarObjeto(h[i]->info);
     }
 }
 
 void Camiones :: listarCamiones(Iterador &iter)
 {
-    //cargarIteradorC(Hash,iter);
+    //cargarIterador(Hash,iter);
 }
 
 
