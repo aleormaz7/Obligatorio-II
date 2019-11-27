@@ -60,7 +60,8 @@ void altaCamionero(Fachada &f)
         {
             cout << "\nFecha nacimiento invalida";
         }
-    }while(!fchNac.esValida());
+    }
+    while(!fchNac.esValida());
 
     Camionero * c = new Camionero(cedula,nombre,cntT,fchNac);
 
@@ -92,7 +93,8 @@ void altaCamion(Fachada &f)
         cin.sync();
         if(tipo <1 || tipo > 3)
             cout << "\nOpcion no valida.";
-    }while((tipo <1 || tipo > 3));
+    }
+    while((tipo <1 || tipo > 3));
 
     //cin.clear();///
     //cin.ignore(numeric_limits <streamsize>::max(), '\n' );///
@@ -162,7 +164,8 @@ void altaCamion(Fachada &f)
             {
                 cout << "\nFecha Adquirido invalida";
             }
-        }while(!fchAdq.esValida());
+        }
+        while(!fchAdq.esValida());
 
         aux = new CamionGrande(mat,mar,cantViajes,vol,fchAdq);
     }
@@ -187,7 +190,8 @@ void altaCamion(Fachada &f)
             {
                 cout << "\nFecha Adquirido invalida";
             }
-        }while(!fchAdq.esValida());
+        }
+        while(!fchAdq.esValida());
 
         //cin.clear();///
         //cin.ignore(numeric_limits <streamsize>::max(), '\n' );///
@@ -250,10 +254,12 @@ void listadoCamioneros(Fachada f)
     f.ListadoCamioneros(iterador);
     if (iterador.hayMasObjetos())
     {
+        Objeto * objAux = NULL;
+        Camionero * aux = NULL;
         while(iterador.hayMasObjetos())
         {
-            Objeto * objAux = iterador.proximoObjeto();
-            Camionero * aux = (Camionero*) objAux;///casteo
+            objAux = iterador.proximoObjeto();
+            aux = (Camionero*) objAux;///casteo
             cout << "\nCedula ";
             cout << aux->getCedula();
             cout << " - Nombre ";
@@ -321,5 +327,50 @@ void detalleCamion(Fachada f)
     cin.sync();
 }
 
+void listadoCamiones(Fachada f)
+{
+    Iterador iterador = Iterador();
+    f.ListadoCamiones(iterador);
+    if (iterador.hayMasObjetos())
+    {
+        while(iterador.hayMasObjetos())
+        {
+            Objeto * objAux = iterador.proximoObjeto();
+            Camion * aux = (Camion *) objAux;///casteo
+            cout << "\nMatricula ";
+            aux->getMatricula().print();
+            cout << " - Marca ";
+            aux->getMarca().print();
+            cout << " - Cantidad de viajes anuales " << aux->getCantViajesAnuales();
+            cout << " - Tipo de camion ";
+            if(aux->getTipo() == "CAMION SIMPLE")
+            {
+                cout << " SIMPLE ";
+                cout << " - Departamento ";
+                ((CamionSimple *) aux)->getDepto().print();
+            }
+            else
+            {
+                if(aux->getTipo() == "CAMION GRANDE")
+                {
+                    cout << " GRANDE ";
+                    cout << " - Volumen: " << ((CamionGrande *) aux)->getVolumen();
+                    cout << " - Fecha de adquirido: ";
+                    ((CamionGrande *) aux)->getFechaAdquirido().MostrarFecha();
+                }
+                else
+                {
+                    cout << " CON REMOLQUE ";
+                    cout << " - Capacidad de remolque " << ((CamionConRemolque *) aux)->getCapRemolque();
+                }
+            }
+            cout << "\n";
+        }
+    }
+    else
+        cout << "\nNo hay camiones registrados en el sistema.";
+
+    cin.sync();
+}
 
 

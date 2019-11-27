@@ -41,6 +41,7 @@ int main()
                 switch(opc)
                 {
                     case 1:
+                        listadoCamiones(fachada);
                         break;
                     case 2:
                         detalleCamion(fachada);

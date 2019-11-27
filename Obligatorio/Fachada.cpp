@@ -63,3 +63,7 @@ void Fachada :: ModificarViajesAnuales(int cant,String mat,Camion * &c,tipoError
     }
 }
 
+void Fachada :: ListadoCamiones(Iterador &iter)
+{
+    camiones.listarCamiones(iter);
+}
