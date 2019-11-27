@@ -373,4 +373,8 @@ void listadoCamiones(Fachada f)
     cin.sync();
 }
 
-
+void totalMetrosCubicosAnuales(Fachada f)
+{
+    cout << "\nTotal de metros cubicos de la flota: " << f.TotalMetrosCubicosAnuales();
+    cin.sync();
+}

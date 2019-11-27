@@ -67,3 +67,8 @@ void Fachada :: ListadoCamiones(Iterador &iter)
 {
     camiones.listarCamiones(iter);
 }
+
+float Fachada :: TotalMetrosCubicosAnuales()
+{
+    return camiones.totalMetrosCubicosAnuales();
+}

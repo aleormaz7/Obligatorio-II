@@ -96,4 +96,19 @@ void Camiones :: listarCamiones(Iterador &iter)
     //cargarIterador(Hash,iter);
 }
 
+float Camiones :: totalMetrosCubicosAnuales()
+{
+    float total = 0;
+    for(int i = 0; i > B;i++)
+    {
+        Nodo * aux = Hash[i];
+        while (aux != NULL)
+        {
+            total = total + aux->info->calcularMetrosCubicosAnuales();
+            aux = aux->sig;
+        }
+    }
+    return total;
+}
+
 

@@ -50,6 +50,8 @@ class Camiones
 
         void listarCamiones(Iterador &);
 
+        float totalMetrosCubicosAnuales();
+
 
 
 };

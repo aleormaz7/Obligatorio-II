@@ -13,10 +13,12 @@ void altaCamion(Fachada &);
 
 void modificarViajesAnuales(Fachada &);
 
-void listadoCamioneros(Fachada f);
+void listadoCamioneros(Fachada);
 
-void listadoCamiones(Fachada f);
+void listadoCamiones(Fachada);
 
-void detalleCamion(Fachada f);
+void detalleCamion(Fachada);
+
+void totalMetrosCubicosAnuales(Fachada);
 
 #endif // CONTROLADOR_H_INCLUDED

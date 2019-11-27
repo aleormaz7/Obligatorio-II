@@ -22,8 +22,7 @@ class Fachada
         void ListadoCamioneros(Iterador &);
         void ListadoCamiones(Iterador &);
         void DetalleCamion(String,Camion * &,tipoError &);
-
-
+        float TotalMetrosCubicosAnuales();
 };
 
 

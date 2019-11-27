@@ -50,6 +50,7 @@ int main()
                         listadoCamioneros(fachada);
                         break;
                     case 4:
+                        totalMetrosCubicosAnuales(fachada);
                         break;
                     case 5:
                         break;
