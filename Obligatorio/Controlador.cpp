@@ -78,10 +78,15 @@ void altaCamion(Fachada &f)
     tipoError error;
     int tipo;
     long cedula;
-    cout << "\nIngrese el numero del tipo de camion que desea dar de alta";
-    cout << "\nTipos: 1-SIMPLE, 2-GRANDE, 3-CON REMOLQUE ";
-    cout << "\nIngresar tipo:";
-    cin >> tipo;
+    do
+    {
+        cout << "\nIngrese el numero del tipo de camion que desea dar de alta";
+        cout << "\nTipos: 1-SIMPLE, 2-GRANDE, 3-CON REMOLQUE ";
+        cout << "\nIngresar tipo:";
+        cin >> tipo;
+        if(tipo <1 || tipo > 3)
+            cout << "\nOpcion no valida.";
+    }while((tipo <1 || tipo > 3));
 
     cin.clear();///
     cin.ignore(numeric_limits <streamsize>::max(), '\n' );///
@@ -91,7 +96,6 @@ void altaCamion(Fachada &f)
     int cantViajes;
     cout << "\nMatricula: ";
     mat.scan();
-
 
     cout << "\nMarca: ";
     mar.scan();
@@ -136,13 +140,16 @@ void altaCamion(Fachada &f)
 
         cout << "\nFecha Adquirido: ";
         Fecha fchAdq = Fecha();///PREGUNTAR: si fecha deberia ser un puntero???
-        fchAdq.CargarFecha();
-        if(!fchAdq.esValida())
+        do
         {
-            cout << "\nFecha Adquirido invalida";
-        }
-        aux = new CamionGrande(mat,mar,cantViajes,vol,fchAdq);
+            fchAdq.CargarFecha();
+            if(!fchAdq.esValida())
+            {
+                cout << "\nFecha Adquirido invalida";
+            }
+        }while(!fchAdq.esValida());
 
+        aux = new CamionGrande(mat,mar,cantViajes,vol,fchAdq);
     }
     else if(tipo == 3)
     {
@@ -155,11 +162,14 @@ void altaCamion(Fachada &f)
 
         cout << "\nFecha Adquirido: ";
         Fecha fchAdq = Fecha();///PREGUNTAR: si fecha deberia ser un puntero???
-        fchAdq.CargarFecha();
-        if(!fchAdq.esValida())
+        do
         {
-            cout << "\nFecha Adquirido invalida";
-        }
+            fchAdq.CargarFecha();
+            if(!fchAdq.esValida())
+            {
+                cout << "\nFecha Adquirido invalida";
+            }
+        }while(!fchAdq.esValida());
 
         cin.clear();///
         cin.ignore(numeric_limits <streamsize>::max(), '\n' );///
