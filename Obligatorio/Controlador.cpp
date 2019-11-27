@@ -48,12 +48,14 @@ void altaCamionero(Fachada &f)
 
     cout << "\nFecha de nacimiento: ";
     Fecha fchNac = Fecha();///PREGUNTAR: si fecha deberia ser un puntero???
-    fchNac.CargarFecha();
-    if(!fchNac.esValida())
+    do
     {
-        cout << "\nFecha nacimiento invalida";
-    }
-
+        fchNac.CargarFecha();
+        if(!fchNac.esValida())
+        {
+            cout << "\nFecha nacimiento invalida";
+        }
+    }while(!fchNac.esValida());
 
     Camionero * c = new Camionero(cedula,nombre,cntT,fchNac);
 
@@ -69,7 +71,6 @@ void altaCamionero(Fachada &f)
         cout << "\nYa exise camionero con dicha cedula en el sistema";
     }
 }
-
 
 void altaCamion(Fachada &f)
 {
