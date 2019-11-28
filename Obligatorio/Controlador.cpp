@@ -250,16 +250,16 @@ void modificarViajesAnuales(Fachada &f)
 
 void listadoCamioneros(Fachada f)
 {
-    Iterador iterador = Iterador();
-    f.ListadoCamioneros(iterador);
+    Iterador iterador = f.ListadoCamioneros();
+
     if (iterador.hayMasObjetos())
     {
-        Objeto * objAux = NULL;
+       // Objeto * objAux = NULL;
         Camionero * aux = NULL;
         while(iterador.hayMasObjetos())
         {
-            objAux = iterador.proximoObjeto();
-            aux = (Camionero*) objAux;///casteo
+            aux = (Camionero*)iterador.proximoObjeto();
+            //= (Camionero*) objAux;///casteo
             cout << "\nCedula ";
             cout << aux->getCedula();
             cout << " - Nombre ";
@@ -329,8 +329,8 @@ void detalleCamion(Fachada f)
 
 void listadoCamiones(Fachada f)
 {
-    Iterador iterador = Iterador();
-    f.ListadoCamiones(iterador);
+    Iterador iterador =  f.ListadoCamiones();
+
     if (iterador.hayMasObjetos())
     {
         while(iterador.hayMasObjetos())
@@ -378,3 +378,20 @@ void totalMetrosCubicosAnuales(Fachada f)
     cout << "\nTotal de metros cubicos de la flota: " << f.TotalMetrosCubicosAnuales();
     cin.sync();
 }
+
+void obtenerCamionesPorTipo(Fachada f)
+{
+    int cantSimple,cantGrande,cantRemolque;
+
+    f.CantidadCamionesPorTipo(cantSimple,cantGrande,cantRemolque);
+
+    cout << "\nCantidades de camiones por tipo: ";
+    cout << "\nSimple: " << cantSimple;
+    cout << "\nGrande " << cantGrande;
+    cout << "\nRemolque: " << cantRemolque;
+
+    cin.sync();
+
+}
+
+

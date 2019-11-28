@@ -8,7 +8,9 @@ class Objeto
     ///Constructor objeto ??
 
 
+
     public:
+        Objeto();
         virtual String getTipo() = 0;
 
 

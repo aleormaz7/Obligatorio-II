@@ -28,9 +28,11 @@ Camionero * Camioneros :: Find(long clave)
     return ObtenerEnArbol(abb,clave);
 }
 
-void Camioneros :: listarCamioneros(Iterador &iter)
+Iterador Camioneros :: listarCamioneros()
 {
+    Iterador iter;
     cargarIterador(abb, iter);
+    return iter;
 }
 
 Camioneros :: ~Camioneros()
@@ -121,3 +123,17 @@ void Camioneros :: cargarIterador(NodoABB * a, Iterador &iter)
         cargarIterador(a->hizq, iter);
     }
 }
+
+/*void Camioneros :: CamioneroMayorCantTatuajes(NodoABB * a, Camionero * &c,int &maxCant)
+{
+    if(a != NULL)
+    {
+        if(a->info->getCantTatuajes() > maxCant)
+        {
+            aux = CamioneroMayorCantTatuajes(a->info,c,maxCant);
+        }
+        CamioneroMayorCantTatuajes(a->hizq,c,maxCant);
+        CamioneroMayorCantTatuajes(a->hder,c,maxCant);
+    }
+}*/
+

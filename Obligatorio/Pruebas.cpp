@@ -2,10 +2,59 @@
 
 
 
+void CamionerosPruebas()
+{/*
+    Fecha fchNac = Fecha(20,11,2019);
+    Camionero * c1 = new Camionero(111,"German",21,fchNac);
+    Camionero * c2 = new Camionero(222,"ale",21,fchNac);
+    Camionero * c3 = new Camionero(333,"banana",21,fchNac);
 
-/*void CamionerosPruebas()
-{
+    Camioneros diccioCamioneros = Camioneros();
 
+    diccioCamioneros.Insert(c1);
+    diccioCamioneros.Insert(c2);
+    diccioCamioneros.Insert(c3);
+
+    Iterador iter;
+    diccioCamioneros.listarCamioneros(iter);
+
+     while(iter.hayMasObjetos())
+    {
+        Objeto * objAux = iter.proximoObjeto();
+        cout << "\nObjeto: ";
+        cout << "\nTipo = ";
+        String tipo = objAux->getTipo();
+        tipo.print();
+
+        Camionero * aux = (Camionero*) objAux;///casteo
+        cout << "\nNom";
+        aux->getNombre().print();
+        cout << "\n";
+
+    }
+
+    Iterador iter2;
+    diccioCamioneros.listarCamioneros(iter2);
+
+        while(iter2.hayMasObjetos())
+    {
+        Objeto * objAux = iter2.proximoObjeto();
+        cout << "\nObjeto: ";
+        cout << "\nTipo = ";
+        String tipo = objAux->getTipo();
+        tipo.print();
+
+        Camionero * aux = (Camionero*) objAux;///casteo
+        cout << "\nNom";
+        aux->getNombre().print();
+        cout << "\n";
+
+    }
+
+*/
+
+
+/*
     ///
     //long cedula = 48136851;
     cout << "Ingrese Cedula del Camionero 1: ";
@@ -123,9 +172,24 @@
     else
         cout << "\nNo existe c2";
 
+    ///
+    while(diccioCamioneros.abb != NULL)
+    {
+        if()
+
+
+        diccioCamioneros->abb->hizq;
+
+        cout << "\nCedula: " << aux->getCedula();
+
+    }
+
+
+
 
     ///---------------------------------------------------------------------------
     ///ITERADOR:
+
     cout << "\n ITERADOR:" << endl;
     Iterador * iterador = new Iterador();
     iterador->insertarObjeto(c1);
@@ -144,12 +208,16 @@
         cout << "\nNom";
         aux->getNombre().print();
         cout << "\n";
-    }
+
+    }*/
     ///---------------------------------------------------------------
 
 
 
 
-}*/
+
+
+
+}
 
 

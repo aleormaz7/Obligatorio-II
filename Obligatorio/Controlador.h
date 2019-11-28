@@ -7,18 +7,21 @@
 #include "Fachada.h"
 #include <limits>
 
-void altaCamionero(Fachada &);
+void altaCamionero(Fachada &f);
 
-void altaCamion(Fachada &);
+void altaCamion(Fachada &f);
 
-void modificarViajesAnuales(Fachada &);
+void modificarViajesAnuales(Fachada &f);
 
-void listadoCamioneros(Fachada);
+void listadoCamioneros(Fachada f);
 
-void listadoCamiones(Fachada);
+void listadoCamiones(Fachada f);
 
-void detalleCamion(Fachada);
+void detalleCamion(Fachada f);
 
-void totalMetrosCubicosAnuales(Fachada);
+void totalMetrosCubicosAnuales(Fachada f);
+
+void obtenerCamionesPorTipo(Fachada f);
+
 
 #endif // CONTROLADOR_H_INCLUDED

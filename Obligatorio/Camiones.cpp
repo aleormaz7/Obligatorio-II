@@ -83,23 +83,33 @@ Camion * Camiones :: Find(String mat)
     return obtenerEnLista(Hash[cubeta], mat);
 }
 
-void Camiones :: cargarIterador(Nodo * h, Iterador &iter)
+void Camiones :: cargarIterador(Iterador &iter)
 {
-    for(int i=0; i < B; i++)
+    for(int i = 0; i < B;i++)
     {
-        //iter.insertarObjeto(h[i]->info);
+        Nodo * aux = Hash[i];
+        while (aux != NULL)
+        {
+            cout << "\n Insrta";
+            iter.insertarObjeto(aux->info);
+            aux = aux->sig;
+        }
     }
+
 }
 
-void Camiones :: listarCamiones(Iterador &iter)
+Iterador Camiones :: listarCamiones()
 {
-    //cargarIterador(Hash,iter);
+    Iterador iter;
+    cargarIterador(iter);
+    return iter;
+
 }
 
 float Camiones :: totalMetrosCubicosAnuales()
 {
     float total = 0;
-    for(int i = 0; i > B;i++)
+    for(int i = 0; i < B; i++)
     {
         Nodo * aux = Hash[i];
         while (aux != NULL)
@@ -110,5 +120,30 @@ float Camiones :: totalMetrosCubicosAnuales()
     }
     return total;
 }
+
+void Camiones :: CantidadCamionesPorTipo(int &cantSimple,int &cantGrande,int &cantRemolque)
+{
+    cantSimple = 0;
+    cantGrande = 0;
+    cantRemolque = 0;
+
+    for(int i = 0; i < B; i++)
+    {
+        Nodo * aux = Hash[i];
+        while (aux != NULL)
+        {
+            if(aux->info->getTipo() == "CAMION SIMPLE")
+                cantSimple++;
+            else if(aux->info->getTipo() == "CAMION GRANDE")
+                cantGrande++;
+            else
+                cantRemolque++;
+
+            aux = aux->sig;
+        }
+    }
+
+}
+
 
 

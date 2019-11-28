@@ -28,7 +28,7 @@ class Camioneros
         void Insert(Camionero *);
         bool Empty();
         Camionero * Find(long);///Precondicion: si existe en el diccionario*/
-        void listarCamioneros(Iterador &);
+        Iterador listarCamioneros();
         //void listarCamioneroMaxTatuajes(Camionero*,&error);
         ///TODO: modulo tipo error
         ~Camioneros();

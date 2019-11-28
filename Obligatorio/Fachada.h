@@ -19,10 +19,11 @@ class Fachada
         void AltaCamion(Camion *,long,tipoError &);
         void ModificarViajesAnuales(int,String,Camion * &,tipoError &);
 
-        void ListadoCamioneros(Iterador &);
-        void ListadoCamiones(Iterador &);
+        Iterador ListadoCamioneros();
+        Iterador ListadoCamiones();
         void DetalleCamion(String,Camion * &,tipoError &);
         float TotalMetrosCubicosAnuales();
+        void CantidadCamionesPorTipo(int &cantSimple,int &cantGrande,int &cantRemolque);
 };
 
 

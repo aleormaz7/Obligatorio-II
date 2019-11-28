@@ -3,6 +3,7 @@
 Fachada :: Fachada(): camioneros(), camiones()
 {
 
+
 }
 
 void Fachada :: AltaCamionero(Camionero * c,tipoError &error)
@@ -35,9 +36,9 @@ void Fachada :: AltaCamion(Camion * c,long cedula,tipoError &error)
     }
 }
 
-void Fachada :: ListadoCamioneros(Iterador &iter)
+Iterador Fachada :: ListadoCamioneros()
 {
-    camioneros.listarCamioneros(iter);
+    return camioneros.listarCamioneros();
 }
 
 void Fachada :: DetalleCamion(String mat, Camion * &c, tipoError &error)
@@ -63,12 +64,17 @@ void Fachada :: ModificarViajesAnuales(int cant,String mat,Camion * &c,tipoError
     }
 }
 
-void Fachada :: ListadoCamiones(Iterador &iter)
+Iterador Fachada :: ListadoCamiones()
 {
-    camiones.listarCamiones(iter);
+    return camiones.listarCamiones();
 }
 
 float Fachada :: TotalMetrosCubicosAnuales()
 {
     return camiones.totalMetrosCubicosAnuales();
+}
+
+void Fachada :: CantidadCamionesPorTipo(int &cantSimple,int &cantGrande,int &cantRemolque)
+{
+    camiones.CantidadCamionesPorTipo(cantSimple,cantGrande,cantRemolque);
 }

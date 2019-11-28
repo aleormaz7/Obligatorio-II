@@ -31,7 +31,7 @@ class Camiones
         ///inserta la mascota al principio de la lista
         Camion * obtenerEnLista (Nodo *, String);
         ///obtiene la mascota con el número ingresado
-        void cargarIterador(Nodo *, Iterador &);
+        void cargarIterador(Iterador &);
 
     public:
         Camiones();
@@ -48,11 +48,11 @@ class Camiones
         ///retorna la mascota cuyo número es el ingresado
         ///precondición: la mascota es miembro de la colección
 
-        void listarCamiones(Iterador &);
+        Iterador listarCamiones();
 
         float totalMetrosCubicosAnuales();
 
-
+        void CantidadCamionesPorTipo(int &cantSimple,int &cantGrande,int &cantRemolque);
 
 };
 
