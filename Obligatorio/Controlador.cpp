@@ -1,7 +1,11 @@
 #include "Controlador.h"
 
+Controlador :: Controlador() : fachada()
+{
 
-void altaCamionero(Fachada &f)
+}
+
+void Controlador :: altaCamionero()
 {
     cout << "\nIngrese datos del camionero: ";
     cout << "\nCedula: ";
@@ -66,7 +70,7 @@ void altaCamionero(Fachada &f)
     Camionero * c = new Camionero(cedula,nombre,cntT,fchNac);
 
     tipoError error;
-    f.AltaCamionero(c,error);
+    fachada.AltaCamionero(c,error);
 
     if(error == SIN_ERROR)
     {
@@ -78,7 +82,7 @@ void altaCamionero(Fachada &f)
     }
 }
 
-void altaCamion(Fachada &f)
+void Controlador :: altaCamion()
 {
 
     tipoError error;
@@ -206,7 +210,7 @@ void altaCamion(Fachada &f)
     }
 
     ///NOTA: ver el tema de que si y existe camion con matricula, que no siga pidiendo los demas datos
-    f.AltaCamion(aux,cedula,error);
+    fachada.AltaCamion(aux,cedula,error);
 
     if(error == SIN_ERROR)
         cout << "\nCamion ingresado en el Sistema";
@@ -220,7 +224,7 @@ void altaCamion(Fachada &f)
 }
 
 ///*Nuevo*/
-void modificarViajesAnuales(Fachada &f)
+void Controlador :: modificarViajesAnuales()
 {
     Camion * c = NULL;
     tipoError error;
@@ -236,7 +240,7 @@ void modificarViajesAnuales(Fachada &f)
     cin >> cant;
     cin.sync();
 
-    f.ModificarViajesAnuales(cant,mat,c,error);
+    fachada.ModificarViajesAnuales(cant,mat,c,error);
     if(error == SIN_ERROR)
     {
         cout << "\nCantidad viajes anuales modificada";
@@ -248,9 +252,9 @@ void modificarViajesAnuales(Fachada &f)
     cin.sync();
 }
 
-void listadoCamioneros(Fachada f)
+void Controlador :: listadoCamioneros()
 {
-    Iterador iterador = f.ListadoCamioneros();
+    Iterador iterador = fachada.ListadoCamioneros();
 
     if (iterador.hayMasObjetos())
     {
@@ -277,7 +281,7 @@ void listadoCamioneros(Fachada f)
 }
 
 
-void detalleCamion(Fachada f)
+void Controlador :: detalleCamion()
 {
     Camion * c = NULL;
     tipoError error;
@@ -290,7 +294,7 @@ void detalleCamion(Fachada f)
     mat.scan();
     cin.sync();
 
-    f.DetalleCamion(mat,c,error);
+    fachada.DetalleCamion(mat,c,error);
     if (error == NO_EXISTE_CAMION)
         cout << "\nError: No exite un camion con la matricula ingresada";
     else
@@ -327,9 +331,9 @@ void detalleCamion(Fachada f)
     cin.sync();
 }
 
-void listadoCamiones(Fachada f)
+void Controlador :: listadoCamiones()
 {
-    Iterador iterador =  f.ListadoCamiones();
+    Iterador iterador =  fachada.ListadoCamiones();
 
     if (iterador.hayMasObjetos())
     {
@@ -373,17 +377,17 @@ void listadoCamiones(Fachada f)
     cin.sync();
 }
 
-void totalMetrosCubicosAnuales(Fachada f)
+void  Controlador :: totalMetrosCubicosAnuales()
 {
-    cout << "\nTotal de metros cubicos de la flota: " << f.TotalMetrosCubicosAnuales();
+    cout << "\nTotal de metros cubicos de la flota: " << fachada.TotalMetrosCubicosAnuales();
     cin.sync();
 }
 
-void obtenerCamionesPorTipo(Fachada f)
+void Controlador :: obtenerCamionesPorTipo()
 {
     int cantSimple,cantGrande,cantRemolque;
 
-    f.CantidadCamionesPorTipo(cantSimple,cantGrande,cantRemolque);
+    fachada.CantidadCamionesPorTipo(cantSimple,cantGrande,cantRemolque);
 
     cout << "\nCantidades de camiones por tipo: ";
     cout << "\nSimple: " << cantSimple;

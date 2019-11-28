@@ -7,21 +7,33 @@
 #include "Fachada.h"
 #include <limits>
 
-void altaCamionero(Fachada &f);
+class Controlador
+{
 
-void altaCamion(Fachada &f);
+    private:
+        Fachada fachada;
+    public:
+        Controlador();
 
-void modificarViajesAnuales(Fachada &f);
+        void altaCamionero();
 
-void listadoCamioneros(Fachada f);
+        void altaCamion();
 
-void listadoCamiones(Fachada f);
+        void modificarViajesAnuales();
 
-void detalleCamion(Fachada f);
+        void listadoCamioneros();
 
-void totalMetrosCubicosAnuales(Fachada f);
+        void listadoCamiones();
 
-void obtenerCamionesPorTipo(Fachada f);
+        void detalleCamion();
+
+        void totalMetrosCubicosAnuales();
+
+        void obtenerCamionesPorTipo();
+
+
+};
+
 
 
 #endif // CONTROLADOR_H_INCLUDED

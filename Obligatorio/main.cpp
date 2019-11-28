@@ -8,7 +8,18 @@ int main()
 {
    // CamionerosPruebas();
 
-    Fachada fachada;// = Fachada();
+    Controlador c;// = Fachada();
+
+
+    /*c.altaCamionero();
+    c.altaCamionero();
+
+    c.listadoCamioneros();
+
+    c.altaCamionero();*/
+
+    //altaCamion(fachada);
+    //altaCamion(fachada);
 
     ///Menu   PREGUNTAR: El Menu y Controlador lo hacemos con archivo o lo hacermos como una clase?
     int opc,opcAltasModif;
@@ -23,13 +34,13 @@ int main()
                 switch(opcAltasModif)
                 {
                     case 1:
-                        altaCamionero(fachada);
+                        c.altaCamionero();
                         break;
                     case 2:
-                        altaCamion(fachada);
+                        c.altaCamion();
                         break;
                     case 3:
-                        modificarViajesAnuales(fachada);
+                        c.modificarViajesAnuales();
                         break;
                     case 4:
                         break;
@@ -46,19 +57,19 @@ int main()
                 switch(opc)
                 {
                     case 1:
-                        listadoCamiones(fachada);
+                        c.listadoCamiones();
                         break;
                     case 2:
-                        detalleCamion(fachada);
+                        c.detalleCamion();
                         break;
                     case 3:
-                        listadoCamioneros(fachada);
+                        c.listadoCamioneros();
                         break;
                     case 4:
-                        totalMetrosCubicosAnuales(fachada);
+                        c.totalMetrosCubicosAnuales();
                         break;
                     case 5:
-                        obtenerCamionesPorTipo(fachada);
+                        c.obtenerCamionesPorTipo();
                         break;
                     case 6:
                         break;
