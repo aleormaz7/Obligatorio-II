@@ -129,8 +129,8 @@ void Controlador :: altaCamion()
     }
     else
     {
-        cin.clear();
-        cin.ignore(numeric_limits <streamsize>::max(), '\n' );
+        //cin.clear();
+        //cin.ignore(numeric_limits <streamsize>::max(), '\n' );
         cout << "Ingreso invalido, debe ingresar solo numeros" << endl;
     }
     cin.sync();

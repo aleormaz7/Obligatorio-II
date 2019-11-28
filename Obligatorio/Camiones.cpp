@@ -90,7 +90,7 @@ void Camiones :: cargarIterador(Iterador &iter)
         Nodo * aux = Hash[i];
         while (aux != NULL)
         {
-            cout << "\n Insrta";
+            //cout << "\n Insrta";
             iter.insertarObjeto(aux->info);
             aux = aux->sig;
         }
