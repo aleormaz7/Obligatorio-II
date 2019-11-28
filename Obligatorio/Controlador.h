@@ -31,6 +31,7 @@ class Controlador
 
         void obtenerCamionesPorTipo();
 
+        void cantidadCamionesGrandesFechaAdq();
 
 };
 

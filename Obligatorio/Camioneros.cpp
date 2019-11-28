@@ -40,12 +40,6 @@ Camioneros :: ~Camioneros()
     DestruirArbol(abb);
 }
 
-/*void listarCamioneroMaxTatuajes(Camionero*,&error)
-{
-
-}*/
-
-
 
 ///Auxiliares:
 void Camioneros :: DestruirArbol(NodoABB * &a)
@@ -136,4 +130,5 @@ void Camioneros :: cargarIterador(NodoABB * a, Iterador &iter)
         CamioneroMayorCantTatuajes(a->hder,c,maxCant);
     }
 }*/
+
 

@@ -6,20 +6,9 @@
 
 int main()
 {
-   // CamionerosPruebas();
 
-    Controlador c;// = Fachada();
+    Controlador c;
 
-
-    /*c.altaCamionero();
-    c.altaCamionero();
-
-    c.listadoCamioneros();
-
-    c.altaCamionero();*/
-
-    //altaCamion(fachada);
-    //altaCamion(fachada);
 
     ///Menu   PREGUNTAR: El Menu y Controlador lo hacemos con archivo o lo hacermos como una clase?
     int opc,opcAltasModif;
@@ -74,6 +63,7 @@ int main()
                     case 6:
                         break;
                     case 7:
+                        c.cantidadCamionesGrandesFechaAdq();
                         break;
                     case 8:
                         break;

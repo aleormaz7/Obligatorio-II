@@ -26,7 +26,7 @@
 	<string.h>
 	<iostream>
 
-1574955886 source:c:\users\ale\desktop\mi obligatorio\main.cpp
+1574960096 source:c:\users\ale\desktop\mi obligatorio\main.cpp
 	"Pruebas.h"
 	"Menu.h"
 	"Controlador.h"
@@ -46,7 +46,7 @@
 	"Camioneros.h"
 	<limits>
 
-1574948440 source:c:\users\ale\desktop\mi obligatorio\camioneros.cpp
+1574958484 source:c:\users\ale\desktop\mi obligatorio\camioneros.cpp
 	"Camioneros.h"
 
 1574943374 c:\users\ale\desktop\mi obligatorio\camioneros.h
@@ -88,20 +88,20 @@
 1574776136 c:\users\ale\desktop\mi obligatorio\camionconremolque.h
 	"CamionGrande.h"
 
-1574945980 source:c:\users\ale\desktop\mi obligatorio\camiones.cpp
+1574960068 source:c:\users\ale\desktop\mi obligatorio\camiones.cpp
 	"Camiones.h"
 
-1574946474 c:\users\ale\desktop\mi obligatorio\camiones.h
+1574959529 c:\users\ale\desktop\mi obligatorio\camiones.h
 	"Iterador.h"
 	"Camion.h"
 	"CamionSimple.h"
 	"CamionGrande.h"
 	"CamionConRemolque.h"
 
-1574946961 source:c:\users\ale\desktop\mi obligatorio\fachada.cpp
+1574959690 source:c:\users\ale\desktop\mi obligatorio\fachada.cpp
 	"Fachada.h"
 
-1574945705 c:\users\ale\desktop\mi obligatorio\fachada.h
+1574959651 c:\users\ale\desktop\mi obligatorio\fachada.h
 	"Camioneros.h"
 	"Camiones.h"
 	"TipoError.h"
@@ -306,10 +306,10 @@
 	"Fachada.h"
 	<limits>
 
-1574955674 source:c:\users\ale\desktop\mi obligatorio\controlador.cpp
+1574960402 source:c:\users\ale\desktop\mi obligatorio\controlador.cpp
 	"Controlador.h"
 
-1574955628 c:\users\ale\desktop\mi obligatorio\controlador.h
+1574959809 c:\users\ale\desktop\mi obligatorio\controlador.h
 	"String.h"
 	"Fecha.h"
 	"Camionero.h"

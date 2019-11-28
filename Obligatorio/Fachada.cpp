@@ -78,3 +78,8 @@ void Fachada :: CantidadCamionesPorTipo(int &cantSimple,int &cantGrande,int &can
 {
     camiones.CantidadCamionesPorTipo(cantSimple,cantGrande,cantRemolque);
 }
+
+void Fachada :: CantidadCamionesGrandesFechaAdq(int &cant,Fecha &f)
+{
+    camiones.CantidadCamionesGrandesFechaAdquisicion(cant,f);
+}

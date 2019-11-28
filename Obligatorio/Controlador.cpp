@@ -350,22 +350,22 @@ void Controlador :: listadoCamiones()
             if(aux->getTipo() == "CAMION SIMPLE")
             {
                 cout << " SIMPLE ";
-                cout << " - Departamento ";
-                ((CamionSimple *) aux)->getDepto().print();
+                /*cout << " - Departamento ";
+                ((CamionSimple *) aux)->getDepto().print();*/
             }
             else
             {
                 if(aux->getTipo() == "CAMION GRANDE")
                 {
                     cout << " GRANDE ";
-                    cout << " - Volumen: " << ((CamionGrande *) aux)->getVolumen();
+                    /*cout << " - Volumen: " << ((CamionGrande *) aux)->getVolumen();
                     cout << " - Fecha de adquirido: ";
-                    ((CamionGrande *) aux)->getFechaAdquirido().MostrarFecha();
+                    ((CamionGrande *) aux)->getFechaAdquirido().MostrarFecha();*/
                 }
                 else
                 {
                     cout << " CON REMOLQUE ";
-                    cout << " - Capacidad de remolque " << ((CamionConRemolque *) aux)->getCapRemolque();
+                   /* cout << " - Capacidad de remolque " << ((CamionConRemolque *) aux)->getCapRemolque();*/
                 }
             }
             cout << "\n";
@@ -395,6 +395,26 @@ void Controlador :: obtenerCamionesPorTipo()
     cout << "\nRemolque: " << cantRemolque;
 
     cin.sync();
+}
+
+void Controlador :: cantidadCamionesGrandesFechaAdq()
+{
+    int cant;
+    Fecha f;
+    cout << "\nIngrese fecha Adquisicion: ";
+    do
+    {
+        f.CargarFecha();
+        cin.sync();
+        if(!f.esValida())
+        {
+            cout << "\nFecha Adquirido invalida";
+        }
+    }
+    while(!f.esValida());
+
+    fachada.CantidadCamionesGrandesFechaAdq(cant,f);
+    cout << "\nCantidad: " << cant;
 
 }
 

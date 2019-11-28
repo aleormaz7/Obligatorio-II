@@ -145,5 +145,27 @@ void Camiones :: CantidadCamionesPorTipo(int &cantSimple,int &cantGrande,int &ca
 
 }
 
-
-
+void Camiones :: CantidadCamionesGrandesFechaAdquisicion(int &cant,Fecha &f)
+{
+    cant = 0;
+    for(int i = 0; i < B; i++)
+    {
+        Nodo * aux = Hash[i];
+        while (aux != NULL)
+        {
+            if(aux->info->getTipo() == "CAMION GRANDE")
+            {
+                CamionGrande * auxGrande = (CamionGrande *) aux;///casteo
+                if(auxGrande->getFechaAdquirido() > f)
+                    cant++;
+            }
+            else if(aux->info->getTipo() == "CAMION CON REMOLQUE")
+            {
+                CamionConRemolque * auxRemolque = (CamionConRemolque *) aux;///casteo
+                if(auxRemolque->getFechaAdquirido() > f)
+                    cant++;
+            }
+            aux = aux->sig;
+        }
+    }
+}

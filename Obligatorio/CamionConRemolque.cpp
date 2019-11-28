@@ -27,7 +27,7 @@ int CamionConRemolque :: getCapRemolque()
 
 String CamionConRemolque :: getTipo()
 {
-    return "CAMION_CON_REMOLQUE";
+    return "CAMION CON REMOLQUE";
 }
 
 float CamionConRemolque :: calcularMetrosCubicosAnuales()
