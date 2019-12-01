@@ -83,3 +83,8 @@ void Fachada :: CantidadCamionesGrandesFechaAdq(int &cant,Fecha &f)
 {
     camiones.CantidadCamionesGrandesFechaAdquisicion(cant,f);
 }
+
+Camionero * Fachada :: CamionerMayorCntTatuajes()
+{
+    return camioneros.CamioneroMaxTatuajes();
+}

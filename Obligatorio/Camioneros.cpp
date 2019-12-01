@@ -34,12 +34,25 @@ Iterador Camioneros :: listarCamioneros()
     cargarIterador(abb, iter);
     return iter;
 }
+/*
+void Camioneros :: CamioneroMaxTatuajes(Camionero * &c)
+{
+    c = NULL;
+    CamioneroMayorCantTatuajes(abb, c);
+ ///   return iter;
+}
+*/
 
+Camionero * Camioneros :: CamioneroMaxTatuajes()
+{
+    Camionero * c = NULL;
+    CamioneroMayorCantTatuajes(abb, c);
+    return c;
+}
 Camioneros :: ~Camioneros()
 {
     DestruirArbol(abb);
 }
-
 
 ///Auxiliares:
 void Camioneros :: DestruirArbol(NodoABB * &a)
@@ -118,17 +131,20 @@ void Camioneros :: cargarIterador(NodoABB * a, Iterador &iter)
     }
 }
 
-/*void Camioneros :: CamioneroMayorCantTatuajes(NodoABB * a, Camionero * &c,int &maxCant)
+void Camioneros :: CamioneroMayorCantTatuajes(NodoABB * a,Camionero * &c)
 {
     if(a != NULL)
     {
-        if(a->info->getCantTatuajes() > maxCant)
+        if(c == NULL)
+            c = a->info;
+        else
         {
-            aux = CamioneroMayorCantTatuajes(a->info,c,maxCant);
+            if(a->info->getCantTatuajes() > c->getCantTatuajes())
+                c = a->info;
         }
-        CamioneroMayorCantTatuajes(a->hizq,c,maxCant);
-        CamioneroMayorCantTatuajes(a->hder,c,maxCant);
+        CamioneroMayorCantTatuajes(a->hder,c);
+        CamioneroMayorCantTatuajes(a->hizq,c);
     }
-}*/
+}
 
 

@@ -24,6 +24,7 @@ class Fachada
         void DetalleCamion(String,Camion * &,tipoError &);
         float TotalMetrosCubicosAnuales();
         void CantidadCamionesPorTipo(int &cantSimple,int &cantGrande,int &cantRemolque);
+        Camionero * CamionerMayorCntTatuajes();
 
         void CantidadCamionesGrandesFechaAdq(int &cant,Fecha &f);
 };

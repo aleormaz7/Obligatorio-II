@@ -61,6 +61,7 @@ int main()
                         c.obtenerCamionesPorTipo();
                         break;
                     case 6:
+                        c.camioneroConMayorCntTatuajes();
                         break;
                     case 7:
                         c.cantidadCamionesGrandesFechaAdq();

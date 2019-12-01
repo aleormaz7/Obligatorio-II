@@ -418,4 +418,16 @@ void Controlador :: cantidadCamionesGrandesFechaAdq()
 
 }
 
+void Controlador :: camioneroConMayorCntTatuajes()
+{
+    Camionero * c = fachada.CamionerMayorCntTatuajes();
+    if(c == NULL)
+        cout << "\nError: aun no hay camioneros ingresados en el sistema. ";
+    else
+    {
+        cout << "\nCamionero. ";
+        c->getNombre().print();
+    }
+}
+
 
