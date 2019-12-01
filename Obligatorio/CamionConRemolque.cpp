@@ -17,7 +17,6 @@ CamionConRemolque :: CamionConRemolque(const CamionConRemolque &c) : CamionGrand
 
 CamionConRemolque :: ~CamionConRemolque()
 {
-
 }
 
 int CamionConRemolque :: getCapRemolque()

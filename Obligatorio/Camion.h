@@ -4,7 +4,6 @@
 #include "Objeto.h"
 #include "Camionero.h"
 
-
 class Camion : public Objeto
 {
     private:

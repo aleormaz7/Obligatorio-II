@@ -5,7 +5,6 @@
 
 class CamionSimple : public Camion
 {
-
     private:
         String depto;
 
@@ -17,10 +16,5 @@ class CamionSimple : public Camion
         String getDepto();
         String getTipo();
         float calcularMetrosCubicosAnuales();
-
 };
-
-
-
-
 #endif // CAMIONSIMPLE_H_INCLUDED

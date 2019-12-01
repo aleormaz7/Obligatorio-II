@@ -55,9 +55,5 @@ class Camiones
         void CantidadCamionesPorTipo(int &cantSimple,int &cantGrande,int &cantRemolque);
 
         void CantidadCamionesGrandesFechaAdquisicion(int &cant,Fecha &f);
-
 };
-
-
-
 #endif // CAMIONES_H_INCLUDED

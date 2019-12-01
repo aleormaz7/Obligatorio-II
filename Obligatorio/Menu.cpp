@@ -1,5 +1,4 @@
 #include "Menu.h"
-#include "String.h"
 
 void mostrarMenu(int &opcion)
 {

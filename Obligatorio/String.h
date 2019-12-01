@@ -2,8 +2,8 @@
 #define STRING_H_INCLUDED
 
 #include <string.h>
-
 #include <iostream>
+
 using namespace std;
 
 const int MAX = 80;

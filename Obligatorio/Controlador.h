@@ -1,13 +1,7 @@
 #ifndef CONTROLADOR_H_INCLUDED
 #define CONTROLADOR_H_INCLUDED
 
-#include "String.h"
-#include "Fecha.h"
-#include "Camionero.h"
 #include "Fachada.h"
-#include <limits>
-
-
 
 class Controlador
 {

@@ -3,9 +3,7 @@
 
 #include "Camioneros.h"
 #include "Camiones.h"
-
 #include "TipoError.h"
-
 
 class Fachada
 {

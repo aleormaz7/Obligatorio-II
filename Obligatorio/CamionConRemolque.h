@@ -1,7 +1,6 @@
 #ifndef CAMIONCONREMOLQUE_H_INCLUDED
 #define CAMIONCONREMOLQUE_H_INCLUDED
 
-
 #include "CamionGrande.h"
 
 class CamionConRemolque : public CamionGrande

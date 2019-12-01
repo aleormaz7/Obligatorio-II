@@ -2,8 +2,6 @@
 
 Fachada :: Fachada(): camioneros(), camiones()
 {
-
-
 }
 
 void Fachada :: AltaCamionero(Camionero * c,tipoError &error)

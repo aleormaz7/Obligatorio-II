@@ -108,21 +108,20 @@
 
 1574873207 c:\users\ale\desktop\mi obligatorio\tipoerror.h
 
-1574858482 source:c:\users\german ana\documents\drive\ude\programacion iv\obligatorio\p4-obligatorio\obligatorio\camion.cpp
+1575243034 source:c:\users\german ana\documents\drive\ude\programacion iv\obligatorio\p4-obligatorio\obligatorio\camion.cpp
 	"Camion.h"
 
-1574858482 c:\users\german ana\documents\drive\ude\programacion iv\obligatorio\p4-obligatorio\obligatorio\camion.h
+1575243034 c:\users\german ana\documents\drive\ude\programacion iv\obligatorio\p4-obligatorio\obligatorio\camion.h
 	"Objeto.h"
 	"Camionero.h"
 
-1574950152 c:\users\german ana\documents\drive\ude\programacion iv\obligatorio\p4-obligatorio\obligatorio\objeto.h
+1575242298 c:\users\german ana\documents\drive\ude\programacion iv\obligatorio\p4-obligatorio\obligatorio\objeto.h
 	"Fecha.h"
 
-1574858482 c:\users\german ana\documents\drive\ude\programacion iv\obligatorio\p4-obligatorio\obligatorio\fecha.h
-	<stdio.h>
+1575242378 c:\users\german ana\documents\drive\ude\programacion iv\obligatorio\p4-obligatorio\obligatorio\fecha.h
 	"String.h"
 
-1574858482 c:\users\german ana\documents\drive\ude\programacion iv\obligatorio\p4-obligatorio\obligatorio\string.h
+1575242255 c:\users\german ana\documents\drive\ude\programacion iv\obligatorio\p4-obligatorio\obligatorio\string.h
 	<string.h>
 	<iostream>
 
@@ -130,22 +129,22 @@
 	"Fecha.h"
 	"Objeto.h"
 
-1575207760 source:c:\users\german ana\documents\drive\ude\programacion iv\obligatorio\p4-obligatorio\obligatorio\camionconremolque.cpp
+1575243034 source:c:\users\german ana\documents\drive\ude\programacion iv\obligatorio\p4-obligatorio\obligatorio\camionconremolque.cpp
 	"CamionConRemolque.h"
 
-1574858482 c:\users\german ana\documents\drive\ude\programacion iv\obligatorio\p4-obligatorio\obligatorio\camionconremolque.h
+1575243034 c:\users\german ana\documents\drive\ude\programacion iv\obligatorio\p4-obligatorio\obligatorio\camionconremolque.h
 	"CamionGrande.h"
 
-1574869215 c:\users\german ana\documents\drive\ude\programacion iv\obligatorio\p4-obligatorio\obligatorio\camiongrande.h
+1575242859 c:\users\german ana\documents\drive\ude\programacion iv\obligatorio\p4-obligatorio\obligatorio\camiongrande.h
 	"Camion.h"
 
 1574858482 source:c:\users\german ana\documents\drive\ude\programacion iv\obligatorio\p4-obligatorio\obligatorio\camionero.cpp
 	"Camionero.h"
 
-1575222503 source:c:\users\german ana\documents\drive\ude\programacion iv\obligatorio\p4-obligatorio\obligatorio\camioneros.cpp
+1575243034 source:c:\users\german ana\documents\drive\ude\programacion iv\obligatorio\p4-obligatorio\obligatorio\camioneros.cpp
 	"Camioneros.h"
 
-1575221193 c:\users\german ana\documents\drive\ude\programacion iv\obligatorio\p4-obligatorio\obligatorio\camioneros.h
+1575243034 c:\users\german ana\documents\drive\ude\programacion iv\obligatorio\p4-obligatorio\obligatorio\camioneros.h
 	"Camionero.h"
 	"Iterador.h"
 
@@ -153,10 +152,10 @@
 	"Objeto.h"
 	"Iterador.h"
 
-1575207760 source:c:\users\german ana\documents\drive\ude\programacion iv\obligatorio\p4-obligatorio\obligatorio\camiones.cpp
+1575243034 source:c:\users\german ana\documents\drive\ude\programacion iv\obligatorio\p4-obligatorio\obligatorio\camiones.cpp
 	"Camiones.h"
 
-1575207760 c:\users\german ana\documents\drive\ude\programacion iv\obligatorio\p4-obligatorio\obligatorio\camiones.h
+1575243034 c:\users\german ana\documents\drive\ude\programacion iv\obligatorio\p4-obligatorio\obligatorio\camiones.h
 	"Iterador.h"
 	"Camion.h"
 	"CamionSimple.h"
@@ -166,42 +165,40 @@
 1574869255 source:c:\users\german ana\documents\drive\ude\programacion iv\obligatorio\p4-obligatorio\obligatorio\camiongrande.cpp
 	"CamionGrande.h"
 
-1574858482 source:c:\users\german ana\documents\drive\ude\programacion iv\obligatorio\p4-obligatorio\obligatorio\camionsimple.cpp
+1575242846 source:c:\users\german ana\documents\drive\ude\programacion iv\obligatorio\p4-obligatorio\obligatorio\camionsimple.cpp
 	"CamionSimple.h"
 
-1574858482 c:\users\german ana\documents\drive\ude\programacion iv\obligatorio\p4-obligatorio\obligatorio\camionsimple.h
+1575242898 c:\users\german ana\documents\drive\ude\programacion iv\obligatorio\p4-obligatorio\obligatorio\camionsimple.h
 	"Camion.h"
 
-1575221686 source:c:\users\german ana\documents\drive\ude\programacion iv\obligatorio\p4-obligatorio\obligatorio\fachada.cpp
+1575242423 source:c:\users\german ana\documents\drive\ude\programacion iv\obligatorio\p4-obligatorio\obligatorio\fachada.cpp
 	"Fachada.h"
 
-1575221583 c:\users\german ana\documents\drive\ude\programacion iv\obligatorio\p4-obligatorio\obligatorio\fachada.h
+1575242466 c:\users\german ana\documents\drive\ude\programacion iv\obligatorio\p4-obligatorio\obligatorio\fachada.h
 	"Camioneros.h"
 	"Camiones.h"
 	"TipoError.h"
 
 1574865100 c:\users\german ana\documents\drive\ude\programacion iv\obligatorio\p4-obligatorio\obligatorio\tipoerror.h
 
-1574858482 source:c:\users\german ana\documents\drive\ude\programacion iv\obligatorio\p4-obligatorio\obligatorio\fecha.cpp
+1575229278 source:c:\users\german ana\documents\drive\ude\programacion iv\obligatorio\p4-obligatorio\obligatorio\fecha.cpp
 	"Fecha.h"
 
 1574858482 source:c:\users\german ana\documents\drive\ude\programacion iv\obligatorio\p4-obligatorio\obligatorio\iterador.cpp
 	"Iterador.h"
 
-1575221774 source:c:\users\german ana\documents\drive\ude\programacion iv\obligatorio\p4-obligatorio\obligatorio\main.cpp
-	"Pruebas.h"
+1575242239 source:c:\users\german ana\documents\drive\ude\programacion iv\obligatorio\p4-obligatorio\obligatorio\main.cpp
 	"Menu.h"
 	"Controlador.h"
-	"Fachada.h"
 
-1574858482 c:\users\german ana\documents\drive\ude\programacion iv\obligatorio\p4-obligatorio\obligatorio\pruebas.h
+1575229278 c:\users\german ana\documents\drive\ude\programacion iv\obligatorio\p4-obligatorio\obligatorio\pruebas.h
 	"Camioneros.h"
 	<limits>
 
-1574950152 source:c:\users\german ana\documents\drive\ude\programacion iv\obligatorio\p4-obligatorio\obligatorio\pruebas.cpp
+1575229278 source:c:\users\german ana\documents\drive\ude\programacion iv\obligatorio\p4-obligatorio\obligatorio\pruebas.cpp
 	"Pruebas.h"
 
-1574858482 source:c:\users\german ana\documents\drive\ude\programacion iv\obligatorio\p4-obligatorio\obligatorio\string.cpp
+1575229278 source:c:\users\german ana\documents\drive\ude\programacion iv\obligatorio\p4-obligatorio\obligatorio\string.cpp
 	"String.h"
 
 1574774432 source:c:\users\ale\desktop\p4-obligatorio\obligatorio\camion.cpp
@@ -289,22 +286,17 @@
 
 1574768216 c:\users\ale\desktop\p4-obligatorio\obligatorio\tipocamion.h
 
-1574858482 source:c:\users\german ana\documents\drive\ude\programacion iv\obligatorio\p4-obligatorio\obligatorio\menu.cpp
+1575242330 source:c:\users\german ana\documents\drive\ude\programacion iv\obligatorio\p4-obligatorio\obligatorio\menu.cpp
 	"Menu.h"
+
+1575242341 c:\users\german ana\documents\drive\ude\programacion iv\obligatorio\p4-obligatorio\obligatorio\menu.h
 	"String.h"
 
-1574858482 c:\users\german ana\documents\drive\ude\programacion iv\obligatorio\p4-obligatorio\obligatorio\menu.h
-	<stdio.h>
-
-1575222574 source:c:\users\german ana\documents\drive\ude\programacion iv\obligatorio\p4-obligatorio\obligatorio\controlador.cpp
+1575242795 source:c:\users\german ana\documents\drive\ude\programacion iv\obligatorio\p4-obligatorio\obligatorio\controlador.cpp
 	"Controlador.h"
 
-1575221481 c:\users\german ana\documents\drive\ude\programacion iv\obligatorio\p4-obligatorio\obligatorio\controlador.h
-	"String.h"
-	"Fecha.h"
-	"Camionero.h"
+1575242559 c:\users\german ana\documents\drive\ude\programacion iv\obligatorio\p4-obligatorio\obligatorio\controlador.h
 	"Fachada.h"
-	<limits>
 
 1575226685 source:c:\users\ale\desktop\mi obligatorio\controlador.cpp
 	"Controlador.h"

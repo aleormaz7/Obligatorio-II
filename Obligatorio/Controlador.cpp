@@ -1,12 +1,7 @@
 #include "Controlador.h"
 
-#include <iostream>
-#include <string>
-using namespace std;
-
 Controlador :: Controlador() : fachada()
 {
-
 }
 
 void Controlador :: altaCamionero()
@@ -16,7 +11,6 @@ void Controlador :: altaCamionero()
     String auxCedula;
     cin.sync();
     auxCedula.scan();
-    //cin >> cedula;
     while(!auxCedula.esEntero())
     {
         cout << "\nIngrese nuevamente, debe contener solo numeros";
@@ -91,9 +85,6 @@ void Controlador :: altaCamion()
     }
     while((tipo <1 || tipo > 3));
 
-    //cin.clear();///
-    //cin.ignore(numeric_limits <streamsize>::max(), '\n' );///
-
     cout << "Ingrese datos del camion: ";
     String mat,mar;
     int cantViajes;
@@ -104,10 +95,8 @@ void Controlador :: altaCamion()
     cout << "\nMarca: ";
     mar.scan();
     cin.sync();
-    //cin.clear();///
 
     cout << "\nCantidad viajes anuales: ";
-    //cin >> cantViajes;
     cin.sync();
     String auxCntViajes;
     auxCntViajes.scan();
@@ -118,18 +107,12 @@ void Controlador :: altaCamion()
         auxCntViajes.scan();
     }
     cantViajes = int(auxCntViajes.convertirStringAEntero());
-    //cin >> cntT;
     cin.sync();
 
-    //cin.clear();///
-    //cin.ignore(numeric_limits <streamsize>::max(), '\n' );///
-
     cout << "\nIngrese cedula del camionero que lo maneja: ";
-    //cin >> cedula;
     String auxCedula;
     cin.sync();
     auxCedula.scan();
-    //cin >> cedula;
     while(!auxCedula.esEntero())
     {
         cout << "\nIngrese nuevamente, debe contener solo numeros ";
@@ -160,11 +143,8 @@ void Controlador :: altaCamion()
 
         cin.sync();
 
-        //cin.clear();///
-        //cin.ignore(numeric_limits <streamsize>::max(), '\n' );///
-
         cout << "\nFecha Adquirido: ";
-        Fecha fchAdq = Fecha();///PREGUNTAR: si fecha deberia ser un puntero???
+        Fecha fchAdq = Fecha();
         do
         {
             fchAdq.CargarFecha();
@@ -183,14 +163,10 @@ void Controlador :: altaCamion()
         float vol;
         cout << "\nVolumen: ";
         cin >> vol;
-
-        //cin.clear();///
-        //cin.ignore(numeric_limits <streamsize>::max(), '\n' );///
         cin.sync();
 
-
         cout << "\nFecha Adquirido: ";
-        Fecha fchAdq = Fecha();///PREGUNTAR: si fecha deberia ser un puntero???
+        Fecha fchAdq = Fecha();
         do
         {
             fchAdq.CargarFecha();
@@ -202,13 +178,8 @@ void Controlador :: altaCamion()
         }
         while(!fchAdq.esValida());
 
-        //cin.clear();///
-        //cin.ignore(numeric_limits <streamsize>::max(), '\n' );///
-
         int capacidad;
         cout << "\nCapacidad remolque: ";
-        //cin >> capacidad;
-        //cin.sync();
         String auxCap;
         auxCap.scan();
         while(!auxCap.esEntero())
@@ -222,8 +193,6 @@ void Controlador :: altaCamion()
 
         aux = new CamionConRemolque(mat,mar,cantViajes,vol,fchAdq,capacidad);
     }
-
-    ///NOTA: ver el tema de que si y existe camion con matricula, que no siga pidiendo los demas datos
     fachada.AltaCamion(aux,cedula,error);
 
     if(error == SIN_ERROR)
@@ -250,7 +219,6 @@ void Controlador :: modificarViajesAnuales()
     cin.sync();
 
     cout << "\nIngrese cantidad de viajes anuales: ";
-    //cin >> cant;
     cin.sync();
     String auxCant;
     auxCant.scan();
@@ -261,7 +229,6 @@ void Controlador :: modificarViajesAnuales()
         auxCant.scan();
     }
     cant = int(auxCant.convertirStringAEntero());
-
 
     fachada.ModificarViajesAnuales(cant,mat,c,error);
     if(error == SIN_ERROR)
@@ -281,12 +248,10 @@ void Controlador :: listadoCamioneros()
 
     if (iterador.hayMasObjetos())
     {
-       // Objeto * objAux = NULL;
         Camionero * aux = NULL;
         while(iterador.hayMasObjetos())
         {
             aux = (Camionero*)iterador.proximoObjeto();
-            //= (Camionero*) objAux;///casteo
             cout << "\nCedula ";
             cout << aux->getCedula();
             cout << " - Nombre ";
@@ -299,7 +264,6 @@ void Controlador :: listadoCamioneros()
     }
     else
         cout << "\nNo hay camioneros registrados en el sistema.";
-
     cin.sync();
 }
 
@@ -372,32 +336,19 @@ void Controlador :: listadoCamiones()
             cout << " - Cantidad de viajes anuales " << aux->getCantViajesAnuales();
             cout << " - Tipo de camion ";
             if(aux->getTipo() == "CAMION SIMPLE")
-            {
                 cout << " SIMPLE ";
-                /*cout << " - Departamento ";
-                ((CamionSimple *) aux)->getDepto().print();*/
-            }
             else
             {
                 if(aux->getTipo() == "CAMION GRANDE")
-                {
                     cout << " GRANDE ";
-                    /*cout << " - Volumen: " << ((CamionGrande *) aux)->getVolumen();
-                    cout << " - Fecha de adquirido: ";
-                    ((CamionGrande *) aux)->getFechaAdquirido().MostrarFecha();*/
-                }
                 else
-                {
                     cout << " CON REMOLQUE ";
-                   /* cout << " - Capacidad de remolque " << ((CamionConRemolque *) aux)->getCapRemolque();*/
-                }
             }
             cout << "\n";
         }
     }
     else
         cout << "\nNo hay camiones registrados en el sistema.";
-
     cin.sync();
 }
 
@@ -410,14 +361,12 @@ void  Controlador :: totalMetrosCubicosAnuales()
 void Controlador :: obtenerCamionesPorTipo()
 {
     int cantSimple,cantGrande,cantRemolque;
-
     fachada.CantidadCamionesPorTipo(cantSimple,cantGrande,cantRemolque);
 
     cout << "\nCantidades de camiones por tipo: ";
     cout << "\nSimple: " << cantSimple;
     cout << "\nGrande " << cantGrande;
     cout << "\nRemolque: " << cantRemolque;
-
     cin.sync();
 }
 

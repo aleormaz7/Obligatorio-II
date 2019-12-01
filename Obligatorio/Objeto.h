@@ -5,16 +5,8 @@
 
 class Objeto
 {
-    ///Constructor objeto ??
-
-
-
     public:
         Objeto();
         virtual String getTipo() = 0;
-
-
 };
-
-
 #endif // OBJETO_H_INCLUDED

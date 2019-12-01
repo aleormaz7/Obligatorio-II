@@ -5,7 +5,6 @@
 
 class CamionGrande : public Camion
 {
-
     private:
         float volumen;
         Fecha fechaAdquirido;
@@ -20,5 +19,4 @@ class CamionGrande : public Camion
         Fecha getFechaAdquirido();
         float calcularMetrosCubicosAnuales();
 };
-
 #endif // CAMIONGRANDE_H_INCLUDED

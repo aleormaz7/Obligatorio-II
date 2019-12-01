@@ -1,7 +1,7 @@
 #ifndef MENU_H_INCLUDED
 #define MENU_H_INCLUDED
 
-#include <stdio.h>
+#include "String.h"
 
     void mostrarMenu(int &opcion);
     void mostrarSubMenuAltasyModificaciones(int &opcion);

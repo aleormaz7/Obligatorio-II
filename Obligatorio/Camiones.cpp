@@ -95,7 +95,6 @@ void Camiones :: cargarIterador(Iterador &iter)
             aux = aux->sig;
         }
     }
-
 }
 
 Iterador Camiones :: listarCamiones()
@@ -142,7 +141,6 @@ void Camiones :: CantidadCamionesPorTipo(int &cantSimple,int &cantGrande,int &ca
             aux = aux->sig;
         }
     }
-
 }
 
 void Camiones :: CantidadCamionesGrandesFechaAdquisicion(int &cant,Fecha &f)

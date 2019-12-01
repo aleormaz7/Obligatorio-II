@@ -1,16 +1,9 @@
-#include "Pruebas.h"
 #include "Menu.h"
 #include "Controlador.h"
 
-#include "Fachada.h"
-
 int main()
 {
-
     Controlador c;
-
-
-    ///Menu   PREGUNTAR: El Menu y Controlador lo hacemos con archivo o lo hacermos como una clase?
     int opc,opcAltasModif;
     do
     {
@@ -75,7 +68,6 @@ int main()
             }while(opc != 8);
         }
     }while(opc != 3);
-
 }
 
 

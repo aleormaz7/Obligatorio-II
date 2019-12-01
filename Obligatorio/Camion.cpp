@@ -20,9 +20,6 @@ Camion :: Camion(const Camion &c) : matricula(c.matricula), marca(c.marca)
 
 Camion :: ~Camion()
 {
-    ///deberia borrar camionero?
-
-
 }
 
 String Camion :: getMatricula()
