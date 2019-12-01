@@ -34,14 +34,6 @@ Iterador Camioneros :: listarCamioneros()
     cargarIterador(abb, iter);
     return iter;
 }
-/*
-void Camioneros :: CamioneroMaxTatuajes(Camionero * &c)
-{
-    c = NULL;
-    CamioneroMayorCantTatuajes(abb, c);
- ///   return iter;
-}
-*/
 
 Camionero * Camioneros :: CamioneroMaxTatuajes()
 {
@@ -121,10 +113,6 @@ void Camioneros :: cargarIterador(NodoABB * a, Iterador &iter)
 {
     if (a != NULL)
     {
-        /*cargarIterador(a->hizq, iter);
-        iter.insertarObjeto(a->info);
-        cargarIterador(a->hder, iter);*/
-
         cargarIterador(a->hder, iter);
         iter.insertarObjeto(a->info);
         cargarIterador(a->hizq, iter);

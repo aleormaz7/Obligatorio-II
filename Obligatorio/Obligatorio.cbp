@@ -58,8 +58,6 @@
 		<Unit filename="Menu.h" />
 		<Unit filename="Objeto.cpp" />
 		<Unit filename="Objeto.h" />
-		<Unit filename="Pruebas.cpp" />
-		<Unit filename="Pruebas.h" />
 		<Unit filename="String.cpp" />
 		<Unit filename="String.h" />
 		<Unit filename="TipoError.h" />

@@ -84,7 +84,6 @@ void Controlador :: altaCamionero()
 
 void Controlador :: altaCamion()
 {
-
     tipoError error;
     int tipo;
     long cedula;
@@ -100,9 +99,6 @@ void Controlador :: altaCamion()
     }
     while((tipo <1 || tipo > 3));
 
-    //cin.clear();///
-    //cin.ignore(numeric_limits <streamsize>::max(), '\n' );///
-
     cout << "Ingrese datos del camion: ";
     String mat,mar;
     int cantViajes;
@@ -113,13 +109,10 @@ void Controlador :: altaCamion()
     cout << "\nMarca: ";
     mar.scan();
     cin.sync();
-    //cin.clear();///
 
     cout << "\nCantidad viajes anuales: ";
     cin >> cantViajes;
     cin.sync();
-    //cin.clear();///
-    //cin.ignore(numeric_limits <streamsize>::max(), '\n' );///
 
     cout << "\nIngrese cedula del camionero que lo maneja: ";
     cin >> cedula;
@@ -128,11 +121,7 @@ void Controlador :: altaCamion()
         //cout << cedula << endl;
     }
     else
-    {
-        //cin.clear();
-        //cin.ignore(numeric_limits <streamsize>::max(), '\n' );
         cout << "Ingreso invalido, debe ingresar solo numeros" << endl;
-    }
     cin.sync();
 
     Camion * aux;
@@ -155,9 +144,6 @@ void Controlador :: altaCamion()
 
         cin.sync();
 
-        //cin.clear();///
-        //cin.ignore(numeric_limits <streamsize>::max(), '\n' );///
-
         cout << "\nFecha Adquirido: ";
         Fecha fchAdq = Fecha();///PREGUNTAR: si fecha deberia ser un puntero???
         do
@@ -179,10 +165,7 @@ void Controlador :: altaCamion()
         cout << "\nVolumen: ";
         cin >> vol;
 
-        //cin.clear();///
-        //cin.ignore(numeric_limits <streamsize>::max(), '\n' );///
         cin.sync();
-
 
         cout << "\nFecha Adquirido: ";
         Fecha fchAdq = Fecha();///PREGUNTAR: si fecha deberia ser un puntero???
@@ -197,14 +180,10 @@ void Controlador :: altaCamion()
         }
         while(!fchAdq.esValida());
 
-        //cin.clear();///
-        //cin.ignore(numeric_limits <streamsize>::max(), '\n' );///
-
         float capacidad;
         cout << "\nCapacidad remolque: ";
         cin >> capacidad;
         cin.sync();
-
 
         aux = new CamionConRemolque(mat,mar,cantViajes,vol,fchAdq,capacidad);
     }
@@ -258,12 +237,10 @@ void Controlador :: listadoCamioneros()
 
     if (iterador.hayMasObjetos())
     {
-       // Objeto * objAux = NULL;
         Camionero * aux = NULL;
         while(iterador.hayMasObjetos())
         {
             aux = (Camionero*)iterador.proximoObjeto();
-            //= (Camionero*) objAux;///casteo
             cout << "\nCedula ";
             cout << aux->getCedula();
             cout << " - Nombre ";
@@ -348,25 +325,13 @@ void Controlador :: listadoCamiones()
             cout << " - Cantidad de viajes anuales " << aux->getCantViajesAnuales();
             cout << " - Tipo de camion ";
             if(aux->getTipo() == "CAMION SIMPLE")
-            {
                 cout << " SIMPLE ";
-                /*cout << " - Departamento ";
-                ((CamionSimple *) aux)->getDepto().print();*/
-            }
             else
             {
                 if(aux->getTipo() == "CAMION GRANDE")
-                {
                     cout << " GRANDE ";
-                    /*cout << " - Volumen: " << ((CamionGrande *) aux)->getVolumen();
-                    cout << " - Fecha de adquirido: ";
-                    ((CamionGrande *) aux)->getFechaAdquirido().MostrarFecha();*/
-                }
                 else
-                {
                     cout << " CON REMOLQUE ";
-                   /* cout << " - Capacidad de remolque " << ((CamionConRemolque *) aux)->getCapRemolque();*/
-                }
             }
             cout << "\n";
         }

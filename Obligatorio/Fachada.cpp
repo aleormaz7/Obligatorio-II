@@ -2,8 +2,6 @@
 
 Fachada :: Fachada(): camioneros(), camiones()
 {
-
-
 }
 
 void Fachada :: AltaCamionero(Camionero * c,tipoError &error)
@@ -29,7 +27,6 @@ void Fachada :: AltaCamion(Camion * c,long cedula,tipoError &error)
             c->setCamionero(auxFind);
             camiones.Insert(c);
             error = SIN_ERROR;
-            //cout << "\n sin error, inserto";
         }
         else
             error = NO_EXISTE_CAMIONERO;
