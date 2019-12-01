@@ -1,3 +1,4 @@
+#include "Pruebas.h"
 #include "Menu.h"
 #include "Controlador.h"
 

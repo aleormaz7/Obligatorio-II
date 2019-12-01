@@ -25,6 +25,9 @@ class String
         void scan();///Leer
         void print();///Mostrar
         int SumaAscii(String matricula);
+        bool esEntero();
+        long convertirStringAEntero();
+        int largo();
 };
 
 

@@ -322,13 +322,41 @@ void Fecha :: MostrarFecha()
 
 void Fecha :: CargarFecha()
 {
+    cin.sync();
     cout << "\nIngrese un dia: ";
-    cin >> dia;
+    //cin >> dia;
+    String auxDia;
+    auxDia.scan();
+    while(!auxDia.esEntero())
+    {
+        cout << "\nDebe ingresar solo numeros: ";
+        auxDia.scan();
+    }
+    dia = int(auxDia.convertirStringAEntero());
 
+    cin.sync();
     cout << "\nIngrese un mes: ";
-    cin >> mes;
+    //cin >> mes;
+    String auxMes;
+    auxMes.scan();
+    while(!auxMes.esEntero())
+    {
+        cout << "\nDebe ingresar solo numeros: ";
+        auxMes.scan();
+    }
+    mes = int(auxMes.convertirStringAEntero());
 
+    cin.sync();
     cout << "\nIngrese un anio: ";
-    cin >> anio;
+    //cin >> anio;
+    String auxAnio;
+    auxAnio.scan();
+    while(!auxAnio.esEntero())
+    {
+        cout << "\nDebe ingresar solo numeros: ";
+        auxAnio.scan();
+    }
+    anio = int(auxAnio.convertirStringAEntero());
+
 }
 

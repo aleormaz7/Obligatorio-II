@@ -1,5 +1,9 @@
 #include "Controlador.h"
 
+#include <iostream>
+#include <string>
+using namespace std;
+
 Controlador :: Controlador() : fachada()
 {
 
@@ -9,49 +13,37 @@ void Controlador :: altaCamionero()
 {
     cout << "\nIngrese datos del camionero: ";
     cout << "\nCedula: ";
-    int cedula;
-    cin >> cedula;
+    String auxCedula;
     cin.sync();
-    if(!cin.fail())
+    auxCedula.scan();
+    //cin >> cedula;
+    while(!auxCedula.esEntero())
     {
-        //cout << cedula << endl;
-    }
-    else
-    {
-        cin.sync();
-        //cin.clear();
-        //cin.ignore(numeric_limits <streamsize>::max(), '\n' );
-        cout << "\nIngreso invalido, debe ingresar solo numeros" << endl;
-    }
-
-    ///TODO: funciona si se ingresa letras primero(ahi falla y no deja ingresar), pero al reves no
-    /*bool fallo = true;
-    while(fallo)
-    {
+        cout << "\nIngrese nuevamente, debe contener solo numeros";
         cout << "\nCedula: ";
-        cin >> cedula;
-        if(cin.fail())
-        {
-            cin.clear();
-            cin.ignore(numeric_limits <streamsize>::max(), '\n' );
-            cout << "\nIngreso invalido, debe ingresar solo numeros" << endl;
-            fallo = true;
-        }
-        else
-            fallo = false;
-    }*/
+        auxCedula.scan();
+    }
+    long cedula = auxCedula.convertirStringAEntero();
 
-    //cin.clear();///para que no se salte de pedir el nombre
-    //cin.ignore(numeric_limits <streamsize>::max(), '\n' );///para que no se salte de pedir el nombre
+    cin.sync();
 
     String nombre;
     cout << "\nNombre: ";
     nombre.scan();
+
     cin.sync();
 
     cout << "\nCantidad de tatuajes: ";
-    int cntT;
-    cin >> cntT;
+    String auxCntT;
+    auxCntT.scan();
+    while(!auxCntT.esEntero())
+    {
+        cout << "\nIngrese nuevamente, debe contener solo numeros";
+        cout << "\nCantidad de tatuajes: ";
+        auxCntT.scan();
+    }
+    int cntT = int(auxCntT.convertirStringAEntero());
+    //cin >> cntT;
     cin.sync();
 
     cout << "\nFecha de nacimiento: ";
@@ -94,10 +86,13 @@ void Controlador :: altaCamion()
         cout << "\nIngresar tipo:";
         cin >> tipo;
         cin.sync();
-        if(tipo <1 || tipo > 3)
+        if(tipo < 1 || tipo > 3)
             cout << "\nOpcion no valida.";
     }
     while((tipo <1 || tipo > 3));
+
+    //cin.clear();///
+    //cin.ignore(numeric_limits <streamsize>::max(), '\n' );///
 
     cout << "Ingrese datos del camion: ";
     String mat,mar;
@@ -109,19 +104,40 @@ void Controlador :: altaCamion()
     cout << "\nMarca: ";
     mar.scan();
     cin.sync();
+    //cin.clear();///
 
     cout << "\nCantidad viajes anuales: ";
-    cin >> cantViajes;
+    //cin >> cantViajes;
+    cin.sync();
+    String auxCntViajes;
+    auxCntViajes.scan();
+    while(!auxCntViajes.esEntero())
+    {
+        cout << "\nIngrese nuevamente, debe contener solo numeros";
+        cout << "\nCantidad viajes anuales: ";
+        auxCntViajes.scan();
+    }
+    cantViajes = int(auxCntViajes.convertirStringAEntero());
+    //cin >> cntT;
     cin.sync();
 
+    //cin.clear();///
+    //cin.ignore(numeric_limits <streamsize>::max(), '\n' );///
+
     cout << "\nIngrese cedula del camionero que lo maneja: ";
-    cin >> cedula;
-    if(!cin.fail())
+    //cin >> cedula;
+    String auxCedula;
+    cin.sync();
+    auxCedula.scan();
+    //cin >> cedula;
+    while(!auxCedula.esEntero())
     {
-        //cout << cedula << endl;
+        cout << "\nIngrese nuevamente, debe contener solo numeros ";
+        cout << "\nIngrese cedula del camionero que lo maneja: ";
+        auxCedula.scan();
     }
-    else
-        cout << "Ingreso invalido, debe ingresar solo numeros" << endl;
+    cedula = auxCedula.convertirStringAEntero();
+
     cin.sync();
 
     Camion * aux;
@@ -144,6 +160,9 @@ void Controlador :: altaCamion()
 
         cin.sync();
 
+        //cin.clear();///
+        //cin.ignore(numeric_limits <streamsize>::max(), '\n' );///
+
         cout << "\nFecha Adquirido: ";
         Fecha fchAdq = Fecha();///PREGUNTAR: si fecha deberia ser un puntero???
         do
@@ -165,7 +184,10 @@ void Controlador :: altaCamion()
         cout << "\nVolumen: ";
         cin >> vol;
 
+        //cin.clear();///
+        //cin.ignore(numeric_limits <streamsize>::max(), '\n' );///
         cin.sync();
+
 
         cout << "\nFecha Adquirido: ";
         Fecha fchAdq = Fecha();///PREGUNTAR: si fecha deberia ser un puntero???
@@ -180,10 +202,23 @@ void Controlador :: altaCamion()
         }
         while(!fchAdq.esValida());
 
-        float capacidad;
+        //cin.clear();///
+        //cin.ignore(numeric_limits <streamsize>::max(), '\n' );///
+
+        int capacidad;
         cout << "\nCapacidad remolque: ";
-        cin >> capacidad;
-        cin.sync();
+        //cin >> capacidad;
+        //cin.sync();
+        String auxCap;
+        auxCap.scan();
+        while(!auxCap.esEntero())
+        {
+            cout << "\nIngrese nuevamente, debe contener solo numeros";
+            cout << "\nCapacidad remolque: ";
+            auxCap.scan();
+        }
+        capacidad = int(auxCap.convertirStringAEntero());
+
 
         aux = new CamionConRemolque(mat,mar,cantViajes,vol,fchAdq,capacidad);
     }
@@ -202,7 +237,6 @@ void Controlador :: altaCamion()
     }
 }
 
-///*Nuevo*/
 void Controlador :: modificarViajesAnuales()
 {
     Camion * c = NULL;
@@ -216,8 +250,18 @@ void Controlador :: modificarViajesAnuales()
     cin.sync();
 
     cout << "\nIngrese cantidad de viajes anuales: ";
-    cin >> cant;
+    //cin >> cant;
     cin.sync();
+    String auxCant;
+    auxCant.scan();
+    while(!auxCant.esEntero())
+    {
+        cout << "\nIngrese nuevamente, debe contener solo numeros";
+        cout << "\nIngrese cantidad de viajes anuales: ";
+        auxCant.scan();
+    }
+    cant = int(auxCant.convertirStringAEntero());
+
 
     fachada.ModificarViajesAnuales(cant,mat,c,error);
     if(error == SIN_ERROR)
@@ -237,10 +281,12 @@ void Controlador :: listadoCamioneros()
 
     if (iterador.hayMasObjetos())
     {
+       // Objeto * objAux = NULL;
         Camionero * aux = NULL;
         while(iterador.hayMasObjetos())
         {
             aux = (Camionero*)iterador.proximoObjeto();
+            //= (Camionero*) objAux;///casteo
             cout << "\nCedula ";
             cout << aux->getCedula();
             cout << " - Nombre ";
@@ -283,6 +329,7 @@ void Controlador :: detalleCamion()
         c->getMarca().print();
         cout << "\nCantidad viajes anuales: " << c->getCantViajesAnuales();
         cout << "\nMetros cubicos anuales: " << c->calcularMetrosCubicosAnuales();
+
         if(c->getTipo() == "CAMION SIMPLE")
         {
             cout << "\nTipo de camion: Simple";
@@ -325,13 +372,25 @@ void Controlador :: listadoCamiones()
             cout << " - Cantidad de viajes anuales " << aux->getCantViajesAnuales();
             cout << " - Tipo de camion ";
             if(aux->getTipo() == "CAMION SIMPLE")
+            {
                 cout << " SIMPLE ";
+                /*cout << " - Departamento ";
+                ((CamionSimple *) aux)->getDepto().print();*/
+            }
             else
             {
                 if(aux->getTipo() == "CAMION GRANDE")
+                {
                     cout << " GRANDE ";
+                    /*cout << " - Volumen: " << ((CamionGrande *) aux)->getVolumen();
+                    cout << " - Fecha de adquirido: ";
+                    ((CamionGrande *) aux)->getFechaAdquirido().MostrarFecha();*/
+                }
                 else
+                {
                     cout << " CON REMOLQUE ";
+                   /* cout << " - Capacidad de remolque " << ((CamionConRemolque *) aux)->getCapRemolque();*/
+                }
             }
             cout << "\n";
         }
@@ -390,7 +449,10 @@ void Controlador :: camioneroConMayorCntTatuajes()
         cout << "\nError: aun no hay camioneros ingresados en el sistema. ";
     else
     {
-        cout << "\nCamionero. ";
+        cout << "\nCamionero: ";
+        cout << "\nCedula: ";
+        cout << c->getCedula();
+        cout << "\nNombre: ";
         c->getNombre().print();
     }
 }

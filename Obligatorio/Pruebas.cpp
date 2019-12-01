@@ -1,0 +1,223 @@
+#include "Pruebas.h"
+
+
+
+void CamionerosPruebas()
+{/*
+    Fecha fchNac = Fecha(20,11,2019);
+    Camionero * c1 = new Camionero(111,"German",21,fchNac);
+    Camionero * c2 = new Camionero(222,"ale",21,fchNac);
+    Camionero * c3 = new Camionero(333,"banana",21,fchNac);
+
+    Camioneros diccioCamioneros = Camioneros();
+
+    diccioCamioneros.Insert(c1);
+    diccioCamioneros.Insert(c2);
+    diccioCamioneros.Insert(c3);
+
+    Iterador iter;
+    diccioCamioneros.listarCamioneros(iter);
+
+     while(iter.hayMasObjetos())
+    {
+        Objeto * objAux = iter.proximoObjeto();
+        cout << "\nObjeto: ";
+        cout << "\nTipo = ";
+        String tipo = objAux->getTipo();
+        tipo.print();
+
+        Camionero * aux = (Camionero*) objAux;///casteo
+        cout << "\nNom";
+        aux->getNombre().print();
+        cout << "\n";
+
+    }
+
+    Iterador iter2;
+    diccioCamioneros.listarCamioneros(iter2);
+
+        while(iter2.hayMasObjetos())
+    {
+        Objeto * objAux = iter2.proximoObjeto();
+        cout << "\nObjeto: ";
+        cout << "\nTipo = ";
+        String tipo = objAux->getTipo();
+        tipo.print();
+
+        Camionero * aux = (Camionero*) objAux;///casteo
+        cout << "\nNom";
+        aux->getNombre().print();
+        cout << "\n";
+
+    }
+
+*/
+
+
+/*
+    ///
+    //long cedula = 48136851;
+    cout << "Ingrese Cedula del Camionero 1: ";
+    int cedula;
+    cin >> cedula;
+    if(!cin.fail())
+        cout << cedula << endl;
+    else
+    {
+        cin.clear();
+        cin.ignore(numeric_limits <streamsize>::max(), '\n' );
+        cout << "Ingreso invalido, debe ingresar solo numeros" << endl;
+    }
+
+    cin.clear();///
+    cin.ignore(numeric_limits <streamsize>::max(), '\n' );///
+
+    String nombre;
+    cout << "Ingrese Nombre del Camionero 1: ";
+    nombre.scan();
+    int cntT = 2;
+    Fecha fchNac = Fecha(20,11,2019);
+    Camionero * c1 = new Camionero(cedula,nombre,cntT,fchNac);
+    cout << "\nCamionero: ";
+    cout << "\nCedula: " << c1->getCedula();
+    cout << "\nNombre: ";
+    c1->getNombre().print();
+    cout << "\nCantidad Tatuajes: " << c1->getCantTatuajes();
+    cout << "\nFecha Nacimiento: ";
+    c1->getFechaNacimiento().MostrarFecha();
+    ///--------------------------------------------------------------------------------------
+    cout << "Ingrese Cedula del Camionero 2: ";
+    cin >> cedula;
+    if(!cin.fail())
+        cout << cedula << endl;
+    else
+    {
+        cin.clear();
+        cin.ignore(numeric_limits <streamsize>::max(), '\n' );
+        cout << "Ingreso invalido, debe ingresar solo numeros" << endl;
+    }
+
+    cin.clear();///
+    cin.ignore(numeric_limits <streamsize>::max(), '\n' );///
+
+
+    cout << "Ingrese Nombre del Camionero 2: ";
+    nombre.scan();
+    cntT = 4;
+    fchNac = Fecha(22,11,2019);
+    Camionero * c2 = new Camionero(cedula,nombre,cntT,fchNac);
+    cout << "\nCamionero: ";
+    cout << "\nCedula: " << c2->getCedula();
+    cout << "\nNombre: ";
+    c2->getNombre().print();
+    cout << "\nCantidad Tatuajes: " << c2->getCantTatuajes();
+    cout << "\nFecha Nacimiento: ";
+    c2->getFechaNacimiento().MostrarFecha();
+    ///-------------------------------------------------------------------------------------
+
+    cin.clear();///
+    cin.ignore(numeric_limits <streamsize>::max(), '\n' );///
+
+    ///--------------------------------------------------------------------------------------
+    cout << "Ingrese Cedula del Camionero 3: ";
+    cin >> cedula;
+    if(!cin.fail())
+        cout << cedula << endl;
+    else
+    {
+        cin.clear();
+        cin.ignore(numeric_limits <streamsize>::max(), '\n' );
+        cout << "Ingreso invalido, debe ingresar solo numeros" << endl;
+    }
+
+    cin.clear();///
+    cin.ignore(numeric_limits <streamsize>::max(), '\n' );///
+
+
+    cout << "Ingrese Nombre del Camionero 3: ";
+    nombre.scan();
+    cntT = 6;
+    fchNac = Fecha(26,11,2019);
+    Camionero * c3 = new Camionero(cedula,nombre,cntT,fchNac);
+    cout << "\nCamionero: ";
+    cout << "\nCedula: " << c3->getCedula();
+    cout << "\nNombre: ";
+    c3->getNombre().print();
+    cout << "\nCantidad Tatuajes: " << c3->getCantTatuajes();
+    cout << "\nFecha Nacimiento: ";
+    c3->getFechaNacimiento().MostrarFecha();
+    ///-------------------------------------------------------------------------------------
+
+
+    Camioneros diccioCamioneros = Camioneros();
+
+    diccioCamioneros.Insert(c1);
+    diccioCamioneros.Insert(c2);
+    diccioCamioneros.Insert(c3);
+
+
+    if(diccioCamioneros.Empty())
+        cout << "\nEs vacio";
+    else
+        cout << "\nNo es vacio";
+
+
+    if(diccioCamioneros.Member(1))///
+        cout << "\nExiste c1";
+    else
+        cout << "\nNo existe c1";
+
+    if(diccioCamioneros.Member(2))///
+        cout << "\nExiste c2";
+    else
+        cout << "\nNo existe c2";
+
+    ///
+    while(diccioCamioneros.abb != NULL)
+    {
+        if()
+
+
+        diccioCamioneros->abb->hizq;
+
+        cout << "\nCedula: " << aux->getCedula();
+
+    }
+
+
+
+
+    ///---------------------------------------------------------------------------
+    ///ITERADOR:
+
+    cout << "\n ITERADOR:" << endl;
+    Iterador * iterador = new Iterador();
+    iterador->insertarObjeto(c1);
+    iterador->insertarObjeto(c2);
+    iterador->insertarObjeto(c3);
+
+    while(iterador->hayMasObjetos())
+    {
+        Objeto * objAux = iterador->proximoObjeto();
+        cout << "\nObjeto: ";
+        cout << "\nTipo = ";
+        String tipo = objAux->getTipo();
+        tipo.print();
+
+        Camionero * aux = (Camionero*) objAux;///casteo
+        cout << "\nNom";
+        aux->getNombre().print();
+        cout << "\n";
+
+    }*/
+    ///---------------------------------------------------------------
+
+
+
+
+
+
+
+}
+
+

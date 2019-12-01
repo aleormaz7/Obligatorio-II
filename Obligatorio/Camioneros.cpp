@@ -113,6 +113,10 @@ void Camioneros :: cargarIterador(NodoABB * a, Iterador &iter)
 {
     if (a != NULL)
     {
+        /*cargarIterador(a->hizq, iter);
+        iter.insertarObjeto(a->info);
+        cargarIterador(a->hder, iter);*/
+
         cargarIterador(a->hder, iter);
         iter.insertarObjeto(a->info);
         cargarIterador(a->hizq, iter);

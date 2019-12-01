@@ -102,3 +102,106 @@ int String :: SumaAscii(String matricula)
     }
     return suma;
 }
+
+bool String :: esEntero()
+{
+	bool entero = true;
+	int i = 0;
+	while(cadena[i] != '\0' && entero)
+    {
+        if (cadena[i] < 48 || cadena[i] > 57)
+        {
+            if(i == 0 && strlen(cadena) > 1 && cadena[i] == 45) ///considero el valor negativo
+                i++;
+            else
+                entero = false;
+        }
+        else
+            i++;
+    }
+    return entero;
+}
+
+long String :: convertirStringAEntero()
+{
+    int i = (strlen(cadena)-1);
+    int exponente = 0;
+    int largoString = strlen(cadena);
+    long EnteroResultante = 0;
+
+    while (i >= 0)
+    {
+      switch(cadena[i])
+      {
+        case 49:
+            if(i == largoString - 1)
+                EnteroResultante = 1;
+            else
+                EnteroResultante = EnteroResultante + 1 * exponente;
+            break;
+        case 50:
+            if(i == largoString - 1)
+                EnteroResultante = 2;
+            else
+                EnteroResultante = EnteroResultante + 2 * exponente;
+            break;
+        case 51:
+            if(i == largoString - 1)
+                EnteroResultante = 3;
+            else
+                EnteroResultante = EnteroResultante + 3 * exponente;
+            break;
+        case 52:
+            if(i == largoString - 1)
+                EnteroResultante = 4;
+            else
+                EnteroResultante = EnteroResultante + 4 * exponente;
+            break;
+        case 53:
+            if(i == largoString - 1)
+                EnteroResultante = 5;
+            else
+                EnteroResultante = EnteroResultante + 5 * exponente;
+            break;
+        case 54:
+            if(i == largoString - 1)
+                EnteroResultante = 6;
+            else
+                EnteroResultante = EnteroResultante + 6 * exponente;
+            break;
+        case 55:
+            if(i == largoString - 1)
+                EnteroResultante = 7;
+            else
+                EnteroResultante = EnteroResultante + 7 * exponente;
+            break;
+        case 56:
+            if(i == largoString - 1)
+                EnteroResultante = 8;
+            else
+                EnteroResultante = EnteroResultante + 8 * exponente;
+            break;
+        case 57:
+            if(i == largoString - 1)
+                EnteroResultante = 9;
+            else
+                EnteroResultante = EnteroResultante + 9 * exponente;
+            break;
+        case 45:
+                EnteroResultante = EnteroResultante * -1;
+            break;
+      }
+
+      if(exponente == 0)
+        exponente = 10;
+      else
+        exponente = exponente * 10;
+      i--;
+    }
+    return EnteroResultante;
+}
+
+int String :: largo()
+{
+    return strlen(cadena);
+}

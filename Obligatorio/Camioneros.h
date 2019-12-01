@@ -31,6 +31,8 @@ class Camioneros
         Camionero * Find(long);///Precondicion: si existe en el diccionario*/
         Iterador listarCamioneros();
         Camionero * CamioneroMaxTatuajes();
+        //void CamioneroMaxTatuajes(Camionero*);
+        //void CamioneroMayorCantTatuajes(/*NodoABB * a,*/ Camionero * &c);
         ///TODO: modulo tipo error
         ~Camioneros();
 

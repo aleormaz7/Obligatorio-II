@@ -10,7 +10,17 @@ void mostrarMenu(int &opcion)
     cout <<("2. Listados y Consultas \n");
     cout <<("3. Salir del programa \n");
     cout <<("Opcion: ");
-    cin >> opcion;
+    cin.sync();
+    String auxOpcion;
+    auxOpcion.scan();
+    while(!auxOpcion.esEntero())
+    {
+        cout << "\nOpcion invalida,ingrese nuevamente";
+        cout <<("\nOpcion: ");
+        auxOpcion.scan();
+    }
+    opcion = int(auxOpcion.convertirStringAEntero());
+    //cin >> opcion;
 }
 
 void mostrarSubMenuAltasyModificaciones(int &opcion)
@@ -23,7 +33,17 @@ void mostrarSubMenuAltasyModificaciones(int &opcion)
     cout <<("3. Modificar viajes anuales de un camion \n");
     cout <<("4. Volver al menu principal \n");
     cout <<("Opcion: ");
-    cin >> opcion;
+    cin.sync();
+    String auxOpcion;
+    auxOpcion.scan();
+    while(!auxOpcion.esEntero())
+    {
+        cout << "\nOpcion invalida,ingrese nuevamente";
+        cout <<("\nOpcion: ");
+        auxOpcion.scan();
+    }
+    opcion = int(auxOpcion.convertirStringAEntero());
+    //cin >> opcion;
 }
 
 
@@ -41,5 +61,15 @@ void mostrarSubMenuListadosConsultas(int &opcion)
     cout <<("7. Cantidad de camiones grandes registrados, con fecha de adquisicion posterior\n");
     cout <<("8. Volver al menu principal \n");
     cout <<("Opcion: ");
-    cin >> opcion;
+    //cin >> opcion;
+    cin.sync();
+    String auxOpcion;
+    auxOpcion.scan();
+    while(!auxOpcion.esEntero())
+    {
+        cout << "\nOpcion invalida,ingrese nuevamente";
+        cout <<("\nOpcion: ");
+        auxOpcion.scan();
+    }
+    opcion = int(auxOpcion.convertirStringAEntero());
 }
