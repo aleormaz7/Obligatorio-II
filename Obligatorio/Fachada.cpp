@@ -27,7 +27,6 @@ void Fachada :: AltaCamion(Camion * c,long cedula,tipoError &error)
             c->setCamionero(auxFind);
             camiones.Insert(c);
             error = SIN_ERROR;
-            //cout << "\n sin error, inserto";
         }
         else
             error = NO_EXISTE_CAMIONERO;
@@ -42,7 +41,10 @@ Iterador Fachada :: ListadoCamioneros()
 void Fachada :: DetalleCamion(String mat, Camion * &c, tipoError &error)
 {
     if(camiones.Member(mat))
+    {
+        error = SIN_ERROR;
         c = camiones.Find(mat);
+    }
     else
         error = NO_EXISTE_CAMION;
 }

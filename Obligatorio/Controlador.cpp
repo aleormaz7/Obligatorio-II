@@ -283,7 +283,7 @@ void Controlador :: detalleCamion()
 
     fachada.DetalleCamion(mat,c,error);
     if (error == NO_EXISTE_CAMION)
-        cout << "\nError: No exite un camion con la matricula ingresada";
+        cout << "\nError: No existe un camion con la matricula ingresada";
     else
     {
         cout << "\n\nDetalle:";
