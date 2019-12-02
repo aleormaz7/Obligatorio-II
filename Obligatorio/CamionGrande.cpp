@@ -10,7 +10,7 @@ CamionGrande :: CamionGrande(String mat,String mar,int cant,float vol,Fecha fch)
     volumen = vol;
 }
 
-CamionGrande :: CamionGrande(const CamionGrande &c) : Camion(c), fechaAdquirido(c.fechaAdquirido) ///ver cabezal Camion(parametros)??
+CamionGrande :: CamionGrande(const CamionGrande &c) : Camion(c), fechaAdquirido(c.fechaAdquirido)
 {
     volumen = c.volumen;
 }

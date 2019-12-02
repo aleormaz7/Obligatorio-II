@@ -37,8 +37,6 @@ String String :: operator=(const String &otro)
     return (*this);
 }
 
-
-
 int String :: operator==(String aux)
 {
     return (strcmp(cadena,aux.cadena) == 0);
@@ -57,7 +55,6 @@ bool String :: operator<(String aux)
         return true;
     else
         return false;
-
 }
 
 String String :: operator+(String aux)
@@ -70,7 +67,6 @@ void String :: scan()
 {
     int i = 0;
     char c;
-    //cout << "\nIngrese una cadena de caracteres: " << endl;
     c = cin.get();
     while((c != '\n') && (i < MAX - 1))
     {

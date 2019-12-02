@@ -26,11 +26,11 @@ class Camiones
         void destruirLista (Nodo * &);
         ///destruye todo el contenido de la lista
         bool perteneceLista (Nodo *, String);
-        ///indica si existe una mascota con el número ingresado
+        ///indica si existe un camion con la matricula ingresada
         void insFrontEnLista (Nodo * &, Camion *);
-        ///inserta la mascota al principio de la lista
+        ///inserta el puntero al camion, al principio de la lista
         Camion * obtenerEnLista (Nodo *, String);
-        ///obtiene la mascota con el número ingresado
+        ///obtiene el puntero del camion con la matricula ingresada
         void cargarIterador(Iterador &);
 
     public:
@@ -39,14 +39,13 @@ class Camiones
         ~ Camiones();
         ///destructor
         bool Member(String);
-        ///indica si la mascota con el número ingresado es miembro de
-        ///a colección
+        ///indica si el camion con el número de matricula ingresado es miembro
         void Insert(Camion *);
-        ///inserta la nueva mascota a la colección
-        ///recondición: la mascota no es miembro de la colección
+        ///inserta el puntero del nuevo camion
+        ///precondición: el camion no es miembro de la colección
         Camion * Find(String);
-        ///retorna la mascota cuyo número es el ingresado
-        ///precondición: la mascota es miembro de la colección
+        ///retorna el puntero al camion cuya matricula es ingresada
+        ///precondición: el camion es miembro de la colección
 
         Iterador listarCamiones();
 

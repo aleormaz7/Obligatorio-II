@@ -101,7 +101,6 @@ Iterador Camiones :: listarCamiones()
     Iterador iter;
     cargarIterador(iter);
     return iter;
-
 }
 
 float Camiones :: totalMetrosCubicosAnuales()

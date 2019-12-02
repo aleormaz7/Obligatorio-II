@@ -9,7 +9,7 @@ class Camioneros
     private:
         struct NodoABB
         {
-            Camionero * info; //colección de punteros a dueños
+            Camionero * info;
             NodoABB * hizq;
             NodoABB * hder;
         };
@@ -20,15 +20,20 @@ class Camioneros
         bool PerteneceEnArbol(NodoABB *,long);
         void InsertarEnArbol(NodoABB * &, Camionero *);
         Camionero * ObtenerEnArbol(NodoABB *,long);
-        void cargarIterador(NodoABB *, Iterador &); /// fijarse si aca va o no puntero a un iterdor???
+        void cargarIterador(NodoABB *, Iterador &);
         void CamioneroMayorCantTatuajes(NodoABB *, Camionero * &);
 
     public:
         Camioneros();
         bool Member(long);
+        ///indica si el camionero con la CI ingresada es miembro
         void Insert(Camionero *);
+        ///inserta el puntero del nuevo camionero
+        ///precondición: el camionero no es miembro de la colección
         bool Empty();
-        Camionero * Find(long);///Precondicion: si existe en el diccionario*/
+        Camionero * Find(long);
+        ///retorna el puntero al camionero cuya CI es ingresada
+        ///precondición: el camionero es miembro de la colección
         Iterador listarCamioneros();
         Camionero * CamioneroMaxTatuajes();
         ~Camioneros();

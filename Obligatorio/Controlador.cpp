@@ -37,11 +37,10 @@ void Controlador :: altaCamionero()
         auxCntT.scan();
     }
     int cntT = int(auxCntT.convertirStringAEntero());
-    //cin >> cntT;
     cin.sync();
 
     cout << "\nFecha de nacimiento: ";
-    Fecha fchNac = Fecha();///PREGUNTAR: si fecha deberia ser un puntero???
+    Fecha fchNac = Fecha();
     do
     {
         fchNac.CargarFecha();
@@ -267,7 +266,6 @@ void Controlador :: listadoCamioneros()
     cin.sync();
 }
 
-
 void Controlador :: detalleCamion()
 {
     Camion * c = NULL;
@@ -388,7 +386,6 @@ void Controlador :: cantidadCamionesGrandesFechaAdq()
 
     fachada.CantidadCamionesGrandesFechaAdq(cant,f);
     cout << "\nCantidad: " << cant;
-
 }
 
 void Controlador :: camioneroConMayorCntTatuajes()

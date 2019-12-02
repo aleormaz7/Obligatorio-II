@@ -7,7 +7,6 @@ class CamionConRemolque : public CamionGrande
 {
     private:
         float capRemolque;
-
     public:
         CamionConRemolque();
         CamionConRemolque(String,String,int,float,Fecha,float);
@@ -16,7 +15,6 @@ class CamionConRemolque : public CamionGrande
         int getCapRemolque();
         String getTipo();
         float calcularMetrosCubicosAnuales();
-
 };
 
 #endif // CAMIONCONREMOLQUE_H_INCLUDED
