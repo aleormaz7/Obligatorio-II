@@ -286,7 +286,7 @@ void Controlador :: detalleCamion()
         cout << "\nError: No exite un camion con la matricula ingresada";
     else
     {
-        cout << "Detalle:";
+        cout << "\n\nDetalle:";
         cout << "\nMatricula: ";
         c->getMatricula().print();
         cout << "\nMarca: ";
