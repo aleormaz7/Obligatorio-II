@@ -19,7 +19,6 @@ void mostrarMenu(int &opcion)
         auxOpcion.scan();
     }
     opcion = int(auxOpcion.convertirStringAEntero());
-    //cin >> opcion;
 }
 
 void mostrarSubMenuAltasyModificaciones(int &opcion)
@@ -42,9 +41,7 @@ void mostrarSubMenuAltasyModificaciones(int &opcion)
         auxOpcion.scan();
     }
     opcion = int(auxOpcion.convertirStringAEntero());
-    //cin >> opcion;
 }
-
 
 void mostrarSubMenuListadosConsultas(int &opcion)
 {
@@ -60,7 +57,6 @@ void mostrarSubMenuListadosConsultas(int &opcion)
     cout <<("7. Cantidad de camiones grandes registrados, con fecha de adquisicion posterior\n");
     cout <<("8. Volver al menu principal \n");
     cout <<("Opcion: ");
-    //cin >> opcion;
     cin.sync();
     String auxOpcion;
     auxOpcion.scan();

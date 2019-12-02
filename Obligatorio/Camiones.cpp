@@ -90,7 +90,6 @@ void Camiones :: cargarIterador(Iterador &iter)
         Nodo * aux = Hash[i];
         while (aux != NULL)
         {
-            //cout << "\n Insrta";
             iter.insertarObjeto(aux->info);
             aux = aux->sig;
         }
@@ -153,13 +152,13 @@ void Camiones :: CantidadCamionesGrandesFechaAdquisicion(int &cant,Fecha &f)
         {
             if(aux->info->getTipo() == "CAMION GRANDE")
             {
-                CamionGrande * auxGrande = (CamionGrande *) aux;///casteo
+                CamionGrande * auxGrande = (CamionGrande *) aux->info;///casteo
                 if(auxGrande->getFechaAdquirido() > f)
                     cant++;
             }
             else if(aux->info->getTipo() == "CAMION CON REMOLQUE")
             {
-                CamionConRemolque * auxRemolque = (CamionConRemolque *) aux;///casteo
+                CamionConRemolque * auxRemolque = (CamionConRemolque *) aux->info;///casteo
                 if(auxRemolque->getFechaAdquirido() > f)
                     cant++;
             }
