@@ -52,7 +52,6 @@ bool Fecha :: operator<(Fecha f)
                 es = true;
         }
     }
-
     return es;
 }
 
@@ -76,17 +75,6 @@ bool Fecha :: operator>(Fecha f)
 
 bool Fecha :: operator==(Fecha f)
 {
-    /*bool igual = false;
-    if(anio == f.anio)
-    {
-        if(mes == f.mes)
-        {
-            if(dia == f.dia)
-            {
-                igual = true;
-            }
-        }
-    }*/
     return ((anio == f.anio) && (mes == f.mes) && (dia == f.dia));
 }
 
@@ -124,45 +112,6 @@ bool Fecha :: operator<=(Fecha f)///Menor igual?
         }
     }
     return es;
-}
-
-///prefija
-Fecha Fecha :: operator++()
-{
-    SumarUnDia();
-
-    return (*this);
-}
-
-///posfija
-Fecha Fecha :: operator++(int x)
-{
-    Fecha aux = (*this);
-    SumarUnDia();
-    return aux;
-}
-
-Fecha Fecha :: operator+(int cant)
-{
-    for(int i=0; i < cant; i++)
-    {
-        SumarUnDia();
-    }
-    return (*this);
-}
-
-///REVISAR................
-///**Precondicion: 1er fecha >= que  2da fecha**
-int Fecha :: operator-(Fecha f)
-{
-    int cant = 0;
-    Fecha aux = (*this);
-    while(!(aux == f))
-    {
-        aux.RestarUnDia();
-        cant = cant + 1;
-    }
-    return cant;
 }
 
 bool Fecha :: esValida()
@@ -207,111 +156,7 @@ bool Fecha :: esValida()
 
         default: valida = false;
     }
-
     return valida;
-
-}
-
-void Fecha :: SumarUnDia()
-{
-    if(dia < 28)
-    {
-        dia = dia + 1;
-    }
-    else
-    {
-        if(dia == 28)
-        {
-            if(mes == 2)
-            {
-                if(anio % 4 != 0)
-                {
-                    dia = 1;
-                    mes = mes + 1;
-                }
-                else
-                    dia = dia + 1;
-            }
-        }
-        else if(dia == 29)
-        {
-            if(mes == 2)
-            {
-                dia = 1;
-                mes = mes + 1;
-
-            }
-            else
-                dia = dia +1;
-
-        }
-        else if(dia == 31)
-        {
-            if(mes == 1 || mes == 3 || mes == 5 || mes == 7 || mes == 8 || mes == 10)
-            {
-                dia = 1;
-                mes = mes + 1;
-            }
-            else
-            {
-                if(mes == 12)
-                {
-                    dia = 1;
-                    mes = 1;
-                }
-
-            }
-        }
-        else if(dia == 30)
-        {
-             if(mes == 4 || mes == 6 || mes == 9 || mes == 11)//meses con 30 dias
-             {
-                 dia = 1;
-                 mes = mes + 1;
-             }
-        }
-    }
-}
-
-void Fecha :: RestarUnDia()
-{
-    if(dia > 1)
-        dia = dia - 1;
-    else
-    {
-        if(dia == 1)
-        {
-            if(mes == 1)
-            {
-                dia = 31;
-                mes = 12;
-            }
-            else if(mes == 3)
-            {
-                if(anio % 4 == 0)
-                {
-                    dia = 29;
-                    mes = mes - 1;
-                }
-                else
-                {
-                    dia = 28;
-                    mes = mes - 1;
-                }
-            }
-            else if(mes == 12|| mes == 10|| mes == 7 || mes == 5)
-            {
-                dia = 30;
-                mes = mes - 1;
-            }
-            else if(mes == 11|| mes == 9 || mes == 8 || mes == 6 || mes == 4 || mes == 2 )
-            {
-                dia = 31;
-                mes = mes - 1;
-            }
-
-        }
-    }
 }
 
 void Fecha :: MostrarFecha()
@@ -319,12 +164,10 @@ void Fecha :: MostrarFecha()
     cout << dia << "/" << mes << "/" <<  anio;
 }
 
-
 void Fecha :: CargarFecha()
 {
     cin.sync();
     cout << "\nIngrese un dia: ";
-    //cin >> dia;
     String auxDia;
     auxDia.scan();
     while(!auxDia.esEntero())
@@ -336,7 +179,6 @@ void Fecha :: CargarFecha()
 
     cin.sync();
     cout << "\nIngrese un mes: ";
-    //cin >> mes;
     String auxMes;
     auxMes.scan();
     while(!auxMes.esEntero())
@@ -348,7 +190,6 @@ void Fecha :: CargarFecha()
 
     cin.sync();
     cout << "\nIngrese un anio: ";
-    //cin >> anio;
     String auxAnio;
     auxAnio.scan();
     while(!auxAnio.esEntero())
@@ -357,6 +198,4 @@ void Fecha :: CargarFecha()
         auxAnio.scan();
     }
     anio = int(auxAnio.convertirStringAEntero());
-
 }
-

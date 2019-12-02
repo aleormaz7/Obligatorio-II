@@ -31,19 +31,7 @@ class Fecha
 
         bool operator<=(Fecha);///Menor igual?
 
-        Fecha operator++();///dar fecha dia siguiente
-
-        Fecha operator++(int x);
-
-        Fecha operator+(int);///agregar x cant dias a fecha
-
-        int operator-(Fecha);///diferencia dias entre fechas
-
-        bool esValida();/// esFechaValida?
-
-        void SumarUnDia();
-
-        void RestarUnDia();
+        bool esValida();
 
         void MostrarFecha();
 
