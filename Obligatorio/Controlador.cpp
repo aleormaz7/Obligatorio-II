@@ -398,11 +398,14 @@ void Controlador :: camioneroConMayorCntTatuajes()
         cout << "\nError: aun no hay camioneros ingresados en el sistema. ";
     else
     {
-        cout << "\nCamionero: ";
+        cout << "\nCamionero con mayor cantidad de tatuajes: ";
         cout << "\nCedula: ";
         cout << c->getCedula();
         cout << "\nNombre: ";
         c->getNombre().print();
+        cout << "\nCantidad de tatuajes: " << c->getCantTatuajes();
+        cout << "\nFecha de nacimiento: ";
+        c->getFechaNacimiento().MostrarFecha();
     }
 }
 
