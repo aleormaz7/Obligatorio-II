@@ -2,7 +2,8 @@ package pruebas;
 
 import logica.valueObjects.VoPartidaEnCurso;
 
-public class PruebaVoPartidaEnCurso {
+public class PruebaVoPartidaEnCurso 
+{
 
 	public static void main(String[] args) 
 	{

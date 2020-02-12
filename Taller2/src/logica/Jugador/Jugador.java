@@ -23,39 +23,48 @@ public class Jugador
 		this.cociente = 0;
 	}
 
-	public String getNombre() {
+	public String getNombre() 
+	{
 		return nombre;
 	}
 
-	public void setNombre(String nombre) {
+	public void setNombre(String nombre) 
+	{
 		this.nombre = nombre;
 	}
 
-	public int getPuntajeTotal() {
+	public int getPuntajeTotal() 
+	{
 		return puntajeTotal;
 	}
 
-	public void setPuntajeTotal(int puntajeTotal) {
+	public void setPuntajeTotal(int puntajeTotal) 
+	{
 		this.puntajeTotal = puntajeTotal;
 	}
 
-	public int getCantidadPartidasFinalizadas() {
+	public int getCantidadPartidasFinalizadas() 
+	{
 		return cantidadPartidasFinalizadas;
 	}
 
-	public void setCantidadPartidasFinalizadas(int cantidadPartidasFinalizadas) {
+	public void setCantidadPartidasFinalizadas(int cantidadPartidasFinalizadas) 
+	{
 		this.cantidadPartidasFinalizadas = cantidadPartidasFinalizadas;
 	}
 
-	public int getCociente() {
+	public int getCociente() 
+	{
 		return cociente;
 	}
 
-	public void setCociente(int coeficiente) {
+	public void setCociente(int coeficiente) 
+	{
 		this.cociente = coeficiente;
 	}
 
-	public String getCodigoIngreso() {
+	public String getCodigoIngreso() 
+	{
 		return codigoIngreso;
 	}
 	

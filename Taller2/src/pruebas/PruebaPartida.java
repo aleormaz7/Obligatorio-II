@@ -2,11 +2,12 @@ package pruebas;
 
 import logica.valueObjects.VoPartida;
 
-public class PruebaPartida {
+public class PruebaPartida
+{
 
 	public static void main(String[] args) 
 	{
-		VoPartida partida = new VoPartida(1,false,0,0,0);
+		VoPartida partida = new VoPartida(1,false,0,0,500);
 		
 		int nroP = partida.getNroPartida();
 		boolean fin = partida.isFinalizada(); 

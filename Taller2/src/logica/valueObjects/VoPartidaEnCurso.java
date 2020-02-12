@@ -19,19 +19,23 @@ public class VoPartidaEnCurso
 		
 	}
 
-	public int getNroPartida() {
+	public int getNroPartida() 
+	{
 		return nroPartida;
 	}
 
-	public boolean isFinalizada() {
+	public boolean isFinalizada() 
+	{
 		return finalizada;
 	}
 
-	public int getCantIntentosRealizados() {
+	public int getCantIntentosRealizados() 
+	{
 		return cantIntentosRealizados;
 	}
 
-	public int getPuntajeObtenido() {
+	public int getPuntajeObtenido() 
+	{
 		return puntajeObtenido;
 	}
 	
