@@ -1,4 +1,4 @@
-package logica.Jugador;
+package logica.jugador;
 
 public class Jugador 
 {

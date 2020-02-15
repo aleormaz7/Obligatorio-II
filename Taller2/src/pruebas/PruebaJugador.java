@@ -1,5 +1,5 @@
 package pruebas;
-import logica.Jugador.Jugador;
+import logica.jugador.Jugador;
 
 public class PruebaJugador 
 {

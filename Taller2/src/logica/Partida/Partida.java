@@ -1,4 +1,4 @@
-package logica.Partida;
+package logica.partida;
 
 public class Partida 
 {

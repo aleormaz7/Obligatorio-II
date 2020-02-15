@@ -1,4 +1,4 @@
-package Excepciones;
+package excepciones;
 
 public class JugadorExisteException extends Exception
 {
@@ -16,6 +16,7 @@ public class JugadorExisteException extends Exception
 	{ 
 		return mensaje; 
 	}
+	
 	
 
 }

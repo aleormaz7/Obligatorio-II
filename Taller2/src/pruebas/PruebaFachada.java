@@ -1,6 +1,6 @@
 package pruebas;
 
-import Excepciones.JugadorExisteException;
+import excepciones.JugadorExisteException;
 import grafica.Fachada;
 
 public class PruebaFachada {

@@ -1,7 +1,7 @@
 package grafica;
 
-import Excepciones.JugadorExisteException;
-import logica.Jugador.Jugadores;
+import excepciones.JugadorExisteException;
+import logica.jugador.Jugadores;
 
 public class Fachada 
 {
