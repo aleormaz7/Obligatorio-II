@@ -8,6 +8,7 @@ import excepciones.PartidaEnCursoException;
 import excepciones.PartidaFinalizadaException;
 import grafica.Fachada;
 import logica.enumerados.EResultado;
+import logica.jugador.Jugador;
 import logica.valueObjects.VoJugadorGeneral;
 import logica.valueObjects.VoPartida;
 import logica.valueObjects.VoPartidaEnCurso;
@@ -20,12 +21,16 @@ public class PruebaFachada
 		Fachada f = new Fachada();
 				
 		//Registrar Jugador:
+		//Jugador 1
 		String nom = "juan";
 		String cod = "123";
-		
+		//Jugador 2
 		String nom2 = "pepe";
 		String cod2 = "456";
-					
+		//Jugador 3
+		String nom3 = "ale";
+		String cod3 = "789";
+		
 		try 
 		{			
 			f.registrarNuevoJugador(nom, cod);			
@@ -43,6 +48,17 @@ public class PruebaFachada
 		{
 			System.out.println(e.darMensaje());			
 		}
+		
+		try 
+		{			
+			f.registrarNuevoJugador(nom3, cod3);			
+		}
+		catch (JugadorExisteException e)
+		{
+			System.out.println(e.darMensaje());			
+		}
+		
+		
 		
 		
 		//ListarJugadores:
@@ -195,8 +211,7 @@ public class PruebaFachada
 		}
 
 		
-		//abandonarPartida:
-		
+		//abandonarPartida:		
 		try
 		{
 			f.aboandonarPartida(nom, cod);
@@ -218,6 +233,17 @@ public class PruebaFachada
 			e4.darMensaje();
 		}
 		
+		
+		//
+		Jugador j1 = f.jugadores.find(nom);
+		j1.setCociente(500);
+
+		Jugador j2 = f.jugadores.find(nom2);
+		j2.setCociente(100);
+
+		Jugador j3 = f.jugadores.find(nom3);
+		j3.setCociente(250);
+		//
 		
 		//rankingGlobal:
 		VoRanking[] arrayJugRankAux = new VoRanking[f.jugadores.listarJugadoresRanking().length];		

@@ -35,16 +35,8 @@ public class Jugadores
 	public VoJugadorGeneral[] listarJugadores()
 	{
 		VoJugadorGeneral[] voJugGeneral = new VoJugadorGeneral[arbol.size()];
-		
-		int i = 0;
-		for (Jugador obj : arbol.values())
-		{
-			VoJugadorGeneral j = new VoJugadorGeneral(obj.getNombre(),obj.getPuntajeTotal(),obj.getCantidadPartidasFinalizadas(),obj.getCociente(),obj.getCodigoIngreso());			
-			voJugGeneral[i] = j;
-			i++;
-		}
-		
-		/*Collection<Jugador> c = arbol.values();
+				
+		Collection<Jugador> c = arbol.values();
 		Iterator<Jugador> itr = c.iterator();
 		int i = 0;
 		while(itr.hasNext())
@@ -54,26 +46,65 @@ public class Jugadores
 			voJugGeneral[i] = j;
 			//System.out.println("Nom: "+j.getNombre());
 			i++;
+		}
+		
+		//opcion no valida....??
+		/*int i = 0;
+		for (Jugador obj : arbol.values())
+		{
+			VoJugadorGeneral j = new VoJugadorGeneral(obj.getNombre(),obj.getPuntajeTotal(),obj.getCantidadPartidasFinalizadas(),obj.getCociente(),obj.getCodigoIngreso());			
+			voJugGeneral[i] = j;
+			i++;
 		}*/
 		
 		return voJugGeneral;
 	}
 	
 	
-	
 	//.................??
 	public VoRanking[] listarJugadoresRanking()
 	{
 		VoRanking[] voRank = new VoRanking[arbol.size()];
+		
+		Collection<Jugador> c = arbol.values();
+		Iterator<Jugador> itr = c.iterator();
 		int i = 0;
-		for (Jugador obj : arbol.values())
+		while(itr.hasNext())
 		{
-			//TODO:ORDENAR POR COCIENTE
-			VoRanking j = new VoRanking(obj.getNombre(),obj.getPuntajeTotal(),obj.getCantidadPartidasFinalizadas(),obj.getCociente(),1);
-			voRank[i] = j;
+			Jugador jug = itr.next();	
+			VoRanking j = new VoRanking(jug.getNombre(),jug.getPuntajeTotal(),jug.getCantidadPartidasFinalizadas(),jug.getCociente(),0);
+			voRank[i] = j;		
 			i++;
 		}
-		return voRank;		
+		
+		
+		//opcion no valida....??
+		/*int i = 0;		
+		for (Jugador obj : arbol.values())
+		{		
+			VoRanking j = new VoRanking(obj.getNombre(),obj.getPuntajeTotal(),obj.getCantidadPartidasFinalizadas(),obj.getCociente(),0);
+			voRank[i] = j;
+			i++;								
+		}*/		
+		
+		//TODO:ORDENAR POR COCIENTE
+		for(i=0; i < voRank.length-1 ; i++)
+		{			
+            for(int j = i+1; j < voRank.length; j++)
+			{           	
+				if(voRank[j].getCociente() > voRank[i].getCociente())
+				{			
+					VoRanking aux = voRank[i];	
+                    voRank[i]=voRank[j];
+                    voRank[j]=aux;                 
+				}		
+			} 		
+		}
+		
+		for(i=0; i < voRank.length; i++)	
+			voRank[i].setPosicion((i+1));
+			
+        return voRank;				
 	}
 	
 }

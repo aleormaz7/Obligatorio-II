@@ -14,7 +14,11 @@ public class VoRanking extends VoJugador
 	{
 		return posicion;
 	}
-
 	
+	public void setPosicion(int pos) 
+	{
+		this.posicion = pos;
+	}
+
 
 }
