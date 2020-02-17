@@ -11,6 +11,7 @@ import logica.enumerados.EResultado;
 import logica.valueObjects.VoJugadorGeneral;
 import logica.valueObjects.VoPartida;
 import logica.valueObjects.VoPartidaEnCurso;
+import logica.valueObjects.VoRanking;
 
 public class PruebaFachada 
 {
@@ -52,6 +53,9 @@ public class PruebaFachada
 			System.out.print("Jugador: "+(i+1));
 			System.out.print(" - Nombre: "+arrayJugAux[i].getNombre());
 			System.out.print(" - Codigo: "+arrayJugAux[i].getCodigoIngreso());
+			System.out.print(" - Puntaje: "+arrayJugAux[i].getPuntaje());
+			System.out.print(" - Cant Partidas Finalizadas: "+arrayJugAux[i].getCantPartidasFinalizadas());
+			System.out.print(" - Cociente: "+arrayJugAux[i].getCociente());
 			System.out.println("");			
 		}
 		
@@ -216,8 +220,18 @@ public class PruebaFachada
 		
 		
 		//rankingGlobal:
-		
-		
+		VoRanking[] arrayJugRankAux = new VoRanking[f.jugadores.listarJugadoresRanking().length];		
+		arrayJugRankAux = f.jugadores.listarJugadoresRanking();  		
+		for(int i = 0;i < arrayJugRankAux.length; i++)
+		{		
+			System.out.print("Ranking: "+(i+1));
+			System.out.print(" - Nombre: "+arrayJugRankAux[i].getNombre());
+			System.out.print(" - Puntaje: "+arrayJugRankAux[i].getPuntaje());
+			System.out.print(" - Cant Partidas Finalizadas: "+arrayJugRankAux[i].getCantPartidasFinalizadas());
+			System.out.print(" - Cociente: "+arrayJugRankAux[i].getCociente());
+			System.out.print(" - Posicion: "+arrayJugRankAux[i].getPosicion());
+			System.out.println("");			
+		}
 
 		
 	}

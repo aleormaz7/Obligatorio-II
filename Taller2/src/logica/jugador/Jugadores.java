@@ -5,6 +5,7 @@ import java.util.Iterator;
 import java.util.TreeMap;
 
 import logica.valueObjects.VoJugadorGeneral;
+import logica.valueObjects.VoRanking;
 
 
 public class Jugadores 
@@ -34,7 +35,16 @@ public class Jugadores
 	public VoJugadorGeneral[] listarJugadores()
 	{
 		VoJugadorGeneral[] voJugGeneral = new VoJugadorGeneral[arbol.size()];
-		Collection<Jugador> c = arbol.values();
+		
+		int i = 0;
+		for (Jugador obj : arbol.values())
+		{
+			VoJugadorGeneral j = new VoJugadorGeneral(obj.getNombre(),obj.getPuntajeTotal(),obj.getCantidadPartidasFinalizadas(),obj.getCociente(),obj.getCodigoIngreso());			
+			voJugGeneral[i] = j;
+			i++;
+		}
+		
+		/*Collection<Jugador> c = arbol.values();
 		Iterator<Jugador> itr = c.iterator();
 		int i = 0;
 		while(itr.hasNext())
@@ -44,15 +54,26 @@ public class Jugadores
 			voJugGeneral[i] = j;
 			//System.out.println("Nom: "+j.getNombre());
 			i++;
-		}
+		}*/
 		
 		return voJugGeneral;
 	}
 	
+	
+	
 	//.................??
-	public int largo()
+	public VoRanking[] listarJugadoresRanking()
 	{
-		return arbol.size();
+		VoRanking[] voRank = new VoRanking[arbol.size()];
+		int i = 0;
+		for (Jugador obj : arbol.values())
+		{
+			//TODO:ORDENAR POR COCIENTE
+			VoRanking j = new VoRanking(obj.getNombre(),obj.getPuntajeTotal(),obj.getCantidadPartidasFinalizadas(),obj.getCociente(),1);
+			voRank[i] = j;
+			i++;
+		}
+		return voRank;		
 	}
 	
 }

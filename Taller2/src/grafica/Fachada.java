@@ -250,15 +250,7 @@ public class Fachada
 	
 	public VoRanking[] rankingGlobal()
 	{
-		
-		VoRanking[] voRank = new VoRanking[jugadores.largo()];
-		
-		//voRank = 
-		//PARA CADA JUGADOR DEL ARBOL AGREGARLO AL LISTADO ORDENADO POR COCIENTE
-		
-		return voRank;
-
-		
+		return jugadores.listarJugadoresRanking();	
 	}
 
 	
