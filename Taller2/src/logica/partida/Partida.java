@@ -77,4 +77,9 @@ public class Partida
 		return voPartidaEnCurso;
 	}
 	
+	public int calcularPuntaje()
+	{
+		return (1000 / cantidadIntentos);
+	}
+	
 }

@@ -1,5 +1,8 @@
 package grafica;
 
+import java.util.Collection;
+import java.util.Iterator;
+
 import excepciones.JugadorCodigoIncorrectoException;
 import excepciones.JugadorExisteException;
 import excepciones.NoHayPartidaDisponibleException;
@@ -62,7 +65,8 @@ public class Fachada
 				throw new JugadorCodigoIncorrectoException("Codigo Ingreso Incorrecto!!");
 			}
 			else
-			{				
+			{
+				///..PRECONDICION..??..SUBDIVIDIR SINO PONGO j.hayPartidas() rompe........??
 				if(j.hayPartidas() && j.hayPartidaEnCurso() == true)
 				{
 					throw new PartidaEnCursoException("Ya hay partida en curso!!");
@@ -182,10 +186,11 @@ public class Fachada
 						if(numero == numSecreto)
 						{
 							ultP.setFinalizada(true);
-							//TODO: CALCULAR PUNTAJE FINAL
-							//TODO: SUMAR PUNTAJE AL JUGADOR
-							j.setCantidadPartidasFinalizadas(j.getCantidadPartidasFinalizadas()+1);
-							//TODO: ACTUALIZAR COCIENTE							
+							int puntaje = ultP.calcularPuntaje();
+							j.setPuntajeTotal(j.getPuntajeTotal() + puntaje);
+							j.setCantidadPartidasFinalizadas(j.getCantidadPartidasFinalizadas()+1);							
+							int cociente = (j.getPuntajeTotal() / j.getCantidadPartidasFinalizadas());
+							j.setCociente(cociente);
 							resu = EResultado.ACIERTO;
 						}
 						else if(numero > numSecreto)
@@ -246,11 +251,13 @@ public class Fachada
 	public VoRanking[] rankingGlobal()
 	{
 		
-		VoRanking[] voRank = null;// = new VoRanking[];
+		VoRanking[] voRank = new VoRanking[jugadores.largo()];
+		
+		//voRank = 
 		//PARA CADA JUGADOR DEL ARBOL AGREGARLO AL LISTADO ORDENADO POR COCIENTE
 		
-		
 		return voRank;
+
 		
 	}
 

@@ -49,4 +49,10 @@ public class Jugadores
 		return voJugGeneral;
 	}
 	
+	//.................??
+	public int largo()
+	{
+		return arbol.size();
+	}
+	
 }

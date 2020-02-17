@@ -78,7 +78,7 @@ public class Jugador
 	
 	public void registrarPartida()
 	{		
-		int nroSecreto = (int) Math.floor(Math.random()*(1-1000+1)+1000);
+		int nroSecreto = 100;//(int) Math.floor(Math.random()*(1-1000+1)+1000);
 		
 		Partida p = new Partida(secuenciaPartidas.largo()+1,nroSecreto);
 		secuenciaPartidas.insBack(p);

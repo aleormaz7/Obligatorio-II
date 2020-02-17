@@ -48,8 +48,7 @@ public class PruebaFachada
 		VoJugadorGeneral[] arrayJugAux = new VoJugadorGeneral[f.jugadores.listarJugadores().length];		
 		arrayJugAux = f.jugadores.listarJugadores();  		
 		for(int i = 0;i < arrayJugAux.length; i++)
-		{
-			
+		{		
 			System.out.print("Jugador: "+(i+1));
 			System.out.print(" - Nombre: "+arrayJugAux[i].getNombre());
 			System.out.print(" - Codigo: "+arrayJugAux[i].getCodigoIngreso());
@@ -131,6 +130,7 @@ public class PruebaFachada
 		}
 		
 		
+		
 		//Visualizar Partida en Curso:
 		try
 		{
@@ -153,12 +153,13 @@ public class PruebaFachada
 		{
 			e3.darMensaje();
 		}
+				
 		
 		
 		//realizarIntento:	
 		try
 		{
-			EResultado resu = f.realizarIntento(nom, cod, 100);
+			EResultado resu = f.realizarIntento(nom, cod, 100);//
 			if(resu == EResultado.ACIERTO)
 			{
 				System.out.println("ACIERTO");
@@ -188,9 +189,10 @@ public class PruebaFachada
 		{
 			e4.darMensaje();
 		}
-		
+
 		
 		//abandonarPartida:
+		
 		try
 		{
 			f.aboandonarPartida(nom, cod);
